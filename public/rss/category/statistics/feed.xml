@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Learnbay blog</title>
+        <link>undefined</link>
+        <description></description>
+        <lastBuildDate>Fri, 23 Sep 2022 06:53:45 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Learnbay blog</title>
+            <url>undefined/logo.svg</url>
+            <link>undefined</link>
+        </image>
+        <copyright>All rights reserved 2022, Learnbay</copyright>
+        <item>
+            <title><![CDATA[Young Data Scientists]]></title>
+            <link>undefined/category/statistics</link>
+            <guid>undefined/category/statistics</guid>
+            <pubDate>Thu, 16 Dec 2021 18:30:00 GMT</pubDate>
+            <description><![CDATA[Data Science is like a wildlife jungle, looks amazing and interesting at first sight but just as one tries to enter into it the vastness of Data Science will be visible, which is so vast that it will scare the one to drop the passion of Data Science...]]></description>
+        </item>
+    </channel>
+</rss>

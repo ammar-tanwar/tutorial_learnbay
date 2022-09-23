@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id/>
+    <title>Learnbay blog</title>
+    <updated>2022-09-23T06:53:45.072Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>Learnbay</name>
+        <email>contacts@learnbay.co</email>
+        <uri> https://twitter.com/Learnbay</uri>
+    </author>
+    <link rel="self" href="undefined/rss/category/atom.xml"/>
+    <logo>undefined/logo.svg</logo>
+    <icon>undefined/favicon.webp</icon>
+    <rights>All rights reserved 2022, Learnbay</rights>
+    <entry>
+        <title type="html"><![CDATA[Artificial Intelligence in E-commerce]]></title>
+        <id>undefined/category/machine-learning</id>
+        <link href="undefined/category/machine-learning"/>
+        <updated>2021-04-14T18:30:00.000Z</updated>
+        <summary type="html"><![CDATA[The internet has opened the door for revolutionizing various sectors. E-commerce sector is one of them. E-commerce sectors have unlocked new opportunities and scope for retailers. Retailers also have never seen such a growth in their sales...]]></summary>
+    </entry>
+</feed>

@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Learnbay blog",
+    "feed_url": "undefined/rss/category/feed.json",
+    "icon": "undefined/logo.svg",
+    "author": {
+        "name": "Learnbay",
+        "url": " https://twitter.com/Learnbay"
+    },
+    "items": [
+        {
+            "id": "undefined/category/technology",
+            "url": "undefined/category/technology",
+            "title": "Artificial Intelligence in E-commerce",
+            "summary": "The internet has opened the door for revolutionizing various sectors. E-commerce sector is one of them. E-commerce sectors have unlocked new opportunities and scope for retailers. Retailers also have never seen such a growth in their sales...",
+            "date_modified": "2021-04-14T18:30:00.000Z",
+            "author": {}
+        }
+    ]
+}

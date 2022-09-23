@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Learnbay blog</title>
+        <link>undefined</link>
+        <description></description>
+        <lastBuildDate>Fri, 23 Sep 2022 06:53:45 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Learnbay blog</title>
+            <url>undefined/logo.svg</url>
+            <link>undefined</link>
+        </image>
+        <copyright>All rights reserved 2022, Learnbay</copyright>
+        <item>
+            <title><![CDATA[You could be a pro in Data Science by Self Assisting]]></title>
+            <link>undefined/category/data-science</link>
+            <guid>undefined/category/data-science</guid>
+            <pubDate>Thu, 10 Sep 2020 18:30:00 GMT</pubDate>
+            <description><![CDATA[Get good at stats, math and Machine Learning. Take online data course. Learn to code. Computer science, development and a language...]]></description>
+        </item>
+    </channel>
+</rss>
