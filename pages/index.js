@@ -9,7 +9,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import generateRssFeed from "../lib/generateRss";
 import generateCategoryRssFeed from "../lib/geneRateCategoryRss";
 import Footer from "../components/global/footer/footer";
-import Navbar from "../components/global/navbar/navbar";
+import Navbar from "../components/global/navbar/Navbar";
 
 export default function blog({ allPostsData }) {
   const length = parseInt(allPostsData.length);
@@ -20,7 +20,7 @@ export default function blog({ allPostsData }) {
   return (
     <>
       <Head>
-        <title>Learnbay's Topics</title>
+        <title>Learnbays Topics</title>
         <meta name="description" content="Learnbay Blogs" />
         <link href="/Learnbay-Favicon-L.png" />
         <meta
@@ -32,7 +32,7 @@ export default function blog({ allPostsData }) {
           href="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/Learnbay-Favicon-L.png"
         />
       </Head>
-      <Navbar tag={categoryPostTag}/>
+      <Navbar tag={categoryPostTag} />
       <div className={styles.BackP} style={{ marginTop: "70px" }}>
         <h4>
           <b>Our Blogs</b>
@@ -86,7 +86,7 @@ export default function blog({ allPostsData }) {
           (post) => post.category === tag
         );
         let makeUrl = post.toLowerCase().replace(/\s+/g, "-");
-        let url = `/category/${makeUrl}`; 
+        let url = `/category/${makeUrl}`;
         return (
           <section className={styles.categoryPosts} key={i}>
             <span>

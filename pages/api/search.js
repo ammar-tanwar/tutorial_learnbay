@@ -4,8 +4,8 @@ import matter from "gray-matter";
 
 export default function handler(req, res) {
   let posts;
-  const {q} = JSON.parse(req.body);
-  console.log(q);
+  const { q } = req.body;
+
   if (process.env.NODE_ENV === "production") {
     // @todo - fetch rom cache
   } else {
@@ -22,14 +22,12 @@ export default function handler(req, res) {
     });
   }
 
-
   const results = posts.filter(
     ({ frontmatter: { title, category, tag } }) =>
-    console.log(title.toLowerCase().indexOf(q)) ||
       title.toLowerCase().indexOf(q) != -1 ||
       category.toLowerCase().indexOf(q) != -1 ||
       tag.toLowerCase().indexOf(q) != -1
-  )
-console.log(results);
-  res.status(200).json(JSON.stringify({ results }))
+  );
+
+  res.status(200).send(results);
 }

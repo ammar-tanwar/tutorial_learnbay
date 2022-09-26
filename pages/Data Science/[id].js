@@ -10,7 +10,7 @@ import { BsDot } from "react-icons/bs";
 import { IoTimeOutline } from "react-icons/io5";
 import { sortByDate } from "../../utils";
 import Footer from "../../components/global/footer/footer";
-import Navbar from "../../components/global/navbar/navbar";
+import Navbar from "../../components/global/navbar/Navbar";
 
 export default function CategoryBlog({ categoryPosts, allPostsData }) {
   let singleCategoryPost = allPostsData.map((post) => {
@@ -27,8 +27,8 @@ export default function CategoryBlog({ categoryPosts, allPostsData }) {
 
         <title>{categoryPosts.tag}</title>
       </Head>
-      <Navbar tag={categoryPostTag}/>
-      <section className={styles.blogHead} style={{marginTop:"100px"}}>
+      <Navbar tag={categoryPostTag} />
+      <section className={styles.blogHead} style={{ marginTop: "100px" }}>
         {categoryPosts.slice(0, 1).map((category) => {
           return <p key={category.tag}>{category.tag}</p>;
         })}
@@ -112,8 +112,7 @@ export async function getStaticProps({ params: { id } }) {
   return {
     props: {
       categoryPosts: categoryPosts.sort(sortByDate),
-   allPostsData : allPostsData,
-
+      allPostsData: allPostsData,
     },
   };
 }

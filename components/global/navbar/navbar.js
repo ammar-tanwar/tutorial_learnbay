@@ -5,39 +5,36 @@ import { FaArrowRight, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import Tabs from "../Tabs/Tabs";
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import searchResults from "../searchResults/searchResults";
+import SearchResults from "../searchResults/SearchResults";
 
-const navbar = ({ tag }) => {
+const Navbar = ({ tag }) => {
   const [icon, setIcon] = useState(false);
   const [show, setShow] = useState(false);
   const [mobile, setMobile] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchresults] = useState([]);
 
   useEffect(() => {
-    console.log("inside");
     const getResults = async () => {
       if (searchTerm === "") {
         setSearchresults([]);
       } else {
-        const res = await fetch("/api/search",{
+        const result = await fetch("/api/search", {
           method: "POST",
-      body: {q:searchTerm},
-      headers: {
-        "Content-Type": "application/json",
-      },
+          body: JSON.stringify({ q: searchTerm }),
+          headers: {
+            "Content-Type": "application/json",
+          },
         }).then((t) => t.json());
-        console.log(res, "reess");
-        const { results } = await res.json();
-        setSearchresults(results);
+
+        setSearchresults(result);
       }
     };
     getResults();
   }, [searchTerm]);
-
-  console.log(setSearchresults);
 
   const handleIcon = (data) => {
     setIcon(data);
@@ -85,7 +82,7 @@ const navbar = ({ tag }) => {
                 setIcon(false);
               }}
             />
-            <a href="/" className={styles.img}>
+            <a href="http://localhost:3000/" className={styles.img}>
               <Image
                 src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/Learnbay-Logo.webp"
                 alt="Learnbay"
@@ -174,11 +171,11 @@ const navbar = ({ tag }) => {
           </button>
         </div>
       </nav>
-      {/* <div>
-    <searchResults results={searchResults} /></div> */}
+      <div>
+        <SearchResults results={searchResults} />
+      </div>
     </div>
-
   );
 };
 
-export default navbar;
+export default Navbar;
