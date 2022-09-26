@@ -6,6 +6,12 @@ headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main-blog/blog/young
 date: "December 17, 2021"
 tag: "Statistics"
 category: "Statistics"
+topic: {
+  title: "Statistics",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
 author: "Admin"
 position: "Editor"
 readTime: "7-9 mins"

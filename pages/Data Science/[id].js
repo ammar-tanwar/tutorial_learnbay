@@ -9,7 +9,7 @@ import Image from "next/image";
 import { BsDot } from "react-icons/bs";
 import { IoTimeOutline } from "react-icons/io5";
 import { sortByDate } from "../../utils";
-import Footer from "../../components/global/footer/footer";
+import Footer from "../../components/global/footer/Footer";
 import Navbar from "../../components/global/navbar/Navbar";
 
 export default function CategoryBlog({ categoryPosts, allPostsData }) {

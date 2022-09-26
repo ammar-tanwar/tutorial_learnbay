@@ -6,7 +6,7 @@ import Head from "next/head";
 import styles from "../styles/blog.module.css";
 import { BsDot } from "react-icons/bs";
 import { IoTimeOutline } from "react-icons/io5";
-import Footer from "../components/global/footer/footer";
+import Footer from "../components/global/footer/Footer";
 import Navbar from "../components/global/navbar/Navbar";
 
 export default function Post({ postData, posts }) {

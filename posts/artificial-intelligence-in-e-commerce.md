@@ -6,6 +6,13 @@ headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main-blog/blog/ar.jp
 category: "Machine Learning"
 date: "April 15, 2021"
 tag: "Machine Learning"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Machine Learning",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
 author: "Admin"
 position: "Editor"
 readTime: "20-25 mins"

@@ -6,6 +6,13 @@ headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main-blog/blog/book.
 date: "September 11, 2020"
 tag: "Data Science"
 category: "Data Science"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Data Science",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
 author: "Admin"
 position: "editor"
 readTime: "7-9 mins"
