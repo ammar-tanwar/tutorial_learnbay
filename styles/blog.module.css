@@ -1,3 +1,84 @@
+/* New Css */
+
+.banner {
+  display: flex;
+  padding: 50px 100px;
+  margin-top: 70px;
+  gap: 50px;
+  align-items: center;
+  box-shadow: 0px 0px 5px 0px rgb(45 156 215 / 31%);
+}
+
+.divFirst > img {
+  width: 100%;
+}
+
+.divSecond {
+  padding: 30px;
+}
+
+.headP {
+  color: #2D9CD7;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.headH2 {
+  font-size: 36px;
+  margin: 10px 0px;
+}
+
+.spanH2 {
+  color: #EDBB52;
+}
+
+.bottomP {
+  color: #515151;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.imgText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.imgC {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.pD {
+  margin: 0px;
+  font-size: 16px;
+}
+
+.PH {
+  color: #2D9CD7;
+  font-weight: bold;
+  margin: 0;
+  font-size: 16px;
+}
+
+.shareLikeDiv {
+  display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.shareLike {
+  font-size: 30px;
+}
+
+
+/* New Css */
+
+
+
+
 .DivImg {
   margin-top: 70px;
 }

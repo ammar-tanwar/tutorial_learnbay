@@ -9,10 +9,10 @@ export default function handler(req, res) {
   if (process.env.NODE_ENV === "production") {
     // @todo - fetch rom cache
   } else {
-    const files = fs.readdirSync(path.join("posts"));
+    const files = fs.readdirSync(path.join("posts/Topic"));
     posts = files.map((filename) => {
       const markdownWithMeta = fs.readFileSync(
-        path.join("posts", filename),
+        path.join("posts/Topic", filename),
         "utf-8"
       );
       const { data: frontmatter } = matter(markdownWithMeta);

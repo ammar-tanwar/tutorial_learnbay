@@ -36,7 +36,6 @@ export default function blog({ allPostsData }) {
         />
       </Head>
       <Navbar tag={categoryPostTag} />
-      <Navbar tag={categoryPostTag}/>
       <HeroSection
       mTitle="Investing in Knowledge and"
       spanMTitleText="Your Future"

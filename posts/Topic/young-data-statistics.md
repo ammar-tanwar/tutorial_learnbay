@@ -6,6 +6,14 @@ headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main-blog/blog/young
 date: "December 17, 2021"
 tag: "Statistics"
 category: "Statistics"
+infoP: "Introductry"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "Sep 22, 2022"
 topic: {
   title: "Statistics",
 tagDes: "15 Tutorials & Projects",

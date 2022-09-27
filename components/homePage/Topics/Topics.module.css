@@ -16,9 +16,22 @@
 
 .boxesInner {
     padding: 30px 20px;
-    border: solid #00AA11;
-    border-width: 0px 3px 3px 3px;
     border-radius: 10px;
-    box-shadow: -1px 0px 10px 2px rgb(0 0 0 / 8%);
+    border: solid #fff;
+    border-width: 0px 3px 3px 3px;
+    box-shadow: -1px 0px 10px 2px rgb(4 135 217 / 10%);
+}
+
+.boxesInner:hover {
+    border: solid #0072bc;
+    border-width: 0px 3px 3px 3px;
+}
+
+.boxes:hover {
+    border-bottom: 2px solid #0072bc;
+    margin-bottom: -10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+
 }
 

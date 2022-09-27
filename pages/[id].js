@@ -8,6 +8,7 @@ import { BsDot } from "react-icons/bs";
 import { IoTimeOutline } from "react-icons/io5";
 import Footer from "../components/global/footer/Footer";
 import Navbar from "../components/global/navbar/Navbar";
+import { FcShare, FcLike } from "react-icons/fc";
 
 export default function Post({ postData, posts }) {
   let singleCategoryPost = posts.map((post) => {
@@ -24,20 +25,33 @@ export default function Post({ postData, posts }) {
           />
 
           <title>{postData.title}</title>
-          <meta
-            name="description"
-            content="Learnbay - Advance Data Science Course With IBM Certification"
-          />
-          <link href="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main-blog/Learnbay-Favicon-L.png" />
         </Head>
         <Navbar tag={categoryPostTag} />
-        <div className={styles.DivImg}>
-          <img
-            src={postData.img}
-            alt="Learnbay"
-            width="100%"
-            height="450px"
-          ></img>
+        <div className={styles.banner}>
+          <div className={styles.divFirst}>
+            <img src={postData.img} alt="Learnbay"></img>
+          </div>
+          <div className={styles.divSecond}>
+            <p className={styles.headP}>{postData.infoP}</p>
+            <h2 className={styles.headH2}>
+              {postData.mainH1}
+              <span className={styles.spanH2}>{postData.spanH2}</span>
+            </h2>
+            <p className={styles.bottomP}>{postData.bottomP}</p>
+            <div className={styles.imgText}>
+              <div className={styles.imgC}>
+                <img src={postData.imgC}></img>
+                <div className={styles.insDate}>
+                  <p className={styles.PH}>{postData.PH}</p>
+                  <p className={styles.pD}>{postData.pD}</p>
+                </div>
+              </div>
+              <div className={styles.shareLikeDiv}>
+                <FcLike className={styles.shareLike} />
+                <FcShare className={styles.shareLike} />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

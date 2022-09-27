@@ -7,13 +7,15 @@ function Topics({categoryPostTopic}) {
         <h2>Our Topics</h2>
 <div className={styles.container} >
         {categoryPostTopic.map((categoryPostTopic, index) => {
+            let murl = categoryPostTopic.title.replace(" ", "-");
+            let url = `/${murl}/getting-started/`;
             return (
         <div className={styles.boxes} key={index}>
-            <div className={styles.boxesInner}>
+            <a href={url}><div className={styles.boxesInner}>
                 <img src={categoryPostTopic.img}></img>
                 <h2>{categoryPostTopic.title}</h2>
                 <p>{categoryPostTopic.tagDes}</p>
-            </div>
+            </div></a>
         </div>
             )
         })}
