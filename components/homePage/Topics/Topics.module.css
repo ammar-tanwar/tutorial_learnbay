@@ -20,6 +20,7 @@
     border: solid #fff;
     border-width: 0px 3px 3px 3px;
     box-shadow: -1px 0px 10px 2px rgb(4 135 217 / 10%);
+    cursor: pointer;
 }
 
 .boxesInner:hover {

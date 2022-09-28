@@ -1,10 +1,17 @@
 ---
-title: Artificial Intelligence in E-commerce
+title: An Introduction to Python Programming
 desc: "The internet has opened the door for revolutionizing various sectors. E-commerce sector is one of them. E-commerce sectors have unlocked new opportunities and scope for retailers. Retailers also have never seen such a growth in their sales..."
 slug: home
-headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main-blog/blog/ar.jpg"
-category: "Machine Learning"
-date: "April 15, 2021"
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "April 7, 2022"
+infoP: "Introductry"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "Sep 22, 2022"
 tag: "Machine Learning"
 tagDes: "15 Tutorials & Projects"
 topic: {
@@ -16,7 +23,7 @@ img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
 author: "Admin"
 position: "Editor"
 readTime: "20-25 mins"
-h1: "Artificial Intelligence in E-commerce"
+h1: "An Introduction to Python Programming : "
 id: "artificial-intelligence-in-e-commerce"
 tableData:
   [

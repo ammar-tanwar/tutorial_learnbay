@@ -2,6 +2,7 @@ import React from "react";
 import { FaYoutube } from "react-icons/fa";
 import styles from "./thirdSection.module.css";
 import { videos } from "./ThirdSectionDetails";
+import Link from "next/link";
 
 function ThirdSection() {
   return (
@@ -10,7 +11,7 @@ function ThirdSection() {
     <div className={styles.back}>
       {videos.map((videos, index) => {
         return (
-      <a href={videos.link} key={videos.id}>
+      <Link href={videos.link} key={videos.id} passHref>
         <div className={styles.innerBox}>
           <div className={styles.innerBoxF}>
             <p>{videos.title}</p>
@@ -18,7 +19,7 @@ function ThirdSection() {
           </div>
           <img src={videos.img}></img>
         </div>
-      </a>
+      </Link>
     )
         })}
     </div>

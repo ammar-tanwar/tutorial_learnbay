@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import styles from './Topics.module.css'
 
@@ -11,11 +12,11 @@ function Topics({categoryPostTopic}) {
             let url = `/${murl}/getting-started/`;
             return (
         <div className={styles.boxes} key={index}>
-            <a href={url}><div className={styles.boxesInner}>
+            <Link href={url}><div className={styles.boxesInner}>
                 <img src={categoryPostTopic.img}></img>
                 <h2>{categoryPostTopic.title}</h2>
                 <p>{categoryPostTopic.tagDes}</p>
-            </div></a>
+            </div></Link>
         </div>
             )
         })}

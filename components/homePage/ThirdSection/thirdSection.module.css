@@ -16,6 +16,11 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.innerBox:hover {
+    color: #0072bc;
 }
 
 .innerBoxF {

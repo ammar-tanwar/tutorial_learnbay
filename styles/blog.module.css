@@ -73,6 +73,41 @@ gap: 15px;
   font-size: 30px;
 }
 
+.Content {
+  display: flex;
+  padding: 80px 100px;
+  gap: 50px;
+}
+
+.left {
+  width: 35%;
+  background: #E1F1F530;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(45 156 215 / 31%);
+}
+
+.right {
+  width: 65%;
+}
+
+.heading {
+  font-size: 22px;
+  color: #505050;
+  font-weight: 500;
+  padding: 10px 40px 0px 40px;
+}
+
+.Hcontent {
+  font-size: 18px;
+  color: #505050;
+  padding: 20px 20px 20px 65px;
+  cursor: pointer;
+
+}
+
+.divInner {
+  background-color: #E1F1F5;
+}
 
 /* New Css */
 
