@@ -1,5 +1,5 @@
 ---
-title: Data Types
+title: Loops in Python
 desc: "Get good at stats, math and Machine Learning. Take online data course. Learn to code. Computer science, development and a language..."
 slug: home
 headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main-blog/blog/book.jpg"
@@ -24,8 +24,8 @@ img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
 author: "Admin"
 position: "editor"
 readTime: "7-9 mins"
-h1: "Data Types,"
-id: "you-could-be-a-pro-in-data-science-by-self-assisting-data-scientist"
+h1: "Loops in Python"
+id: "loops-in-python"
 tableData:
   [
    How do you become a data scientist?,

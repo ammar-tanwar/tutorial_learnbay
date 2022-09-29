@@ -3,6 +3,7 @@ import {
   getSortedTechnologyData,
   getAllTechnologyIds,
   getTechnologyData,
+  getSortedPostsData,
 } from "../../lib/posts";
 import Footer from "../../components/global/footer/Footer";
 import Navbar from "../../components/global/navbar/Navbar";
@@ -12,8 +13,11 @@ import Head from "next/head";
 import styles from "../../styles/blog.module.css";
 import { FcShare, FcLike } from "react-icons/fc";
 
-export default function CategoryBlog({ postData, posts }) {
+export default function CategoryBlog({ postData, posts, navData }) {
   let singleCategoryPost = posts.map((post) => {
+    return post.category;
+  });
+  let singleCategoryNav = navData.map((post) => {
     return post.category;
   });
   let data = []
@@ -38,6 +42,7 @@ export default function CategoryBlog({ postData, posts }) {
     );
   };
   let categoryPostTag = Array.from(new Set(singleCategoryPost));
+  let categoryPostNav = Array.from(new Set(singleCategoryNav));
   return (
     <>
       <section className={styles.MainS}>
@@ -49,7 +54,7 @@ export default function CategoryBlog({ postData, posts }) {
 
           <title>{postData.title}</title>
         </Head>
-        <Navbar tag={categoryPostTag} />
+        <Navbar tag={categoryPostNav} />
         <div className={styles.banner}>
           <div className={styles.divFirst}>
             <Image
@@ -93,20 +98,25 @@ export default function CategoryBlog({ postData, posts }) {
           {state.map((table, i) => {
               return (
                 <div key={i}>
-                <p onClick={()=> handleChange(i) } className={styles.heading}>{table.id}</p>
+                <div className={styles.firstC}>
+                {[table.id].map((id, i) => {
+                  const removeSpecial = id.replace(
+                    /[&\/\\#,+()$~%.'":*?<>{}]/g,
+                    ""
+                  );
+
+                  const uMake = removeSpecial
+                    .toLowerCase()
+                    .replace(/\s+/g, "-");
+
+                  const url = `${uMake}`;
+            return (
+                  <p onClick={()=> handleChange(i) } className={styles.heading}><Link href={url}>{table.id}</Link></p>
+                  );
+          })}</div>
                 <div className={styles.divInner}>
-                {table.open ? <p className={styles.Hcontent}>{table.dataTable.map((dataT, i) => {
-                  return dataT;
-                })}</p>:""}
-                </div>
-                </div>
-              );
-            })}
-            <div className={styles.white} />
-            {/* <div className={styles.table}>
-              <div className={styles.contentT}>
-                {postData.table.map((table, i) => {
-                  const removeSpecial = table.replace(
+                {table.open ? <div>{table.dataTable.map((dataT, i) => {
+                  const removeSpecial = dataT.replace(
                     /[&\/\\#,+()$~%.'":*?<>{}]/g,
                     ""
                   );
@@ -116,21 +126,13 @@ export default function CategoryBlog({ postData, posts }) {
                     .replace(/\s+/g, "-");
 
                   const url = `#${uMake}`;
-                  return (
-                    <div key={i}>
-                      <div className={styles.numberBack}>
-                        <span className={styles.number}>{i}</span>
-                      </div>
-                      <span>
-                        <p>
-                          <Link href={url}>{table}</Link>
-                        </p>
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div> */}
+                  return <Link href={url}><span className={styles.Hcontent}>{dataT}</span></Link>;
+                })}</div>:""}
+                </div>
+                </div>
+              );
+            })}
+            <div className={styles.white} />
           </div>
           <div className={styles.right}>
             <article dangerouslySetInnerHTML={{ __html: postData.body }} />
@@ -153,10 +155,12 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const posts = getSortedTechnologyData();
   const postData = getTechnologyData(params.id);
+  const navData = getSortedPostsData()
   return {
     props: {
       postData,
       posts,
+      navData,
     },
   };
 }

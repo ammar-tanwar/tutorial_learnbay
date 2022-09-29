@@ -28,7 +28,7 @@ const Tabs = ({ tag }) => {
           {[...tag].map((post, i) => {
             let tag = post;
             let murl = tag.replace(" ", "-");
-            let url = `/${murl}`;
+            let url = `/${murl}/getting-started`;
             return (
               <span key={tag} className={styles.span}>
                 <Link href={url}>{tag}</Link>

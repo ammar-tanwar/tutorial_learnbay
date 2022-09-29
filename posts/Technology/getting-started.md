@@ -1,5 +1,5 @@
 ---
-title: "Python Loops"
+title: "Getting Started"
 desc: "The internet has opened the door for revolutionizing various sectors. E-commerce sector is one of them. E-commerce sectors have unlocked new opportunities and scope for retailers. Retailers also have never seen such a growth in their sales..."
 slug: home
 headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
@@ -23,8 +23,8 @@ img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
 author: "Admin"
 position: "Editor"
 readTime: "20-25 mins"
-h1: "Python Loops"
-id: "artificial-intelligence-in-e-commerce"
+h1: "Getting Started"
+id: "getting-started"
 tableData:
   [
   1. Chatbots, 
