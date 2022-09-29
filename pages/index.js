@@ -43,8 +43,8 @@ export default function blog({ allPostsData }) {
       spanTitleText="Your Future"
       desc="With new capstone projects, learn how to apply your previous domain expertise to make a successful transition."
       src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tutorial.png"
-      width="900"
-      height="762"
+      width="914"
+      height="1002"
       alt="data science course"
       />
       <Topics categoryPostTopic = {categoryPostTopic}/>

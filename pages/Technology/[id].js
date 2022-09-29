@@ -11,7 +11,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import styles from "../../styles/blog.module.css";
-import { FcShare, FcLike } from "react-icons/fc";
+import { FaRegCopy, FaChevronDown, FaCopy, FaHeart, FaRegHeart } from "react-icons/fa";
 
 export default function CategoryBlog({ postData, posts, navData }) {
   let singleCategoryPost = posts.map((post) => {
@@ -27,7 +27,16 @@ export default function CategoryBlog({ postData, posts, navData }) {
     open:id === 0 ? true : false
   })
   })
-  
+  const [copied, setCopied] = useState(false);
+  function copy() {
+    const el = document.createElement("input");
+    el.value = window.location.href;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+    setCopied(true);
+  }
   const [state, setState] = useState(data);
   const handleChange = (index) => {
     setState(
@@ -87,8 +96,8 @@ export default function CategoryBlog({ postData, posts, navData }) {
                 </div>
               </div>
               <div className={styles.shareLikeDiv}>
-                <FcLike className={styles.shareLike} />
-                <FcShare className={styles.shareLike} />
+              <p onClick={copy} className={styles.shareLike}>{!copied ? <FaRegHeart/> : <FaHeart style={{color:"red"}} />}</p>
+                <p onClick={copy} className={styles.shareLike}>{!copied ? <FaRegCopy/> : <FaCopy style={{color:"#2D9CD7"}} />}</p>
               </div>
             </div>
           </div>
@@ -111,7 +120,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
 
                   const url = `${uMake}`;
             return (
-                  <p onClick={()=> handleChange(i) } className={styles.heading}><Link href={url}>{table.id}</Link></p>
+                  <p onClick={()=> handleChange(i) } className={styles.heading}><Link href={url}>{table.id}</Link><FaChevronDown /></p>
                   );
           })}</div>
                 <div className={styles.divInner}>

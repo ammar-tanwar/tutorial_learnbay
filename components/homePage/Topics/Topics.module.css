@@ -1,17 +1,17 @@
 .container {
     display: flex;
-    padding: 50px 100px;
+    margin: 50px 100px;
     text-align: center;
     gap: 100px;
     flex-flow: wrap;
     justify-content: space-between;
-
 }
 
 .topics > h2 {
     text-align: center;
     font-size: 30px;
     font-weight: 500;
+    margin: 0;
 }
 
 .boxesInner {
@@ -19,7 +19,7 @@
     border-radius: 10px;
     border: solid #fff;
     border-width: 0px 3px 3px 3px;
-    box-shadow: -1px 0px 10px 2px rgb(4 135 217 / 10%);
+    box-shadow: -1px 0px 10px 2px rgb(4 135 217 / 20%);
     cursor: pointer;
 }
 
@@ -33,6 +33,21 @@
     margin-bottom: -10px;
     border-radius: 10px;
     background-repeat: no-repeat;
+}
 
+@media (max-width: 481px) { 
+.container {
+    margin: 20px;
+    gap: 20px;
+    justify-content: center;
+    gap: 15px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.boxesInner {
+    padding: 20px;
+}
 }
 

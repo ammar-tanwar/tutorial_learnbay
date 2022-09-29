@@ -3,7 +3,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 55% 45%;
-    padding: 80px 100px 40px 100px;
+    padding: 0px 100px 0px 100px;
   }
   .left {
     display: flex;

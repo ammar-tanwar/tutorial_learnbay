@@ -6,6 +6,10 @@
     gap: 30px;
 }
 
+.third {
+    margin-top: 100px;
+}
+
 .third > h2 {
     text-align: center;
     font-size: 30px;
@@ -40,3 +44,18 @@
     color: red;
     font-size: 40px;
 }
+
+@media (max-width: 481px) { 
+    .third {
+        margin-top: 50px;
+    }
+
+.back {
+    padding: 20px;
+    display: flex;
+    flex-flow: wrap;
+}
+.innerBox {
+    width: 100%;
+}
+    }

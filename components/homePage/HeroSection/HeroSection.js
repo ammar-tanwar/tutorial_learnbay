@@ -75,12 +75,12 @@ const HeroSection = ({
           </div>
           <div className={styles.boxShape}>
             <div className={styles.boxStyle}>
-              <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png" width="40px"></img>
+              <Image src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png" width="40px" height="40px"></Image>
               <p className={styles.boxP}>10K+</p>
               <p className={styles.boxpp}>Trusted Learners</p>
             </div>
             <div className={styles.boxStyle}>
-              <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/circle.png" width="40px"></img>
+              <Image src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/circle.png" width="40px" height="40px"></Image>
               <p className={styles.boxP}>100%</p>
               <p className={styles.boxpp}>Targeted Syllabus</p>
             </div>
