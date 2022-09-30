@@ -11,7 +11,13 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import styles from "../../styles/blog.module.css";
-import { FaRegCopy, FaChevronDown, FaCopy, FaHeart, FaRegHeart } from "react-icons/fa";
+import {
+  FaRegCopy,
+  FaChevronDown,
+  FaCopy,
+  FaHeart,
+  FaRegHeart,
+} from "react-icons/fa";
 
 export default function CategoryBlog({ postData, posts, navData }) {
   let singleCategoryPost = posts.map((post) => {
@@ -20,13 +26,14 @@ export default function CategoryBlog({ postData, posts, navData }) {
   let singleCategoryNav = navData.map((post) => {
     return post.category;
   });
-  let data = []
+  let data = [];
   posts.forEach((tabledata, id) => {
-    data.push ({id:tabledata.title,
-      dataTable:tabledata.tableData,
-    open:id === 0 ? true : false
-  })
-  })
+    data.push({
+      id: tabledata.title,
+      dataTable: tabledata.tableData,
+      open: id === 0 ? true : false,
+    });
+  });
   const [copied, setCopied] = useState(false);
   function copy() {
     const el = document.createElement("input");
@@ -96,48 +103,79 @@ export default function CategoryBlog({ postData, posts, navData }) {
                 </div>
               </div>
               <div className={styles.shareLikeDiv}>
-              <p onClick={copy} className={styles.shareLike}>{!copied ? <FaRegHeart/> : <FaHeart style={{color:"red"}} />}</p>
-                <p onClick={copy} className={styles.shareLike}>{!copied ? <FaRegCopy/> : <FaCopy style={{color:"#2D9CD7"}} />}</p>
+                <p onClick={copy} className={styles.shareLike}>
+                  {!copied ? (
+                    <FaRegHeart />
+                  ) : (
+                    <FaHeart style={{ color: "red" }} />
+                  )}
+                </p>
+                <p onClick={copy} className={styles.shareLike}>
+                  {!copied ? (
+                    <FaRegCopy />
+                  ) : (
+                    <FaCopy style={{ color: "#2D9CD7" }} />
+                  )}
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div className={styles.Content}>
           <div className={styles.left}>
-          {state.map((table, i) => {
+            {state.map((table, i) => {
               return (
                 <div key={i}>
-                <div className={styles.firstC}>
-                {[table.id].map((id, i) => {
-                  const removeSpecial = id.replace(
-                    /[&\/\\#,+()$~%.'":*?<>{}]/g,
-                    ""
-                  );
+                  <div
+                    className={styles.firstC}
+                    onClick={() => handleChange(i)}
+                  >
+                    {[table.id].map((id, i) => {
+                      const removeSpecial = id.replace(
+                        /[&\/\\#,+()$~%.'":*?<>{}]/g,
+                        ""
+                      );
 
-                  const uMake = removeSpecial
-                    .toLowerCase()
-                    .replace(/\s+/g, "-");
+                      const uMake = removeSpecial
+                        .toLowerCase()
+                        .replace(/\s+/g, "-");
 
-                  const url = `${uMake}`;
-            return (
-                  <p onClick={()=> handleChange(i) } className={styles.heading}><Link href={url}>{table.id}</Link><FaChevronDown /></p>
-                  );
-          })}</div>
-                <div className={styles.divInner}>
-                {table.open ? <div>{table.dataTable.map((dataT, i) => {
-                  const removeSpecial = dataT.replace(
-                    /[&\/\\#,+()$~%.'":*?<>{}]/g,
-                    ""
-                  );
+                      const url = `${uMake}`;
+                      return (
+                        <Link href={url}>
+                          <p className={styles.heading}>
+                            {table.id}
+                            <FaChevronDown />
+                          </p>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                  <div className={styles.divInner}>
+                    {table.open ? (
+                      <div>
+                        {table.dataTable.map((dataT, i) => {
+                          const removeSpecial = dataT.replace(
+                            /[&\/\\#,+()$~%.'":*?<>{}]/g,
+                            ""
+                          );
 
-                  const uMake = removeSpecial
-                    .toLowerCase()
-                    .replace(/\s+/g, "-");
+                          const uMake = removeSpecial
+                            .toLowerCase()
+                            .replace(/\s+/g, "-");
 
-                  const url = `#${uMake}`;
-                  return <Link href={url}><span className={styles.Hcontent}>{dataT}</span></Link>;
-                })}</div>:""}
-                </div>
+                          const url = `#${uMake}`;
+                          return (
+                            <Link href={url}>
+                              <span className={styles.Hcontent}>{dataT}</span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                 </div>
               );
             })}
@@ -164,7 +202,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const posts = getSortedTechnologyData();
   const postData = getTechnologyData(params.id);
-  const navData = getSortedPostsData()
+  const navData = getSortedPostsData();
   return {
     props: {
       postData,

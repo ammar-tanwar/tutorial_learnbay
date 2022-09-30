@@ -173,6 +173,10 @@ gap: 15px;
   display: flex;
 }
 
+.Hcontent:hover {
+  color: #000;
+}
+
 /* New Css */
 
 @media (max-width: 481px) {
