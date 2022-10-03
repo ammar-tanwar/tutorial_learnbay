@@ -142,7 +142,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
 
                       const url = `${uMake}`;
                       return (
-                        <Link href={url}>
+                        <Link href={url} key={i}>
                           <p className={styles.heading}>
                             {table.id}
                             <FaChevronDown />
@@ -166,7 +166,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
 
                           const url = `#${uMake}`;
                           return (
-                            <Link href={url}>
+                            <Link href={url} key={i}>
                               <span className={styles.Hcontent}>{dataT}</span>
                             </Link>
                           );

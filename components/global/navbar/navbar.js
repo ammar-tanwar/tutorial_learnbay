@@ -165,10 +165,10 @@ const Navbar = ({ tag }) => {
               <FaSearch className={styles.iconSearch} />
             </form>
           </div>
-          <button>
+          {/* <button>
             Log In
             <FaArrowRight className={styles.icon} />
-          </button>
+          </button> */}
         </div>
       </nav>
       <div>

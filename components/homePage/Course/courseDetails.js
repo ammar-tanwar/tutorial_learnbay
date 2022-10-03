@@ -10,7 +10,7 @@ export const viewAllD = [
       "8 Projects + 1 Capstone",
       "Course Fee : ₹ 65,000 + GST",
     ],
-    link1: "/data-science-certification-courses",
+    link1: "https://www.learnbay.co/data-science-certification-courses",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+Foundation+Program+Learnbay.pdf",
   },
@@ -25,7 +25,7 @@ export const viewAllD = [
       "12 Projects + 1 Capstones",
       "Course Fee : ₹ 85,000 + GST",
     ],
-    link1: "/advance-data-science-certification-courses",
+    link1: "https://www.learnbay.co/advance-data-science-certification-courses",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+Data+Science+and+AI+Certification+Program+Learnbay.pdf",
   },
@@ -40,7 +40,7 @@ export const viewAllD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 95,000 + GST",
     ],
-    link1: "/artificial-intelligence-certification-course",
+    link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+AI+%26+ML+Certification+Program+Learnbay.pdf",
   },
@@ -55,7 +55,7 @@ export const viewAllD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 95,000 + GST",
     ],
-    link1: "/data-science-ai-for-managers",
+    link1: "https://www.learnbay.co/data-science-ai-for-managers",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+%26+AI+Certification+Program+For+Managers+%26+Leaders+Learnbay.pdf",
   },
@@ -70,7 +70,7 @@ export const viewAllD = [
       "20 Projects + 3 Capstones",
       "Course Fee : ₹ 1,10,000 + GST",
     ],
-    link1: "/data-science-ai-masters-program",
+    link1: "https://www.learnbay.co/data-science-ai-masters-program",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+and+AI+Master's+Program+%5BWith+Unlimited+Interview+Calls%5D.pdf",
   },
@@ -85,7 +85,7 @@ export const viewAllD = [
       "8 Projects",
       "Course Fee : ₹ 65,000 + GST",
     ],
-    link1: "/data-analytics-certification-course",
+    link1: "https://www.learnbay.co/data-analytics-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Analytics+Certification+Program+Learnbay.pdf",
   },
@@ -101,7 +101,7 @@ export const viewAllD = [
       "8 Projects",
       "Course Fee : ₹ 65,000 + GST",
     ],
-    link1: "/business-analytics-certification-course",
+    link1: "https://www.learnbay.co/business-analytics-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Business+Analytics+Certification+Program+Learnbay.pdf",
   },
@@ -131,7 +131,7 @@ export const viewAllD = [
       "12 Projects + 2 Capstones",
       "Course Fee : ₹ 1,10,000 + GST",
     ],
-    link1: "/full-stack-software-development-program",
+    link1: "https://www.learnbay.co/full-stack-software-development-program",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Software+Development+Program+Learnbay.pdf",
   },
@@ -146,7 +146,7 @@ export const viewAllD = [
       "12 Projects + 2 Capstones",
       "Course Fee : ₹ 70,000 + GST",
     ],
-    link1: "/dsa-system-design",
+    link1: "https://www.learnbay.co/dsa-system-design",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Structure+Algorithm+%26+System+Design+Learnbay.pdf",
   },
@@ -163,7 +163,7 @@ export const ForProgrammersD = [
       "12 Projects + 1 Capstones",
       "Course Fee : ₹ 85,000 + GST",
     ],
-    link1: "/advance-data-science-certification-courses",
+    link1: "https://www.learnbay.co/advance-data-science-certification-courses",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+Data+Science+and+AI+Certification+Program+Learnbay.pdf",
   },
@@ -178,7 +178,7 @@ export const ForProgrammersD = [
       "12 Projects + 2 Capstones",
       "Course Fee : ₹ 1,10,000 + GST",
     ],
-    link1: "/full-stack-software-development-program",
+    link1: "https://www.learnbay.co/full-stack-software-development-program",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Software+Development+Program+Learnbay.pdf",
   },
@@ -193,7 +193,7 @@ export const ForProgrammersD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 95,000 + GST",
     ],
-    link1: "/data-science-ai-for-managers",
+    link1: "https://www.learnbay.co/data-science-ai-for-managers",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+%26+AI+Certification+Program+For+Managers+%26+Leaders+Learnbay.pdf",
   },
@@ -208,7 +208,7 @@ export const ForProgrammersD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 95,000 + GST",
     ],
-    link1: "/artificial-intelligence-certification-course",
+    link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+AI+%26+ML+Certification+Program+Learnbay.pdf",
   },
@@ -238,7 +238,7 @@ export const ForProgrammersD = [
       "20 Projects + 3 Capstones",
       "Course Fee : ₹ 1,10,000 + GST",
     ],
-    link1: "/data-science-ai-masters-program",
+    link1: "https://www.learnbay.co/data-science-ai-masters-program",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+and+AI+Master's+Program+%5BWith+Unlimited+Interview+Calls%5D.pdf",
   },
@@ -253,7 +253,7 @@ export const ForProgrammersD = [
       "12 Projects + 2 Capstones",
       "Course Fee : ₹ 70,000 + GST",
     ],
-    link1: "/dsa-system-design",
+    link1: "https://www.learnbay.co/dsa-system-design",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Structure+Algorithm+%26+System+Design+Learnbay.pdf",
   },
@@ -270,7 +270,7 @@ export const ForNonProgrammerD = [
       "8 Projects + 1 Capstone",
       "Course Fee : ₹ 65,000 + GST",
     ],
-    link1: "/data-science-certification-courses",
+    link1: "https://www.learnbay.co/data-science-certification-courses",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+Foundation+Program+Learnbay.pdf",
   },
@@ -285,7 +285,7 @@ export const ForNonProgrammerD = [
       "12 Projects + 1 Capstones",
       "Course Fee : ₹ 85,000 + GST",
     ],
-    link1: "/advance-data-science-certification-courses",
+    link1: "https://www.learnbay.co/advance-data-science-certification-courses",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+Data+Science+and+AI+Certification+Program+Learnbay.pdf",
   },
@@ -300,7 +300,7 @@ export const ForNonProgrammerD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 95,000 + GST",
     ],
-    link1: "/artificial-intelligence-certification-course",
+    link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+AI+%26+ML+Certification+Program+Learnbay.pdf",
   },
@@ -315,7 +315,7 @@ export const ForNonProgrammerD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 95,000 + GST",
     ],
-    link1: "/data-science-ai-for-managers",
+    link1: "https://www.learnbay.co/data-science-ai-for-managers",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+%26+AI+Certification+Program+For+Managers+%26+Leaders+Learnbay.pdf",
   },
@@ -330,7 +330,7 @@ export const ForNonProgrammerD = [
       "20 Projects + 3 Capstones",
       "Course Fee : ₹ 1,10,000 + GST",
     ],
-    link1: "/data-science-ai-masters-program",
+    link1: "https://www.learnbay.co/data-science-ai-masters-program",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+and+AI+Master's+Program+%5BWith+Unlimited+Interview+Calls%5D.pdf",
   },
@@ -346,7 +346,7 @@ export const ForNonProgrammerD = [
       "8 Projects",
       "Course Fee : ₹ 65,000 + GST",
     ],
-    link1: "/business-analytics-certification-course",
+    link1: "https://www.learnbay.co/business-analytics-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Business+Analytics+Certification+Program+Learnbay.pdf",
   },
@@ -361,7 +361,7 @@ export const ForNonProgrammerD = [
       "8 Projects",
       "Course Fee : ₹ 65,000 + GST",
     ],
-    link1: "/data-analytics-certification-course",
+    link1: "https://www.learnbay.co/data-analytics-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Analytics+Certification+Program+Learnbay.pdf",
   },
@@ -379,7 +379,7 @@ export const JobGuaranteeD = [
       "20 Projects + 3 Capstones",
       "Course Fee : ₹ 1,10,000 + GST",
     ],
-    link1: "/data-science-ai-masters-program",
+    link1: "https://www.learnbay.co/data-science-ai-masters-program",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+and+AI+Master's+Program+%5BWith+Unlimited+Interview+Calls%5D.pdf",
   },
@@ -426,7 +426,7 @@ export const StackD = [
       "12 Projects + 2 Capstones",
       "Course Fee : ₹ 1,10,000 + GST",
     ],
-    link1: "/full-stack-software-development-program",
+    link1: "https://www.learnbay.co/full-stack-software-development-program",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Software+Development+Program+Learnbay.pdf",
   },
@@ -441,7 +441,7 @@ export const StackD = [
       "12 Projects + 2 Capstones",
       "Course Fee : ₹ 70,000 + GST",
     ],
-    link1: "/dsa-system-design",
+    link1: "https://www.learnbay.co/dsa-system-design",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Structure+Algorithm+%26+System+Design+Learnbay.pdf",
   },
