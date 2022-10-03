@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import {
-  getSortedTechnologyData,
-  getAllTechnologyIds,
-  getTechnologyData,
+  getSortedPythonData,
+  getAllPythonIds,
+  getPythonData,
   getSortedPostsData,
 } from "../../lib/posts";
 import Footer from "../../components/global/footer/Footer";
@@ -192,7 +192,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllTechnologyIds();
+  const paths = getAllPythonIds();
   return {
     paths,
     fallback: false,
@@ -200,8 +200,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const posts = getSortedTechnologyData();
-  const postData = getTechnologyData(params.id);
+  const posts = getSortedPythonData();
+  const postData = getPythonData(params.id);
   const navData = getSortedPostsData();
   return {
     props: {
