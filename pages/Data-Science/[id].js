@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  getSortedPostsData,
-  getAllPostIds,
-  getPostData,
-} from "../../lib/Python-Page";
+import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/Data-Science-Page";
 import Footer from "../../components/global/footer/Footer";
 import Navbar from "../../components/global/navbar/Navbar";
 import Link from "next/link";
