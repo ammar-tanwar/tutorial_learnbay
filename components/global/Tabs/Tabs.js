@@ -25,7 +25,7 @@ const Tabs = ({ tag }) => {
     <div className="wrapper">
       <div className={styles.MenuTabs}>
         <div className={styles.leftPanel}>
-          {[...tag].map((post, i) => {
+          {/* {[...tag].map((post, i) => {
             let tag = post;
             let murl = tag.replace(" ", "-");
             let url = `/${murl}/getting-started`;
@@ -35,7 +35,7 @@ const Tabs = ({ tag }) => {
                 <FaArrowRight />
               </span>
             );
-          })}
+          })} */}
         </div>
       </div>
     </div>

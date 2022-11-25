@@ -26,11 +26,16 @@ export default function CategoryBlog({ postData, posts, navData }) {
     return post.category;
   });
   let data = [];
+
   posts.forEach((tabledata, id) => {
-    data.push({
-      id: tabledata.title,
-      dataTable: tabledata.tableData,
-      open: id === 0 ? true : false,
+    tabledata.postData.forEach((metaData) => {
+      data.push({
+        chapter: metaData.fileName,
+        id: metaData.title,
+        dataTable: metaData.tableData,
+        open: id === 0 ? true : false,
+        iOpen: id === 0 ? true : false,
+      });
     });
   });
   const [copied, setCopied] = useState(false);
@@ -56,6 +61,21 @@ export default function CategoryBlog({ postData, posts, navData }) {
       })
     );
   };
+  const handleIChange = (index) => {
+    console.log(index, "clicked");
+    setState(
+      state.map((faq, i) => {
+        if (i === index) {
+          console.log("hello");
+          faq.iOpen = !faq.iOpen;
+        } else {
+          faq.iOpen = false;
+        }
+        return faq;
+      })
+    );
+  };
+  console.log(state);
   let categoryPostTag = Array.from(new Set(singleCategoryPost));
   let categoryPostNav = Array.from(new Set(singleCategoryNav));
   return (
@@ -129,32 +149,16 @@ export default function CategoryBlog({ postData, posts, navData }) {
                     className={styles.firstC}
                     onClick={() => handleChange(i)}
                   >
-                    {[table.id].map((id, i) => {
-                      const removeSpecial = id.replace(
-                        /[&\/\\#,+()$~%.'":*?<>{}]/g,
-                        ""
-                      );
-
-                      const uMake = removeSpecial
-                        .toLowerCase()
-                        .replace(/\s+/g, "-");
-
-                      const url = `${uMake}`;
-                      return (
-                        <Link href={url} key={i}>
-                          <p className={styles.heading}>
-                            {table.id}
-                            <FaChevronDown />
-                          </p>
-                        </Link>
-                      );
-                    })}
+                    <p className={styles.heading}>
+                      {table.chapter}
+                      <FaChevronDown />
+                    </p>
                   </div>
                   <div className={styles.divInner}>
                     {table.open ? (
                       <div>
-                        {table.dataTable.map((dataT, i) => {
-                          const removeSpecial = dataT.replace(
+                        {[table.id].map((id, i) => {
+                          const removeSpecial = id.replace(
                             /[&\/\\#,+()$~%.'":*?<>{}]/g,
                             ""
                           );
@@ -163,13 +167,43 @@ export default function CategoryBlog({ postData, posts, navData }) {
                             .toLowerCase()
                             .replace(/\s+/g, "-");
 
-                          const url = `#${uMake}`;
+                          const url = `${uMake}`;
                           return (
-                            <Link href={url} key={i}>
-                              <span className={styles.Hcontent}>{dataT}</span>
-                            </Link>
+                            <p
+                              className={styles.headings}
+                              key={i}
+                              onClick={() => handleIChange(i)}
+                            >
+                              {table.id}
+                              <FaChevronDown />
+                            </p>
                           );
                         })}
+                        {table.iOpen ? (
+                          <div>
+                            {table.dataTable.map((dataT, i) => {
+                              const removeSpecial = dataT.replace(
+                                /[&\/\\#,+()$~%.'":*?<>{}]/g,
+                                ""
+                              );
+
+                              const uMake = removeSpecial
+                                .toLowerCase()
+                                .replace(/\s+/g, "-");
+
+                              const url = `#${uMake}`;
+                              return (
+                                <Link href={url} key={i}>
+                                  <span className={styles.Hcontent}>
+                                    {dataT}
+                                  </span>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     ) : (
                       ""
@@ -191,7 +225,8 @@ export default function CategoryBlog({ postData, posts, navData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const path = getAllPostIds();
+  const paths = path[0];
   return {
     paths,
     fallback: false,
