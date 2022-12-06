@@ -1,0 +1,295 @@
+---
+title: "Tableau Calculation"
+desc: "Tableau Calculation"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 16, 2022"
+infoP: "Tableau"
+spanH2: "Core Concepts"
+bottomP: "Table calculations in Tableau are a particular kind of calculated column that perform calculations using the local data. They are calculated using the data that is now available in the visualization and do not take into account any measurements or dimensions that have been filtered out."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 16, 2022"
+tag: "Tableau"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Tableau",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Tableau Calculation : "
+id: "tableau-calculation"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. Numeric Calculations,  
+  4. String Calculations,  
+  5. Date Calculations,
+  6. Table Calculations,
+  7. LOD Expressions,
+  8. Types of LOD,
+  9. Summary,
+  ]
+---
+
+# **Chapter 6**
+
+
+# **Tableau Calculation**
+
+ 
+
+
+## 1. Overview
+
+In Tableau calculation, one can generate new data from existing data in the data source by utilizing calculated fields. Whenever you develop a calculated field, you are effectively adding a fresh field (or column) in the data source, whose values or members are decided by a calculation that users control.
+
+ 
+
+
+## 2. Scope of the tutorial
+
+This tutorial will cover
+
+
+
+* Numeric Calculations
+* String Calculations
+* Date Calculations
+* Table Calculations
+* LOD Expressions
+
+ 
+
+
+## 3. Numeric Calculations
+
+Various built-in functions that are present in the formula editor are implemented by Tableau to perform numerical calculations.
+
+ 
+
+**Create Calculated Field**
+
+Navigate to the Analysis option when linked to Sample-superstore, then select "Create Calculated Field."
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-1.PNG"></img>
+
+
+**Calculation Editor**
+
+The last step shows a calculation editor that displays a list of all Tableau's functions. The dropdown setting can be changed so that only functions relating to numbers are displayed.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-2.PNG"></img>
+
+
+**Create Formula**
+
+Generate a formula that subtracts the discount from the profit to compare the difference with both profit and discount for various product delivery systems. Add the name profit and discount to this field.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-3.PNG"></img>
+
+
+**Utilizing a Calculated Field**
+
+By sliding it into the Rows shelf, the calculated field mentioned above may be utilized in the view. It generates a bar graph showing the variation in profit and discount for various delivery options.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-4.PNG"></img>
+
+
+**Applying Aggregate Calculations**
+
+Utilizing the aggregate function, one can build a calculated field similar to how we did previously. Create AVG(sales) numbers for various ship modes here. Fill up the calculation editor with the formula.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-5.PNG"></img>
+
+
+One will receive the following view after selecting OK and moving the Avg Sales field to the Rows shelf.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-6.PNG"></img>
+
+
+
+## 4. String Calculations
+
+To execute string operations like comparing, concatenating, changing a few elements from a string, etc., Tableau offers a variety of built-in string functions. The techniques to generate a calculation field and insert string functions into it are as follows.
+
+ 
+
+**Create Calculated Field**
+
+Navigate to the Analysis option when linked to Sample-superstore, then select "Create Calculated Field."
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-7.PNG"></img>
+
+
+**Calculation Editor**
+
+The last step launches a calculation editor that displays a list of all Tableau's functions. By changing the drop-down selection, you can only view string-related functions.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-8.PNG"></img>
+
+
+**Create a Formula**
+
+Consider that one wishes to learn about the sales in the city beginning with the letter "o." Start creating the formula for all this as displayed in the image below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-9.PNG"></img>
+
+
+**Utilizing a Calculated Field**
+
+Drag the newly generated field to the Rows shelf and the Sales field onto the Columns shelf to see it in use. The Sales figures are displayed in the following image.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-10.PNG"></img>
+
+
+
+## 5. Date Calculations
+
+One important variable that is frequently utilized in the majority of data analysis situations is the date. As a result, Tableau has many built-in functions that deal with dates. Simple date manipulations like adding or removing days from the date are possible. Dates may be utilized in sophisticated expressions as well.
+
+Here are the procedures to build a calculation field that utilizes date functions.
+
+**Create Calculated Field**
+
+Navigate to the Analysis menu when linked to Sample Superstore, then select "Create Calculated Field" as presented in the below screenshot. 
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-11.PNG"></img>
+
+
+**Calculation Editor**
+
+The last step launches a calculation editor that presents a list of all Tableau's functions. By setting the dropdown value, you can only view Date-related functions.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-12.PNG"></img>
+
+
+**Create a Formula**
+
+Figure out all the sales volume and the variation in the date of the sale in months starting on March 21, 2009. Write the formula for this as displayed in the image below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-13.PNG"></img>
+
+
+**Utilizing the Calculated Field**
+
+One can now drag the freshly generated field to the Rows shelf to analyze its usage, and you can also drag the Sales field into the Columns shelf. Moreover, pull the Date ship with months. The data for Sales are displayed in the next screenshot.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-14.PNG"></img>
+
+
+
+## 6. Table Calculations
+
+The numbers in the entire table are subjected to these calculations. For instance, we must use a single calculation technique to calculate a running overall or running average over a whole column. Some specified rows cannot be subjected to such calculations.
+
+To make these calculations, Table provides a tool called Quick Table Calculation. Using Quick Table calculation requires the following procedures.
+
+**_Step 1_** - Drag the measure to the column shelf after selecting the measure to which the table calculation must be done.
+
+**_Step 2_** - Select the measure with the right mouse button, then select Quick Table Calculation.
+
+**_Step 3_** - To apply to the measure, select one of the following options.
+
+
+
+* Difference
+* Percent Difference 
+* Running Total
+* Percent of Total
+* Percentile
+* Moving Average
+* Rank
+* Compound Growth Rate
+* Year to Date(YTD) Total
+* Year-to-Year Growth
+* Year to Date(YTD) Growth
+
+
+## 7. LOD Expressions
+
+Instead of presenting all the information to the Tableau interface, Level of Detail (LOD) expressions are utilized to conduct refined searches including many dimensions from the data source level. Adding dimension to an existing calculated aggregate number is a simple example.
+
+
+## 8. Types of LOD
+
+LOD expressions are divided into three main categories.
+
+
+
+* Fixed LOD
+* Include LOD
+* Exclude LOD
+
+
+### **Fixed LOD**
+
+This expression utilizes the supplied dimensions to calculate values without referencing any other dimensions in the display.
+
+Example
+
+Calculate the sales volume for each state within each region. Use the equation as shown in the below screenshot to first generate the equation box titled Regional Sales.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-15.PNG"></img>
+
+
+Drag the calculated field into the Text shelf below the Marks card after shifting the Region as well as State field onto the Rows shelf. Drag the Region field over to the Color shelf as well. The result is the view that follows, which displays a set value for different conditions. This is because the predetermined region is the dimension for sales value calculation.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-16.PNG"></img>
+
+
+
+### **INCLUDE LOD Expression**
+
+In addition to the dimensions that are available in the view, INCLUDE level of detailed expressions calculates values utilizing the supplied dimensions. Determine the total sales by the state for every product subcategory.
+
+Drag the field for Sub-Category to the Rows shelf to do this. Next, as displayed in the screenshot below, type the expression on the Columns shelf. It generates the following view that combines the calculations for both dimensions.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-17.PNG"></img>
+
+
+
+### **EXCLUDE LOD Expression**
+
+Expressions for the EXCLUDE level of detail indicate which dimensions should not be included in the view level of detail. Eliminate the region from the monthly sales calculation. Write the formula as displayed in the picture below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-18.PNG"></img>
+
+
+One may obtain the final view again for EXCLUDE LOD as displayed in the below picture by dragging the necessary fields to the corresponding shelves.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/TC-19.PNG"></img>
+
+
+
+## 9. Summary
+
+Table calculations in Tableau are a specific kind of calculated field that performs calculations utilizing the local data. They are calculated using the information that is presently available in the visualization and doesn't take into account any measure or dimension that has been filtered out.
+

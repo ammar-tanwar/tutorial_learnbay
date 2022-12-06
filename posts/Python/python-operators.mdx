@@ -1,0 +1,344 @@
+---
+title: "Python Operators"
+desc: "Python Operators"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 21, 2022"
+infoP: "Python Operators"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 21, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Operators : "
+id: "python-operators"
+tableData:
+  [
+  1. Overview,
+  2. Scopes of this tutorial,  
+  3. What is a boolean in Python?,  
+  4. Python bool() method,  
+  5. Boolean Operators,
+  ]
+---
+
+
+# **Chapter 4: (c)**
+
+
+# **Python Operators**
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/main+banner.jpg"></img>
+
+
+
+## 1. Overview
+
+In mathematics, an operator is a symbol that stands in for action. The same is true for using Python operators to carry out specific tasks on values and variables. Each symbol or operator has a unique operation.
+
+
+## 2. Scopes of this tutorial
+
+This will cover
+
+
+
+* Defining an Operator in python
+* Different kinds of operators in python
+
+
+## 3. In Python, what exactly is an operator?
+
+Operators are unique symbols that act as a stand-in for the values of operands. In Python, variables are called operands which are also the objects of operators.
+
+Example
+
+The operator "+" is applied to both operands ‘s’ and ‘f’ as part of the expression "s+f". 
+
+
+## 4. What are the various types of operators in python?
+
+In Python, there are seven different kinds of operators. Let's discuss  each of them separately:
+
+
+
+* Arithmetic operator
+* Comparison or Relational operator
+* Assignment operator
+* Bitwise operator
+* Logical operator
+* Identity operator
+* Membership operator
+1. **Arithmetic Operators in Python**
+
+There are seven different arithmetic operators in Python, also known as binary operators because they operate on two operands. It is a fundamental mathematical operation.
+
+
+
+* Addition (+)
+* Subtraction (-)
+* Multiplication (*)
+* Float Division (/)
+* Modulus (%)
+* Exponent (**)
+* Floor Division (//)
+
+Example of Arithmetic operator
+
+
+```
+# Addition				#Division Floor
+x = 20					x = 20
+y = 25					y = 5
+print(x+y)				print(x//y)
+45						4
+
+# Subtraction				# Modules
+x = 50					x = 30
+y = 30					y = 7
+print(x-y)				print(x%y)
+20						2
+
+# Multiplication			# Exponents
+x = 100					x = 5
+y = 6					y = 3
+print(x*y)				print(x**y)
+600						125
+
+# Division Float 
+x = 40
+y = 5
+print(x/y)
+8.0
+
+```
+
+
+
+2. **Comparison or Relational Operator in Python**
+
+The comparison operator, also referred to as a relational operator, is used to determine whether two values are equal, greater, or lesser, among other comparisons. These operators generate either True or False results based on the values that are being compared..
+
+
+
+* Equals operators (==)
+* Not Equals operator (!=)
+* Greater than(>)
+* Lesser than(&lt;)
+* Greater than or equal to(>=)
+* Lesser than or equal to(&lt;=)
+
+Example
+
+
+```
+# Equals					#Not Equals
+x = 20					x = 20
+y = 20					y = 5
+print(x==y)				print(x!=y)
+True						True
+
+# Subtraction				# Modules
+x = 50					x = 30
+y = 30					y = 7
+print(x>y)				print(x<y)
+True						False
+
+# Greater than equal to		# Lesser than equal to
+x = 100					x = 5
+y = 6					y = 3
+print(x>=y)				print(x<=y)
+True						False
+
+```
+
+
+
+3. **Assignment operator in Python**
+
+An assignment operator is used to assign values to variables. The outcome of these activities can be saved into a variable later.
+
+Example
+
+x = 5
+
+
+```
+
+#Assign value				#Modulus
+y = x					y %= x
+print(y)					print(y)
+
+#Add and assign value		# Floor division 
+y += x					y //= x
+print(y)					print(y)
+
+#Subtract					#Exponentiation
+y -= x					y **= x
+print(y)					print(y)
+
+#Multiplication			#Division
+y *= x					y /=x
+print(y)					print(y)
+
+#Right shift				#left shift
+y >>= x					y <<= x
+print(y)					print(y)
+
+5						0.0
+10						0.0
+5						0.0
+25						0.0
+
+```
+
+
+
+4. **Logical operators in Python**
+
+Python's "logical operators" are the symbols or letters used in conditional statements. Logical operators result in ‘True’ or ‘False.’ The ‘AND,’ ‘OR,’ and ‘NOT’ operations can be executed by them. False represents 0 in the Logical Operator, and True represents 1.
+
+Python has three logical operators.
+
+
+
+* AND Logic
+* OR Logic
+* Not Logic
+
+Example
+
+
+```
+x = True
+y = False
+
+# Print x and y is True
+print(x and y)
+
+# Print x or y is False
+print(x or y)
+
+# Print not x is False
+print(not x)
+
+Output
+False
+True
+False
+
+```
+
+
+
+5. **Bitwise Operator in Python**
+
+Bitwise operators are unique operand bits (0 and 1). The binary digits 0 and 1 that represent the values are known as bits. It is performed while converting integers to the binary number system. The operations are carried out bit by bit after the integers are modified to binary digits. It is possible to convert binary numbers to decimal numbers and vice versa.
+
+Note: The Bitwise operator can only be utilized with integers.
+
+Example
+
+
+```
+x = 30
+y = 20
+
+#Bitwise AND operation
+print(x & y)å
+
+#Bitwise OR operation
+print(x | y)
+
+#Bitwise NOT operation
+print(~x)
+
+#Bitwise XOR operation
+print(x ^ y)
+
+#Bitwise right shift operation
+print(x >> 2)
+
+#Bitwise left shift operation
+print(x << 2)
+
+6
+30
+-31
+24
+1
+480
+```
+
+
+
+
+6. **Membership Operator in Python**
+
+This allows us to identify whether the items are part of the sequence or not. It checks whether a string, list, tuple, or dictionary is present. The following list includes two membership operators:
+
+Example
+
+
+```
+x = 45
+y = 20
+list = [10, 20, 30, 40, 50]
+
+if(x not in list):
+    print("x is not in the given list")
+else:
+    print("x is in the given list")
+
+if(y in list):
+    print("y is in the given list")
+else:
+    print("y is not in the given list")
+
+Output
+x is not in the given list
+y is in the given list
+```
+
+
+
+
+7. **Identity Operator in Python**
+
+This allows us to find the object's memory location internally and return the identity number, an integer. The id() function can be used to find an object's position in memory.
+
+Example
+
+
+```
+x = 10
+y = 20
+z = x
+
+print(x is not y)
+print(x is z)
+
+Output
+True
+True
+```
+
+
+
+## 5. Summary
+
+Operators are nothing but symbols to perform the operation with operands. Also, there are different types of operators for different operations in python.

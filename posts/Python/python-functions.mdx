@@ -1,0 +1,440 @@
+---
+title: "Python Functions"
+desc: "Python Functions"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 26, 2022"
+infoP: "Python Functions"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 26, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Functions : "
+id: "python-functions"
+tableData:
+  [
+  1. Overview,
+  2. Scope of the tutorial,  
+  3. Defining a function in Python,  
+  4. What categories of functions are there in Python?,  
+  5. Summary,
+  ]
+---
+
+# **Chapter 6 (a)**
+
+
+# **Python Functions**
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python+function.jpg"></img>
+
+
+
+## 1. Overview
+
+Functions are something Python programmers use to transform data efficiently before using it in the most efficient way possible. A Python function is also one that runs the block just when it is triggered.
+
+You can split your code into smaller sections using " Python functions" programs. When you have to write the same code several times, you may put it in a function and call it anytime you need to run it.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Python function definition
+* Categories of Python functions
+    * Built-in functions
+    * User-defined functions
+
+
+## 3. Defining a function in Python
+
+A Python function is a collection of instructions that are executed when they are called. The necessity to write the same code repeatedly is avoided by using a collection of reusable code that can be accessed from anywhere in a program. A function assists in the creation of modular code by programmers. A function that is written inside a class is transformed into a method. The function can be used after it has been created, we could utilize it by calling fun().
+
+The essential functionality is available via a function. The following are basic guidelines for defining a Python function:
+
+
+
+* A function is started with the 'def' keyword, after which it is followed mostly by the name and the parenthesis "()".
+* Within the parenthesis, you may enter any arguments or parameters.
+* The initial function statement might be made more flexible or docstring for verification purposes.
+* Every function that contains a code block begins with a colon (:) which is indented.
+* A function is maintained by the return(expression) statement, which returns an expression to a caller.
+
+**Example: Define a function**
+
+
+```
+# A simple python function
+def fun():
+    print("Hello! Welcome to python class")
+```
+
+
+**Example2: Calling a function**
+
+Once a function has been built, it may be called by using its name, which is headed by a parenthesis that holds the function's specific parameters.
+
+
+```
+# A python function
+
+def fun():
+    print("Hello! Welcome to python class")
+
+# Code to call a function
+fun()
+
+Output
+Hello! Welcome to python class
+```
+
+
+Example3:
+
+
+```
+It displays both the initial and successive calls for the same function.
+def my_function(Fun):
+      print(Fun + "Learnbay")
+
+my_function("Hello! ")
+my_function("Welcome ")
+my_function("python ")
+my_function("class ")
+
+Output
+Hello! Learnbay
+Welcome Learnbay
+python Learnbay
+class Learnbay
+```
+
+
+
+## 4. What categories of functions are there in Python?
+
+There are two key kinds of functions in Python.
+
+
+
+* Built-in functions
+* User-defined functions
+
+
+### **Built-in functions**
+
+Default functions that are built within Python software are considered "Built-in functions". A variety of built-in functions are available in Python. Some of the built-in functions include
+
+
+
+* string 
+* set 
+* bin 
+* int 
+* list 
+* tuple 
+* float
+* oct 
+* hex 
+* dictionary
+
+
+### **User-defined functions**
+
+User-defined Python functions are those that you create especially to define particular tasks. It may also serve as someone else's library. When you are working on a bigger project, you may split your workload by keeping up with several tasks.
+
+There are three elements to a user-defined method.
+
+
+
+* Function definition
+* Function body
+* Function call
+
+Example
+
+
+```
+# program for  user-defined functions 
+
+def multiply_num(x,y):
+    mul = x*y
+    return mul
+num1 = 8
+num2 = 3
+print("The Product of: ", multiply_num(num1,num2))
+
+Output
+The Product of: 24
+```
+
+
+**Function Definition**
+
+If there are any parameters, we define them here along with the function's name.
+
+Syntax- def function_name():
+
+Example
+
+def add()
+
+**Function body**
+
+
+
+* It is a part of how a function is defined.
+* It is where logic is used in this situation.
+
+Example
+
+
+```
+def add(): # Function definition
+x=10
+y=20 Function body
+z=x+y
+print(z) 
+```
+
+
+**Function Call**
+
+
+
+* To enable the function definition to function, it is used.
+* The function definition is only effective when called.
+* Function calling is the process of using a function.
+
+Syntax - function_name()
+
+Example
+
+
+```
+def add():                            # Function definition and function body
+a=int(input("Enter a number- "))
+b=int(input("Enter a number- "))
+c=a+b
+print(c)
+
+Output
+Enter a number- 10
+Enter a number- 50
+60
+```
+
+
+
+### **Types of user-defined functions**
+
+_Non-parameterized functions_- The functions that have no parameters or arguments.
+
+
+
+* _Parameters_- The variables that are passed inside the () of the function definition.
+* _Arguments-_ The variables that are passed inside the () of the function call.
+
+Example
+
+
+```
+#Create a function with the name num_list that creates a list of integer values from 1 to 50
+
+# def num_list():
+#     lst=[]
+#     for i in range(1,51):
+#         lst+=[i]
+#     print(lst)
+    
+# num_list()
+
+def num_list():
+    lst=[i for i in range(1,51)]
+    print(lst)
+    
+num_list()
+
+Output
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+```
+
+
+
+### **Parameterized functions**
+
+The functions that have parameters and the arguments
+
+Arguments appear in four different types.
+
+
+
+* Required arguments
+* Default arguments
+* Keyworded arguments
+* variable-length arguments
+
+
+### **Required positional arguments**
+
+
+
+* The count of variables in the function definition should match the number of variables given by either function call.
+* The parameters' variables are given the argument variables' values in the order in which they are positioned.
+* The function call receives a value from the return statement.
+* We assign the function call to a variable and use that variable to manage the value returned by the function definition.
+
+Example
+
+
+```
+def add(num_1,num_2):
+    sum=num_1+num_2
+    return sum
+
+a=int(input("Enter the first value "))
+b=int(input("Enter the second value "))
+
+x=add(a,b)
+print(x)
+
+Output
+Enter the first value 30
+Enter the second value 23
+53
+```
+
+
+Default arguments
+
+
+
+* Whenever a parameter's value is assigned during the definition of a function, it is referred to as a default argument.
+* If no argument is provided for the default variable, the default value (designated in the function description) is used. 
+* The default value needs to be entered after the other arguments.
+
+Example
+
+
+```
+def course(a,b,c='MCA'):
+    print(a,b,c)
+    
+course('MBA','M.Tech')
+
+Output
+MBA M.Tech MCA
+```
+
+
+Keyworded arguments
+
+
+
+* The term "keyworded argument" refers to arguments passed in key=value format.
+* In this scenario, the variable name in the definition and call must be the same.
+* The order of the values can be anything because there is no set structure.
+* The positional arguments should be followed by the keyword arguments.
+
+Example
+
+
+```
+def course(a,b,c):
+    print(a,b,c)
+    
+course(a="DS",b='B.Tech',c='MBA')
+
+Output
+DS B.Tech MBA
+```
+
+
+Variable Length Argument (Arbitrary Number of Arguments)
+
+
+
+* We utilize it when the number of variables is unknown.
+* It accepts how many arguments we pass.
+* The values are kept as a tuple.
+
+Syntax - def function_name(*parameter):
+
+Example
+
+
+```
+def course(*name):
+    for i in name:
+        print(i,type(i))
+        
+course('MBA','MCA','BCA','BBA','B.Tech','M.Tech',123,10+20j,[1,2,3,4,5])
+
+Output
+MBA <class 'str'>
+MCA <class 'str'>
+BCA <class 'str'>
+BBA <class 'str'>
+B.Tech <class 'str'>
+M.Tech <class 'str'>
+123 <class 'int'>
+(10+20j) <class 'complex'>
+[1, 2, 3, 4, 5] <class 'list'>
+```
+
+
+
+### Recursive Functions in Python
+
+What does recursion in Python mean?
+
+Recursion is the process of defining something only by itself. A function can call other functions. Using a function allows one to get their function.
+
+Example
+
+
+```
+# To find the factorial number
+def calc_fact(x):
+    if x == 1:
+        return 1
+    else:
+        return(x * calc_fact(x-1))
+num = 7
+print ("Factorial of", num, "is", calc_fact(num))
+
+Output
+Factorial of 7 is 5040
+```
+
+
+In the example above, since it executed the function by itself the Python function calc fact() is recursive. The function call increases the factorial value by one so that it is equal to one.
+
+**_Note: The function will call itself continuously if a recursive function does not specify a base condition that stops the recursion._**
+
+
+## 5. Summary
+
+An accurate and efficient method of producing code with the help of function would be more beneficial to a programmer than complications. A better choice would be functions, which allow you to split the program into smaller programs.
+
+
+
+

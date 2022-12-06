@@ -1,0 +1,243 @@
+---
+title: "The Basics of Finding and Dealing with missing values"
+desc: "The Basics of Finding and Dealing with missing values"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "January 27, 2023"
+infoP: "The Basics of Finding and Dealing with missing values"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "Jan 27, 2023"
+tag: "statistic"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "statistic",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "The Basics of Finding and Dealing with missing values : "
+id: "the-basics-of-finding-and-dealing-with-missing-values"
+tableData:
+  [
+  1. The Overview of The Tutorial, 
+  2. Scope of The Tutorial,  
+  3. Explaining Missing Value,  
+  4. Types of Missing Values, 
+  5. How do we avoid missing data,
+  6. Approaches for treating missing values,
+  7. Conclusion,
+  ]
+---
+
+# **Chapter 9: (a)**
+
+
+# **The Basics of Finding and Dealing with missing values**
+
+
+## 1. The Overview of The Tutorial
+
+Missing values are a significant concern across many datasets from the real world. This tutorial provides information on missing values, their representation, and the numerous causes of missing values. Together with defining multiple types of missing values, it also presents an overview of various methods for dealing with missing values.
+
+
+## 2. Scope of The Tutorial
+
+
+
+* Explaining Missing Value
+* Types of Missing Values
+* How do we avoid missing data
+* Approaches for treating missing value
+
+
+## 3. Explaining Missing Value
+
+The values or data which are not stored or does not exist throughout one or more variables within provided dataset are considered as missing values.
+
+An example of the missing values from the flight passenger dataset is presented below. The columns including some missing values are shown.
+
+In the given table where the data is not available are the missing values cells.
+
+
+<table>
+  <tr>
+   <td>PassengerID
+   </td>
+   <td>Boarded
+   </td>
+   <td>Class
+   </td>
+   <td>Gender
+   </td>
+   <td>SeatNo
+   </td>
+   <td>TicketNo
+   </td>
+  </tr>
+  <tr>
+   <td>1
+   </td>
+   <td>0
+   </td>
+   <td>3
+   </td>
+   <td>male
+   </td>
+   <td>C1
+   </td>
+   <td>1001
+   </td>
+  </tr>
+  <tr>
+   <td>2
+   </td>
+   <td>
+   </td>
+   <td>1
+   </td>
+   <td>female
+   </td>
+   <td>C2
+   </td>
+   <td>1002
+   </td>
+  </tr>
+  <tr>
+   <td>3
+   </td>
+   <td>1
+   </td>
+   <td>3
+   </td>
+   <td>female
+   </td>
+   <td>
+   </td>
+   <td>1003
+   </td>
+  </tr>
+  <tr>
+   <td>4
+   </td>
+   <td>1
+   </td>
+   <td>
+   </td>
+   <td>female
+   </td>
+   <td>C4
+   </td>
+   <td>1004
+   </td>
+  </tr>
+  <tr>
+   <td>5
+   </td>
+   <td>0
+   </td>
+   <td>3
+   </td>
+   <td>male
+   </td>
+   <td>C5
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>6
+   </td>
+   <td>0
+   </td>
+   <td>3
+   </td>
+   <td>male
+   </td>
+   <td>
+   </td>
+   <td>1006
+   </td>
+  </tr>
+</table>
+
+
+
+## 4. Types of Missing Values
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/statistics/Figure+1+The+central+limit+theorem.jpg"></img>
+
+
+### **Missing Completely At Random (MCAR)**
+
+The possibility of missing data for MCAR becomes similar across all observations.
+
+There is no relation between specific missing data throughout this circumstance and any additional detected or undetected data that is not recorded values in the provided dataset. 
+
+Missing values are completely unconnected from other data and no pattern could be found.
+
+
+### **Missing At Random (MAR)**
+
+Missing at random (MAR) indicates that there exists an association between the missing data as well as many other values or data, which signifies that the reason of the missing values is sometimes accounted for through variables for which we have complete information.
+
+In this case, not every one of the occurrences is missing any data. Only subgroups of the data it is missing, and the values which are missing reflect any type of pattern.
+
+
+### **Missing Not At Random (MNAR)**
+
+Values are missing and generally dependent on unobserved data.
+
+When missing data possesses structure or pattern as well as other observed data cannot explain it, therefore it is missing not at random (MNAR).
+
+The missing data could be defined as MNAR when it does not come into the MCAR or MAR classes.
+
+
+## 5. How do we avoid missing data
+
+Missing data are often the consequence of attrition, non-response, or improper research procedure design. Keeping it simple for users those are provided data is a good parameter whilst designing the study.
+
+The following advice would assist us in eliminating missing data:
+
+
+
+* Reducing the number of follow-ups.
+* Reducing the amount of data obtained.
+* Generate user-friendly data capture forms.
+* Apply statistical validation approaches
+* Give an indication
+
+After collecting the data, it's important to securely maintain it and to keep multiple backups.
+
+
+## 6. Approaches for treating missing values
+
+Accepting, dismissing, or rebuilding the missing data are typically our choices whenever attempting to tidy our data.
+
+We should consider how to deal with each case of missing data based on our assessment of why the data are missing.
+
+
+
+* Do these missing data originate through random or non-random influences?
+* Are the missing data null or zero values, or a combination of both?
+* Was the testing or analysis badly constructed?
+
+
+**Note:**
+
+When the data includes MCAR or MAR, it could be accepted or left completely in its current state. MNAR data, consequently, could therefore involve more involved processing.
+
+
+## 7. Conclusion
+
+Evaluating the collected data and determining all the missing values is the fundamental step when dealing with missing values.
+
+This is all about finding and dealing with missing values. Our following topic will be using z-scores to find outliers.

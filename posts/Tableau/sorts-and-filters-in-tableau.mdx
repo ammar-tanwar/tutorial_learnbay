@@ -1,0 +1,449 @@
+---
+title: "Sorts and Filters in Tableau"
+desc: "Sorts and Filters in Tableau"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 16, 2022"
+infoP: "Tableau"
+spanH2: "Core Concepts"
+bottomP: "A key component of data analysis is data sorting. Tableau filters and sorting allows you to sort the dimensions or data from the columns. Data sorting is accomplished utilizing the Sort Fields function when the data is uploaded to Tableau."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 16, 2022"
+tag: "Tableau"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Tableau",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Sorts and Filters in Tableau : "
+id: "sorts-and-filters-in-tableau"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. Basic Filters,  
+  4. Quick Filters in Tableau,  
+  5. Context Filters,
+  6. Condition Filters,
+  7. Top Filters,
+  8. Filter Operation,
+  9. Summary,
+  ]
+---
+
+# **Chapter 7**
+
+
+# **Sorts and Filters in Tableau**
+
+
+## 1. Overview
+
+Sorting allows users to customize the arrangement of a table's dimension components and frequently reveals correlations between fields. The technique of filters in Tableau involves eliminating a specific value or a set of values from a result set. The Tableau filtering feature supports both basic field value instances and complicated calculation or context-based filters.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Basic Sorting
+* Basic Filters
+* Quick Filters
+* Context Filters
+* Condition Filters
+* Top Filters
+* Filter operations
+
+Data sorting is a fundamental aspect of data analysis. Data from the columns, known as dimensions, can be sorted using Tableau. Tableau performs the sorting in one of two methods.
+
+
+
+* **_Computed Sorting_** - Utilizing the sort dialogue button, the sort is instantly assigned to an axis.
+* **_Manual Sorting_** - Dragging dimension fields close to one another in an ad hoc manner is utilized to change the order in which they display.
+
+
+### **Computed Sorting**
+
+In this type of Tableau sorting approach, the column to be sorted is selected, and the sort is then immediately applied to utilize the sort dialog box. One can choose the column on which to perform the sort and decide whether to use a descending or ascending order.
+
+Example
+
+By utilizing the dimensions order date as well as Subcategory as displayed below, choose Sample-Superstore to sort the field called discount. The result displays each year's worth of subcategory names in decreasing order.
+
+
+### **Manual Sorting**
+
+By performing this, the visualization aspects on the screen change the order. 
+
+For instance, one might wish to display the sales volume of various product categories in descending order, but then one can choose the order individually. This sort does not correspond to the actual value of the text or numbers; rather, it represents the user's preferred ordering. They are referred to as manual sorting as a result.
+
+Example
+
+Although the Home Office category has the lowest sales volume, you shift it below the Consumer section.
+
+
+## 3. Basic Filters
+
+The process of filtering includes deleting a specific value or set of values within a result group. The Tableau filtering function supports both basic field value instances and complex calculation and context-based filters.
+
+Tableau has three different categories of basic filters. They are listed below.
+
+
+
+* Filter Dimensions
+* Filter Measures
+* Filter Dates
+
+
+### **Filter Dimensions**
+
+On the dimension fields, these filters are being used. Filtering utilizing logical expressions with greater-than or less-than conditions depending on categories from text or numeric values is a typical example.
+
+**_Example_**
+
+We can apply dimension filters to the item subcategory utilizing the Sample - Superstore data source. We developed a view to display profit for every product category based on the delivery strategy. Drag the measured field "profit" to the Columns shelf and the dimension field "Sub-Category" to the Rows shelf for it.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF1.PNG"></img>
+
+
+The Filter dialog box will be opened when you drag the Sub-Category dimensions to the Tableau Filters shelf. To deselect every section, choose None from the list's bottom buttons. Then, choose “Exclude” from the menu in the dialog box's lower right corner. Lastly, choose Labels and Storage, then enter OK. The result is presented in the next image without the two mentioned categories.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF2.PNG"></img>
+
+
+
+### **Filter Measures**
+
+The measure fields are subject to these filters. The calculations performed on the measure fields serve as the foundation for filtering. Therefore, although you just use values to filter in dimension filters, calculations depending on columns are utilized in measure filters.
+
+**_Example_**
+
+Implementing dimension filters to the profits mean can be done utilizing the Sample - Superstore data source. Generate a view first with ship mode, subcategory, and Mean of Profit as dimensions, as demonstrated in the below image.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF3.PNG"></img>
+
+
+The AVG (profit) result should be added to the filter pane. Select Average as the filtering option. Then select "At least" and enter a number to filter the rows that match these conditions.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF4.PNG"></img>
+
+
+After completing the previous processes, we land at the final view below, which only displays the subcategories with an average profit of more than 20.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF5.PNG"></img>
+
+
+
+### **Filter Dates**
+
+Adding the date field to Tableau results in three alternative interpretations of the date field. It can create a filter by utilizing an actual date, a set of dates, or a relative date in reference to today. Whenever a date field is taken out from the filter window, each of these possibilities is displayed.
+
+**_Example_**
+
+Using the order date there in the column shelf as well as the profit within the rows shelf of the view we develop using the example Superstore data source.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF6.PNG"></img>
+
+
+After that, drag the "order date" column to the filters shelf and select a variety of dates within the filter dialog box. Select the dates as displayed in the image below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF7.PNG"></img>
+
+
+After selecting OK, the output for the selected dates is displayed in the final view, as shown in the image below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF8.PNG"></img>
+
+
+
+## 4. Quick Filters in Tableau
+
+By using right-click button on the dimension or measure, several filter types within Tableau are instantly accessible. These filters generally called Quick filters, are efficient enough to address the majority of normal filtering demands.
+
+The quick filters could be accessed using the image in the following.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF9.PNG"></img>
+
+
+The list of different quick filters and how to utilize them is presented below.
+
+
+<table>
+  <tr>
+   <td><strong>Filter Name</strong>
+   </td>
+   <td><strong>Purpose</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Single Value(List)
+   </td>
+   <td>Choose one value from a list at a time.
+   </td>
+  </tr>
+  <tr>
+   <td>Single Value(Dropdown)
+   </td>
+   <td>Choose only one item from a drop-down list.
+   </td>
+  </tr>
+  <tr>
+   <td>Multiple Values(List)
+   </td>
+   <td>Choose one or even more values from a list.
+   </td>
+  </tr>
+  <tr>
+   <td>Multiple Values(Dropdown)
+   </td>
+   <td>Choose one or even more values from a dropdown list.
+   </td>
+  </tr>
+  <tr>
+   <td>Multiple Values(Custom List)
+   </td>
+   <td>Perform a search and choose one or even more values.
+   </td>
+  </tr>
+  <tr>
+   <td>Single Value(Slider)
+   </td>
+   <td>One can choose a single value by dragging a horizontal slider.
+   </td>
+  </tr>
+  <tr>
+   <td>Wildcard Match
+   </td>
+   <td>Choose values that include the desired character.
+   </td>
+  </tr>
+</table>
+
+
+Example
+
+For a quick filter, think about the Sample-Superstore data source. In the illustration below, choosing sales as the column and sub-category as the row results in a horizontal bar chart by default. 
+
+Drag the subcategory field onto the filters pane after that. 
+
+Next to the chart, one can see every subcategory. Apply wildcard filtering by choosing all subcategory names that begin with "a" with an expression a*.
+
+The output of implementing this filter, in which only the subcategories beginning with "A," is presented on the screen below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF10.PNG"></img>
+
+
+**_Clearing the Filter_**
+
+After applying the filter and completing the analysis, utilize the clear option to get rid of it. 
+
+To do this, open the filter pane, right-click the field's name, and select Clear Filter, as displayed in the image below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF11.PNG"></img>
+
+
+
+## 5. Context Filters
+
+Normal Tableau filters operate independently from one another. It indicates that each and every filter analyzes all rows in the source data and produces a unique output. 
+
+The second filter should just process the records that the first filter returned in certain instances, though. The second filter in this situation is considered to as a dependent filter since it only processes the information that makes it past the context filter. Contextual filters are utilized for two major reasons.
+
+
+
+* Performance improvement
+* Creates a top N or Dependent numerical filter
+
+**_Performance Improvement_**
+
+The queries might take a long time if you have many filters configured or a huge data source. To increase the speed, one can configure one or even more context filters.
+
+**_Creates a top N or Dependent numerical filter_**
+
+You can first use a context filter to assure that only the relevant data has been included, and then apply a numerical or top N filter.
+
+**_Context Filter Creation_**
+
+The top 10 Sub-Category items for the Furniture category can be found utilizing the Sample-superstore. The methods listed below can help you accomplish this purpose.
+
+**_Step 1_**
+
+The measure Sales must be shifted to the Columns Shelf, as well as the dimension Sub-Category must be shifted to the Rows Shelf. The chart type must be set to horizontal bars. Back on the Filters shelf, drag the dimension Sub-Category.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF12.PNG"></img>
+
+
+**_Step 2_**
+
+Go to the fourth tab, Top, by right-clicking the field Sub-Category there in the filter shelf. Pick the option based on the field. Select the Top 10 by Sales Sum option using the following drop-down menu, as indicated in the actual photo.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF13.PNG"></img>
+
+
+**_Step 3_**
+
+To add a filter to the shelf, drag the dimension Category. Select Furniture from the selection on the general tab by right-clicking to change. As you can see, the search result displays three product subcategories.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF14.PNG"></img>
+
+
+**_Step 4_**
+
+Add to Context can be selected by right-clicking the Category: Furniture filter. The end result is the subcategory of Furniture products that are in the top ten subcategories among all the products, as displayed in the end output.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF15.PNG"></img>
+
+
+
+## 6. Condition Filters
+
+Adding some parameters to previously existing filters is one of Tableau's key filtering choices. These criteria may be pretty simple, such as limiting the results to sales that are above a provided limit, or they could be more complicated and based on a formula. A range filter could also be created utilizing the requirements.
+
+**_Condition Filter Creation_**
+
+Let's identify the product subcategory throughout all sectors whose sales total more than one million utilizing the Sample-superstore. These are the actions to be taken in order to attain this goal.
+
+**_Step 1_**
+
+Sales measure as well as the dimension segment must be shifted to the Column shelf. The dimension Sub-Category must be shifted to the Rows shelf. Select the options for a horizontal bar chart.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF16.PNG"></img>
+
+
+**_Step 2_**
+
+Add the Filters Shelf with the dimension Sub-Category. Right-click to modify, then select the Condition tab. Select the radio options by field here. Choose Sales, Sum, as well as greater than equal to sign from the drop-down menu, and then enter the number 100,000.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF17.PNG"></img>
+
+
+After finishing the above-mentioned two levels, we are left with a chart that only displays the product subcategories that have the necessary sales volume. Moreover, this is presented for each segment that is accessible and satisfies the requirement.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF18.PNG"></img>
+
+
+
+## 7. Top Filters
+
+To decrease the range of outputs provided by a filter, utilize Tableau's Top option. For illustration, one might just want the top 10 numbers from a vast collection of sales data. This filter can be implemented either by generating a formula or by utilizing the built-in options for restricting the records in various ways. 
+
+**_Creating a Top Filter_**
+
+Identify the product subcategory that reflects the top 5 sales amounts utilizing the Sample-superstore. The following are the measures to be taken in order to achieve this goal.
+
+**_Step 1_**
+
+Drag the Measure Sales into the Column shelf and the Dimension Sub-Category into the Row shelf. Select a horizontal bar chart as the chart type.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF19.PNG"></img>
+
+
+**_Step 2_**
+
+Navigate to the Top tab by selecting the field Sub-Category with the right mouse button. Select the second radio feature by field in this menu. Select the Top 5 by Sales Sum options from the drop-down menu.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF20.PNG"></img>
+
+
+One will receive the below chart, which displays the top 5 Sub-Categories of goods by sales, after completing the mentioned step.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF21.PNG"></img>
+
+
+
+## 8. Filter Operation
+
+Data must be properly filtered as part of any analysis and visualization process. To satisfy these objectives, Tableau offers a huge selection of filtering solutions. 
+
+There are multiple built-in functions for applying filters to the entries utilizing both dimensions as well as measurements. The measure filter option provides a comparison and numerical calculations. One can select string values from the list or from the custom list of values while utilizing the filter option for dimensions. You will understand the various choices as well as how to change and remove the filters.
+
+**_Creating Filters_**
+
+Drag the necessary column to the Filters shelf above the Marks card to set a filter. 
+
+Drag the dimension Sub-Category into the Rows shelf and the measure sales into the Columns shelf to generate a horizontal bar chart. 
+
+Drag the sales measurement once again into the Filters shelf. 
+
+Right-click the filter once it has been created and select the modified filter options from the pop-up menu.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF22.PNG"></img>
+
+
+Filters for Measures creations
+
+Measures are fields with numbers. Therefore, selecting values is necessary for the filter option for these fields. The relevant measure filters are provided by Tableau.
+
+**_Range of values_** - specifies the range's lowest and highest values, which will appear in the presentation.
+
+**_At Least_** - All numbers which are greater than or equal to a certain minimum value are included.
+
+**_At Most_** - Contain all numbers which are less than or equal to a defined maximum value.
+
+**_Special_** - Filters on Null values to assist with. Only non-null values, all values, or null values must be included.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF23.PNG"></img>
+
+
+Creating Filters for Dimensions
+
+Dimensions are informative fields with string values. The following filters are available for dimensions in Tableau.
+
+**_General Filter_** - Supports the selection of particular values from a list.
+
+**_Wildcard Filter_** - Enables the use of wildcards to filter every string value beginning with cha, such as cha*.
+
+**_Condition Filter_** - applies constraints like the number of sales.
+
+Top Filter - selects the files having a group of top values.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF24.PNG"></img>
+
+
+Clearing Filters
+
+By selecting the clear filter option, filters could be quickly removed.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/SF25.PNG"></img>
+
+
+
+## 9. Summary
+
+Tableau filters assist in selecting measure or date ranges for the information you want to analyze, cleaning up raw data, deleting unnecessary dimension members, and decreasing the size of the information for efficiency purposes. Sorting allows you to customize the arrangement of a table's dimension members and frequently exposes connections between fields.
+
+

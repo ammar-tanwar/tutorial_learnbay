@@ -1,0 +1,146 @@
+---
+title: "Python Map"
+desc: "Python Map"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 27, 2022"
+infoP: "Python Map"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 27, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Map : "
+id: "python-map"
+tableData:
+  [
+  1. Overview,
+  2. Scope of the tutorial,  
+  3. What is the map function in python?,  
+  4. Values of the parameter,  
+  5. Python Map function using lambda function,
+  6. Summary,
+  ]
+---
+
+
+# **Chapter 7: (a)**
+
+
+# **Python Map**
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/Python+map.jpg"></img>
+
+
+
+## 1. Overview
+
+When a Python map function is applied to each item in an iterable, the map function in Python acts as an iterator and returns a result (tuple, lists, etc.). When you wish to change each iterable element using a single transformation function, you use it.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Definition of Python map() function
+* Different examples of map() function
+
+
+## 3. What is the map function in python?
+
+Each item inside an iterable is given a specific function to run by the map() method. As an argument, the item will be sent to the function.
+
+Syntax
+
+map(function, iterables)
+
+
+## 4. Values of the parameter
+
+Function - The process that will be used for each item
+
+Iterable - A collection, an iterator, or a series of objects. As long as the function contains one parameter for each iterable, you can submit as many iterables as you wish.
+
+**_Note: The map() function accepts one or more iterables as parameters._**
+
+Example
+
+
+```
+#write a Python program to demonstrate the working of a map.
+
+def addition(n):
+    return n + n
+  
+# Double all numbers using a map()
+num = (2, 4, 6, 8, 10)
+out = map(addition, num)
+print(list(out))
+
+Output
+[4, 8, 12, 16, 20]
+```
+
+
+Example 2
+
+
+```
+#write a Python program to multiply using the map.
+
+def multiplication(n):
+    return n * 5
+  
+# multiplying all numbers using a map()
+num = (2, 4, 6, 8, 10)
+out = map(multiplication, num)
+print(list(out))
+
+Output
+[10, 20, 30, 40, 50]
+```
+
+
+
+## 5. Python Map function using lambda function
+
+The lambda functions are the most typical use cases for the Python map function that you could come across. Lambda functions are anonymous, or nameless, functions. You may specify the function directly within the map() function using the lambda function.
+
+Example 
+
+
+```
+# write a program to add two lists using map and lambda
+  
+num1 = [3, 2, 1]
+num2 = [7, 8, 9]
+  
+out = map(lambda x, y: x + y, num1, num2)
+print(list(out))
+
+Output
+[10, 10, 10]
+```
+
+
+
+## 6. Summary
+
+You gained knowledge of the Python map in this tutorial. You have seen a few samples of how it works with multiple functions and iterables. The Python map() function is utilized to execute a transformation function to that of an entire iterable, which is one of the important things to keep in mind. A single map() function also accepts multiple iterables as arguments.

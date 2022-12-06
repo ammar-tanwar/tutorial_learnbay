@@ -1,0 +1,298 @@
+---
+title: "File Types And Data Types In Tableau"
+desc: "File Types And Data Types In Tableau"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 16, 2022"
+infoP: "Tableau"
+spanH2: "Core Concepts"
+bottomP: "Depending on the program used, Tableau files have a variety of file extensions. There is always one particular datatype or another included in the file's content."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 16, 2022"
+tag: "Tableau"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Tableau",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "File Types And Data Types In Tableau : "
+id: "file-types-and-data-types-in-tableau"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. File types utilized in Tableau,  
+  4. Data Types in Tableau,  
+  5. Summary,  
+  ]
+---
+
+
+# **Chapter 2**
+
+
+# **File Types And Data Types In Tableau**
+
+
+## 1. Overview
+
+Any file that is saved should have a file extension to be opened in particular applications. Also, the content in the file is always one or the other specific datatype.
+
+
+## 2. Scope of the Tutorial
+
+This tutorial covers
+
+
+
+* File types in Tableau
+* Data types in Tableau
+
+
+## 3. File types utilized in Tableau
+
+Users can save their output in Tableau by utilizing a variety of Tableau-specific file formats. Various file formats are supported by Tableau, including the following:
+
+
+<table>
+  <tr>
+   <td><strong>File Type</strong>
+   </td>
+   <td><strong>File Extension</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Tableau Workbook
+   </td>
+   <td>.twb
+   </td>
+   <td>The most frequently utilized type of file in Tableau for storing data from worksheets, dashboards, and stories.
+   </td>
+  </tr>
+  <tr>
+   <td>Tableau Packed Workbook
+   </td>
+   <td>.twbx
+   </td>
+   <td>A compressed zip file that allows individuals to distribute their work to others without access to basic information.
+   </td>
+  </tr>
+  <tr>
+   <td>Tableau Data Source
+   </td>
+   <td>.tds
+   </td>
+   <td>These files serve as shortcuts for easily accessing the frequently utilized data source. Although it does not include the actual data, it includes the connections and any alterations you've applied to it.
+   </td>
+  </tr>
+  <tr>
+   <td>Tableau Packed Data Source
+   </td>
+   <td>.tdsx
+   </td>
+   <td>A compressed file containing the data source commands and any local file data, including extraction files (.hyper or.tde), local cube files, Access files, and Excel and text files.
+   </td>
+  </tr>
+  <tr>
+   <td>Tableau Data Extract
+   </td>
+   <td>.tde or .hyper
+   </td>
+   <td>When working offline, one may utilize this to exchange information with others and perform much better because it includes a local copy of a portion of the complete dataset.
+   </td>
+  </tr>
+  <tr>
+   <td>Tableau Bookmark
+   </td>
+   <td>.tbm
+   </td>
+   <td>This provides you the opportunity to save worksheets and distribute them with everyone else so they could utilize them in their workbooks without having to begin from scratch.
+   </td>
+  </tr>
+</table>
+
+
+
+## 4. Data Types in Tableau
+
+Tableau mainly accepts seven major types of data. The data type defines the kind of content that is kept in a specific field.
+
+
+<table>
+<tr>
+<td><strong>Data Type</strong>
+</td>
+<td><strong>Icon</strong>
+</td>
+</tr>
+<tr>
+<td>Text(String) Value
+</td>
+<td>
+
+
+
+</td>
+</tr>
+<tr>
+<td>Date Value
+</td>
+<td>
+
+
+
+</td>
+</tr>
+<tr>
+<td>Date and Time
+</td>
+<td>
+
+
+
+</td>
+</tr>
+<tr>
+<td>Numeric values
+</td>
+<td>
+
+
+
+</td>
+</tr>
+<tr>
+<td>Boolean values(relational only)
+</td>
+<td>
+
+
+
+</td>
+</tr>
+<tr>
+<td>Geographic values(Used with maps)
+</td>
+<td>
+
+
+
+</td>
+</tr>
+<tr>
+<td>Cluster Group(Used with Find clusters in Data)
+</td>
+<td>
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+
+* On the Data Source screen, changing the data type for a field.
+
+The data type of the field is sometimes misinterpreted by Tableau. For instance,   a numeric type, instead of a date data type, maybe how Tableau interprets a field containing dates.
+
+On the Data Source screen, you can alter the data type for just a field that was an element of the original data source (as compared to a calculated field made in Tableau).
+
+
+
+1. Select the field's data type icon by clicking it (according to the table above).
+2. Pick a different data type from the drop-down menu:
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tableau+dt+-+1.PNG"></img>
+
+
+**_Note: Before you generate an extract, make sure to update the data types. If not, your data might not be accurate. For instance, if you build your extracts before altering the type of a column in the original data source that Tableau interprets as a floating-point field, the subsequent floating-point domain in Tableau will also have part of its precision trimmed._**
+
+**In the Data pane, modify the data type for a field.**
+
+A field's data type can be changed in the Data pane by selecting a different data type from the drop-down list by clicking the symbol to the left of the field name.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tableau+dt-2.PNG"></img>
+
+
+**For just a field in the screen, specify the data type.**
+
+Right-click the column in the Data pane, select Change Data Type, & then choose the appropriate data type in the drop-down list to update the data type of a field in a column.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tableau+dt-3.PNG"></img>
+
+
+**_Note: The database's data may often be more precise than what Tableau can simulate. An accuracy warning flashes in the status bar's upper right corner as soon as you add these data to the view._**
+
+**Data from files with a mixture of data kinds**
+
+Most columns in a CSV (comma-separated values) file, Microsoft Access, or Microsoft Excel document include values that are generally of a similar data type (Booleans, text, dates, or numbers). For each field, Tableau produces a column in the relevant section of the Data pane once you link to the file. Numbers are measurements, and text values and dates are dimensions.
+
+Moreover, the files you link to can involve columns with a mix of data kinds, such as text and numbers or dates and numbers. The mixed-value column is converted to a column with individual data type in Tableau when you link to the file. Hence, a column that includes both numbers and dates might be mapped as either a date data type or as a number data type, making it a measure(Tableau then interprets it as a dimension).
+
+Tableau utilizes the data types of the initial 15,000 rows inside an Excel data source and the initial 1,024 rows in a CSV data source to decide whether to map mixed-value fields to different data types. For example, if the initial 15,000 rows are primarily composed of text values, the whole column will be mapped to utilize the text data type.
+
+**_Note: Since empty cells don't have the same style as text, dates, or numbers, they also produce mixed-value columns._**
+
+If the content inside a field doesn't match the data type that Tableau has assigned to it when it generates each field, Tableau manages the field in one of the various possible ways, based on the data type.
+
+
+<table>
+<tr>
+<td><strong>Mapped Data Type</strong>
+</td>
+<td><strong>Treatment of additional data types inside the field</strong>
+</td>
+</tr>
+<tr>
+<td>Text
+</td>
+<td>Numbers and dates are seen as text. It does not produce nulls.
+</td>
+</tr>
+<tr>
+<td>Dates
+</td>
+<td>Text is handled as a null value. In numeric sequence starting on January 1, 1900, a number is viewed as the day.
+</td>
+</tr>
+<tr>
+<td>Numbers
+</td>
+<td>Text is handled as a null value. The days since January 1, 1900, are utilized to calculate a date.
+</td>
+</tr>
+<tr>
+<td>Boolean
+</td>
+<td>Dates, numbers, and text are all considered null.
+</td>
+</tr>
+</table>
+
+
+Individuals can perform one of the following things if utilizing fields depending on mixed-value columns causes issues when evaluating the data:
+
+
+
+* The supporting data source shall format empty cells such that they have the same data type as the column.
+* Create a fresh column that does not consist of any mixed values in it.
+
+
+## 5. Summary
+
+In this tutorial we have covered every file type and data type in detail. The data type specifies the kind of content that is kept in a specific field. Any output saved in a specific file format is known as the file type.
+
+
+

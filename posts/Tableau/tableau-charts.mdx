@@ -1,0 +1,589 @@
+---
+title: "Tableau Charts"
+desc: "Tableau Charts"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 16, 2022"
+infoP: "Tableau"
+spanH2: "Core Concepts"
+bottomP: "In business intelligence and analytics, Tableau charts assist in the visualization of data in the form of worksheets and dashboards. Charts provide a visual representation of many different types of analysis, including comparison, relation, distribution, and composition."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 16, 2022"
+tag: "Tableau"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Tableau",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Tableau Charts : "
+id: "tableau-charts"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. Bar Chart,  
+  4. Line Chart,  
+  5. Pie Chart,
+  6. Crosstab,
+  7. Scatter Plot,
+  8. Bubble Chart8. Bubble Chart,
+  9. Bullet Graph,
+  10. Box Plot,
+  11. Tree Map,
+  12. Bump Chart,
+  13. Histogram,
+  14. Motion Charts,
+  15. Waterfall Charts,
+  16. Summary,
+  ]
+---
+
+# **Chapter 8**
+
+
+# **Tableau Charts**
+
+
+## 1. Overview
+
+Different types of Tableau charts, often known as area charts, show all quantitative data collected over time. It comprises a line graph, and the color is typically used to fill in the space between the line and the axis.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Bar Chart
+* Line Chart
+* Crosstab
+* Pie Chart
+* Bubble Chart
+* Scatter Plot
+* Bullet Graph
+* Tree Map
+* Box Plot
+* Bump Chart
+* Gantt Chart
+* Histogram
+* Motion Charts
+* Waterfall Charts
+
+
+## 3. Bar Chart
+
+In a bar chart, data is shown as rectangular bars with lengths that are inversely associated with the values of the variables. In Tableau, a bar chart is automatically generated whenever you drag a dimension into the Row shelf and a measure into the Column shelf. The Show Me button also has a bar chart option that we may utilize. This selection will be automatically grayed out if the data is incorrect for a bar chart.
+
+With Tableau charts, a dimension and a measure can be utilized to produce several kinds of bar charts.
+
+
+
+* **Simple Bar Chart**
+
+Select the dimension from the Sample-Superstore, then move Profit into the Columns shelf as well as Sub-Category into the Rows shelf. It generates a horizontal bar graph automatically. If it doesn't, you could select the type of chart from the Show Me tool.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-1.PNG"></img>
+
+
+
+
+* **Bar Chart with Color Range**
+
+Depending on the ranges of the bars, one can allocate colors to them. Longer bars are given dark colors, whereas shorter bars are given light colors. Drag the profit column to the color palette located under the Marks Pane to perform this. Also, take note that negative bars are created in a different shade.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-2.PNG"></img>
+
+
+
+
+* **Stacked Bar Chart**
+
+The previous bar chart could be made into a stacked bar chart that presents several colors in each bar, by adding another dimension. Drag the designated section dimension field to the Marks pane & drop it there. The proportion of each segment inside every bar is displayed in the chart below.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-3.PNG"></img>
+
+
+
+## 4. Line Chart
+
+The two axes of the chart area are utilized as a measure and a dimension in a line tableau chart. Each pair of values for an observation is converted into a point, and when all of those points are joined, a line is formed that illustrates the variations or relation between the dimensions and measures specified.
+
+
+
+* **Simple Line Chart**
+
+To make a basic line chart, use one dimension as well as one measure. Drag the dimension Sales onto the Rows shelf and Ship Mode onto the Columns shelf. Choose the Line chart from the Marks card. The following line graph displays the difference in sales for various ship modes.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-4.PNG"></img>
+
+
+
+
+* **Multiple Measure Line Chart**
+
+In a line chart, one could combine a dimension with two or even more measures. This will generate several line charts, each in a separate pane. The fluctuation of a dimension associated with one of the metrics is shown in each window.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-5.PNG"></img>
+
+
+
+
+* **Line Chart with Label**
+
+For making the values of the measure transparent, each point on the line chart might be labeled. In this example, insert a different measure of Profit Ratio into the Marks card's labels pane. The following chart, which displays the labels, will appear if you select average as the aggregate.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-6.PNG"></img>
+
+
+
+## 5. Pie Chart
+
+In a pie chart, information is shown as several sized and colored slices of a circle. The slices are identified by labels, and the graphic shows the numbers assigned to each slice. To build a pie chart, use the Marks card's pie chart option.
+
+
+
+* **Simple Pie Chart**
+
+To generate a basic pie chart, use one dimension and one metric. For instance, consider the dimension region and the measured profit. Remove the Region dimension from the label marks and color schemes. Fill in the size mark with the Profit measure. Select the Pie chart type. The 4 areas are depicted in the following chart in various colors.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-7.PNG"></img>
+
+
+
+
+* **Drill-Down Pie Chart**
+
+One could select a hierarchy-based dimension, and as you move up the hierarchy, this particular Tableau chart changes to represent the level of the selected dimension. The dimension Sub-Category, which contains two additional levels (Manufacturer and Product Name), is utilized in the example that follows. Take the profit measure and place it at the Labels mark. The data for each slice is presented in the following pie chart.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-8.PNG"></img>
+
+
+The above pie chart transforms to the next one when we descend one more level in the hierarchy and receive the manufacturer as the tag.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-9.PNG"></img>
+
+
+
+## 6. Crosstab
+
+In Tableau, a crosstab chart is also known as a ‘text table’ since it displays the data as text. One or even more dimensions and one or even more metrics make up the chart. Moreover, this chart will present several calculations based on the measured field's values, such as ‘running total,’ ‘% total,’ and more.
+
+
+
+* **Simple Crosstab**
+
+Let's make a strategy to determine the volume of sales for each category in each region using the Sample-superstore. You must use the order dates provided to present this data for each year. These are the measures to follow in order to accomplish this purpose.
+
+**_Step 1_** - The dimension order date may be moved to the columns shelf by dragging it there.
+
+**_Step 2_** - The dimensions region as well as segment are dragged and dropped into the rows shelf.
+
+**_Step 3_** - To the labels shelf below Marks pull the measure Sales.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-10.PNG"></img>
+
+
+
+
+* **Crosstab - Color Encoded**
+
+Dropping the measured field onto the Color shelf, as demonstrated in the below example, automatically color-codes the data in the crosstab chart. This color coding illustrates the color's intensity to the measure's value. In comparison to the lighter numbers, the greater values also have a darker color.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-11.PNG"></img>
+
+
+
+
+* **Crosstab with Row Percentage**
+
+One may also obtain calculations based on the data from the measure in addition to the color encoding. In the example that follows, we use the calculation to determine the proportion of sales in each row as a group rather than just the individual sales statistics. To do this, right-click on SUM (Sales) in the marks card and select Add Table Calculation from the options then select the percentage of the total and present it as Table (Across).
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-12.PNG"></img>
+
+
+When you select OK on the screen above, the crosstab chart with % values generated as displayed in the picture below will appear.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-13.PNG"></img>
+
+
+
+## 7. Scatter Plot
+
+A scatter plot displays several points dispersed over the Cartesian plane, as the name indicates. By displaying the values of numerical variables as X as well as Y coordinates in the Cartesian plane, it is produced. For Tableau to build a scatter plot, at least one measure must be on the Rows shelf and another one measure on the Columns shelf. The scatter plot can be expanded using dimension fields, which assist in distinguishing distinct colors for the scatter graph's existing points.
+
+
+
+* **Simple Scatter Plot**
+
+Let's try to determine the variation in sales and profit numbers as the two axes of the Cartesian plane are split by their Sub-Category using the Sample-superstore as our example. The methods mentioned below can assist you in achieving this goal.
+
+**_Step 1_** - To that of the columns shelf, drag and place the sales measure.
+
+**_Step 2_** - Drag and move the measurement. Benefit for the Rows shelf.
+
+**_Step 3_** - Take the dimension Sub-Category and place it on the labels shelf next to Marks.
+
+The distribution of sales and profit among the product categories is shown in the image below.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-14.PNG"></img>
+
+
+
+
+* **Scatter plot - Color Encoded**
+
+Drag the dimension Sub-Category to the color Shelf below the Marks card to color-code the values. The scatter points are shown in this graph using various colors for each point.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-15.PNG"></img>
+
+
+
+
+* **Drill-Down Scatter Plot**
+
+When you select a dimension with hierarchy, the same scatter plot may display various values. The Sub-Category field is expanded in the example below to display the scatter plot values for the Manufacturers.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-16.PNG"></img>
+
+
+
+## 8. Bubble Chart
+
+Data is presented in bubble charts as a collection of circles. The values of measure indicate the sizes of those circles, whereas each value in the dimension field indicates a circle. Drag the necessary fields to multiple shelves underneath the marks card since the values won't be shown in any row or column.
+
+
+
+* **Simple Bubble Chart**
+
+Let's make a strategy to estimate the size of revenues for several ship modes using the Sample-superstore. These are the measures to take to achieve this goal.
+
+**_Step 1_** - Place the measured profit on the Size shelf next to the Mark card by dragging it there.
+
+**_Step 2_** - The dimension ship mode should be dropped into the Labels shelf underneath the Marks card.
+
+**_Step 3_** - To the Colors shelf beneath the Marks card, drag the dimension ship mode.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-17.PNG"></img>
+
+
+
+
+* **Bubble Chart with Measure Values**
+
+The measure field's values, which determine the size of the circles, can also be presented. To perform this, pull the sales measure to the shelf with "Labels" marked on it. The chart shown below is displayed.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-18.PNG"></img>
+
+
+
+
+* **Bubble Chart with Measure Colors**
+
+Utilizes a single color in many shades as compared to coloring each circle a separate color. Drag the measure sales into the appropriate color shelf. Smaller numbers relate to lighter colors, whereas bigger values indicate dark colors.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-19.PNG"></img>
+
+
+
+## 9. Bullet Graph
+
+A bar chart variant is a bullet chart. In order to identify the variations in the first measure within a range of changes in the second measure, we compare the values of the two measures in this chart. To represent their respective values at the same place in the graph, it is similar to two bars drawn over one another. It may be compared to merging two graphs into one to make a comparison result easier to view.
+
+
+
+* **Creating Bullet Graph**
+
+Plan to determine the magnitude of earnings for the corresponding sales figures for each Sub-Category using the Sample-superstore. These are the measures to take in order to accomplish this goal.
+
+**_Step 1_** - The dimension Sub-Category can be added to the column shelf by dragging it there from the data pane.
+
+**_Step 2_** - To the Rows shelf, drag & drop the measures of Profit as well as Sales.
+
+The below graph presents the two measures as two different types of bar charts, each of which illustrates the values for subcategories.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-20.PNG"></img>
+
+
+**_Step 3_** - Add the Marks card by dragging the sales measure there. Choose ‘Show Me’ and select the bullet graph preference. The graph with bullets is displayed in the chart below.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-21.PNG"></img>
+
+
+
+## 10. Box Plot
+
+Box-and-whisker plots are another name for the box plots. They represent how values are distributed along an axis. Boxes indicate the middle 50% of the data or the middle two quartiles of the distribution of the data. The rest 50% of the information on both sides is displayed by lines, also known as whiskers, to show all points between 1.5 times the interquartile range, sometimes referred to as all points inside 1.5 times the size of the next box, or all elements at the highest length of the data.
+
+The Box Plots include zero or more dimensions and one or more measures.
+
+
+### **Creating a Box Plot**
+
+Prepare to determine the size of profits for each Ship mode value using the Sample-superstore for the relevant category. Users can accomplish this aim with the help of the following actions.
+
+**_Step 1_** - The dimension category should be moved from the Columns shelf to the Rows shelf by dragging and dropping. To the right of Category in the Columns shelf, drag the dimension Ship mode as well.
+
+**_Step 2_** - From Show Me, pick the Box-and-Whisker plot. The box plots are displayed in the graphic that follows. The ‘ship’ mode is now automatically assigned to the Marks card by Tableau.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-22.PNG"></img>
+
+
+
+
+* **Box Plot with Two Dimensions**
+
+By attaching a second dimension to the Column shelf, you can make box plots with two dimensions. In the previous chart, increase the Column shelf's region dimension. This results in a graph that displays the box plots for every region.
+
+
+## 11. Tree Map
+
+Data is shown as layered rectangles on the tree map. The sizes and measurements determine the shape and color of each individual rectangle as well as the tree map's overall structure. Because the rectangles' size and color mirror the measure's value, it is simple to understand what they represent.
+
+To produce a tree map, one or several dimensions and one or multiple metrics are being utilized.
+
+
+### **Creating a Tree Map**
+
+Plan to calculate the profit margins for each Ship mode value using the Sample-superstore.
+
+**_Step 1_** - Double-click the Marks Card and drag the ‘measure profit’ there. Go to the Size shelf once, then go to the Color shelf once more.
+
+**Step 2** - The Dimension Ship Mode must be dropped onto the Label shelf. Select the Tree Map chart type under Show Me. The chart shown below gets displayed.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-23.PNG"></img>
+
+
+
+
+* **TreeMap with Two Dimensions**
+
+The region dimension can be added to the treemap diagram shown above. Twice drag and drop it. Start with the Label shelf first, then the Color shelf. The chart that displays will include boxes for ship options nested within the four outside boxes representing the four zones. Now, each of the various areas will have a unique color.
+
+
+## 12. Bump Chart
+
+When comparing two dimensions based on one of the Measure values, a bump chart is utilized. They are highly helpful for examining how the rank of a value varies throughout the course of a time dimension, a geographic dimension, or any dimension related to the analysis.
+
+With zero or even more measures, the Bump Chart utilizes two dimensions.
+
+
+### **Creating a Bump Chart**
+
+Plan to locate the different ship modes of items with the different Sub-Categories using the Sample-superstore.
+
+**_Step 1_** - The dimension Sub-Category must be dropped onto the Columns shelf. Drag the Dimension Ship mode as well to the Color shelf next to the Marks card. The chart type should remain Automatic.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-24.PNG"></img>
+
+
+**_Step 2_** - Next, make Rank the name of the calculated field. choose Create Calculated Field from the Analysis menu. Use the expression index () inside the calculation area and name the field Rank. It is a built-in function that generates an index for the partition's current row. The new field will appear in the measures section when you click OK. To make the field Rank distinct, use the right-click menu.
+
+**_Step 3_** - To the Rows shelf, drag Rank. The dimension Sub-Category with every ship mode ordered in ascending order of their Rank value is displayed in the below chart.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-25.PNG"></img>
+
+
+**_Step 4_** - Use the measure Profit to perform further calculations on the rank field. Select Edit Table Calculation with a right-click on Rank. Select the group by the field profit using the sub-category division and ship mode.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-26.PNG"></img>
+
+
+Users will get the bump chart illustrated in the figure below after finishing the previous stages. It illustrates how the profit varies across different subcategories for each ship style.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-27.PNG"></img>
+
+
+
+### **Gantt Chart**
+
+A Gantt chart illustrates how a task or resource value fluctuates over time. Over time, it is heavily utilized in project management and other sorts of variation investigation. As a result, the time dimension is a critical part of Gantt charts.
+
+In addition to the time dimension, the Gantt chart also includes at least one dimension and one measure.
+
+
+### **Creating a Gantt chart**
+
+Plan to use the Sample-superstore to determine how the quantities of each SubCategory of Products vary over a span of time based on their shipping method. These are the measures to take in order to accomplish this goal.
+
+**_Step 1_** - Pull the Dimension Order Date into the Columns shelf and the Sub-Category into the Rows shelf. The order date should then be added to the Filters shelf. To change the order date to the actual date values presented, use the right-click option.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-28.PNG"></img>
+
+
+**_Step 2_** - For a specific selection of dates, change the filter requirements. It's because there are a lot of dates in the data and you want split date values. The range is produced as displayed in the screenshot below.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-29.PNG"></img>
+
+
+**_Step 3_** - Drag the measure quantities to the Size shelf below the Marks card and the dimension ship style to the Color shelf. As a result, the Gantt chart is created.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-30.PNG"></img>
+
+
+
+## 13. Histogram
+
+The values of a variable's frequencies are displayed in a histogram as bucketed ranges. The data are grouped into continuous ranges in a histogram, which is comparable to a bar chart. The height of every bar of a histogram corresponds to the amount of value that fit inside that span.
+
+Tableau uses a single measure and produces a histogram. It creates a new bin field for the measurement that was utilized to make the histogram.
+
+
+### **Creating a Histogram**
+
+Plan to determine the sales volume for each region using the Sample-superstore. Drag the Quantity Measure to the Rows shelf to do this. Next, click Show Me and choose the Histogram chart. The quantities are automatically bucketed into values between 0 and 4811 and split into 12 bins as demonstrated in the chart below.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-31.PNG"></img>
+
+
+
+### **Creating a Histogram with Dimensions**
+
+Histograms can also be generated by adding Dimensions to Measures. A stacked histogram will result from this. The values of the dimension are represented by stacks on each bar. Add the Region Dimension to the color Shelf below the Marks Card by following the procedures in the previous example. As a result, the following histogram is produced, with each bar displaying a separate region's representation.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-32.PNG"></img>
+
+
+
+## 14. Motion Charts
+
+Motion charts exhibit changes over time by indicating changes mostly in color of the lines as well as the motion of the data points inside the designated area. Data is displayed using the X and Y axes in motion charts. The basic benefit of a motion chart is that it allows you to see the whole history of the data's changes through time, as opposed to simply a single snapshot.
+
+To construct a Motion chart in Tableau, One Measure and one Time Dimension are required.
+
+
+### **Creating a Motion Chart**
+
+Plan to determine the variance in profits throughout the months using the Sample-superstore. These are the measures to take in order to achieve this goal.
+
+**_Step 1_** - Drag the Columns Shelf to the Dimension Order Date. Move it one more to the shelf page. Right-click the Order Date as well as choose Month from the Pages shelf. Drag the Profit measure to the Rows Shelf after that. The chart shown below occurs.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-33.PNG"></img>
+
+
+**_Step 2_** - Mark the box next to "Show History" with a check mark, and then click the dropdown button. Under the "Marks to Show History For" select "All". Select "Both" under "Show" after that. When "Marks" or "Trails" are selected, simply the points and lines are displayed, respectively. Select "Play" from the menu. The chart shown below occurs.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-34.PNG"></img>
+
+
+**_Step 3_** - The chart that displays how the profits have changed throughout each month for all the years will be generated if the chart is allowed to run from January to December. Furthermore, the historical data is colored lighter as the data changes, while the current months are colored darker.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-35.PNG"></img>
+
+
+
+## 15. Waterfall Charts
+
+The cumulative impact of sequential positive and negative numbers is efficiently represented by waterfall charts. It represents the beginning, end, and progressive progression of a value. As a result, we can examine the magnitude of changes as well as the value differences between subsequent data points.
+
+For Tableau to generate a waterfall chart, both a Dimension and a Measure must be present.
+
+
+### **Creating a Waterfall chart**
+
+Plan to determine the variation in Sales for each Product Sub-Category using the Sample-Superstore. These are the actions to take in order to accomplish this goal.
+
+**_Step 1_** - Drag the Measure Sales to the Rows shelf and the Dimension Sub-Category to the Columns shelf. Sort the information by sales value, ascending. Utilize the sort option that appears in the vertical axis's center when the mouse is placed over it for this. When this phase is finished, the following chart is displayed.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-36.PNG"></img>
+
+
+**_Step 2_** - Next, from the table calculation option, right-click on the SUM (Sales) number and choose "Running Total." choose the Gantt Bar chart type.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-37.PNG"></img>
+
+
+**_Step 3_** - Make the following formula the value of a calculated field with the name -sales.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-38.PNG"></img>
+
+
+**_Step 4_** - To the size shelf below Marks Card, drag the just generated calculated field (-sales). The above graphic now undergoes a transition to result in the waterfall chart that follows.
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-39.PNG"></img>
+
+
+
+
+* **Waterfall Chart with Color**
+
+Drag the Sales measure to the Color shelf beneath the Marks Card to then provide the bars in the chart with multiple color shades. You receive the colored waterfall diagram that is shown below.
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/Tch-40.PNG"></img>
+
+
+
+## 16. Summary
+
+So, now you are eligible for creating eye-catchy and interesting presentations by utilizing tableau charts, graphs, or other visually stunning data representations. Just keep practicing and experimenting with different layouts. 
+

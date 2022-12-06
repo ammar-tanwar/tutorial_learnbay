@@ -1,0 +1,423 @@
+---
+title: "Python Pandas Library"
+desc: "Python Pandas Library"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "December 3, 2022"
+infoP: "Python Pandas Library"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 3, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Pandas Library : "
+id: "python-pandas-library"
+tableData:
+  [
+  1. Overview,
+  2. Scope of the tutorial,  
+  3. What is meant by Pandas library in Python?,  
+  4. Some of the applications for Python Pandas,  
+  5. Series in Pandas,
+  6. Indexing of a Series,
+  7. Dataframe in Pandas,
+  8. Custom labels or renaming indexes,
+  9. Concatenation of the two dataframes,
+  10. Summary,
+  ]
+---
+
+
+# **Chapter 11: (b)**
+
+
+# **Python Pandas Library**
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Python+Pandas+Library.jpg"></img>
+
+
+
+
+## 1. Overview
+
+Python's Pandas Library is used to manipulate data collections. It offers tools for data exploration, cleaning, analysis, and manipulation. Using its potent data structures, Pandas, an open-source Python library, offers high-performance analytical tools.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Definition of Python pandas Library
+* Application of Pandas
+* Different ways to use Pandas in projects
+
+
+## 3. What is meant by Pandas library in Python?
+
+Pandas is an abbreviation for "Panel Data," a program for analyzing financial data. It is a Python library that is most often utilized for data manipulation as well as data analysis. Python is also used to manage tabular data. It offers data structure and functionality, specifically for handling numerical tables and time series. Relational databases or spreadsheets are typically the objects of its utilization (SQL)
+
+There are two categories of data structures for Pandas.
+
+
+
+1. Series
+2. Dataframe
+
+
+## 4. Some of the applications for Python Pandas
+
+
+
+* It is used in machine learning concepts to create models and for data visualization.
+* It is used for complex functionality indexing, including data subset selection and slicing, indexing, and dice.
+* Both tabular and heterogeneous data may be used with it.
+
+**_Please Note: If you desire to work with an array in any way, panel data has to be imported. Don't worry if it doesn't work; just search for "pandas.pypi" and use the first link to install the library._**
+
+The many file types that Pandas can read include
+
+
+
+* XLSX
+* CSV - Comma-Separated values
+* txt - Plain text
+* zip
+* xml
+* json
+* Images
+* html
+
+
+## 5. Series in Pandas
+
+In pandas, a series is a collection of values, much like a one-dimensional array with data of any kind. When compared to a table column, it is the same.
+
+Example
+
+
+```
+lst=['Aswin','Nitia','Yasu','Divya','Tanish']
+
+ser=pd.Series(lst)
+ser
+
+Output
+0     Aswin
+1     Nitia
+2      Yasu
+3     Divya
+4    Tanish
+dtype: object
+```
+
+
+Example2
+
+
+```
+ddata = {'Karthik' : 40500, 'Likith' : 36000, 'John' : 32000, 'Tina' : 87000}
+dis = pd.Series(ddata)
+dis
+
+Output
+Karthik    40500
+Likith     36000
+John       32000
+Tina       87000
+dtype: int64
+If you simply provide a dict, the keys in the dict will produce a list of sorted indexes. Use the dict keys to appear in the series if you wish to overwrite them.
+```
+
+
+
+```
+names = ['Karthik', 'Lobo', 'John', 'Tina']
+dis = pd.Series(ddata, index=names)
+dis
+
+Output
+Karthik    40500.0
+Lobo           NaN
+John       32000.0
+Tina       87000.0
+dtype: float64
+```
+
+
+Creating a series using a list of pandas
+
+
+```
+lst=[i for i in range(10,20)]
+print(lst)
+
+ser=pd.Series(lst)
+ser
+
+Output
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+0    10
+1    11
+2    12
+3    13
+4    14
+5    15
+6    16
+7    17
+8    18
+9    19
+dtype: int64
+```
+
+
+
+```
+ser=pd.Series(np.random.random(10))
+ser
+
+Output
+0    0.529569
+1    0.000575
+2    0.267853
+3    0.628980
+4    0.723200
+5    0.614637
+6    0.057751
+7    0.418555
+8    0.980236
+9    0.875922
+dtype: float64
+```
+
+
+
+## 6. Indexing of a Series
+
+
+
+* Series indexing is similar to the indexing of a 1-D array.
+* Starts from0 by default and stops at len(series)-1 by default.
+* It does not support the negative indexing directly.
+
+```
+ser=pd.Series(np.random.random(10))
+ser
+
+Output
+0    0.529569
+1    0.000575
+2    0.267853
+3    0.628980
+4    0.723200
+5    0.614637
+6    0.057751
+7    0.418555
+8    0.980236
+9    0.875922
+dtype: float64
+
+print(ser[0])
+
+Output
+0.529569
+
+print(ser[len(ser)-1])
+
+Output
+0.875922
+```
+
+
+
+Accessing an element of a series using iloc and loc attributes.
+
+1- Explicit index (starts from 0, stops at len(series)-1).
+
+2- User-defined index that is known as labels.
+
+**iloc - index location**
+
+
+
+* It is used to access an element using an explicit index.
+* It works upon integer index only.
+* We can fetch an element using negative indexing also with iloc.
+* With explicit indexes, we can use iloc and loc.
+
+Example
+
+
+```
+country=['India','Germany','Brazil','UK','China']
+
+ser=pd.Series(country)
+ser
+
+Output
+0      India
+1    Germany
+2     Brazil
+3         UK
+4      China
+dtype: object
+```
+
+
+
+## 7. Dataframe in Pandas
+
+What does Python's DataFrame term mean?
+
+The term "DataFrame" refers to a table in Python that stores data in a rectangular style with various value types. The column index and row index are both used to create the data frame. A dict with an equal-length list is one of the usual ways to generate a data frame. However, there are other ways as well.
+
+
+```
+Creating a DataFrame
+data = {'state': ['Tokyo','Paris','Iran','Paris','Tokyo','Paris'],
+        'year': [2020, 2021, 2020, 2021, 2020, 2023],
+       'pop': [2.5, 4.7, 6.6, 2.4, 7.9, 8.2]}
+frame = pd.DataFrame(data)
+frame
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Pandas+Pic+1.PNG"></img>
+
+
+
+## 8. Custom labels or renaming indexes
+
+You may modify the default numbering and use custom labels to distinguish the rows by using index parameters. This is performed when the dataframe is being created.
+
+Example
+
+
+```
+frame2 = pd.DataFrame(data, columns=['year','state','pop','debt'],
+index=['one','two','three','four','five','six'])
+frame2
+
+Output
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Pandas+Pic+2.PNG"></img>
+
+
+**info()**
+
+It gives some vital information about the dataframe
+
+
+```
+
+```
+
+
+**describe()**
+
+
+
+* It is applicable only to numeric columns.
+* It gives the statistical measures of numeric columns.
+
+```
+data.describe()
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Pandas+Pic+3.PNG"></img>
+
+
+
+## 9. Concatenation of the two dataframes
+
+
+```
+new_data=data.iloc[0:20]
+new_data
+```
+
+
+
+### Concatenate the new data with data
+
+
+```
+pd.concat([data_frame_1,data_frame_2],axis=0)
+data=pd.concat([data,new_data],ignore_index=True)
+data
+```
+
+
+
+### How to get duplicate entries?
+
+
+```
+data.duplicated()
+```
+
+
+
+### How to drop the duplicate values?
+
+
+```
+data.drop_duplicates()
+data.drop_duplicates(inplace=True)
+# data=data.drop_duplicates()
+data.duplicated().sum()
+```
+
+
+
+### How to drop rows?
+
+
+```
+data.drop([index],axis=0,inplace=True)
+data.drop(data.index[0:10],axis=0)
+```
+
+
+
+### How to drop a column?
+
+
+```
+data.drop('column_name',axis=1,inplace=True)
+data.drop('Name',axis=1)
+```
+
+
+
+### How to drop multiple columns?
+
+
+```
+data.drop(['Name','Ticket','PassengerId'],axis=1,inplace=True)
+```
+
+
+
+## 10. Summary
+
+In this tutorial we discussed about how to deal with Pandas in a few easy steps. We also learned how to access and construct a dataframe. Pandas is based on two essential Python libraries: NumPy for arithmetic operations and Matplotlib for data presentation. By serving as a shell for these libraries, Pandas makes it easier to use many more of matplotlib's & NumPy functions.

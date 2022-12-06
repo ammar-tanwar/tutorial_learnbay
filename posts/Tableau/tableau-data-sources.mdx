@@ -1,0 +1,350 @@
+---
+title: "Tableau Data Sources"
+desc: "Tableau Data Sources"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 16, 2022"
+infoP: "Tableau"
+spanH2: "Core Concepts"
+bottomP: "Tableau is capable of communicating with all well-known and popular data sources. A Tableau data source is a link between the source data and the visualizations."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 16, 2022"
+tag: "Tableau"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Tableau",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Tableau Data Sources : "
+id: "tableau-data-sources"
+tableData:
+  [
+  1. Scope of the tutorial, 
+  2. Connect Live,  
+  3. In-Memory,  
+  4. Combine Data Sources,  
+  5. Custom Data View,
+  6. Extracting Data,
+  7. Fields Operations,
+  8. Editing Metadata,
+  9. Data Joining,
+  10. Data Blending,
+  11. Summary,
+  ]
+---
+
+# **Chapter 4**
+
+
+# **Tableau Data Sources**
+
+The connection between the source data as well as tableau is known as a Tableau data source. It consists mainly of the data (either as an extract or a live connection), connection metadata, the names of the tables or sheets that store the data, and any modifications that apply to the data to utilize it in Tableau.
+
+
+## 1. Scope of the tutorial
+
+This tutorial will cover
+
+
+
+* Tableau Data Sources
+* Extracting Data
+* Custom Data View
+* Field Operations
+* Data Joining
+* Editing Metadata
+* Data Blending
+
+Tableau can interact with all well-known and widely-used data sources. The following data sources are accessed through Tableau's native connectors.
+
+
+
+* File Types - Excel, CSV, etc.
+* Relational Systems - SQL Server, Oracle, DB2, etc.
+* Cloud Systems - Google BigQuery, Windows Azure, etc.
+* Other Systems - ODBC
+
+The majority of the data sources that can be accessible via Tableau's native data connectors are represented in the figure below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-1+(1).PNG"></img>
+
+
+
+## 2. Connect Live
+
+Analyzing data in real-time is performed with the Connect Live function. In this scenario, Tableau continues to read data from a real-time data source. The most recent modifications are indeed represented in the analysis's output, which is up to date. The source system is loaded since it must continuously keep delivering data to Tableau, which is a disadvantage.
+
+
+## 3. In-Memory
+
+Tableau can analyze the information in memory by storing it in memory and analyzing it without being linked to the source of the data anymore. The quantity of data that may have been stored will, of course, be constrained by the available amount of RAM.
+
+
+## 4. Combine Data Sources
+
+Tableau can instantaneously connect to multiple data sources. For instance, users can define several connections in a single worksheet to connect to both a relational source and a flat file. This is utilized in data mixing, an exceptional Tableau function.
+
+
+## 5. Custom Data View
+
+A customized data view is used to add some more functionality to the standard data views so that the views could represent various chart types for similar underlying data. For example, you could go deeper into a dimension field that is an element of a predefined structure to obtain more exact values for the measures. Listed below are a few of the most critical and frequently utilized custom data views that Tableau provides.
+
+
+### **Drill Down View**
+
+The results of analysis for the subsequent or earlier level of aggregation are typically required for dimension fields that are a component of a hierarchy. For instance, Once we have the output for a quarter, you may be curious to learn the performance for each month of that quarter and even require the data for each week. In this scenario, existing dimensions are being drilled down to a finer degree of accuracy.
+
+Drill Down may be selected from the context menu by right-clicking a table header to access individual dimension members for each level of a hierarchy. 
+
+Imagine a bar chart that has been made with the dimension Sales inside the rows shelf and the dimension classification in the columns shelf. Drill Down may be selected by performing a right-click on the furniture bar.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-1.PNG"></img>
+
+
+The following screenshot represents the output of the drill-down process.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-2.PNG"></img>
+
+
+
+### **Swapping Dimensions**
+
+By swapping the locations of the dimensions, a fresh view can be generated from an existing one. The positions of the measurements are modified, but the results of the measures remain unchanged. The Profit for every year for each sector and class of items should be analyzed using a certain perspective. 
+
+You may drag the vertical line at the finish of the category column to the segment column by clicking and dragging it over there.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-3.PNG"></img>
+
+
+The snapshot that follows displays the results of switching the two dimensions. As you can see, the placement of the values for the measure Profit for every category and segment does not vary; only their positions do.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-4.PNG"></img>
+
+
+
+## 6. Extracting Data
+
+Tableau generates a subset of data from a data source utilizing data extraction. Extracting data is implementing filters that are beneficial in increasing performance. Additionally, it assists in adding Tableatures to data that might not be present in the data source, such as identifying different values within the data. The data extract tool is typically used, however, to generate an extract that will be saved to the local disk for offline access by Tableau.
+
+
+### **Creating an Extract**
+
+By selecting Data —> Extract Data from the menu, data would be extracted. It provides a wide range of possibilities, including placing restrictions on the number of rows to be extracted and selecting whether it should aggregate data for dimensions.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-5.PNG"></img>
+
+
+
+### **Applying Extract Filters**
+
+One might design filters that will only return the necessary rows if one wants to retrieve a subset of information from the data source. Generate an extract using the Sample Superstore data set as our instance. Pick the list under filter selection, then check the box next to the value you would like to retrieve from the source when the data is fetched.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-6.PNG"></img>
+
+
+
+### **Adding New Data to Extract**
+
+Users can choose the selection Data—> Extract—> Append Data from File to add fresh data to an extract that has already been generated. Search the data file in this scenario, then click OK to complete. The file's columns must match the current data in terms of both number and datatype.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-7.PNG"></img>
+
+
+
+### **Extract History**
+
+If you want to be clear about how often and when a data extract has been performed.
+
+Utilize the Data—>Extract History menu item to do this.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-8.PNG"></img>
+
+
+
+## 7. Fields Operations
+
+The fields that are included in Tableau's data pane may be modified using a variety of capabilities. You can give the fields fresh names or merge two fields into one. Such methodologies support accommodating two or even more sections with a similar identity for improved data analysis as well as better structuring of the dimensions and measures.
+
+Some of the Field Operations are as follows:
+
+
+### **Adding Fields to Worksheet**
+
+By right-clicking and selecting ‘Add to Sheet’, you may append any field to the worksheet. Moreover, you could drag & drop the fields onto the worksheet's various shelves, including the shelves for columns, rows, filters, and a variety of additional shelves underneath the Marks card.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-9.PNG"></img>
+
+
+
+### **Combining two Fields**
+
+One field can be generated by combining two-dimension fields. The name of the combined field combines the names of the individual columns. By merging the two strings into a single string and separating them with a comma, the elements in the dimension are merged into a single value. However, by utilizing the rename field function, this default name could be altered.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-10.PNG"></img>
+
+
+
+### **Searching Fields**
+
+Utilizing the search box option, you could look for field names. When you specify the first three or even more letters of a field name, the search only returns results for fields whose names contain those letters.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-11.PNG"></img>
+
+
+
+### **Reordering Fields**
+
+Simply dragging fields up and down will adjust their location. In the instance that accompanies, we move the customer name field between the state and the city. Usually, this is done to combine related fields that are commonly utilized for analysis.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-12.PNG"></img>
+
+
+
+## 8. Editing Metadata
+
+Tableau records the metadata information of the data source, including the columns as well as their data types, after linking to the data source. The dimensions, measurements, and computed fields utilized in views are generated using this. Users can go through the information and modify some of its features according to their needs.
+
+
+### **Checking the Metadata**
+
+Tableau displays all relevant tables and columns available in the source after creating a link to the data. When examining the metadata, keep in mind the source "Sample Coffee shop". The Data option will appear to pick "Connect to a data source" The MS Access file titled "Sample Coffee shop" should be accessed. Drag the Product table onto the data canvas. The following screen, which displays the column names and their data types, appears after selecting the file. String data types are indicated by Abc, whereas integer data types are denoted by #.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-13.PNG"></img>
+
+
+
+### **Changing the Data Type**
+
+If necessary, one can alter the datatype for a few of the fields. Depending on the source data's characteristics, Tableau may occasionally not be able to identify the data type. In some situations, the data type can be manually changed.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-14.PNG"></img>
+
+
+
+### **Renaming and Hiding**
+
+The renaming feature can be utilized to modify the column names. A column can also be hidden so it does not show up in the data display you design. You can access these options by selecting the data type button in the metadata grid.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-15.PNG"></img>
+
+
+
+### **Column Alias**
+
+An alias can be given to each column in the data source, that defines the purpose of the column. The previous step's aliases feature can be selected, and the next screen, which is utilized to generate or edit aliases appears.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-16.PNG"></img>
+
+
+
+## 9. Data Joining
+
+Any analysis of data will almost certainly involve some sort of data joining. It may be necessary to merge data from many sources or from various tables inside a single source. By utilizing the data pane located under ‘Edit Data Source’ inside the Data menu, Tableau provides the option to connect the table.
+
+
+### **Creating a Join**
+
+Consider the "Sample superstore" data source while performing a join among the Orders and Returns columns. In order to do this, select Edit Data Source from the Data menu. After that, drag the Returns and Orders tables to the data pane. Tableau will automatically generate a join that could be altered later based on the field name as well as the datatype.
+
+Utilizing the Field Order ID, an inner join between Orders as well as Returns is created in the screenshot below.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-17.PNG"></img>
+
+
+
+### **Editing a Join Type**
+
+One can manually modify the type of join that the table produces on its own. To do this, click the intersection of the two intersecting circles. The four join kinds are displayed in a popup window that is shown below. Moreover, Tableau automatically suppresses some join types that it determines are inappropriate based on the data within the data source.
+
+The left outer and inner joins are the ones that are instantly available.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-18.PNG"></img>
+
+
+
+### **Editing a Join Field**
+
+By selecting the Data Source feature in the join popup box, you can also modify the fields that make up the join condition. One can use a search text box to look for the column that is required while choosing the field.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-19.PNG"></img>
+
+
+
+## 10. Data Blending
+
+Tableau's Data Blending function is really effective. It is utilized when there are several tableau data sources with connected data that we want to examine all at once. 
+
+Think about a scenario where sales data is stored inside a relational database as well as sales target data is kept in an Excel spreadsheet. 
+
+The Sales Targets measure could now be obtained by combining the data based on shared dimensions, allowing one to compare target sales to actual sales. Primary as well as secondary data sources are the term used to define the two sources used in data mixing. Using all the data rows from the primary data source and matching data rows to the secondary data source, a left join is produced between the primary data source and the secondary data source.
+
+
+### **Preparing data for Blending**
+
+Data blending can be presented using two built-in data sources from Tableau, Sample-superstore, and Sample coffee chain.mdb.
+
+Import the sample coffee chain into Tableau first, then analyze its metadata. Search for the sample coffee chain document, which is an MS Access database file, by choosing Data > New Data Source from the menu. The following picture displays the various tables and joins that are available in the file.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-20.PNG"></img>
+
+
+
+### **Adding Secondary Data Source**
+
+By performing the steps Data—>New Data Source and selecting this data source, you could now add a secondary data source called Sample-superstore.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-21.PNG"></img>
+
+
+
+### **Blending the data**
+
+A technique for merging data from several sources is data blending. Data blending presents information from the original data source in the view along with extra information that has been incorporated from the secondary data source.
+
+Now, using a common dimension, users could blend the data from the two sources mentioned above. A little chain picture emerges next to the dimension "State," as you can see. This shows the dimension that the two data sources share. Drag and drag the State information from the primary data source to the rows shelf, and then the Profit Ratio field of the secondary data source to the columns shelf. Then, choose the bullet chart feature from Show Me to obtain the bullet chart displayed in the screenshot below. The graph demonstrates how each state's profit ratio for chain stores and superstores differs.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tableau/DS-22.PNG"></img>
+
+
+
+## 11. Summary
+
+In this tutorial we have come across various stages of Data sources utilized in Tableau. Tableau has the capability to interact with all well-known and widely-used data sources. The place from where the data is used originating is known as the data source. A data source might be the place where data first appears or the place where actual information will be first converted to digital form, but even the most specific data could function as a source as long as other processes can access and utilize it.

@@ -1,0 +1,263 @@
+---
+title: "Python Sets"
+desc: "Python Sets"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 24, 2022"
+infoP: "Python Sets"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 24, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Sets : "
+id: "python-sets"
+tableData:
+  [
+  1. Overview,
+  2. Scope of the tutorial,  
+  3. What are Python sets?,  
+  4. Frozen Set,  
+  5. Set Methods in Python,
+  6. Eliminating values in Python sets,
+  7. Summary,
+  ]
+---
+
+# **Chapter4: (g)**
+
+# **Python Sets**
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python+sets.jpg"></img>
+
+## 1. Overview
+
+A set is an unsorted, immutable, and unindexed collection. The output will always have unique values, regardless of whether a set of values contains duplicates or not. On a set, indexing and slicing operations are not allowed.
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+● Definition of Python sets
+
+● Set methods in Python
+
+● Eliminating processes in Python sets
+
+## 3. What are Python sets?
+
+Python sets are unorganized data that cannot be changed. The values in sets are kept inside curly brackets {}, in which values are separated by a comma. It accepts no duplication and contains unique values. A python set does not allow indexing or slicing. A set can contain a float, an integer, a string, etc.
+
+Example
+
+```
+set = {8.5, 'Python', (5, 7, 1)}
+
+Output
+{'Python', (5, 7, 1), 8.5}
+```
+
+## 4. Frozen Set
+
+Apart from a Python set object, the frozen set is immutable. The components of a frozen set don't change after being created, unlike sets, where changes can be made at any moment. The frozen set is unchanged after creation. An empty frozen set is produced while no values are given.
+
+Example
+
+```
+#Difference between a frozen set and a normal set
+
+frozen_set = (["p", "q", "r"])
+print("\nFrozen set")
+print(frozen_set)
+
+Output
+Frozen set
+{'p', 'q', 'r'}
+
+Normal_set = set(["e", "r", "t"])
+print("Normal set")
+print(Normal_set)
+
+Output
+Normal set
+{'r', 't', 'e'}
+```
+
+So, we can see that results from the normal set can be randomized, while in the Frozen set, it will be the same as creation.
+
+## 5. Set Methods in Python
+
+Below are the most used set methods in Python
+
+●      **Adding in set**
+
+Data is inserted into a set using the set.add() function, and a suitable entry value is generated for the hash table. On average, 0(1) is like looking for an item. However, in some worst circumstances, it might be zero (n).
+
+Example
+
+```
+#adding elements in a set
+set_1 = {"Rahul", "Shiva", "Data"}
+print("set:", end = " ")
+print(set_1)
+# This will add Jeet to the set
+set_1.add("Science")
+
+#Adding elements to the set by using iterator
+for i in range(1, 5):
+    set_1.add(i)
+
+print("\nSet after adding element:", end = " ")
+print(set_1)
+
+Output
+set: {'Rahul', 'Shiva', 'Data'}
+Set after adding element: {1, 2, 'Shiva', 3, 4, 'Data', 'Rahul', 'Science'}
+
+```
+
+- **Difference in set**
+
+It is similar to identifying differences in linked lists to find differences between sets. Use the difference() or - operator to achieve it. The time required to calculate the difference s1 - s2 is: 0(len(s1)).
+
+Example
+
+#find `difference between two sets \ set_1 = set() \ set_2 = set() \ \ for i in range(30): \ set_1.add(i) \ \ for i in range(2,25): \ set_2.add(i) \ \ #difference of two sets using difference() function \ set_3 = set_1.difference(set_2) \ \ print("Difference of two sets by using difference() function") \ print(set_3) \ \ #Difference of two sets using '-' operator \ set_3 = set_1 - set_2 \ \ print("\nDifference of two sets by using '-' operator") \ print(set_3) \ \ Output \ \ Difference of two sets by using difference() function \ {0, 1, 25, 26, 27, 28, 29} \ \ Difference of two sets by using '-' operator \ {0, 1, 25, 26, 27, 28, 29}`
+
+- **Union Function in Set**
+
+Two sets can be combined using the '|' operator or the union() function. Values are accepted, and the elements are combined while also removing duplicates by executing the merge function on both hash tables. This has a time complexity of 0(len(v1) + len(v2)), where v1 and v2 are the two sets for which the union must be executed.
+
+Example
+
+```
+#Union of two sets
+Students = {"Aadarsh", "Soma", "Archie"}
+Internship = {"Surya", "Teja"}
+Employees = {"Deepak", "Ranju"}
+#Union utilizing union() function
+population = Students.union(Internship)
+
+print("Union utilizing unions() function")
+print(population)
+
+#Union utilizing "|" operator
+population = Students|Employees
+
+print("\nUnion utilizing '|' operator")
+print(population)
+
+Output
+Union utilizing unions() function
+{'Aadarsh', 'Surya', 'Teja', 'Soma', 'Archie'}
+
+Union utilizing '|' operator
+{'Aadarsh', 'Deepak', 'Soma', 'Archie', 'Ranju'}
+```
+
+- **Intersection in set**
+
+The intersection is performed using the intersection or the '&' operator (). For iterating through the hash lists and joining identical values on both tables, frequent elements are selected that are comparable to one another. This has a time complexity of 0 (min(len(v1), len(v2))), where v1 and v2 are two sets that need to be united.
+
+Example
+
+```
+#intersection of two sets
+set_1 = set()
+set_2 = set()
+
+for i in range(20):
+    set_1.add(i)
+
+for i in range(4,12):
+    set_2.add(i)
+
+#Intersection utilizing intersection() functionß
+set_3 = set_1.intersection(set_2)
+
+print("Intersection utilizing intersection() function")
+print(set_3)
+
+#Intersection utilizing "&" operator
+set_3 = set_1 & set_2
+
+print("\nIntersection utilizing '&' operator")
+print(set_3)
+
+Output
+Intersection utilizing intersection() function
+{4, 5, 6, 7, 8, 9, 10, 11}
+
+Intersection utilizing '&' operator
+{4, 5, 6, 7, 8, 9, 10, 11}
+```
+
+## 6. Eliminating values in Python sets
+
+- **Using remove() in set**
+
+The remove() option in sets allows you to remove a value from a set.
+
+Example
+
+```
+set = {"Pen", "pencil", "Carrot"}
+set.remove("Carrot")
+print(set)
+
+Output
+{'pencil', 'Pen'}
+```
+
+**_Note: An error message will be displayed if the element is missing from the set._**
+
+- **Using discard() from sets**
+
+The discard() option in sets allows you to remove a value from a set.
+
+Example
+
+```
+set = {"apple", "grapes", "spinach"}
+set.discard("spinach")
+print(set)
+
+Output
+{'apple', 'grapes'}
+```
+
+**_Note: An error message will be displayed if the element is missing from the set._**
+
+- **Using pop() in sets**
+
+By using the pop() option in sets, you can remove a value from a set.
+
+Example
+
+```
+set = {"dog", "cat", "mug"}
+set.pop()
+print(set)
+
+Output
+{'cat', 'mug'}
+```
+
+_Note: The pop() method should not be utilised since sets are always unordered and it will remove any value from the set._
+
+## 7. Summary
+
+Even if a set contains duplicate values, the output will always contain unique values. Indexing and slicing are not permitted on a set as the order keeps changing.

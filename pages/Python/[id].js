@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/Python-Page";
+import {
+  getSortedPostsData,
+  getAllPostIds,
+  getPostData,
+mainFolderdata
+  
+} from "../../lib/Python-Page";
 import Footer from "../../components/global/footer/Footer";
 import Navbar from "../../components/global/navbar/Navbar";
 import Link from "next/link";
@@ -15,6 +21,7 @@ import {
 } from "react-icons/fa";
 
 export default function CategoryBlog({ postData, posts, navData }) {
+  console.log(navData,"posts");
   let singleCategoryPost = posts.map((post) => {
     return post.category;
   });
@@ -54,6 +61,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
   };
   let categoryPostTag = Array.from(new Set(singleCategoryPost));
   let categoryPostNav = Array.from(new Set(singleCategoryNav));
+  // console.log(categoryPostNav, "category");
   return (
     <>
       <section className={styles.MainS}>
@@ -204,6 +212,6 @@ export async function getStaticProps({ params }) {
       posts,
       navData,
     },
-     revalidate: 18000,
+    revalidate: 18000,
   };
 }
