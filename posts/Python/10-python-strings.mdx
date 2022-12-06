@@ -1,0 +1,528 @@
+---
+title: "10. Python Strings"
+desc: "Python Strings"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 10, 2022"
+infoP: "Python Strings"
+spanH2: "Core Concepts"
+bottomP: "In order to have complete control over the functioning of their data structures, Python users can design their own."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 10, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Strings : "
+id: "python-strings"
+tableData:
+  [
+  1. Overview,
+  2. Scopes of this tutorial,  
+  3. What does the word "string" mean?,  
+  4. Length of a string,  
+  5. Indexing of a string,
+  6. Benefits of indexing,
+  7. Loops using a String,
+  8. Slicing of String,
+  9. String Concatenation,
+  10. String Membership,
+  11. Immutability of string object,
+  12. Method for converting String,
+  13. Conclusion,
+  ]
+---
+
+# **Chapter 4: (d)**
+
+
+# **Python Strings**
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/main+banner.jpg"></img>
+
+
+
+## 1. Overview
+
+Python uses strings to represent Unicode characters, just like many other commonly known programming languages. Simply placing characters in quotations allows for the creation of strings.
+
+
+## 2. Scopes of this tutorial
+
+This will cover
+
+
+●  	Definition of a string
+
+
+●  	Different operations using String
+
+
+●  	Methods of converting String
+
+
+●  	Methods of testing a string
+
+ 
+
+
+## 3. What does the word "string" mean?
+
+The most commonly used data types in Python are strings. Basically, enclosing characters within quotation marks(single or double) will create strings. Python accepts single, double, and triple(single and double) quotes as strings. 'str' is the built-in string class in Python.
+
+Example
+
+
+a = ('How are you?') # Single quote
+b = ("Fine, thank you!") # Double quotes
+print(a)
+print(b)
+
+Output
+How are you?
+Fine, thank you!
+
+
+
+## 4. Length of a string
+
+A string's length can be determined using the built-in len() function in Python. A string is passed to an argument, and it returns a number of characters within it.
+
+Example
+
+
+y = """ Python is a Data Science course"""
+len(y)
+
+Output
+31
+
+
+
+## 5. Indexing of a string
+
+ 
+
+The index() method is used to look for the supplied value. Positive indexing can be used for this, starting from Left to Right with (0, N), while negative indexing can be used, starting from Right to Left with (-1,-N). This is helpful for finding specific values in the String.
+
+Example 1
+
+
+Data = "Python is a data science course. python developer has more knowledge"
+c = Data.index("developer")
+print(c)
+
+Output
+40
+
+
+Example 2
+
+
+A = 'Data Science at Learnbay'
+print(A[7]) # positive indexing
+
+Output
+i
+
+
+In this case, we can observe that A[7]is an ‘i’ positive index, defining a key point of an Index as stated earlier.
+
+Example 3
+
+
+A = 'Data Science at Learnbay'
+print(A[-5]) # negative indexing
+
+Output
+r
+
+
+In this case, we can observe that A[-5] is ‘r’ negative index, defining a key point of an Index as stated earlier.
+
+
+## 6. Benefits of indexing
+
+
+●  	Including them in queries often results in substantially better performance
+
+
+●  	They allow for faster data retrieval
+
+
+●  	The database's records will have a unique identification
+
+ 
+
+
+## 7. Loops using a String
+
+Using a for loop, we may loop through any characters in a string.
+
+Example
+
+
+for p in 'Python':
+	print(p)
+
+Output
+P
+y
+t
+h
+o
+n
+
+
+
+## 8. Slicing of String
+
+Accessing multiple characters simultaneously or removing a portion of it via a cut is slicing off a string.
+
+Syntax:
+
+str_name[start_index:stop_index:step]
+
+Example
+
+
+A = 'Data Science at Learnbay'
+print(A[0:-5:2])
+
+Output
+Dt cec tLa
+
+
+
+## 9. String Concatenation
+
+In Python, two strings can be joined or concatenated together by simply using the '+' operator.
+
+Example
+
+
+Y = 'Data'
+Z = 'Science'
+X = Y+" "+Z
+print(X)
+
+Output
+Data Science
+
+
+
+## 10. String Membership
+
+In Python, you have only two membership logical operators: (in) & (not in). They can be used to figure out whether the provided character is an element of the provided String or not.
+
+Example
+
+
+my_str = 'This is Python Class'
+print('a' in my_str)
+print('p' in my_str)
+print('Pn' in my_str)
+print('Python' in my_str)
+
+True
+False
+False
+True
+
+
+
+## 11. Immutability of string object
+
+
+
+* Item assignment is not possible
+* Changes will not be done in same existing object
+
+Example
+
+
+str = 'This is Python class'
+print('Before Execution')
+print(str, id(str), '\n\n')
+str = str.replace('i', 'o')
+print('After Execution')
+print(str, id(str))
+# print(new, id(new))
+print()
+a = 10
+print(a, id(a))
+a = 10+2
+print(a, id(a))
+
+Output
+Before Execution
+This is Python class 4354079360 
+
+After Execution
+Thos os Python class 4354060736
+
+10 4302879680
+12 4302879744
+
+
+
+## 12. Method for converting String
+
+The method for converting strings is primarily used to change the edition of a string. This has six different techniques.
+
+
+
+* lower()
+* upper()
+* title()
+* capitalise()
+* swapcase()
+* strip()
+
+**lower()**
+
+This technique creates a new string by changing every character in the original string to lowercase.
+
+Example
+
+
+"ABCdef".lower()
+"ABC".lower()
+
+
+
+ 
+
+
+Output
+'abcdef'
+'Abc'
+
+
+**Upper()**
+
+This technique creates a new string by changing every character in the original string to uppercase.
+
+Example
+
+
+"abcDEF".upper()
+"abc".upper()
+
+
+
+ 
+
+
+Output
+'ABCDEF'
+'ABC'
+
+
+**title()**
+
+The output of this method is a new string that has the initial letter of each word in the input string capitalized.
+
+Example
+
+
+"a python string".title()
+
+Output
+'A Python String'
+
+
+**Capitalise()**
+
+By this technique, the very first letter of the string is made uppercase, and the output is a brand-new string.
+
+Example
+
+
+"a python string".capitalize()
+
+Output
+'A python string'
+
+
+**swapcase()**
+
+The output of this method is a new string that has all lowercase letters changed to uppercase and vice versa.
+
+Example
+
+
+"a pyTHOn clASs".swapcase()
+Output
+'A PYthoN CLasS'
+
+
+**strip()**
+
+The output of this method is a new string because all the whitespace characters at the beginning and end of the string are eliminated.
+
+Example
+
+
+E = "\n\tPython\tClass"
+print(E)
+
+Output 
+	Python	Class
+
+F = E.strip()
+F
+
+Output
+'Python\tClass'
+
+print(F)
+Python	Class
+
+
+**Methods of testing String**
+
+The main purpose of the string testing method is to determine the character types that are present in the string. Subcategories are further divided into this.
+
+
+
+* str.isalnum()
+* str.isalpha()
+* str.isascii()
+* str.isdigit()
+* str.isnumeric()
+* str.isidentifier()
+
+**str.isalnum() method**
+
+When every letter in the string is alphanumeric (contains either alphabets, numerals, or a combination of both), the output of this method returns "True"; otherwise, it returns "False."
+
+Example
+
+
+"123".isalnum()
+"sfs".isalnum()
+"$$$$".isalnum()
+"abhw342".isalnum()
+
+
+Output
+True
+True
+False
+True
+
+
+**str.isalpha() method**
+
+If every character in the string is alphabetical, this method's output will return "True," else it will return "False".
+
+Example
+
+
+"123".isalnum()
+"sfs".isalnum()
+"$$$$".isalnum()
+"abhw342".isalnum()
+
+
+Output
+False
+True
+False
+False
+
+
+**str.isascii() method**
+
+This technique verifies that all characters are ascii.
+
+Example
+
+
+print('sahjdbfkjhsdk283765
+987346&^%*^%'.isascii())
+
+Output
+True
+
+
+**str.isdigit() method**
+
+The output of this procedure returns "True." It returns "False" if the string only contains numbers and no other special characters, spaces, or alphabets.
+
+Example
+
+
+"nameis101".isdigit()
+"100".isdigit()
+"1561 ".isdigit()
+"132141.125".isdigit()
+
+
+
+ 
+
+
+Output
+False
+True
+False
+False
+
+
+**str.isnumeric() method**
+
+When every element in the string is a number, this method's output returns "True," else it returns "False."
+
+Example:
+
+
+"123".isnumeric()
+"sfs".isnumeric()
+"$$$$".isnumeric()
+"abhw342".isnumeric()
+
+
+
+ 
+
+
+Output
+True
+False
+False
+False
+
+
+**str.isidentifier() method**
+
+It checks all rules  and tells whether it is a valid identifier or not.  It Will give true if it is a valid identifier except for reserved words.
+
+Example
+
+
+print('num1'.isidentifier())
+print('1num'.isidentifier())
+print('for'.isidentifier())
+
+Output
+True
+False
+True
+
+
+
+## 13. Conclusion
+
+Basically, enclosing characters within quotation marks will create strings. Python accepts both single and double quotes as strings.
+

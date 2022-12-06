@@ -30,7 +30,7 @@ const Tabs = ({ tag }) => {
             let tag = post.replace("-"," ");
             console.log(post);
             let murl = tag.replace(" ", "-");
-            let url = `/${murl}/getting-started`;
+            let url = `/${murl}/1-python-overview-and-introduction`;
             return (
               <span key={tag} className={styles.span}>
                 <Link href={url}>{tag}</Link>

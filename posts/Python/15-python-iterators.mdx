@@ -1,0 +1,379 @@
+---
+title: "15. Python Iterators"
+desc: "Python Iterators"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 15, 2022"
+infoP: "Python Iterators"
+spanH2: "Core Concepts"
+bottomP: "In order to have complete control over the functioning of their data structures, Python users can design their own."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 15, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Iterators : "
+id: "python-iterators"
+tableData:
+  [
+  1. Overview,
+  2. Scopes of this tutorial,  
+  3. What do you mean by an iterator in python?,  
+  4. Iterable and iterator,  
+  5. Methods that are specified in an iterator,
+  6. Utilising a while loop with a for loop to iterate an iterator,
+  7. Indefinite python iterators,
+  8. Summary,
+  ]
+---
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python+iterators.jpg"></img>
+
+**Chapter 5(a)**
+
+
+# **Python Iterators**
+
+
+## 1. Overview
+
+An object with a countable range of values is an iterator. An object that may be iterated upon, or traversed through all the values, is known as an iterator.
+
+
+## 2. Scopes of this tutorial
+
+This tutorial will cover
+
+
+
+* Definition of an iterator in python
+* Methods in an iterator
+
+
+## 3. What do you mean by an iterator in python?
+
+In Python, an object with a countable number of iterable elements is known as an iterator. In other words, Iterators are objects that let you iterate through every element in a collection and return each element one at a time. Iterators technically refer to objects that implement the iterator protocol in Python, which consists of the functions __iter__() and __next__ ().
+
+Example
+
+
+```
+# A built-in Python iterator is shown here.
+# Anything that can be iterated serves as a value
+val = 'Learnbay python course'
+obj = iter(val)
+ 
+while True:
+    try:
+ 
+        # Calling next between iterations
+        item = next(obj)
+        print(item)
+    except StopIteration:
+ 
+        # When an iteration is complete, an exception will occur.
+        break
+
+Output
+L
+e
+a
+r
+n
+b
+a
+y
+ 
+p
+y
+t
+h
+o
+n
+ 
+c
+o
+u
+r
+s
+e
+```
+
+
+Example2
+
+
+```
+# some of the examples of built-in iterators
+ 
+# Iteration of a list
+print("Iteration of a list")
+x = ["Python", "is", "data", "science", "course"]
+for i in x:
+    print(i)
+     
+# Iteration of a tuple
+print("\nIteration of a tuple")
+y = ("Python", "is", "data", "science", "course")
+for i in y:
+    print(i)
+     
+# Iteration of a String
+print("\nIteration of a string")   
+g = "Python is data science course"
+for i in g :
+    print(i)
+     
+# Iteration of a dictionary
+print("\nIteration of a dictionary")  
+d = dict()
+d['hello'] = 23654
+d['python'] = 25000
+for i in d :
+    print("%s  %d" %(i, d[i]))
+
+Output
+Iteration of a list
+Python
+is
+data
+science
+course
+
+Iteration of a tuple
+Python
+is
+data
+science
+course
+
+Iteration of a string
+P
+y
+t
+h
+o
+n
+ 
+i
+s
+ 
+d
+a
+t
+a
+ 
+s
+c
+i
+e
+n
+c
+e
+ 
+c
+o
+u
+r
+s
+e
+
+Iteration of a dictionary
+hello  23654
+python  25000
+```
+
+
+
+## 4. Iterable and iterator
+
+An object that can be iterated over is indeed iterable. When supplied to the iter() function, it creates an Iterator. Iterable objects include strings, sets, dictionaries, lists, and tuples. They can be transformed into an iterator because they are iterable containers.
+
+Take note that while every iterable serves as an iterator, not all iterables are iterators. 
+
+For instance,   a tuple is iterable but not an iterator. 
+
+Using the function iter(), an iterator may be generated from an iterable. As a result, an iterator will be returned when this tuple is passed into an iter() method. In reality, this is allowed because an object's class has a technique called __iter__ that returns an iterator.
+
+Implementing a for loop to automatically iterate is a more suitable method. We may iterate over every object which can yield an iterator with this, including lists, strings, files, and many more.
+
+Example
+
+
+```
+my_list = [6, 27, 40, 63, 'Python']
+for element in my_list:
+    print(element)
+
+Output
+6
+27
+40
+63
+Python
+```
+
+
+The for loop is able to iterate automatically through the list, as you can see in the example above. In reality, any iterable may be iterated using the _for loop_. 
+
+
+## 5. Methods that are specified in an iterator
+
+There are two methods
+
+
+
+* __iter__()
+* __next__()
+
+
+### **__iter__() function**
+
+The real iterator object is returned by this function. For the for statements to work properly, both containers, as well as iterators, must be supported.
+
+
+### **__next__() function**
+
+The next item in the container is returned by this function. Raising the StopIteration exception when there is a lack of any further items.
+
+Example1
+
+
+```
+# defining a iterable utilising a list
+lst = [0, 1, 2]
+# getting an iterator using iter()
+iter1 = lst.__iter__()
+#iert the item using __next__method
+print(iter1.__next__())
+
+Output
+0
+```
+
+
+Example2
+
+
+```
+# defining a iterable utilising a string
+string = "hello"
+# to obtain an iterator, use iter()
+iter5 = iter(string)
+# iterate through it by utilizing next()
+print(next(iter5))
+print(next(iter5))
+print(next(iter5))
+print(next(iter5))
+print(next(iter5))
+
+Output
+h
+e
+l
+l
+o
+```
+
+
+
+## 6. Utilising a while loop with a for loop to iterate an iterator
+
+Why can't we utilise a while loop to ease our workload as we are continuously utilising the next() function? Moreover, we can utilize exception handling to deal with the error we receive when the iterator runs out of elements. Because of this, whenever the error "StopIteration" occurs, control is transferred to the except block, and the break statement is actually executed.
+
+Example
+
+
+```
+# defining an iterable utilising a list
+lst=[14,82,93,34,75,6,27,48,59,20]
+
+# get an iterator using iter()
+iter1=iter(lst)
+while True:
+    try:
+        print(next(iter1)) # get the next item
+    except StopIteration:
+        # once the StopIteration is raised, break from loop
+        break
+
+Output
+14
+82
+93
+34
+75
+6
+27
+48
+59
+20
+```
+
+
+
+## 7. Indefinite python iterators
+
+The item in an iterator object does not always need to be fixed. Iterators are limitless in number (which never ends). When working with these iterators, we must be cautious.
+
+Example
+
+
+```
+class InfiniteIterator:
+ 
+    def __iter__(self):
+        self.n = 0
+        return self
+ 
+    def __next__(self):
+        result = self.n * 3
+        self.n += 1
+        return result
+ 
+multiplesOfThree = InfiniteIterator()
+ 
+i = iter(multiplesOfThree)
+ 
+print("Multiples of three are:")
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+
+Output
+Multiples of three are:
+0
+3
+6
+9
+12
+15
+18
+21
+24
+27
+```
+
+
+
+## 8. Summary
+
+In this tutorial we have gone through iterators and its methods. Iterators are useful since they allow us to retain a lot of resources. As we can see, there is no array of integers stored when calculating multiples of three.
+

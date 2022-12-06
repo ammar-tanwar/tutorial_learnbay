@@ -1,0 +1,280 @@
+---
+title: "14. Python Dictionary"
+desc: "Python Dictionary"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 14, 2022"
+infoP: "Python Dictionary"
+spanH2: "Core Concepts"
+bottomP: "In order to have complete control over the functioning of their data structures, Python users can design their own."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 14, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Dictionary : "
+id: "python-dictionary"
+tableData:
+  [
+  1. Overview,
+  2. Scope of this tutorial,  
+  3. Definition of the Python Dictionary,  
+  4. Accessing Dictionary Elements in Different Ways,  
+  5. Addition And Deletion of Elements in Dictionary,
+  6. Using a loop to find the key elements,
+  7. Using a loop to access the values,
+  8. Using a loop to access the items in dictionaries,
+  9. Things to keep in mind,
+  10. Summary,
+  ]
+---
+
+# Chapter 4: (h)
+
+
+# Python Dictionary
+
+ 
+
+
+## 1. Overview
+
+A key and the corresponding value are both represented like a pair of values in a Python dictionary (key: value). Keys must belong to an immutable type; values may be of whatever data type and may repeat.
+
+ 
+
+
+## 2. Scope of this tutorial
+
+This tutorial covers
+
+
+●      Python dictionary definition
+
+
+●      Accessing Dictionary Elements in Different Ways
+
+ 
+
+
+## 3. Definition of the Python Dictionary
+
+The data that is wrapped in curly brackets with a key and value separated by a semi-colon(:) is referred to as a dictionary. A dictionary is implemented in Python as a data structure. Data values are kept in dictionaries as key-value pairs.
+
+Example1
+
+
+```
+st_name = (101, 'Suresh', 'Ramesh', 'Veeresh')
+st_id = ('LB101', 'LB102', 'LB103', 'LB104')
+st_email = ['rakesh@gmail.com','suresh@yahoo.com', 'ramesh@hotmail.com', 'veeresh@gmail.com']
+
+st_details = {'st_1':{'name':'Rakesh', 'id':'LB101', 'email':'rakesh@gmail.com'},
+'st_2':{'name':'Suresh', 'id':'LB102', 'email':'suresh@yahoo.com'},
+'st_3':{'name':'Ramesh', 'id':'LB103', 'email':'ramesh@hotmail.com'},
+'st_4':{'name':'Veeresh', 'id':'LB104', 'email':'veeresh@gmail.com'}}
+
+print(st_details['st_4']['id'])
+print(list(st_details['st_2'].items())[1])
+
+Output
+LB104
+('id', 'LB102')
+```
+
+
+Example2
+
+
+```
+car = { "brand": "Hyundai","model":"Getz","year": 2010,"year": 2022}
+print(car)
+
+Output
+{'brand': 'Hyundai', 'model': 'Getz', 'year': 2022}
+```
+
+
+Here brand, model, and year are keys while Hyundai, Getz, 2010 and 2022 are values
+
+**_Note 1: We can see that Example 2 assumes the year to be 2022. Python accepts the most recent modifications made to any value allocated to its key._**
+
+**_Note 2: Duplicate key values are not accepted in dictionaries._**
+
+
+## 4. Accessing Dictionary Elements in Different Ways
+
+We may use the function below to obtain the data.
+
+
+
+* Get Keys
+* Get Values
+* Get Items
+
+Get Keys: The get() method returns the values associated with the object whose key is specified.
+
+Example
+
+
+```
+car = { "brand": "Hyundai","model":"Getz","year": 2010,"year": 2022}
+a=car.get("model")
+print(a)
+
+Output
+Getz
+```
+
+
+Get values: Returns a list of all values found inside the dictionary that was specified. Values that are in reverse have been retained.
+
+Example
+
+
+```
+salary = {"Dan":17000,"mike":45000,"juke": 82000}
+out1 = salary.values()
+print(sum(out1))
+
+Output
+144000
+```
+
+
+Get items: All dictionary keys and values are returned in a list by the items() method of the Python dictionary.
+
+Example
+
+
+```
+out = {"name":'mike',"status":'married',"place":'Bangalore'}
+items = out.items()
+print(items)
+
+Output
+dict_items([('name', 'mike'), ('status', 'married'), ('place', 'Bangalore')])
+```
+
+
+
+## 5. Addition And Deletion of Elements in Dictionary
+
+ERP can be modified to meet the constant turnover of resources in industries with high rates of growth by adding and removing components. Below is a description of how to obtain the updated data. The Dictionary's built-in update() method may be used to add the elements to the current data.
+
+To remove data, use the built-in Python method pop().
+
+Example
+
+
+```
+#Adding of elements
+empl_det = {"zenk" : 19000,"marker":42000,"rodio":38000}
+empl_det.update({"bendon":59500})
+print(empl_det)
+
+Output
+{'zenk': 19000, 'marker': 42000, 'rodio': 38000, 'bendon': 59500}
+```
+
+
+
+```
+#Deletion of elements
+empl_det = {'zenk': 19000, 'marker': 42000, 'rodio': 38000, 'bendon': 59500}
+empl_det.pop('zenk')
+print(empl_det)
+
+Output
+{'marker': 42000, 'rodio': 38000, 'bendon': 59500}
+```
+
+
+
+## 6. Using a loop to find the key elements
+
+Let's take a closer look at how to utilise Python's loop function to find keys, values, and items in dictionaries.
+
+Example
+
+
+```
+empl={"Dept1":"Maths","Dept2":"Physics","Dept3":"Biology","Dept4": "Chemistry"}
+for x in empl:
+    print(x)
+
+Output
+Dept1
+Dept2
+Dept3
+Dept4
+```
+
+
+
+## 7. Using a loop to access the values
+
+The values() function can be used to return dictionary values.
+
+Example:
+
+
+```
+empl={"Dept1":"Maths","Dept2":"Physics","Dept3":"Biology","Dept4": "Chemistry"}
+for x in empl.values():
+    print(x)
+
+Output
+Maths
+Physics
+Biology
+Chemistry
+```
+
+
+
+## 8. Using a loop to access the items in dictionaries
+
+The results of the Items identified in dictionaries are produced by Items loops.
+
+Example:
+
+
+```
+empl={"Dept1":"Maths","Dept2":"Physics","Dept3":"Biology","Dept4": "Chemistry"}
+for x in empl.items():
+    print(x)
+
+Output
+('Dept1', 'Maths')
+('Dept2', 'Physics')
+('Dept3', 'Biology')
+('Dept4', 'Chemistry')
+```
+
+
+
+## 9. Things to keep in mind
+
+
+
+* In Python, dictionaries are one of the accessible composite data types.
+* The information is kept as a key-value pair.
+* Dictionary prevents using the same key value twice.
+* The nature of Python's dictionary keys is immutability.
+* Strings and integers can be used as dictionary keys, but lists are not possible. They also enhance dictionary reading. The nesting of two Python dictionaries is another feature.
+
+
+## 10. Summary
+
+A selection of the Python dictionaries that we will eventually need for all development work. They are adaptable and offer valuable capabilities for anything from the simple job of inserting a key-value combination to dictionary comprehension.
+

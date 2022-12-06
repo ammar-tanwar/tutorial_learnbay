@@ -1,0 +1,450 @@
+---
+title: "29. Python Seaborn"
+desc: "Python Seaborn"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 29, 2022"
+infoP: "Python Seaborn"
+spanH2: "Core Concepts"
+bottomP: "Data visualization is the technique of visual representations of our data to identify trends and relationships. We should utilize a variety of Python data visualization libraries, such as Matplotlib, Seaborn, etc., to do data visualization."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 29, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Seaborn : "
+id: "29-python-seaborn"
+tableData:
+  [
+  1. Overview,
+  2. Scope of the tutorial,  
+  3. The Definition of Seaborn in python.,  
+  4. Features of Python Seaborn,  
+  5. The benefits of using Python Seaborn,
+  6. Data visualization utilizing Seaborn,
+  7. Distribution of plots,
+  8. Loading of the dataset,
+  9. Summary,
+  ]
+---
+
+# **Chapter 12(b)**
+
+
+# **Python Seaborn**
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Python+seaborn.jpg"></img>
+
+
+
+## 1. Overview
+
+Based on matplotlib, Python Seaborn is a Python data structure library for data visualization that works well with pandas. Visualization is the main component of Seaborn that assists in data investigation and interpretation.
+
+
+## 2. Scope of the tutorial
+
+This tutorial will cover
+
+
+
+* Definition of Seaborn in python
+* Different ways to plot graphs utilizing Python seaborn.
+
+
+## 3. The Definition of Seaborn in python.
+
+Utilizing Python Seaborn, the ability to produce and visualize data in the form of graphs, charts, and plots is being improved. Moreover, it shows the data on a statistical graph and any hidden correlations between variables and trends. Seaborn has a top-level interface when compared to Matplotlib. It is a Matplotlib extension module.
+
+
+## 4. Features of Python Seaborn
+
+
+
+* The ability to visualize 3D data
+* By employing time series data, Seaborn enables things simple to create graphs.
+* Several styles of graphs can be plotted.
+
+
+## 5. The benefits of using Python Seaborn
+
+
+
+* A plot or graph can be used to display the data.
+* Execute the data or dataset within the "relplot()" function, and it will arrange the values accurately and calculate automatically, so you don't have to worry about the internals.
+* It provides an instructive and attractive display for the loaded dataset.
+* You can also visualize categorical data.
+
+
+## 6. Data visualization utilizing Seaborn
+
+There are two elements in data visualization:
+
+
+
+* Visualizing statistical relationships
+* Plotting of categorical data
+
+**Visualizing statistical relationships**
+
+It is the process of analyzing relations between different dataset components and understanding how it influences other parameters within the dataset.
+
+
+## 7. Distribution of plots
+
+
+
+* dis plot
+* his plot
+* kde plot
+* rug plot
+* box plot 
+
+We will look over all the above plots by utilizing a dataset “titanic.”
+
+
+## 8. Loading of the dataset
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+1.PNG"></img>
+
+
+
+### **displot()**
+
+
+```
+sns.displot(data_frame.column)
+sns.displot(df.age)
+plt.show()
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+2.PNG"></img>
+
+
+
+```
+sns.displot(x='age',data=df,kind='kde')
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+3.PNG"></img>
+
+
+
+```
+sns.displot(x='age',data=df,kde=True)
+```
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+4.PNG"></img>
+
+
+
+```
+kdeplot()
+sns.kdeplot(x='age',data=df,shade=True,color='red')
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+5.PNG"></img>
+
+
+
+```
+histplot()
+sns.histplot(df.age,bins=35,kde=True)
+```
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+6.PNG"></img>
+
+
+
+### **Boxplot()**
+
+Box-and-whisker plots are the alternative names for box plots. To make it simple to compare one variable with another or various phases of categorical data, it visualizes the distribution of statistical data. The box shows the quartiles of the dataset, and the whiskers stretch to represent the remainder of the distribution, except for points that are designated as "outliers" using a method that is an expression of an interquartile range.
+
+
+```
+sns.boxplot(y='age',data=df)
+```
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+7.PNG"></img>
+
+
+
+### **Countplot()**
+
+
+```
+sns.countplot(x='sex',hue='class',data=df,palette='bright')
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+8.PNG"></img>
+
+
+
+### **Scatter plot()**
+
+One of the most popular methods for displaying the relationship between two items is a scatter plot. Each observation point from the dataset is shown on the plot as a collection of interconnected dots.
+
+sns.scatterplot(x='age',y='fare',hue='class',data=df)
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+9.PNG"></img>
+
+
+
+```
+sns.scatterplot(x='tip',y='total_bill',data=data)
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+10.PNG"></img>
+
+
+Using new dataset
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+11.PNG"></img>
+
+
+
+### **jointplot()**
+
+
+```
+sns.jointplot(x='total_bill', y='tip', data=data, kind='hex')
+```
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+12.PNG"></img>
+
+
+
+### **Violin plot()**
+
+The same goal is achieved by both a violin plot as well as a whisker and box plot. It shows the distributions of quantitative data for one (or even more) categorical parameters over several phases to enable comparison. In contrast to a box plot, where every single piece of the plot correlates to actual data points, the violin plot incorporates an estimated kernel frequency of the underlying distribution. This method of presenting multiple data distributions simultaneously can be informative and appealing, but it should be noted that the estimated algorithm is influenced by the sample size, making small samples of violins look deceptively smooth.
+
+
+```
+sns.set(style="tricks", color_codes=True)
+a = sns.load_dataset("tips")
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+12(b).PNG"></img>
+
+
+
+### **heatmap()** 
+
+
+```
+plt.subplots(figsize=(8,6),dpi=100)
+sns.heatmap(df.corr(),annot=True,fmt='.2g',cmap='viridis')
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+13.PNG"></img>
+
+
+Heatmap for checking null values
+
+
+```
+plt.subplots(figsize=(6,4),dpi=100)
+sns.heatmap(df.isna(),cmap='viridis')
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+14.PNG"></img>
+
+
+
+### **stripplot()**
+
+
+```
+plt.subplots(figsize=(6,5),dpi=100)
+sns.stripplot(x='day',y='tip',data=data)
+```
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+15.PNG"></img>
+
+
+
+### **swarmplot()**
+
+
+```
+plt.subplots(figsize=(6,5),dpi=100)
+sns.swarmplot(x='day',y='tip',data=data)
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+16.PNG"></img>
+
+
+
+### **scatter plot()**
+
+
+```
+sns.scatterplot(x='tip',y='total_bill',hue='smoker',data=data)
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+17.PNG"></img>
+
+
+
+### **regplot()**
+
+It is used to plot the regression line.
+
+
+```
+plt.subplots(figsize=(10,8))
+sns.regplot(x='tip',y='total_bill',data=data)
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+18.PNG"></img>
+
+
+
+### **relplot()**
+
+Relplot is used to visually represent the connection between two statistically comparable techniques. One could pass data, x-axis and y-axis labels, size, style, color, and many other parameters in this.
+
+
+```
+Syntax
+seaborn.relplot(data="your data",
+x="name for x axis", y="name for y axis",
+hue="your_hue", style="your_style", size="and size",)
+```
+
+
+Example
+
+
+```
+sns.relplot(x="total_bill",y="tip", hue= "smoker", data=tips);
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+19.PNG"></img>
+
+
+
+### **lmplot()**
+
+
+```
+sns.lmplot(x='tip',y='total_bill',hue='day',data=data)
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+20.PNG"></img>
+
+
+
+### **pairplot()**
+
+
+```
+sns.pairplot(x_vars=['Attack Point','Defense Point','Speed Point','Sp. Atk Point'], y_vars=['Total Point'], kind='reg', data=data)
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+21.PNG"></img>
+
+
+
+### **barplot()**
+
+
+```
+from numpy import median
+plt.subplots(figsize=(6,4),dpi=100)
+sns.barplot(x='Type1',y='Total Point',data=data,ci=False,estimator=max)
+```
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+22.PNG"></img>
+
+
+
+### **catplot()**
+
+It is known as a universal plot
+
+
+```
+# plt.figure(figsize=(12,8),dpi=100)
+sns.catplot(x='Type1',y='Total Point',data=data,kind='strip',height=8,estimator=median)
+plt.show()
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+23.PNG"></img>
+
+
+
+```
+sns.catplot(x='day',y='tip',data=data,kind='bar',height=6,estimator=median)
+```
+
+
+![alt_text](images/image26.png "image_tooltip")
+
+
+How to plot multiple axes in seaborn?
+
+
+```
+fig, ax= plt.subplots(2,2,figsize=(12,8),dpi=100)
+
+sns.boxplot(y='tip',data=data,ax=ax[0][0])
+ax[0][0].set_title("Tip")
+ax[0][0].set_xlabel("x_axis")
+ax[0][0].set_ylabel("y_axis")
+
+sns.boxplot(y='total_bill',data=data,ax=ax[0][1])
+
+sns.regplot(x='tip',y='total_bill',data=data,ax=ax[1][0],color='y')
+ax[1][0].set_title("tip vs total_bill")
+
+plt.tight_layout()
+plt.show()
+```
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+24.PNG"></img>
+
+
+
+## 9. Summary
+
+Visualization is the substantial role of Seaborn. The most frequently used library is seaborn, a python library. Data visualization is indeed the art of showcasing data as graphs. For those in the data industry, such as financial analysts, business analysts, data analysts, and data scientists, it is a helpful tool.

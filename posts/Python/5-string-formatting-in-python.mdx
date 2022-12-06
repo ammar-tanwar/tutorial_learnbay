@@ -1,0 +1,185 @@
+---
+title: "5. String Formatting in Python"
+desc: "String Formatting in Python"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 5, 2022"
+infoP: "String Formatting in Python"
+spanH2: "Core Concepts"
+bottomP: "In Python, a comment begins with the hash symbol # and continues until the end of the actual line. Python code is sometimes explained using comments. Code can be made more understandable by using comments.In Python, a comment begins with the hash symbol # and continues until the end of the actual line. Python code is sometimes explained using comments. Code can be made more understandable by using comments."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 5, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "String Formatting in Python : "
+id: "string-formatting-in-python"
+tableData:
+  [
+  1. Overview, 
+  2. Scopes of this tutorial,  
+  3. What does Python's string formatting mean?,  
+  4. Benefits of using the .format() method in Python,  
+  5. Summary,
+  ]
+---
+
+
+
+# Chapter 2: (c)
+
+
+# String Formatting in Python
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/main+banner-String-formating-in-python.jpg"></img>
+
+
+
+## 1. Overview
+
+As a programmer, it is essential to have an overall understanding of string formatting and its benefits. String formatting in Python is nothing but introducing a variable to the written source.
+
+ 
+
+
+## 2. Scopes of this tutorial
+
+This tutorial will cover
+
+
+●      What is string formatting in Python?
+
+
+●      Benefits of using the .format() method in Python
+
+ 
+
+
+## 3. What does Python's string formatting mean?
+
+String formatting is a potential that must be known inside out when it comes to coding expertise. Usually, a string has an easy flow of writing. It is the process of introducing a variable to the written source. It is a crucial component of a programming language. It includes modifying strings in basic text with user-defined values or phrases.
+
+Curly braces '{}', sometimes known as "placeholders," are used in the String format method as "arguments" that can be held in various positions and according to an ordered keyword.
+
+ 
+
+
+## 4. Benefits of using the .format() method in Python
+
+
+●      Inserting variables based on index position
+
+
+●      Inserting variables by assigning keywords
+
+
+●      Duplicates can be avoided even if the same variable is used
+
+
+●      Increasing and decreasing floating point is possible
+
+ 
+
+Examples of string formatting in Python
+
+ 
+
+
+●      **Index-based position**
+
+ 
+
+
+```
+print ('{2} {0} {1}'.format('you?', 'how', 'are'))
+ 
+Output
+How are you?
+```
+
+
+ 
+
+
+●      **Assigning keywords**
+
+ 
+
+
+```
+print('a: {a}, b: {b}, c: {c}'.format(a = 108, b = 'Sixty-Eight', c = 462.65))
+
+
+Output
+a: 108, b: Sixty-Eight, c: 462.65
+
+
+```
+
+
+
+●      **Assigning the same variable to avoid duplicate**
+
+ 
+
+
+```
+print('The first {w} was alright, but the {w} {w} was not correct.'.format(w = 'word'))
+```
+
+
+ 
+
+
+```
+Output
+The first word was alright, but the word word was not correct.
+```
+
+
+ 
+
+
+●      **Increase or decrease Floating points**
+
+ 
+
+
+```
+print("Floating point {0:.3f}".format(425.16408732))
+```
+
+
+ 
+
+
+```
+Output
+Floating point 425.164
+```
+
+
+ 
+
+Note: ‘f’ represents the floating point and ‘3’ represents the number of digits after the decimal.
+
+ 
+
+The easiest and most efficient method for string formatting is using F-strings. String literal formatting is also another name for it. Here, the string is handled as a formatted string by using the literal 'f' at the beginning.
+
+ 
+
+
+## 5. Summary
+
+String formatting is a common operation, and the way it is displayed in f-strings makes it incredibly simple for everyone to use Python. Because it is so simple to create and maintain, the f-string is the most popular and widely used method for formatting strings. Therefore, using formatting strings is encouraged to simplify and improve coding skills.

@@ -1,0 +1,413 @@
+---
+title: "17. Python Loops"
+desc: "Python Loops"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 17, 2022"
+infoP: "Python Loops"
+spanH2: "Core Concepts"
+bottomP: "Control statements are those that alter the order in which statements are executed. Control statements for loops change how they usually run."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 17, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Loops : "
+id: "python-loops"
+tableData:
+  [
+  1. Overview,
+  2. Scope of the tutorial,  
+  3. What in Python is a control statement?,  
+  4. What kind of loops are there in Python?,  
+  5. What are the types of control statements available in python?,
+  6. Summary,
+  ]
+---
+
+# **Chapter 5: (c)**
+
+
+# **Python Loops**
+
+
+## 1. Overview
+
+Sequential execution is used while running Python code. Change the flow of control if one or more sets of codes must be repeated or skipped. This tutorial will assist you in efficiently automating some repetitive operations by using loop control statements that are based on logic and data.
+
+
+## 2. Scope of the tutorial
+
+This tutorial will cover
+
+
+
+* Python control statements
+* Various types of loops
+* Types of control statements in python
+
+
+## 3. What in Python is a control statement?
+
+Control statements are used when an operation may only be performed under specific situations, achievable via conditional statements. You can decide to end the loop or skip the condition in some situations.
+
+
+## 4. What kind of loops are there in Python?
+
+Loops are categorized into three types.
+
+
+        ●      'While loop'
+
+
+        ●      'For loop'
+
+
+        ●      'Nested loop'
+
+
+
+1. While Loop
+
+The while loop repeatedly executes the block statement until it satisfies its conditions; if the program condition is false, then the next statement is immediately performed. Any statement in programming with the same number of character spaces between it and the next is regarded as a single block of code. Indentation is the term for a collection of Python statements.
+
+
+```
+Example
+# A program to sum natural numbers while adding them
+# 1+2+3+...+n
+
+nn = 10
+
+# initial sum and counter
+sum = 0
+i = 1
+
+while i <= nn:
+    sum = sum + i
+    i = i+1    # update counter
+print("The sum is", sum)
+
+Output
+The sum is 55
+```
+
+
+
+
+2. **While loop with else statement**
+
+When the program condition is false, the else statement after the while loop is performed. The while loop allows us to execute the block statement until it satisfies its condition. The loop will not execute if an exception is triggered or if we leave the program.
+
+Example
+
+
+```
+count = 0
+while (count<5):
+    count = count +1
+    print ("Hello Python welcome to data science")
+else:
+    print ("Closing Python")
+
+Output
+Hello Python welcome to data science
+Hello Python welcome to data science
+Hello Python welcome to data science
+Hello Python welcome to data science
+Hello Python welcome to data science
+Closing Python
+```
+
+
+
+### **For Loops**
+
+For line-by-line execution, loops are utilized. We may run a series of instructions for each element in a set, list, tuple, string, etc. using them for a loop.
+
+Example1 
+
+
+```
+#Iteration over range 0 to n-1
+n = 10
+for i in range(0, n):
+    print(i)
+Output
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example2
+# Program to find the sum of all numbers stored in a list
+
+# Numbers in a list
+numbers = [7, 12, 36, 81, 44, 62, 58, 11, 49]
+
+# variable to retain the total
+sum = 0
+
+# iterate across the list
+for i in numbers:
+    sum = sum+i
+
+print("The total sum is", sum)
+
+Output
+The total sum is 360
+```
+
+
+
+### **Nested loops**
+
+Any loop that is used inside of another loop is referred to as a nested loop in Python. Any type of loop may be combined with it (for inside of the while loop, inside of for loop, inside of the while loop, inside of the while loop).
+
+It's possible that there's more than one inner loop in the outer loop. The number of loops that can be chained is unlimited.
+
+The number of iterations inside the nested loop is determined by an equal number of iterations inside the outer loop by the number of iterations inside the inner loop.
+
+Example
+
+
+```
+#Create a program using nested for loops to print adding of numbers in Python
+# out of loop
+for i in range(1, 20):
+    # nested loop
+    # to iterate from 1 to 19
+    for j in range(1, 20):
+        # print addition
+        print(i + j, end=' ')
+    print()
+
+
+Example2
+age = 17
+gender =[]
+
+if age < 20:
+    if gender == 'M':
+        print('son')
+    else:
+        print('daughter')
+elif age >= 20 and age < 60:
+    if gender == 'M':
+        print('father')
+    else:
+        print('mother')
+else:
+    if gender == 'M':
+        print('grandfather')
+    else:
+        print('grandmother')
+
+Output
+daughter
+```
+
+
+
+## 5. What are the types of control statements available in python?
+
+Three different loop control statement types are available
+
+
+
+* Continue statement
+* Break statement
+* Pass statement
+
+
+### **Break Statement in python**
+
+In Python, to stop a loop or statement within which it appears, use the break statement. Later, control will be expended over the statements that followed the break statement. It ends the loop that contains the break clause.
+
+Example
+
+
+```
+for k in range(10):
+    for l in range(10):
+        if l == k:
+            break
+        print(k, l)
+
+Output
+1 0
+2 0
+2 1
+3 0
+3 1
+3 2
+4 0
+4 1
+4 2
+4 3
+5 0
+5 1
+5 2
+5 3
+5 4
+6 0
+6 1
+6 2
+6 3
+6 4
+6 5
+7 0
+7 1
+7 2
+7 3
+7 4
+7 5
+7 6
+8 0
+8 1
+8 2
+8 3
+8 4
+8 5
+8 6
+8 7
+9 0
+9 1
+9 2
+9 3
+9 4
+9 5
+9 6
+9 7
+9 8
+Example using while loop
+n = 10
+while n > 0:
+    n -= 1
+    if n == 2:
+        break
+    print(n)
+print('Loop ended.')
+
+Output
+9
+8
+7
+6
+5
+4
+3
+Loop ended.
+```
+
+
+
+### **Continue statement in python**
+
+In comparison to a break statement, the continue statement in Python forces the loop to continue running through its remaining iterations rather than ending it. The code inside the loop will not run when the continue statement is used, allowing the loop to begin its next iteration.
+
+Example
+
+
+```
+The code prints the numbers from 1 to 5 in the example provided. However, since we explicitly said in our loop statement not to print 3, it does not print 3. The "continue statement" performs a loop from 1 to 5 while comparing the value of the iterator with 3. The continue statement skips number 3 when the value reaches it and publishes values after number 3.
+
+li = [1,2,3,4,5,6]
+elist = []
+for i in li:
+    if i == 3:
+        continue
+    else:
+        elist.append(i)
+print(elist)
+
+Output
+[1, 2, 4, 5, 6]
+```
+
+
+
+### **Pass statement in python**
+
+However, you don't need a command or a piece of code to execute a statement when it is grammatically needed. It is possible to utilize a pass statement in that situation. When it is performed, nothing happens, just like a null operation. The statement neglects writing empty loops, empty control statements, functions, and empty classes.
+
+Example
+
+
+```
+In the example, when the value of I equals "u," the pass statement does nothing, and the letter "u" is therefore printed as well.
+
+li = ['a', 'b', 'c', 'a', 'd', 'a']
+for i in li:
+    if i == 'a':
+        pass
+    else:
+        print(i)
+
+Output
+b
+c
+d
+```
+
+
+
+### **The range() Function**
+
+The range() function allows us to iterate across a set of code a defined number of times.
+
+When using the range() function, an array of numbers is returned that by default starts at 0 and increases by 1 before attaining to a specified value.
+
+
+```
+Example
+
+for i in range (10):
+	print(i)
+
+```
+
+
+In for loops, we may iterate through a list of integers by using the range() method. A sequence can be iterated over using indexing by combining it with the len() function. 
+
+Example
+
+
+```
+#write a program to iterate through a list using indexing
+
+name = ['popit', 'rohit', 'sharma']
+
+# iterate over the list using an index
+for i in range(len(name)):
+    print("I like", name[i])
+
+Output
+I like popit
+I like rohit
+I like sharma
+```
+
+
+
+## 6. Summary
+
+The for and while loops, as well as loop statements, are now skills that you have learned. By enhancing your python ability, these ideas aid in thinking.
+
+
+

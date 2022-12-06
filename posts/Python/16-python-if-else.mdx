@@ -1,0 +1,203 @@
+---
+title: "16. Python If Else"
+desc: "Python If Else"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 16, 2022"
+infoP: "Python If Else"
+spanH2: "Core Concepts"
+bottomP: "Control statements are those that alter the order in which statements are executed. Control statements for loops change how they usually run."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 16, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python If Else : "
+id: "python-if-else"
+tableData:
+  [
+  1. Overview,
+  2. Scopes of the tutorial,  
+  3. If Statement,  
+  4. What is an if…else statement in python?,  
+  5. If…elif…else statement,
+  6. Nested if Statement,
+  7. Pass Statement,
+  8. Summary,
+  ]
+---
+
+
+# **Chapter 5: (b)**
+
+
+# **Python If…Else**
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python+if+else.jpg"></img>
+
+
+
+## 1. Overview
+
+A statement or a group of statements can be conditionally executed using the Python if-else statement. Conditions can be either true or false. when they are true, one decision is taken; when they are false, another decision is made.
+
+
+## 2. Scopes of the tutorial
+
+This tutorial covers
+
+
+
+* if statement
+* if…else statement
+* Nested if Statement
+* if…elif…else statement
+
+
+## 3. If Statement
+
+It starts with the if keyword and proceeds on to the condition. The test expression is examined first. If the expression produces a true result, the if statement's content is executed. When the "If" condition is false, the sentence that appears after the "else" statement is executed. In all cases, the statement's default evaluation rule applies to any line of code outside of it.
+
+Example:
+
+
+```
+# If the result is positive, you print the suitable message.
+
+num1 = 3
+if num1 > 0:
+    print(num1, "is a positive value.")
+print("Always print this.")
+
+Output
+3 is a positive value.
+Always print this.
+```
+
+
+
+## 4. What is an if…else statement in python?
+
+Python uses the if-else expression to make decisions. Every time we want to execute a piece of code, but only under certain conditions, we should make a decision.
+
+If the expression is True, the program gets evaluated and executes the statement(s).
+
+The Statement(s) will not be processed if the expression returns False.
+
+The content of the if statement is shown by the indentation within Python. The body terminates with the first line that isn't indented following the indentation.
+
+Example
+
+
+```
+# When the number is either positive or negative, the program determines and displays the relevant message.
+num2 = 40
+
+if num2 >= 0:
+    print("Positive value or Zero")
+else:
+    print("Negative value")
+
+Output
+Positive value or Zero
+```
+
+
+The body of the if statement is performed in the example above when num equals 10, while the body of the else statement is skipped.
+
+
+## 5. If…elif…else statement
+
+A scenario can occur occasionally when many factors/conditions are involved. Python allows you to add as many elif statements as you need to address the situation before an else clause and after an if. Each condition is separately evaluated by Python, and if a true condition is detected, the statement(s) placed below that expression will be carried out. The statement(s) in the block below else will be executed when no true condition is found.
+
+Example
+
+
+```
+variable = 37649,345
+if (type(variable) == int):
+    print("The variable's type is Integer")
+elif (type(variable) == float):
+    print("The variable's type is Float")
+elif (type(variable) == complex):
+    print("The variable's type is Complex")
+elif (type(variable) == bool):
+    print("The variable's type is Bool")
+elif (type(variable) == str):
+    print("The variable's type is String")
+elif (type(variable) == tuple):
+    print("The variable's type is Tuple")
+elif (type(variable) == dict):
+    print("The variable's type is Dictionaries")
+elif (type(variable) == list):
+    print("The variable's type is List")
+else:
+    print("The variable's type is Unknown")
+
+Output
+The variable's type is Float
+```
+
+
+
+## 6. Nested if Statement
+
+An IF statement that would be nested inside of another IF statement is known as a nested IF statement.The necessity to filter a parameter more than once occurs in this situation. The indentation is used to specify the scope of each statement in nested IF statements should be properly examined. There can be as many stages of nesting as needed, but doing so lowers the program's performance and makes it more difficult to read and interpret. Therefore, make an effort to utilize nested IF statements as often as feasible.
+
+Example
+
+
+```
+# A python program is utilised to illustrate nested If statement
+i = 40
+if (i == 40):
+    
+    #  First if statement
+    if (i < 50):
+        print("i is smaller than 50")
+          
+# Nested - if statement will only be executed if statement above it is true
+    if (i < 12):
+        print("i is smaller than 20")
+    else:
+        print("i is greater than 25")
+
+Output
+i is smaller than 50
+i is greater than 25
+```
+
+
+
+## 7. Pass Statement
+
+For any reason you have an if statement that is empty, add the pass statement to stop arising an error. If statements in if sections cannot be empty.
+
+Example
+
+
+```
+x = 654
+y = 432
+
+if x > y:
+	pass
+```
+
+
+
+## 8. Summary
+
+I hope this Python conditional statement tutorial was helpful to you. Through a few exercises, you acquired knowledge of the if, else, if-elif-else, and nested IF statements.
+
+

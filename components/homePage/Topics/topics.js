@@ -9,7 +9,7 @@ function Topics({categoryPostTopic}) {
 <div className={styles.container} >
         {categoryPostTopic.map((categoryPostTopic, index) => {
             let murl = categoryPostTopic.title.replace(" ", "-");
-            let url = `/${murl}/getting-started/`;
+            let url = `/${murl}/1-python-overview-and-introduction/`;
             return (
         <div className={styles.boxes} key={index}>
             <Link href={url}><div className={styles.boxesInner}>

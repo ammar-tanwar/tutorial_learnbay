@@ -1,0 +1,257 @@
+---
+title: "21. Python Filter"
+desc: "Python Filter"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 21, 2022"
+infoP: "Python Filter"
+spanH2: "Core Concepts"
+bottomP: "Built-in functions are a set of pre-defined in the application library of the programming language, allowing the program to call them directly whenever needed to complete certain functional activities."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 21, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Filter : "
+id: "python-filter"
+tableData:
+  [
+  1. Overview,
+  2. Scope of the tutorial,  
+  3. What is Filter() in python?,  
+  4. Applications of Python filters,  
+  5. Getting Rid of Outliers in a Sample,
+  6. Getting rid of NaN Values,
+  7. Summary,
+  ]
+---
+
+
+# **Chapter 7: (c)**
+
+
+# **Python Filter**
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Python+Filter.jpg"></img>
+
+
+
+## 1. Overview
+
+The built-in Python function filter(), aka Python filters enables users to process an iterable & extract those elements that meet a specified condition. The process of filtering is a common term used to describe this operation. You may use the filter() function to apply a filtering function with an iterable and create a new iterable that only contains the elements that match the given condition. One of the tools for functional programming in Python is a filter().
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Definition of Python filter
+* Applications of Python filter
+* Examples of different scenarios
+
+
+## 3. What is Filter() in python?
+
+Python includes a built-in function called filter(). The filter function could be utilized to produce a new iterator from an iterable, like a list and dictionary. Depending on the criteria you specify, this new iterator may filter out certain items very effectively.
+
+There are several techniques to filter elements from a list. However, the filter method provides a swift and efficient way to eliminate items, and it even uses minimal code to complete the same purpose. When dealing with massive volumes of data, this is quite beneficial.
+
+Python Filter Syntax 
+
+**_filter(function, iterable)_**
+
+**_functions_** -  It operates on each iterable element and checks to see if the resulting value is true or false. All the iterable items for which the function returned True will be included in the output sequence. It can also be referred to as None. In this situation, the output sequence will only include components that are True in a boolean value.
+
+**_iterable_ **- The item list on which the filter is to be applied is iterable. A set, list, tuple, dictionary, etc. are all examples of iterables.
+
+While using Python, the filter() method will produce an iterator that includes every member of the initial iterable which has passed a function check.
+
+
+## 4. Applications of Python filters
+
+There are various uses for the Python filter() function. It is the perfect replacement for list comprehension in aspects of memory usage and execution efficiency. To separate or filter components depending on the function check, the filter function can be used in combination with lambda functions. In reality, you may also use a regular/traditional function instead of a lambda function.
+
+Example
+
+
+```
+lst=[1,2,3,4,5,6,7,8,9,10]
+
+# Create a function that returns the even numbers from the above list
+
+list(filter(lambda x:x%2==0,lst))
+
+Output
+[2, 4, 6, 8, 10]
+```
+
+
+Example2
+
+
+```
+# We can apply loop on a filter object to get the values
+
+flt=filter(lambda x:x%2==0,lst)
+print(flt)
+
+for i in flt:
+    print(i)
+
+Output
+<filter object at 0x0000024D03CF40D0>
+2
+4
+6
+8
+10
+```
+
+
+The conditional statement eliminates 0 and any negative values. Filtering is the term for this sort of functionality. When performing filtering operations, each value in an iterable is tested against a predicate function, and only the ones that provide a true result are kept. Programming involves filtering operations often, hence most programming languages include tools for this purpose.
+
+Example
+
+
+```
+def identity(x):
+    return x
+
+identity(42)
+42
+
+objects = [0, 1, [], 4, 5, "", None, 8]
+list(filter(identity, objects))
+
+Output
+[1, 4, 5, 8]
+```
+
+
+In this case, the filtering operation identity() returns the same argument instead of returning either True or False. Filter() eliminates None, 0, [], "", and other false values by using their truth values. Only the values that are true in Python are part of the final list.
+
+Example : Finding Prime Numbers
+
+
+```
+import math
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+is_prime(14)
+is_prime(29)
+
+Output
+False
+True
+```
+
+
+
+```
+Prime numbers ranging between 1-50 
+list(filter(is_prime, range(1, 51)))
+
+Output
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+```
+
+
+
+## 5. Getting Rid of Outliers in a Sample
+
+Finding the mean, or average, of a sample of data is often where you start when trying to explain and evaluate it. The mean is a widely used measure of central tendency and is frequently used as the starting point for data analysis. It provides you with a fast idea of the position or center of the data.
+
+The mean may not always be a reliable indicator of central tendency in a given sample. One factor that affects how exact the mean is its outliers. Outliers are data points in a sample or population that dramatically deviate from other observations. Apart from that, they don't have a particular mathematical explanation in stats.
+
+Outliers, on the other hand, are frequently described in normal distribution samples as data points that differ more than 2 standard deviations from the mean of the distribution.
+
+Example
+
+
+```
+import statistics as st
+sample = [10, 28, 40, 68, 22, 71, 95, 36, 4, 49, 15, 89, 53]
+
+# The mean before removing outliers
+mean = st.mean(sample)
+mean
+10.692307692307692
+
+stdev = st.stdev(sample)
+low = mean - 2 * stdev
+high = mean + 2 * stdev
+
+clean_sample = list(filter(lambda x: low <= x <= high, sample))
+clean_sample
+[10, 28, 40, 68, 22, 71, 95, 36, 4, 49, 15, 89, 53]
+
+# The mean after removing outliers
+st.mean(clean_sample)
+44.61538461538461
+```
+
+
+
+## 6. Getting rid of NaN Values
+
+You could end up running across NaN (not a number) numbers while using floating-point arithmetic. Consider the situation when you are determining the mean of a sample of data that includes NaN values. The following outcome is obtained if you do this calculation using Python's statistics module:
+
+Example
+
+
+```
+import statistics as st
+
+sample = [10.1, 8.3, 10.4, 8.8, float("nan"), 7.2, float("nan")]
+st.mean(sample)
+
+Output
+nan
+```
+
+
+The result of this example's call to mean() is nan, which isn't the most useful result you can receive. Different sources can give way to NaN values. They could result from incorrect inputs, inaccurate data, etc. In any application, one should come up with the best method for handling them. Getting rid of them from your files is one option.
+
+One could solve this issue using the useful function isnan() that the math module offers. The method provides True if the input parameter x has a NaN; otherwise, it provides False. When calling filterfalse(), one can utilize this method to specify the filtering criteria:
+
+
+```
+import math
+import statistics as st
+from itertools import filterfalse
+
+sample = [10.1, 8.3, 10.4, 8.8, float("nan"), 7.2, float("nan")]
+
+st.mean(filterfalse(math.isnan, sample))
+
+Output
+8.96
+```
+
+
+One may exclude any NaN values from the mean calculation by using the functions math.isnan() and filterfalse(). After filtering, you should take note that the call to mean() provides a number that better describes the sample data you provided.
+
+
+## 7. Summary
+
+Iterables can be filtered utilizing the filter() function in Python. A Boolean function is applied to the items in an iterable in this type of operation, and only the values that the function returns a true result are kept. In particular, you may use filter() to analyze existing iterables and produce new ones with the data you need immediately.

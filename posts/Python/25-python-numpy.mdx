@@ -1,0 +1,405 @@
+---
+title: "25. Python Numpy"
+desc: "Python Numpy"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 25, 2022"
+infoP: "Python Numpy"
+spanH2: "Core Concepts"
+bottomP: "Python libraries are a set of interrelated modules with collections of code that could be included in various projects. Programmers can save time by utilizing Python libraries, which do not require them to write the same code repeatedly for various programs."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 25, 2022"
+tag: "Python"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Python",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Python Numpy : "
+id: "python-numpy"
+tableData:
+  [
+  1. Overview,
+  2. Scope of the tutorial,  
+  3. Defining NumPy in Python,  
+  4. Why use NumPy?,  
+  5. The NumPy’s ‘ndarray’,
+  6. Shape,
+  7. ndim,
+  8. Standard deviation and square root,
+  9. Identity matrix,
+  10. Creating an array of random numbers,
+  11. Ravel,
+  12. Summary,
+  ]
+---
+
+# **Chapter 11: (a)**
+
+
+# **Python Numpy**
+
+
+## 1. Overview
+
+The Python package NumPy is used to manage arrays. Moreover, it also includes matrices, the Fourier transform, and methods for dealing with linear algebra.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Definition of NumPy in Python
+* Different operations using NumPy
+
+
+## 3. Defining NumPy in Python
+
+Numerical Python is referred to as NumPy in Python. The computation and processing of both multi-dimensional and one-dimensional arrays are performed using this module in Python. It is primarily written in C language. For specific processes involving numerical data, NumPy is used. It is possible to generate the array faster and more efficiently. It is set up for data manipulation and storage.
+
+**_Please Note: If you want to do anything with an array, you should import the Numerical library Python. Don't worry if it doesn't work; just search for "numpy.pypi" and use the first result to install the library._**
+
+The syntax for importing
+
+
+```
+import numpy
+import numpy as np
+```
+
+
+
+## 4. Why use NumPy?
+
+
+
+* The primary purpose of NumPy is to be effective with huge data arrays.
+* In Numpy, the data is kept in internal memory as a continuous block.
+* Without the support of loops, NumPy operations involve complex computations on arrays.
+* Numpy uses less memory than a list when you compare the two.
+* The result is delivered quickly, which is good for the coder.
+
+I'll use a million integers as an example, and a Python list of equivalent values:
+
+
+```
+import numpy as np
+in_array = np.arrange(1200000)
+out_lst = list(range(1200000))
+```
+
+
+**When we already have a list, why use NumPy?**
+
+
+
+* We must use loops on lists, which slows down the operation.
+* Loops take a lot of time.
+* NumPy can help to speed up extremely slow loops.
+* The list is quicker than Numpy.
+
+**Why NumPy is faster than a list?**
+
+
+
+* Each element in a list is not the same as the others.
+* In a list, Python considers each entry as a unique object.
+* Pointers are used to maintain the elements in a list.
+* The components of the array are stored in locations of continuous memory.
+* Each element is not a separate object because they are of the same type.
+
+
+## 5. The NumPy’s ‘ndarray’
+
+The N-dimensional array, often known as the nd array, is one of the key components of a multidimensional array in NumPy. This is a versatile container that is quick for huge datasets. Large blocks of data are used to carry out the mathematical operations in an array.
+
+Example
+
+
+```
+import numpy as np
+#generate some random data
+data5 = np.random.randn(3, 3)
+data5
+
+Output
+array([[ 0.00240236, -0.69598614, -0.24931431],
+       [-0.83394576,  0.7267158 , -0.66499516],
+       [ 0.00577484,  0.12978261, -0.73802466]])
+
+data5*10
+array([[  0.04804727, -13.91972275,  -4.98628627],
+       [-16.67891519,  14.5343161 , -13.29990327],
+       [  0.11549678,   2.59565223, -14.76049311]])
+
+data5 + data5
+array([[ 0.00480473, -1.39197227, -0.49862863],
+       [-1.66789152,  1.45343161, -1.32999033],
+       [ 0.01154968,  0.25956522, -1.47604931]])
+```
+
+
+
+## 6. Shape
+
+Each array has unique row and column sizes. To retrieve the result, use the shape function to get the array size.
+
+An example
+
+I'm using one of the results from the example above to examine the matrix's shape.
+
+
+```
+data5.shape
+
+Output
+(3, 3)
+```
+
+
+Using the reshape function, where you may change rows into columns and vice versa, you can also reshape the array.
+
+Example
+
+
+```
+arry = np.array([(23,52,64),(36,73,96)])
+print(arry)
+
+arry=arry.reshape(3,2)
+print(arry)
+
+Output
+[[23 52 64]
+ [36 73 96]]
+[[23 52]
+ [64 36]
+ [73 96]]
+```
+
+
+
+## 7. ndim
+
+'ndim' can be used to determine an array's dimension. You guys would grasp realistically if I gave you an example.
+
+
+```
+g = np.array([(45,26,92),(54,37,31)])
+print(g.ndim)
+
+Output
+2
+```
+
+
+Heads up: Importing the NumPy library only has to be done once per workspace, it is not required every time.
+
+Using a list of tuples to create a two-dimensional array
+
+Example
+
+
+```
+lst=[('Akash',101,185000),
+    ('Nivin',102,378000),
+    ('Wasim',103000)]
+
+arr=np.array(lst)
+print(arr,type(arr))
+print(arr.shape)
+print(arr.dtype)
+
+Output
+[['Akash' '101' '185000']
+ ['Nivin' '102' '950000']
+ ['Wasim' '103' '95000']] <class 'numpy.ndarray'>
+(3, 3)
+<U11
+```
+
+
+Example 2
+
+
+```
+lst=[('Akash',101,185000),
+    ('Nivin',102,378000),
+    ('Wasim',103000)]
+
+arr=np.array(lst)
+print(arr,type(arr))
+print(arr.size)
+print(arr.shape)
+print(arr.ndim)
+
+Output
+[('Akash', 101, 185000) ('Nivin', 102, 378000) ('Wasim', 103000)] <class 'numpy.ndarray'>
+3
+(3,)
+1
+<ipython-input-36-6389e1a2db0f>:5: 
+
+```
+
+
+
+## 8. Standard deviation and square root
+
+**The standard deviation and square root of an array can be found using NumPy.
+
+Example
+
+
+```
+arry=np.array([(48,82,34),(73,13,69)])
+print(np.std(arry))
+print(np.sqrt(arry))
+
+Output
+24.09299114311509
+[[6.92820323 9.05538514 5.83095189]
+ [8.54400375 3.60555128 8.30662386]]
+```
+
+
+The square root of all the numbers is given in the output above along with the mean value, which is shown as the standard deviation.
+
+There are many ways to create arrays with NumPy
+
+arange(start,stop,step)
+
+
+
+* It is utilized to generate an array of numbers in a range
+* It creates an array of values as per start, stop and step
+* Stop value is excluded
+
+Example
+
+
+```
+arr=np.arange(0,10,1)
+arr
+
+Output
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+The default start is 0 and the default step is 1
+```
+
+
+
+## 9. Identity matrix
+
+
+
+* Diagonal values are 1 and the rest of the values are 0.
+* eye(rows, columns)
+
+```
+# Create an identity matrix of 3rows and 3 columns
+np.eye(3,3)
+
+Output
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+```
+
+
+
+
+## 10. Creating an array of random numbers
+
+
+
+* Syntax- np.random.rand(rows, columns)
+* It always gives random values between 0 and 1.
+
+Example
+
+
+```
+np.floor(np.random.rand(3,3)*100)
+
+Output
+array([[69., 73., 38.],
+       [48., 67., 47.],
+       [69., 30., 38.]])
+```
+
+
+Create an array of random values that returns the same set of values at every execution
+
+seed() is used when you want to get the same set of random values
+
+
+```
+np.random.seed(2)
+arr=np.random.rand(3,3)
+arr
+
+array([[0.4359949 , 0.02592623, 0.54966248],
+       [0.43532239, 0.4203678 , 0.33033482],
+       [0.20464863, 0.61927097, 0.29965467]])
+```
+
+
+Find the index of maximum and minimum of the array
+
+
+```
+# argmax()- Index of the maximum number
+# argmin()- Index of the minimum number
+```
+
+
+
+```
+arr=np.random.randint(50,100,9).reshape(3,3)
+print(arr)
+print(np.max(arr))
+print(np.argmax(arr))
+
+[[58 89 60]
+ [92 61 93]
+ [63 84 94]]
+94
+8
+
+print(np.min(arr))
+print(np.argmin(arr))
+58
+0
+```
+
+
+
+## 11. Ravel
+
+The ravel function is used to convert an array into one column.
+
+Example
+
+
+```
+arry=np.array([(24,52,78),(81,33,92)])
+print(arry.ravel())
+
+Output
+[24 52 78 81 33 92]
+```
+
+
+
+## 12. Summary
+
+One of the most important Python libraries of data science and machine learning is NumPy. It is developed in Python and performs calculations very fast using vectorized forms. It provides several built-in features that many programmers find useful.
