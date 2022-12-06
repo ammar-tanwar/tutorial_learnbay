@@ -3,7 +3,6 @@ import {
   getSortedPostsData,
   getAllPostIds,
   getPostData,
-mainFolderdata
   
 } from "../../lib/Python-Page";
 import Footer from "../../components/global/footer/Footer";
@@ -21,7 +20,12 @@ import {
 } from "react-icons/fa";
 
 export default function CategoryBlog({ postData, posts, navData }) {
-  console.log(navData,"posts");
+  const navCategory =  []
+  navData.map((navDetails, i)=>{
+    
+    navCategory.push(navDetails.readMainFolder)
+  })
+  
   let singleCategoryPost = posts.map((post) => {
     return post.category;
   });
@@ -73,7 +77,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
 
           <title>{postData.title}</title>
         </Head>
-        <Navbar tag={categoryPostNav} />
+        <Navbar tag={navCategory[0]} />
         <div className={styles.banner}>
           <div className={styles.divFirst}>
             <Image

@@ -20,13 +20,15 @@ const Tabs = ({ tag }) => {
       setMobile(false);
     }
   });
+  // console.log(tag);
 
   return (
     <div className="wrapper">
       <div className={styles.MenuTabs}>
         <div className={styles.leftPanel}>
-          {/* {[...tag].map((post, i) => {
-            let tag = post;
+          {tag.map((post, i) => {
+            let tag = post.replace("-"," ");
+            console.log(post);
             let murl = tag.replace(" ", "-");
             let url = `/${murl}/getting-started`;
             return (
@@ -35,7 +37,7 @@ const Tabs = ({ tag }) => {
                 <FaArrowRight />
               </span>
             );
-          })} */}
+          })}
         </div>
       </div>
     </div>
