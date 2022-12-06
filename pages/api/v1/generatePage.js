@@ -26,6 +26,18 @@ async function getAllFolderFromBucket() {
 
   return bucketData;
 }
+async function getAllFoldersFromBucket(folderName) {
+  const s3 = createInstance();
+  const param = {
+    Bucket: AWSCredentials.bucketName,
+
+    Prefix: `somnath-practice/posts/Python`,
+    MaxKeys: 100,
+  };
+  const bucketData = await s3.listObjects(param).promise();
+
+  return bucketData;
+}
 async function downloadFileFromBucket(key, path, parentFolder, fileName) {
   const s3 = createInstance();
   const param = {
@@ -63,7 +75,13 @@ export default async function generatePage(req, res) {
       const folder = data.Prefix.split("posts/");
       const parentFolder = folder[1].replace("/", "");
       const path = `./posts/${parentFolder}`;
+      console.log(parentFolder, "parentFolder");
 
+      const getInnerFolder = async () => {
+        const innerFolder = await getAllFoldersFromBucket(parentFolder);
+        console.log(innerFolder, "InnerFolder");
+      };
+      getInnerFolder();
       //make file in lib folder to read from post folder
       const readLibFile = fs.readFileSync("./libFile.txt", "utf8");
       const replaceLibFile = readLibFile.replace(
@@ -78,6 +96,8 @@ export default async function generatePage(req, res) {
 
       //make folder for json files
       fs.mkdirSync(`./posts/${parentFolder}`, { recursive: true });
+      //make folder for chapter in posts
+
       //make folders and pages in page folder
       fs.mkdirSync(`./pages/${parentFolder}`, { recursive: true });
       //read the content replace what needed
