@@ -26,9 +26,9 @@ const Tabs = ({ tag }) => {
     <div className="wrapper">
       <div className={styles.MenuTabs}>
         <div className={styles.leftPanel}>
-          {tag.map((post, i) => {
-            let tag = post.replace("-"," ");
-            console.log(post);
+          {tag.map((posts, i) => {
+            let tag = posts.replace("-"," ");
+            console.log(posts);
             let murl = tag.replace(" ", "-");
             let url = `/${murl}/1-getting-started`;
             return (
