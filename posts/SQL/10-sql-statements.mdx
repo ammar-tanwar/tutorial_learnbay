@@ -1,0 +1,279 @@
+---
+title: "10. SQL Statements"
+desc: "sql statements"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "December 10, 2022"
+infoP: "Chapter 2 :- SQL Concepts"
+spanH2: "Core Concepts"
+bottomP: "RDBMS refers to Relational Database Management System. RDBMS serves as the foundation for all contemporary database systems, including MySQL."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 10, 2022"
+tag: "sql"
+tagDes: "SQL Statements"
+topic: {
+  title: "SQL Statements",
+tagDes: "sql statements",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "SQL Statements"
+id: "10-sql-statements"
+tableData:
+  [
+     Overview, 
+     Scope of the tutorial, 
+     What is a function in SQL?, 
+     Aggregate SQL Functions, 
+     Scalar SQL Functions, 
+     SQL STRING FUNCTIONS, 
+     SQL Date Functions, 
+     Summary
+  ]
+---
+
+
+# **Chapter 2(h)**
+
+# **SQL Statements**
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-stat-1.jpeg"></img>
+
+## **Overview**
+
+The computer language SQL, or Structured Query Language, is used to store, manipulate, and retrieve data from relational databases. To work on the queries, a set of statements needs to be used to input the data into table format.
+
+## **Scope of the tutorial**
+
+This tutorial covers
+
+- Definition of SQL Statement
+- Different types of SQL statements
+
+## **What is an SQL Statement?**
+
+An SQL statement is a collection of instructions that properly compiles and includes identifiers, variables, data types, parameters, names, and SQL-reserved words.
+
+## **Types of SQL statement**
+
+There are five different kinds of SQL statements, which are as follows:
+
+1. Data Definition Language(DDL)
+  1. CREATE
+  2. ALTER
+  3. DROP
+2. Data Manipulation Language(DML)
+  1. INSERT
+  2. UPDATE
+  3. DELETE
+3. Data Control Language(DCL)
+  1. GRANT
+  2. REVOKE
+4. Data Query Language(DQL)
+  1. SELECT
+5. Data Transaction Language(DTL) or Transaction Control Language(TCL)
+  1. COMMIT
+  2. ROLLBACK
+  3. SAVEPOINT
+
+## **Data Definition Language(DDL)**
+
+We have three types of SQL statements in Data Definition Language (DDL)
+
+- CREATE
+- ALTER
+- DROP
+
+### CREATE
+
+In an existing database, a new table can be created using the CREATE statement. Other database objects like stored procedures, functions, and so on can also be created using the CREATE statement.
+
+Syntax
+
+| CREATE TABLE Table\_Name(
+ Column1 datatype (size) constraints,
+ Column2 datatype constraints,
+ ColumnN datatype constraints); |
+| --- |
+
+Example
+
+| Create Table Employee (Emp\_ID) Int,Emp\_Name varchar(25),Mark Float) |
+| --- |
+
+### ALTER
+
+A column can be added, modified, deleted, or renamed a table can also be renamed using the alter statement.
+
+ALTER has 3 subcategories
+
+- Add
+- Drop
+- Rename
+
+Syntax
+
+| Alter Table Table\_Name Add Column\_Name;
+ Alter Table Table\_Name Drop Column\_Name;
+ Alter Table Table\_Name rename Column\_Name To New Column\_Name; |
+| --- |
+
+Example
+
+| ALTER TABLE Employee Add (Passport int);
+ ALTER TABLE Employee Drop Passport;
+ ALTER TABLE Employee rename Passport To PASSPORT; |
+| --- |
+
+### DROP
+
+A table definition, including all of the data, indexes, triggers, constraints, and permission specifications for the table, are deleted using the SQL DROP TABLE statement.
+
+Syntax
+
+| Drop Table Table\_name; |
+| --- |
+
+Example
+
+| Drop Table Employees; |
+| --- |
+
+### TRUNCATE
+
+TRUNCATE A SQL statement deletes all entries from a table without documenting the deletion of each individual row.
+
+Syntax
+
+| Truncate Table Table\_Name; |
+| --- |
+
+Example
+
+| Truncate Table Employee; |
+| --- |
+
+## **Data Manipulation Language(DML)**
+
+The three distinct SQL statements in Data Manipulation Language (DML) are Insert, Update, and Delete.
+
+### INSERT
+
+A collection of values can be inserted using the INSERT statement into a database table. Use of the insert statement with values.
+
+Syntax
+
+| Insert into table\_name(Column1, Column2,....) values (V1, V2,...); |
+| --- |
+
+Example
+
+| INSERT INTO CUSTOMER (ID, NAME, AGE, ADDRESS, SALARY)
+ VALUES (1, 'Sathya', 43, 'HSR', 50000.00 ); |
+| --- |
+
+### UPDATE
+
+When updating values in a table that are based on a condition, one uses the UPDATE statement.
+
+Syntax
+
+| Update table\_name set column\_name=value where condition; |
+| --- |
+
+Example
+
+| Update Employee set EmployeeName='Rakesh' where EmployeeName='Suresh'; |
+| --- |
+
+### DELETE
+
+The table's current record can be deleted using the delete statement if it meets a certain condition.
+
+Syntax
+
+| Delete from table\_name where condition; |
+| --- |
+
+Example
+
+| Delete from Employee where EmployeeName='Sathya'; |
+| --- |
+
+## **Data Control Language(DCL)**
+
+The control on the data within the database is defined by Data Control Language (DCL). The two commands that we have are
+
+### GRANT
+
+The identified user can perform the given tasks with the granted permission.
+
+Syntax
+
+| GRANT privilege\_name
+ ON object\_name
+ TO {user\_name |PUBLIC |role\_name}
+ [WITH GRANT OPTION]; |
+| --- |
+
+### REVOKE
+
+It is utilized to revoke rights that have already been granted or refused.
+
+Syntax
+
+| REVOKE privilege\_name
+ ON object\_name
+ FROM {user\_name |PUBLIC |role\_name}; |
+| --- |
+
+## **Data Query Language(DQL)**
+
+### SELECT
+
+With or without a condition, entries from the table are selected using the SELECT command.
+
+Example
+
+| select \* from Employee; - Gets all records from employee table.
+ Select \* from employee where salary\>50000; - Gets records with the condition where employees salary is greater than 50000. |
+| --- |
+
+## **Data Transaction Language(DTL) or Transaction Control Language(TCL)**
+
+The commands of Transaction Control Language (TCL) are utilized to oversee database transactions. These are employed to control the adjustments that DML statements perform. Moreover, it enables the statements to be structured into logical transactions.
+
+### COMMIT
+
+Any transaction can be saved into the database permanently using the commit statement.
+
+Syntax
+
+| Commit; |
+| --- |
+
+### ROLLBACK
+
+To restore the database to the most recently committed state, use the rollback command. It can also be utilized to jump to a save point when one is present.
+
+Syntax
+
+| Rollback to savepoint name; |
+| --- |
+
+### SAVEPOINT
+
+Using the SAVEPOINT command, you can quickly save a transaction so you can roll back at any time.
+
+Syntax
+
+| savepointsavepoint-name; |
+| --- |
+
+## **Summary**
+
+Relational databases use the computer language SQL, or Structured Query Language, to store, process, and retrieve data. There are several statements that must be utilized to enter the information into table format to work on the queries.

@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  getSortedPostsData,
-  getAllPostIds,
-  getPostData,
-  
-} from "../../lib/Python-Page";
+import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/Python-Page";
 import Footer from "../../components/global/footer/Footer";
 import Navbar from "../../components/global/navbar/Navbar";
 import Link from "next/link";
@@ -216,6 +211,6 @@ export async function getStaticProps({ params }) {
       posts,
       navData,
     },
-    revalidate: 18000,
+     revalidate: 18000,
   };
 }

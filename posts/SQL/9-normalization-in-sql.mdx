@@ -1,0 +1,204 @@
+---
+title: "9. Normalization in SQL"
+desc: "normalization in sql"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "December 9, 2022"
+infoP: "Chapter 2 :- SQL Concepts"
+spanH2: "Core Concepts"
+bottomP: "RDBMS refers to Relational Database Management System. RDBMS serves as the foundation for all contemporary database systems, including MySQL."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 9, 2022"
+tag: "sql"
+tagDes: "Normalization in SQL"
+topic: {
+  title: "Normalization in SQL",
+tagDes: "normalization in sql",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Normalization in SQL"
+id: "9-normalization-in-sql"
+tableData:
+  [
+     Overview, 
+     Scope of the tutorial, 
+     What is a function in SQL?, 
+     Aggregate SQL Functions, 
+     Scalar SQL Functions, 
+     SQL STRING FUNCTIONS, 
+     SQL Date Functions, 
+     Summary
+  ]
+---
+
+# **Chapter 2: (g)**
+
+# **Normalization in SQL**
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-1.jpeg"></img>
+
+## **Overview**
+
+Normalization is a part that includes during the database design process. Since it is hard to separate the ER modeling process from the normalization process, the two methods should be used simultaneously.
+
+The entity relation diagram (ERD) is used to provide the overall, or macro, view of an organization's data requirements and procedures. This is the outcome of an ongoing operation that involves the identification of key components, their attributes, and relations.
+
+The normalization method, which focuses on the attributes of specific entities, represents the micro view of entities in the entity-relationship diagram.
+
+## **Scope of the tutorial**
+
+This tutorial covers
+
+-  Definition of Normalization in SQL
+
+-  Different types of Normal Forms
+
+## **What is Normalization in SQL?**
+
+Normalization, a component of a relational theory, provides design-related insights. It is a method for evaluating how much duplication is there in a table. The following are some of the normalization's goals:
+
+-  It should be capable of explaining the level of redundancy within a relational schema.
+
+-  To eliminate unwanted data from schemas, provide options for this purpose.
+
+In normalization, the functional dependency concept is commonly utilized. The normalization theory describes six normal forms (NF). Each normal form defines a set of dependence requirements that a schema must satisfy and offers assurance about the presence or absence of update anomalies. Moreover, higher normal forms have less redundancy, and hence, there are fewer updating issues.
+
+## **Normal Forms**
+
+Although there are six normal forms, we will just pay attention to the first four, which are as follows:
+
+-  First normal form(1NF)
+
+-  Second normal form(2NF)
+
+-  Third normal form(3NF)
+
+-  Boyce-Codd normal form(BCNF)
+
+## **Real-world uses of normal forms**
+
+Several practical design projects, both in the private and government sectors, depend on pre-existing database designs developed using older designs, legacy models, etc. They appear to be interested in the designs since they appear to be of excellent quality and durability. Existing designs are examined using the tests for normal forms, and normalization is used in practice to ensure that the final designs are of a high standard and include no data duplication.
+
+## **First Normal Form(1NF)**
+
+The domain of each attribute must only include atomic (single, indivisible) variables and each attribute's value in a tuple must be a single value from that domain, according to the first normal form (1NF). The usage of a set of values, a tuple of values, or a combination of the two as an attribute value for a single tuple is therefore forbidden by 1NF. The only attribute values allowed by 1NF are single atomic (or indivisible) values. In other words, if a relation includes a multi-valued attribute, 1NF is violated.
+
+Example
+
+Student Relation
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-2.png"></img>
+
+According to the multi-attribute Course, the STUDENT relationship is not covered in 1NF. We must ensure that the values for the Course property are atomic to convert this table to 1NF. This is shown below.
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-3.png"></img>
+
+## **Second Normal Form(2NF)**
+
+To be in the second normal form, a relation needs to be in the first normal form (1NF) and free of any partial dependencies. Therefore, a relation is only in 2NF to the extent that it does not have partial dependencies or, more specifically, just to the extent that no non-prime attributes (attributes that are not present in any candidate key) are dependent on any acceptable subset of a composite primary key of a table.
+
+Example
+
+Student Relation
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-4.png"></img>
+
+We can make some assumptions by looking at the table above. The Course Fee alone cannot be utilized to uniquely identify each tuple to begin with. Therefore, neither Course Fee nor Stud Id by themselves, nor Course Id on its own, may be used to identify any given tuple distinctly.
+
+The Course Fee attribute is a non-prime attribute since it isn't a component of the composite main key ("Stud Id, Course Id,").
+
+However, the table makes it visible that Course Id Course Fee, or Course fee, depends only on Course Id, which is an acceptable subset of the main key. Due to the partial reliance that results, this connection is not 2NF.
+
+To change the above relation to 2NF, we must split the table into two separate tables.
+
+- Table 1: Stud\_Id, Course \_Id
+- Table 2: Course\_Id, Course\_Fee
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-5.png"></img>
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-6.png"></img>
+
+Table 1 Table2
+
+The two tables are then joined by using Course Id as the foreign key in the first table. As a result, we can use Table 2 to get the fee for a particular course.
+
+It's necessary to keep in mind that 2NF helps to minimize duplicate data stored in memory. For instance, if 100 students are registered in the C1 Course, we do not need to preserve the cost of the Course for each of the 100 records (tuples). In the second table, we can only save it once.
+
+## **Third Normal Form(3NF)**
+
+For a table to have the third normal form:
+
+- The second normal form should be considered.
+- It should not be dependent in a transitive way.
+
+Example
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-7.png"></img>
+
+As you can see from the table, the primary key of the SCORE table is a composite key, which means it is built up of two attributes (columns): Std Id and subject Id.
+
+The column Exam Type depends on both Std Id and Subject Id. For instance, a student studying chemistry will get a practical lab exam, whereas a person studying math won't. We may conclude that Exam Type depends on the complete composite key and that the database is in 2NF because there is no partial dependency.
+
+When a non-prime attribute depends on another non-prime attribute, as opposed to the prime attributes and main key, a transitive dependency is produced.
+
+As a result, to transform the table into 3NF, we first remove the characteristics Exam Type and Total Marks and place them in another table called the EXAM table. We will also add a new column called Exam Id to the EXAM table, which will act as the primary key. To build a connection between this column and the SCORE table, we will also add it as a foreign key.
+
+Example
+
+Score Table
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-8.png"></img>
+
+Exam table
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-9.png"></img>
+
+## **Boyce-Codd Normal Form(BCNF)**
+
+A table must meet the two conditions to satisfy the Boyce-Codd normal form.
+
+- The third normal form should be used.
+- Moreover, A should be a super key for every dependence where A—\>B.
+
+The second point appears to be quite difficult, am I right? In layman's language, it means that if B is a prime attribute, then A cannot be a non-prime attribute for an A-B dependency.
+
+Example
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-10.png"></img>
+
+From the table above
+
+- One person can enroll in several courses. For instance, the student with the Std ID 101 has opted to enroll in both CS-100 and MATH-101.
+- The primary key, which enables us to uniquely identify each tuple in the table, is made up of Std Id and Subject.
+- It is essential to take into consideration the possibility of having two different instructors teaching the same subject, even though a faculty only teaches one subject. As an example, CS-100 is taught by two different faculty.
+
+Since the subject is dependent on the professor's name, there is a dependence between the subject and the professor.
+
+This table meets the 1NF because each value is atomic, each column name is unique, and each value entered in a given column belongs to the same domain.
+
+This table also satisfies the 2NF because there are no partial dependencies. Additionally, the table satisfies the 3NF because there is no transitive dependency.
+
+Unfortunately, this table does not contain the Boyce-Codd normal form. The subject is a prime attribute because Std Id and Subject combination make up a composite primary key.
+
+There is one extra dependency, however: Professor —\> Subject. While Subject is a prime attribute, BCNF prohibits the use of Professor because it is only a non-prime attribute.
+
+To make the relation (table) abide by BCNF, we will split it into two tables: the STUDENT table and the PROFESSOR table.
+
+STUDENT Table
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-11.png"></img>
+
+PROFESSOR Table
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-12.png"></img>
+
+In the PROFESSOR table, Professor and Subject are non-prime attributes that are both dependent on the primary key, Professor Id. These tables are all in BCNF because a prime attribute is independent of a non-prime attribute. Professor Id is also added to the STUDENT database as a foreign key to connect the two tables.
+
+## **Summary**
+
+To reduce data duplication and improve data consistency in the table, normalization is being used. Moreover, normalization assists in database data organization. The information is organized into tabular form through a multi-step procedure, and duplicate data is then purged from relational tables. To make sure that constraints on database consistency effectively carry out their obligations, normalization structures the columns and tables of a database. It is a systematic method of breaking down tables to get away from redundant data and unwanted features like Insertion, Update, & Deletion anomalies.

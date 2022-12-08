@@ -1,0 +1,515 @@
+---
+title: "8. SQL Functions"
+desc: "sql functions"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "December 8, 2022"
+infoP: "Chapter 2 :- SQL Concepts"
+spanH2: "Core Concepts"
+bottomP: "RDBMS refers to Relational Database Management System. RDBMS serves as the foundation for all contemporary database systems, including MySQL."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 8, 2022"
+tag: "sql"
+tagDes: "SQL Functions"
+topic: {
+  title: "SQL Functions",
+tagDes: "SQL Functions",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "SQL Functions"
+id: "8-sql-functions"
+tableData:
+  [
+     Overview, 
+     Scope of the tutorial, 
+     What is a function in SQL?, 
+     Aggregate SQL Functions, 
+     Scalar SQL Functions, 
+     SQL STRING FUNCTIONS, 
+     SQL Date Functions, 
+     Summary
+  ]
+---
+
+
+# **Chapter 2: (f)**
+
+# **SQL Functions**
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-fun-1.jpeg"></img>
+
+## **Overview**
+
+A series of SQL commands known as SQL functions perform a particular operation. Functions encourage the reusability of codes. One can develop a function to execute the same operation if you frequently had to write lengthy SQL queries to execute it. One can just call that function the next time rather than create a new SQL function.
+
+## **Scope of the tutorial**  
+
+This tutorial covers
+
+- The Definition of a function in SQL
+- Types of functions with examples
+
+## **What is a function in SQL?**
+
+Data operations are executed by the use of functions. The function is a specified formula that accepts one or more inputs, processes those arguments, and then generates the result. Several built-in functions in SQL are being utilized with strings, numerical data, etc.
+
+The two types into which SQL functions belong are as follows:
+
+- Aggregate Functions
+- Scalar Functions
+
+## **Aggregate SQL Functions**  
+
+A single result is delivered after a set of inputs are been submitted to calculations using SQL's aggregate functions.
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-fun-2.png"></img>
+
+Some of the Aggregate functions are as follows:
+
+- **SUM()** - This is used to provide the total value of a specified numeric column.
+
+Syntax
+
+| SELECT SUM(ColumnName)
+ FROM TableName; |
+| --- |
+
+Example:
+
+| SELECT SUM(Salary)
+ FROM Employee; |
+| --- |
+
+Output
+
+| 237,000 |
+| --- |
+
+**Count()**
+
+Provides the count of rows that is available in the table, either with or without conditions.
+
+Syntax:
+
+| SELECT COUNT(ColumnName)
+ FROM TableName
+ WHERE Condition; |
+| --- |
+
+Example1
+
+| SELECT COUNT(EMP\_ID)
+ FROM Employee; |
+| --- |
+
+Output
+
+| 6 |
+| --- |
+
+Example2
+
+| SELECT COUNT(EMP\_ID)
+ FROM Employee
+ WHERE Salary \>=40000.00; |
+| --- |
+
+Output
+
+| 3 |
+| --- |
+
+**AVG()**
+
+The average result of a numerical column is provided by this function.
+
+Syntax
+
+| SELECT AVG(ColumnName)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT AVG(Salary)
+ FROM Employee; |
+| --- |
+
+Output
+
+| 39500.00 |
+| --- |
+
+**MIN()**
+
+The output is delivered when a numeric column's minimum value is required.
+
+Syntax
+
+| SELECT MIN(ColumnName)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT MIN(Salary)
+ FROM Employee; |
+| --- |
+
+Output
+
+| 27000 |
+| --- |
+
+**MAX()**
+
+The output is delivered when a numeric column's maximum value is required.
+
+Syntax
+
+| SELECT MAX(ColumnName)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT MAX(Salary)
+ FROM Employee; |
+| --- |
+
+Output
+
+| 55000 |
+| --- |
+
+**FIRST()**
+
+The first item of the selected column is returned by this function.
+
+Syntax
+
+| SELECT FIRST(ColumnName)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT FIRST(Salary)
+ FROM Employee; |
+| --- |
+
+Output
+
+| 50000 |
+| --- |
+
+**LAST()**
+
+The last item of the selected column is returned by this function.
+
+Syntax
+
+| SELECT LAST(ColumnName)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT LAST(Salary)
+ FROM Employee; |
+| --- |
+
+Output
+
+| 30000 |
+| --- |
+
+## **Scalar SQL Functions**  
+
+A single output could be generated from an input value by utilizing the scalar functions in SQL.
+
+**LCASE()**
+
+It is utilized to transform a string column's values to lowercase characters.
+
+Syntax
+
+| SELECT LCASE(ColumnName)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT LCASE(EMP\_ID)
+ FROM Employee; |
+| --- |
+
+Output
+
+| sathya
+ tejas
+ tinku
+ rittu
+ rakesh
+ milan |
+| --- |
+
+**UCASE()**
+
+It is utilized to transform a string column's values to uppercase characters.
+
+Syntax
+
+| SELECT UCASE(ColumnName)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT UCASE(EMP\_ID)
+ FROM Employee; |
+| --- |
+
+Output
+
+| SATHYA
+ TEJAS
+ TINKU
+ RITTU
+ RAKESH
+ MILAN |
+| --- |
+
+**LEN()**
+
+It is used to obtain the given string length by this method.
+
+Syntax
+
+| SELECT LENGTH(String) AS SampleColumn; |
+| --- |
+
+Example
+
+| SELECT LENGTH("Rakesh") AS EMPNAMELEN; |
+| --- |
+
+Output
+
+| 6 |
+| --- |
+
+**MID()**
+
+Substrings can be extracted from columns with string data types using this method.
+
+Syntax
+
+| SELECT MID(ColumnName, Start, Length)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT MID(EMP\_Name, 2, 3)
+ FROM Employee; |
+| --- |
+
+Output
+
+| ath
+ eja
+ ink
+ itt
+ ake
+ ila |
+| --- |
+
+**Round()**
+
+Using this function, you could round a number off to the closest integer.
+
+Syntax:
+
+| SELECT ROUND(ColumnName, Decimals)
+ FROM TableName; |
+| --- |
+
+Example
+
+| SELECT ROUND(Salary)
+ FROM Employee; |
+| --- |
+
+Output
+
+| 50000
+27000
+40000
+35000
+55000
+30000 |
+| --- |
+
+**NOW()**
+
+It is used to get the time and date as of right now. The format of the returned date and time is "YYYY-MM-DD HH-MM-SS."
+
+Syntax
+
+| SELECT NOW() |
+| --- |
+
+Example
+
+| SELECT NOW() |
+| --- |
+
+OUTPUT
+
+| 2022-10-1115:45:33 |
+| --- |
+
+**FORMAT()**
+
+This function formats a field so that it will be presented appropriately.
+
+Syntax
+
+| FORMAT(InputValue, Format) |
+| --- |
+
+Example
+
+| Write a query to present the number "5367802033"in the format "###-###-###"
+
+ SELECT FORMAT(5367802033, "###-###-###"); |
+| --- |
+
+Output
+
+| 536-780-203 |
+| --- |
+
+## **SQL STRING FUNCTIONS**   
+**Substring()**
+
+Depending on the length and start position values, a string's component.
+
+Example
+
+| Select SUBSTRING ('WORLD', 1,3) |
+| --- |
+
+Output
+
+| WOR |
+| --- |
+
+**Replace()**
+
+A string expression will be produced for a supplied string of information once all instances of the specified character have been replaced with the supplied character.
+
+Example
+
+| Select REPLACE('INDIA', 'I', 'K') |
+| --- |
+
+Output
+
+| KNDKA |
+| --- |
+
+**REVERSE()**
+
+For a provided string of information, a reverse string expression would be generated.
+
+**STUFF()**
+
+For a particular string of data, a string expression would be produced as the result of replacing every character up to the provided length with the desired character.
+
+Example
+
+| Select STUFF('ABCDEFGH', 2,4,'IJK') |
+| --- |
+
+## **SQL Date Functions**  
+
+- GETDATE
+
+Syntax
+
+| GETDATE() |
+| --- |
+
+- DATEADD
+
+Syntax
+
+| DATEADD (datepart, number, date) |
+| --- |
+
+- DATEDIFF
+
+Syntax
+
+| DATEDIFF (datepart, startdate, enddate) |
+| --- |
+
+- DAY
+
+Syntax
+
+| DAY(DATE) |
+| --- |
+
+- MONTH
+
+Syntax
+
+| MONTH(DATE) |
+| --- |
+
+- YEAR
+
+Syntax
+
+| YEAR(DATE) |
+| --- |
+
+- DATEPART
+
+Syntax
+
+| DATEPART(datepart, datecolumnEID) |
+| --- |
+
+- CONVERT
+
+Syntax
+
+| CONVERT(datatype, expression, style) |
+| --- |
+
+- FORMAT
+
+Syntax
+
+| FORMAT ( getdate(), 'D') -\> Tuesday, October 11, 2022 |
+| --- |
+
+Example
+
+| Select CONVERT (varchar(19),getdate()) -\> Oct 11202219:24PM
+ Select CONVERT (varchar(19),getdate(),10) -\> 10-11-22
+ Select CONVERT (varchar(19),getdate(),110) -\> 10-11-2022 |
+| --- |
+
+## **Summary**   
+
+A series of SQL commands known as a function performs the predefined operation. One can develop a function to execute the same operation if you frequently have to write lengthy SQL queries to execute it.

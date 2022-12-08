@@ -1,0 +1,252 @@
+---
+title: "5. SQL JOINS"
+desc: "sql joins"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "December 5, 2022"
+infoP: "Chapter 2 :- SQL Concepts"
+spanH2: "Core Concepts"
+bottomP: "RDBMS refers to Relational Database Management System. RDBMS serves as the foundation for all contemporary database systems, including MySQL."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 5, 2022"
+tag: "sql"
+tagDes: "SQL JOINS"
+topic: {
+  title: "sql joins",
+tagDes: "SQL Joins",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "SQL Joins"
+id: "5-sql-joins"
+tableData:
+  [
+    Overview, 
+    Scope of the Tutorial, 
+    Various categories of SQL JOINS,
+     INNER JOIN, 
+     FULL JOIN, 
+     LEFT JOIN, 
+     RIGHT JOIN, 
+     CARTESIAN JOIN, 
+     Summary
+  ]
+---
+
+# **Chapter 2: (c)**
+
+# **SQL JOINS**
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-1.jpeg"></img>
+
+## **Overview**
+
+Users will frequently need to check over many tables and combine them throughout the data analysis in SQL in order to obtain the necessary results. In order to join tables for data analysis, a data scientist must be able to perform SQL JOINS. You will study the various joins that SQL could do in this tutorial.
+
+## **Scope of the Tutorial**     
+
+This tutorial covers
+
+-  Definition of SQL JOIN
+
+-  Various categories of JOINS
+
+## **What is meant by SQL JOINS?**
+
+Using a JOIN clause, data from two or more tables can be combined together based on a comparable column.
+
+## **Various categories of SQL JOINS**   
+
+-  INNER JOIN
+
+-  FULL JOIN
+
+-  Left Join / Left Outer Join
+
+-  Right Join / Right Outer Join
+
+-  CARTESIAN JOIN or CROSS JOIN
+
+-  SELF JOIN
+
+### **INNER JOIN**  
+
+THE INNER JOIN keyword is utilized to get the matching records from two tables.
+
+Syntax
+
+The INNER JOIN's primary syntax is
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-2.png"></img>
+
+Example
+
+Let's consider that we only require the data of customers who have placed orders to be retrieved. The two tables may be inner joined to do this:
+
+Let's create a table first, then do an inner join
+
+Here is a sample table that shows how to make one.
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-3.png"></img>
+
+|
+Inserting values to the Customer5 table
+ INSERT INTO CUSTOMER5 (ID, NAME, AGE, ADDRESS, SALARY)
+ VALUES (1, 'Sathya', 43, 'HSR', 50000.00 );
+
+ INSERT INTO CUSTOMER5 (ID, NAME, AGE, ADDRESS, SALARY)
+ VALUES (2, 'Tejas', 22, 'NY', 27000.00 );
+
+ INSERT INTO CUSTOMER5 (ID, NAME, AGE, ADDRESS, SALARY)
+ VALUES (3, 'Tinku', 35, 'Behrin', 40000.00 );
+
+ INSERT INTO CUSTOMER5 (ID, NAME, AGE, ADDRESS, SALARY)
+ VALUES (4, 'Rittu', 32, 'Congo', 35000.00 );
+
+ INSERT INTO CUSTOMER5 (ID, NAME, AGE, ADDRESS, SALARY)
+ VALUES (5, 'Rakesh', 47, 'HSR', 55000.00 );
+
+ INSERT INTO CUSTOMER5 (ID, NAME, AGE, ADDRESS, SALARY)
+ VALUES (6, 'Milan', 29, 'Wango', 30000.00 );
+
+Customer5 Table 
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-4.png"></img>
+
+ CREATE TABLE ORDER5(
+ ORDER\_ID INT NOT NULL,
+ DATE VARCHAR (15) NOT NULL,
+ CUSTOMER\_ID INT NOT NULL,
+ AMOUNT INT,
+ PRIMARY KEY (ORDER\_ID),
+ FOREIGN KEY (CUSTOMER\_ID) REFERENCES CUSTOMER5(ID)
+ );
+
+Inserting values to the Order5 table
+ INSERT INTO ORDER5 (ORDER\_ID, DATE, CUSTOMER\_ID, AMOUNT)
+ VALUES (201, '2021-05-10', 2, 3000 );
+
+ INSERT INTO ORDER5 (ORDER\_ID, DATE, CUSTOMER\_ID, AMOUNT)
+ VALUES (202, '2021-08-22', 5, 7000 );
+
+ INSERT INTO ORDER5 (ORDER\_ID, DATE, CUSTOMER\_ID, AMOUNT)
+ VALUES (203, '2021-10-16', 1, 2000 );
+
+ INSERT INTO ORDER5 (ORDER\_ID, DATE, CUSTOMER\_ID, AMOUNT)
+ VALUES (204, '2021-02-05', 2, 6000 );
+
+ INSERT INTO ORDER5 (ORDER\_ID, DATE, CUSTOMER\_ID, AMOUNT)
+ VALUES (205, '2021-03-27', 3, 1000 );
+
+ INSERT INTO ORDER5 (ORDER\_ID, DATE, CUSTOMER\_ID, AMOUNT)
+ VALUES (206, '2021-06-02', 2, 5000 );
+Order5 Table
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-5.png"></img>
+Let's perform inner join
+
+ SELECT CUSTOMER5.ID, CUSTOMER5.NAME, ORDER5.AMOUNT, ORDER5.DATE
+ FROM CUSTOMER5
+ INNER JOIN ORDER5
+ ON CUSTOMER5.ID = ORDER5.CUSTOMER\_ID; |
+| --- |
+
+Output
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-6.png"></img>
+
+### **FULL JOIN**    
+
+By using the Full Join or Full Outer Join, all items that match in either the left (Table1) or right (Table2) table are returned.
+
+Syntax
+
+| SELECT Table1.Column1,Table1.Column2,Table2.Column1,....
+ FROM Table1
+ FULL JOIN Table2
+ ON Table1.MatchingColumnName = Table2.MatchingColumnName; |
+| --- |
+
+### **LEFT JOIN**
+
+All information from the left table (table 1) and the matching information from the right table are returned via the LEFT JOIN keyword (table2). If there is no matching found, the output from the other side is NULL.
+
+Syntax
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-7.png"></img>
+
+**Note:** LEFT OUTER JOIN is the name provided to LEFT JOIN in some databases.
+
+Example
+
+All customers, along with any orders they may have placed, will be preferred:
+
+The SQL statement to obtain all customers, irrespective of whether they have made an order:
+
+| SELECT CUSTOMER.ID, CUSTOMER.NAME, ORDER.AMOUNT, ORDER.DATE
+ FROM CUSTOMER5
+ LEFT JOIN ORDER5
+ ON CUSTOMER.ID = ORDER.CUSTOMER\_ID
+ ORDER5 BY CUSTOMER.ID; |
+| --- |
+
+As you can see, even though there are no matches in the right table(Orders), the LEFT JOIN keyword still returns all entries from the left table (Customers).
+
+### **RIGHT JOIN**  
+
+The RIGHT JOIN keyword provides all the data from the right table (table2) as well as the matching data from the left table (table1). If no match has been found, the left side output is NULL.
+
+Syntax
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-8.png"></img>
+
+ **Note:** RIGHT OUTER JOIN is the name provided to RIGHT JOIN in some of the databases.
+
+Example
+
+Consider the situation where we need to cancel all orders and all clients who have placed order requests:
+
+The SQL query to extract certain customers (customers who have ordered an order) and all orders are as follows:
+
+| SELECT CUSTOMER.ID, CUSTOMER.NAME, ORDER.AMOUNT, ORDER.DATE
+ FROM CUSTOMER5
+ RIGHT JOIN ORDER5
+ ON CUSTOMER.ID = ORDER5.CUSTOMER\_ID; |
+| --- |
+
+You can see that when there are no matches in the left table, the RIGHT JOIN keyword still returns all values from the right table (ORDER5) (CUSTOMER5).
+
+### **CARTESIAN JOIN**  
+
+- The cartesian product of the group of records from the two or more related tables is returned by the CARTESIAN JOIN or CROSS JOIN.
+- If the WHERE clause is used along with the CROSS JOIN, the result set is the count of rows in the initial table multiplied by the count of rows in the second table
+- if a WHERE clause is used simultaneously with the CROSS JOIN, it acts like an INNER JOIN.
+
+Syntax
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-9.png"></img>
+
+You can see that when there are no matches in the left table, the RIGHT JOIN keyword still returns all values from the right table (ORDER5) (CUSTOMER5).
+
+### **CARTESIAN JOIN**  
+
+-  The cartesian product of the group of records from the two or more related tables is returned by the CARTESIAN JOIN or CROSS JOIN.
+
+-  If the WHERE clause is used along with the CROSS JOIN, the result set is the count of rows in the initial table multiplied by the count of rows in the second table
+
+-  if a WHERE clause is used simultaneously with the CROSS JOIN, it acts like an INNER JOIN.
+
+Syntax
+
+| SELECT a.column\_EID, b.column\_EID...
+ FROM table1 a, table1 b
+ WHERE a.common\_filed = b.common\_field; |
+| --- |
+
+## **Summary**  
+
+ 
+We have already covered several commands that could be used to create queries and explore your databases. Additionally, you should be familiar with the various types of joins and how to utilize them to accumulate data from several tables.

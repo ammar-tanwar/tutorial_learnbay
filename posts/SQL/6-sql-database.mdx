@@ -1,0 +1,157 @@
+---
+title: "6. SQL Database"
+desc: "sql database"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "December 6, 2022"
+infoP: "Chapter 2 :- SQL Concepts"
+spanH2: "Core Concepts"
+bottomP: "RDBMS refers to Relational Database Management System. RDBMS serves as the foundation for all contemporary database systems, including MySQL."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 6, 2022"
+tag: "sql"
+tagDes: "SQL Database"
+topic: {
+  title: "sql database",
+tagDes: "SQL Database",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "SQL Database"
+id: "6-sql-database"
+tableData:
+  [
+   Overview,
+   Scope of the tutorial,
+   Structure of a SQL database table,
+   Column, 
+   Rows, 
+   In what ways are SQL databases utilized?, 
+   Advantages of having SQL database,
+   How to create a SQL database?,
+   How to drop(delete) a SQL database?,
+   How to take a backup of SQL database?,
+   Summary
+  ]
+---
+
+# **Chapter 2: (d)**
+
+# **SQL Database**
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-da.jpeg"></img>
+
+## **Overview**
+
+A relational database, typically referred to as a SQL database, is built up of several highly organized tables where each row represents a certain type of data object, and each column represents a particular field of data.
+
+## **Scope of the tutorial**   
+
+This tutorial covers
+
+-  Definition of SQL database
+
+-  Structure of SQL database table
+
+-  Advantages of utilizing a SQL database
+
+## **What is meant by a database in SQL?**
+
+A SQL database, commonly known as a relational database, is built up of several highly organized tables where each row represents a certain type of data object, and each column represents a particular field of data. Structured query language (SQL) is used to create, preserve, update, and retrieve data in relational databases. As a result, all relational database management systems (RDBMS), including MySQL, Oracle, and Sybase, among others, use SQL as their primary programming language.
+
+## **Structure of a SQL database table**   
+
+Data is stored and structured in tables by the SQL database server. Tables are the basic database objects in RDBMS that are fundamentally created to gather data in rows & columns format. Columns describe the attributes of every item, whereas rows describe the entities themselves.
+
+For example, in a table containing customer data, each row represents a record for a particular client, and every table column provides information particular to that customer, such as their name and address. The SQL database table's main components are as follows:
+
+-  Columns
+
+-  Rows
+
+### **Column**  
+
+The data type (for instance, number or text data) and range that each column could handle are defined by the column attributes. Each column has particular attribute information. An entity could be uniquely identified in each table by its primary key. The main key might be a particular column, such as Customer ID, in a database of customer information.
+
+### **Rows**
+
+Each row might have information added to it by database users, who can also run SQL commands to obtain data. Each row in the main key contains a distinct value that assists in preventing data duplicating issues.
+
+## **In what ways are SQL databases utilized?**  
+
+The base of many software and operations across businesses is provided by SQL databases. SQL database enables a wide range of operational characteristics, such as transaction handling, analytics, and business analytics, that need to operate business-critical applications. Companies depend on database operations for data storage, manipulation, and retrieval.
+
+Relational databases include many tables containing important rows (Record) and columns (Attribute) as well as a specific primary key. When a user runs a query, the system either updates the data in the database or, in the case of particular queries, retrieves the appropriate results after checking restrictions.
+
+By combining several tables, users may use SQL databases to obtain useful information that will help them better understand the circumstances and links between the data. SQL is used to perform fundamental data management operations as well as sophisticated queries to convert raw data into contextually relevant information. Users of databases can insert, update, remove, and select data inside tables using common SQL languages such as data definition language (DDL) for building the database & table structures and data manipulation language (DML) for doing so.
+
+## **Advantages of having SQL database**   
+
+Relational databases are a widely accepted database alternative for organizations due to their significant advantages, including
+
+### -  **Higher Flexibility**  
+
+Relational databases use DDL to dynamically adjust the schema in real time and use SQL as their main programming language. It enables database users to make a variety of real modifications without disturbing database operations, including adding new tables and columns, renaming relations, and changing many other aspects.
+
+### -  **Better consistency with data**
+
+Between software and SQL database server versions, SQL databases efficiently retain data consistency. For massive data volumes, other types of databases find it difficult to sustain real-time consistency. Relational databases are essential for preserving data consistency in software handling and business operations.
+
+### -  **Minimum Redundancy**
+
+RDBMS employs normalization to minimize data redundancy. When data is normalized, irregularities resulting from a data insertion, update, & deletion are eradicated.
+
+### -  **Optimizing Performance**
+
+Relational databases guarantee flexibility of use and performance when executing database operations with a variety of value-adding functionalities. All applications' database performance is accelerated due to minimal memory utilization, lower storage costs, and fast processors.
+
+### -  **Ease of Maintenance**
+
+SQL database control, maintenance, and repair are made easier by integrating automation tools in relational database systems. It facilitates proactive database maintenance and upgrades for database admins and technicians. Moreover, utilizing external technologies for SQL database monitoring might provide organizations using databases the chance to monitor the database in such a way that is unique to their requirements.
+
+## **How to create a SQL database?** 
+
+A new SQL database is created using the CREATE DATABASE command.
+
+| Syntax
+ CREATE DATABASE database\_name;
+
+ Example
+ CREATE DATABASE Learnbay; |
+| --- |
+
+_ **Note:** _ _Once the database is created you need to use the database by utilizing the USE function otherwise the next process will be getting updated in "Master'._
+
+_Like this→ use Learnbay;_
+
+## **How to drop(delete) a SQL database?**    
+
+An already existing SQL database can be deleted using the DROP DATABASE command.
+
+| Syntax
+ DROP DATABASE database\_name;
+
+ Example
+ DROP DATABASE Learnbay; |
+| --- |
+
+## **How to take a backup of SQL database?**  
+
+An existing SQL database could be completely backed up utilizing the BACKUP DATABASE command in SQL Server.
+
+| Syntax
+ BACKUP DATABASE database\_name
+ TO DISK = 'filepath';
+
+ Example
+ BACKUP DATABASE Learnbay
+ TO DISK = 'D:\backup\learnbay.bak'; |
+| --- |
+
+## **Summary**  
+
+In comparison to spreadsheets, databases are a far more productive way to store and organize information since they provide a central location that can be instantly shared among many users and readily changed.

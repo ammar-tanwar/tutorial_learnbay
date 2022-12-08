@@ -1,0 +1,235 @@
+---
+title: "2. SQL Installation, Structure, and Commands"
+desc: "SQL Installation, Structure, and Commands"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "December 2, 2022"
+infoP: "Chapter 1 :- Introduction"
+spanH2: "Core Concepts"
+bottomP: "A relational database's data could be retrieved and managed using the database language SQL. The computer language SQL, or Structured Query Language, is utilized to store, manipulate, and retrieve data from relational databases."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 2, 2022"
+tag: "sql"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "sql",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "SQL Installation, Structure, and Commands"
+id: "2-sql-installation-structure-and-commands"
+tableData:
+  [
+  Overview, 
+  Scope of the tutorial,
+  Step-by-step installation of SQL Server,
+  SQL structure, SQL Process, 
+  Categories of SQL statements,
+  Data Definition Language (DDL),
+  Data Manipulation Language(DML), 
+  Data Query Language(DQL),
+  Data Control Language(DCL), 
+  Summary
+  ]
+---
+
+# **Chapter 1: (b)**
+
+# **SQL Installation, Structure, and Commands**
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-in.jpeg"></img>
+
+## **Overview**  
+
+Relational database systems use the standard language for SQL. The user may create, read, update, and delete relational databases and tables with this tool. For various types of queries, there are multiple data language types. To run the SQL with the fullest degree of utility an error-free neat and clean _SQL installation_ is a must. This particular tutorial will shed light on the same.
+
+## **Scope of the tutorial**
+
+This tutorial covers
+
+- Installation of SQL Server
+- SQL Structure
+- Categories of SQL statements
+
+## **Step-by-step installation of SQL Server**
+
+1. Click [SQL Server 2014](https://www.microsoft.com/en-in/download/details.aspx?id=42299) to download SQL Server 2014
+
+1. Check your system→ if it supports 64 bit then →
+
+1. Check the below two files from the list:
+
+SERVER File: Express 64BIT\SQLEXPR\_x64\_ENU.exe
+
+MANAGEMENT STUDIO File: MgmtStudio 64BIT\SQLManagementStudio\_x64\_ENU.exe
+
+1. Click on NEXT the download will start automatically.
+2. Once downloaded first install the Server file first and then the Management Studio file.
+3. The installation wizard is simple you just need to follow on-screen instructions.
+
+Download link: https://www.microsoft.com/en-in/download/details.aspx?id=42299
+
+_ **Note:** _ _SQL and MySQL are the same terms, the word 'My' before SQL refers to Microsoft._
+
+## **SQL structure**   
+Database architecture and modeling software for MySQL servers are called MySQL Workbench. With reverse engineering, management assistance, and other features, it assists in the creation of new physical data structures and the modification of MySQL databases. For working with databases, MySQL workbench offers a well-organized interface.
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/SQL+structure+sub.jpg"></img>
+
+## **SQL Process**
+
+Once you are well aware of the SQL structure, the next thing you need to understand is the SQL process. Any RDBMS that supports SQL commands will choose the best option of activity to take to fulfill the request, as well as the SQL engine will then interpret that decision.
+
+- SQL Query
+- Query language Processor
+- DBMS Engine
+- Database
+
+## **Categories of SQL statements**     
+
+
+### **Data Definition Language (DDL)**
+
+1. **CREATE** - Enables the creation of new database objects, such as tables, views of tables, and other things.
+
+Syntax
+
+CREATE TABLE TABLE\_NAME (COLUMN\_NAME DATATYPES[,....]);
+
+Example
+
+Create database School;
+
+Create table Student;
+
+Create view for\_students;
+
+1. **ALTER** - Edits a table or other existing database item.
+
+Syntax
+
+ALTER TABLE table\_name ADD column\_name COLUMN-definition;
+
+To change a table's existing column:
+
+ALTER TABLE MODIFY(COLUMN DEFINITION);
+
+Example
+
+ALTER TABLE student ADD birthdate DATETIME
+
+1. **DROP** - Deletes every bit of data from a table, a table view, or other database objects.
+
+Syntax
+
+DROP TABLE Table\_name;
+
+Example
+
+Drop object\_type object\_name;
+
+Drop database School;
+
+Drop table Student;
+
+1. **TRUNCATE** - This command is utilized to remove all rows from the table and clear up the area where the table is stored.
+
+Syntax
+
+TRUNCATE TABLE table\_name;
+
+Example
+
+TRUNCATE TABLE Student;
+
+-
+### **Data Manipulation Language(DML)**   
+
+1. **INSERT** - Establishes a record into the row of a table.
+
+Syntax
+
+INSERT INTO TABLE\_NAME VALUES (value1, value2, value3, .... valueN);
+
+Example
+
+INSERT INTO student (Student ID, Student Name, Student Contact) VALUES (45, 'Sathya', 90045 67498);
+
+1. **UPDATE** - Changes a data record in a table's column or its value.
+
+Syntax
+
+UPDATE table\_name SET [column\_name1= value1,...column\_nameN = valueN] [WHERE CONDITION]
+
+Example
+
+UPDATE student
+
+SET Student Name = 'Sathya', Student Contact= 90045 67498
+
+WHERE StudentID = 45;
+
+1. **DELETE** - A record from one or more rows in the database table is removed.
+
+Syntax
+
+DELETE FROM table\_name [WHERE condition];
+
+Example
+
+DELETE FROM students
+
+WHERE FirstName = 'Sathya';
+
+-
+### **Data Query Language(DQL)**   
+
+1. **SELECT** -This command assists in the selection of the attribute according to the parameters specified by the WHERE statement.
+
+Syntax
+
+SELECT expressions
+
+FROM TABLES
+
+WHERE conditions;
+
+Example
+
+SELECT FirstName
+
+FROM Student
+
+WHERE RollNo \> 15;
+
+-
+### **Data Control Language(DCL)**   
+
+1. **GRANT** - This function is used to provide a person's database access rights.
+
+Syntax:
+
+GRANT SELECT, UPDATE ON MY\_TABLE TO SOME\_USER, ANOTHER\_USER;
+
+Example
+
+GRANT SELECT, UPDATE ON Students TO Sathya;
+
+1. **REVOKE** - It is utilized to revoke a user's privilege. The administrator can revoke already given rights with the help of the REVOKE function.
+
+Syntax
+
+REVOKE privilege\_name on objectname from the user;
+
+Example
+
+REVOKE SELECT, UPDATE ON Students TO Sathya;
+
+## **Summary**   
+
+A relational database's data can be accessed and managed using the database language SQL. It enables user access to data within the RDBMS system. There are different types of data languages for different queries.

@@ -1,0 +1,201 @@
+---
+title: "4. SQL Clauses"
+desc: "SQL Clauses"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "December 4, 2022"
+infoP: "Chapter 2 :- SQL Concepts"
+spanH2: "Core Concepts"
+bottomP: "RDBMS refers to Relational Database Management System. RDBMS serves as the foundation for all contemporary database systems, including MySQL."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 4, 2022"
+tag: "sql"
+tagDes: "SQL Clauses"
+topic: {
+  title: "sql",
+tagDes: "SQL Clauses",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "SQL Clauses"
+id: "4-sql-clauses"
+tableData:
+  [
+    Overview,
+    Scope of the tutorial,
+    The 'SELECT' Clause, 
+    The 'WHERE' Clause,
+    The 'AND & OR' Clauses,
+    The OR Operator, 
+    The 'LIKE' Clause, 
+    The 'TOP' Clause,
+    Summary
+  ]
+---
+
+# **Chapter 2: (b)**
+
+# **SQL Clauses**
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-1.jpeg"></img>
+
+## **Overview**   
+
+The built-in SQL functions known as clauses are at our command. We can manage data contained in the table with the assistance of clauses. Clauses speed up the process and analysis of data. When the database includes a lot of data, we utilize Clauses to query and retrieve the data as the user needs.
+
+## **Scope of the tutorial**   
+
+This tutorial covers
+
+● The 'SELECT' Clause
+
+● The 'WHERE' Clause
+
+● The 'AND' & 'OR' Clause
+
+● The 'LIKE' Clause
+
+● The 'TOP' Clause
+
+## **The 'SELECT' Clause**   
+
+The information from a database table that gives this data in the sort of an output table is retrieved using the SQL SELECT command. The term "result sets" refers to these result tables.
+
+**Syntax**   
+
+The syntax of the SELECT statement is
+
+| SELECT column1, column2, ... columnN FROM table\_name; |
+| --- |
+
+Here, the 'FROM' clause defines which table these columns must be retrieved from, and the 'SELECT' clause indicates which column (Column1, Column2, etc.,) is to be chosen.
+
+To access every column that is presented in the table, use the syntax shown below:
+
+| SELECT \* FROM table\_name; |
+| --- |
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-2.png"></img>
+
+Let's imagine that you would like to retrieve the customers' ID, Name, and Salary columns from the 'CUSTOMERS' database. These three column names must be specified following the 'SELECT' clause in order to execute this. The code below illustrates how to achieve this:
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-3.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-4.png"></img>
+| --- |
+
+Output
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-5.png"></img>
+
+Utilizing the SELECT statement select (SELECT ID, NAME, SALARY FROM CUSTOMER) that is utilized to fetch the data in the specified columns.
+
+Let's now retrieve every column from the CUSTOMER table utilizing the \* following the SELECT clause:
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-6.png"></img>
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-7.png"></img>
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-8.png"></img>
+
+## **The 'WHERE' Clause**   
+
+When retrieving information from a specific table, the SQL WHERE clause is utilized to set criteria. These particular records are retrieved from the table if the specified condition is met.
+
+**Syntax**
+
+The fundamental structure of the WHERE clause in the SELECT statement is displayed below:
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-9.png"></img>
+
+Example
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-10.png"></img>
+
+Let us assume we want to retrieve the ID, Name, and Salary values from the CUSTOMER table, If the customer's income is higher than 30,000.
+
+How to execute this in SQL is represented by the code below:
+
+| SELECT ID, NAME, SALARY
+ FROM CUSTOMER
+ WHERE SALARY \> 30000 |
+| --- |
+
+_ **Note:** _ _It's necessary to remember that all strings & characters must be included in single quotes ("), whereas numbers may not be enclosed in quotes._
+
+## **The 'AND & OR' Clauses**  
+
+To limit data in a SQL query, many constraints can be combined using the AND and OR SQL operators. The conjunctive operators include those two operators. These operators offer a way to do several comparisons using several operators in a single SQL query.
+
+**The AND Operator**
+
+The WHERE clause of a SQL query can have various requirements if the AND operator is utilized.
+
+**Syntax**
+
+The following is the primary syntax for utilizing the AND operator along with a WHERE clause:
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-11.png"></img>
+
+The AND operator allows you to merge N number of conditions. All conditions split by the AND operator must be TRUE, whether it is a transaction or a query, allowing the SQL statement to execute the operation.
+
+Example
+
+In this example, we'll extract the ID, Name, and Salary information from the CUSTOMERS table for individuals whose ages are under 30 and whose wages total more than 25,000 (inclusive).
+
+How to execute this in SQL is illustrated by the code below:
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-12.png"></img>
+
+## **The OR Operator**  
+
+In the WHERE clause of a SQL query, several parameters can be combined using the OR operator.
+
+**Syntax**
+
+The following is the primary syntax for using the OR operator along with a WHERE clause:
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-13.png"></img>
+
+Utilizing the OR operator, N number of parameters could be combined. For an activity to be executed by the SQL statement, whether it may be a transaction or a query, ANY ONE of the conditions, that is split by an OR operator, must be TRUE.
+
+Example
+
+Look at the below query, which will retrieve the ID, Name, and Salary data from the CUSTOMERS table, if the salary is higher than 30,000 or the age is under 30.
+
+How to execute this in SQL is illustrated by the code below:
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-14.png"></img>
+
+## **The 'LIKE' Clause**  
+
+The 'LIKE' clause helps identify particular patterns in the data. We only use particular symbols, such as (%) and ( ). We may receive results that exactly match the phrases or patterns we desire by using the "like" clause.
+
+Syntax
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-15.png"></img>
+
+Example
+
+| SELECT \*
+ FROM Customer
+ WHERE name LIKE 'S%'; |
+| --- |
+
+## **The 'TOP' Clause**  
+
+To indicate how many records to return, utilize the SELECT TOP clause. When dealing with huge tables with a lot of records, the SELECT TOP clause is essential. The performance will be affected if many records are provided.
+
+_ **Note:** _ _The SELECT TOP clause is not supported by all database systems.MySQL allows you to choose a specific number of entries using the LIMIT clause._
+
+Syntax
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-cl-16.png"></img>
+
+## **Summary**  
+
+Many clauses have been covered, along with their benefits. SQL clauses are useful because it makes our searches simpler and enables us to obtain data fast and effectively. By taking advantage of the available clause, we can eliminate any additional complexity that arises in queries as a result of complicated calculations or big volumes of data. This assists us in improving the effectiveness of our inquiries and their response times.

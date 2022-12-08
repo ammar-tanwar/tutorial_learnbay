@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/Data-Science-Page";
+import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/Tableau-Page";
 import Footer from "../../components/global/footer/Footer";
 import Navbar from "../../components/global/navbar/Navbar";
 import Link from "next/link";
@@ -15,6 +15,12 @@ import {
 } from "react-icons/fa";
 
 export default function CategoryBlog({ postData, posts, navData }) {
+  const navCategory =  []
+  navData.map((navDetails, i)=>{
+    
+    navCategory.push(navDetails.readMainFolder)
+  })
+  
   let singleCategoryPost = posts.map((post) => {
     return post.category;
   });
@@ -54,6 +60,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
   };
   let categoryPostTag = Array.from(new Set(singleCategoryPost));
   let categoryPostNav = Array.from(new Set(singleCategoryNav));
+  // console.log(categoryPostNav, "category");
   return (
     <>
       <section className={styles.MainS}>
@@ -65,7 +72,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
 
           <title>{postData.title}</title>
         </Head>
-        <Navbar tag={categoryPostNav} />
+        <Navbar tag={navCategory[0]} />
         <div className={styles.banner}>
           <div className={styles.divFirst}>
             <Image
