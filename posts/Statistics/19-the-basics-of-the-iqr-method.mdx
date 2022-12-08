@@ -1,0 +1,132 @@
+---
+title: "The Basics of the IQR Method"
+desc: "The Basics of the IQR Method"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python.png"
+date: "November 19, 2022"
+infoP: "The Basics of the IQR Method"
+spanH2: "Core Concepts"
+bottomP: "Placeholder text lorem ipsum doret lorem ipsum text lorem ipsum
+              doret lorem ipsum text lorem ipsum doret lorem ipsum text lorem
+              ipsum doret lorem ipsum"
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 19, 2022"
+tag: "Statistics"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "Statistics",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "The Basics of the IQR Method : "
+id: "the-basics-of-the-iqr-method"
+tableData:
+  [
+  1. The Overview of The Tutorial, 
+  2. Content of The Tutorial,  
+  3. InterQuartile Range (IQR)-Definition,  
+  4. Where do we use the interquartile range?,  
+  5. How do we perform Inter Quartile Range?,
+  6. Conclusion,
+  ]
+---
+
+
+
+
+**Chapter 3: (d)**
+
+**The Basics of the IQR Method**
+
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/statistics/The+Basics+of+the+IQR+Method.jpg"></img>
+
+
+
+## 1. The Overview of The Tutorial
+
+Today’s tutorial is on the interquartile range (IQR). If we have Outliers in our data then the interquartile range is one of the methods to find out the outliers from our data set. In this tutorial, we will learn how to perform the interquartile range and what are some of its uses.
+
+
+## 2. Content of The Tutorial
+
+
+
+* What is the interquartile range?
+* Where do we use the interquartile range?
+* How do we perform the interquartile range?
+
+
+## 3. InterQuartile Range (IQR)-Definition
+
+The IQR is a metric for determining how far away a group of data points differs from the mean of the set. The datasets are more distributed the higher the IQR; alternatively, the closer they are situated to the mean the lesser the IQR. One of the many measurements frequently used to determine how evenly dispersed a data set's data points are is the IQR range. To fully comprehend how a data collection tends to cluster around its mean, it is best used in conjunction with other statistics like the median and total range.
+
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/statistics/Inter+Quartile+Range+in+a+Box+Plo+sub.jpg"></img>
+
+
+
+**Figure 1: Inter Quartile Range in a Box Plot**
+
+
+## 4. Where do we use the interquartile range?
+
+The interquartile range is the simplest indicator of variability in data points with outliers or skewed distributions. It's difficult to be influenced by outliers since it's based on numbers derived from the center half of the distribution.
+
+The IQR is the distance observed between the third or upper quartile and the first or lower quartile. This is the technical definition of IQR. The word "quartile" refers to the procedure of arranging a set of data into four equal segments (think quarter).
+
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/statistics/Inter+Quartile+Range+sub+(1).jpg"></img>
+
+
+
+**Figure 2: Inter Quartile Range(IQR)**
+
+
+## 5. How do we perform Inter Quartile Range?
+
+We might create a "fence" beyond Q1 and Q3 by using the IQR method of detecting outliers. Outliers will be any values that lie beyond this range. To make this fence, we multiply the IQR by 1.5, reduce Q1 from this output, and add Q3 to the outcome. As a consequence, we can match every observation to the minimum and maximum fence posts and can match every observation to the minimum and maximum fence posts as a consequence. Outliers are any data that decline more than 1.5 IQR beyond Q1 or increase more than 1.5 IQR beyond Q3.
+
+**Example:**
+
+
+**Figure 4: Inter-Quartile Range**
+
+
+
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/statistics/Inter+Quartile+Range+sub2.jpg"></img>
+
+
+A professor is interested in looking at the test results of the students. Students that are achieved 74, 88, 78, 90, 94, 90, 84, 90, 98, and 80 as overall scores.
+
+The five-number summary for the test score is 74, 80, 89, 90, and 98.
+
+IQR = 90-80 = 10
+
+The IQR is 10
+
+1.5 IQR = 1.5(10) = 15
+
+The interquartile range is 1.5 times, or 15. Our limits will be 15 times lower than Q1 and 15 points higher than Q3.
+
+Lower fence: 80-15 = 65
+
+Upper fence: 90+15 = 105
+
+Outliers would be any numbers that exceed the normal limits of 65 to 105. There are absolutely no outliers in this instance.
+
+
+## 6. Conclusion
+
+By partitioning a range of data into quartiles, the IQR is utilized to analyze the variability. In this tutorial, we learned IQR in detail and how it is being used. Our following topic will be Z-Score Method.
