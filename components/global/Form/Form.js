@@ -83,12 +83,6 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
     if (dataScience) {
       router.push("/Thank-you");
     }
-    if (fullStack) {
-      router.push("/Thank-you-fsd");
-    }
-    if (event)  {
-      router.push("/event/Thank-You-event");
-    }
   };
   const isWeekday = (date) => {
     const day = getDay(date);
@@ -104,7 +98,7 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
   return (
     <div className={styles.App}>
       <form onSubmit={formSubmit}>
-        <div className={styles.formWrapper}>
+      <div className={styles.formWrapper}>
           <input
             type="text"
             name="name"
@@ -192,7 +186,7 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
           ""
         )}
 
-{/* <div className={popup ? styles.formWrappers : styles.formWrapper}>
+        {/* <div className={popup ? styles.formWrappers : styles.formWrapper}>
             <div className={styles.inner}>
               <DatePicker
                 selected={startDate}
@@ -219,26 +213,32 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
               />
             </div>
           </div> */}
-          <div className={popup ? styles.formWrappers : styles.formWrapper} >
+        {radio ? (
+          <div className={popup ? styles.formWrappers : styles.formWrapper}>
             <input
               id="Data Science Program"
-              value="Data Science Program"
+              value="Data Science Courses"
               name="platform"
               required
               type="radio"
               onChange={handleParam()}
             />
-            Data Science Program&nbsp;
-            <br/><input
+            Data Science Courses&nbsp;
+            <br />
+            <input
               id="Full Stack Program"
-              value="Full Stack Program"
+              value="Full Stack Software Dev Courses"
               name="platform"
               required
               type="radio"
               onChange={handleParam()}
             />
-            Full Stack Program
+            Full Stack Software Dev <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;(DSA & System Design) Courses
           </div>
+        ) : (
+          ""
+        )}
         <p className={styles.FormText} style={{ fontSize: "10px" }}>
           By submitting the form, you agree to our Terms and Conditions and our
           Privacy Policy.

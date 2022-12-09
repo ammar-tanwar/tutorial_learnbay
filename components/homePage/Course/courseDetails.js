@@ -8,7 +8,7 @@ export const viewAllD = [
     para: [
       "200 hours of Interactive Learning",
       "8 Projects + 1 Capstone",
-      "Course Fee : ₹ 65,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-certification-courses",
     link2:
@@ -23,7 +23,7 @@ export const viewAllD = [
     para: [
       "250 hours of Interactive Learning",
       "12 Projects + 1 Capstones",
-      "Course Fee : ₹ 85,000 + GST",
+      "Course Fee : ₹ 90,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/advance-data-science-certification-courses",
     link2:
@@ -38,7 +38,7 @@ export const viewAllD = [
     para: [
       "350 hours of Interactive Learning",
       "15 Projects + 1 Capstones",
-      "Course Fee : ₹ 95,000 + GST",
+      "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
@@ -53,7 +53,7 @@ export const viewAllD = [
     para: [
       "400 hours of Interactive Learning",
       "15 Projects + 1 Capstones",
-      "Course Fee : ₹ 95,000 + GST",
+      "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-ai-for-managers",
     link2:
@@ -63,12 +63,12 @@ export const viewAllD = [
     id: 5,
     img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/data-science-ai-with-job-guarantee.webp",
     title: "Data Science & AI ",
-    title1: "Master's Program",
+    title1: "Master Program",
     tag: "Data science",
     para: [
       "500 hours of Interactive Learning",
       "20 Projects + 3 Capstones",
-      "Course Fee : ₹ 1,10,000 + GST",
+      "Course Fee : ₹ 1,20,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-ai-masters-program",
     link2:
@@ -83,7 +83,7 @@ export const viewAllD = [
     para: [
       "180 hours of Interactive Learning",
       "8 Projects",
-      "Course Fee : ₹ 65,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-analytics-certification-course",
     link2:
@@ -99,27 +99,27 @@ export const viewAllD = [
     para: [
       "200 hours of Interactive Learning",
       "8 Projects",
-      "Course Fee : ₹ 65,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/business-analytics-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Business+Analytics+Certification+Program+Learnbay.pdf",
   },
-  // {
-  //   id: 8,
-  //   img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-web-development.webp",
-  //   title: "Full-Stack Web",
-  //   title1: "Development Program",
-  //   tag: "Full stack",
-  //   para: [
-  //     "300 hours of Interactive Learning",
-  //     "12 Projects + 2 Capstones",
-  //     "Course Fee : ₹ 1,20,000 + GST",
-  //   ],
-  //   link1: "/full-stack-web-development-program",
-  //   link2:
-  //     "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Web+Development+Program+Learnbay.pdf",
-  // },
+  {
+    id: 8,
+    img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-web-development.webp",
+    title: "Full-Stack Web",
+    title1: "Development Program",
+    tag: "Full stack",
+    para: [
+      "300 hours of Interactive Learning",
+      "12 Projects + 2 Capstones",
+      "Course Fee : ₹ 85,000 + 18% GST",
+    ],
+    link1: "/full-stack-web-development-program",
+    link2:
+      "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Web+Development+Program+Learnbay.pdf",
+  },
   {
     id: 9,
     img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-developer-course.webp",
@@ -129,7 +129,7 @@ export const viewAllD = [
     para: [
       "300 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 1,10,000 + GST",
+      "Course Fee : ₹ 1,10,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/full-stack-software-development-program",
     link2:
@@ -144,7 +144,7 @@ export const viewAllD = [
     para: [
       "200 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 70,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/dsa-system-design",
     link2:
@@ -161,7 +161,7 @@ export const ForProgrammersD = [
     para: [
       "250 hours of Interactive Learning",
       "12 Projects + 1 Capstones",
-      "Course Fee : ₹ 85,000 + GST",
+      "Course Fee : ₹ 90,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/advance-data-science-certification-courses",
     link2:
@@ -176,7 +176,7 @@ export const ForProgrammersD = [
     para: [
       "300 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 1,10,000 + GST",
+      "Course Fee : ₹ 1,10,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/full-stack-software-development-program",
     link2:
@@ -191,7 +191,7 @@ export const ForProgrammersD = [
     para: [
       "400 hours of Interactive Learning",
       "15 Projects + 1 Capstones",
-      "Course Fee : ₹ 95,000 + GST",
+      "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-ai-for-managers",
     link2:
@@ -206,37 +206,37 @@ export const ForProgrammersD = [
     para: [
       "350 hours of Interactive Learning",
       "15 Projects + 1 Capstones",
-      "Course Fee : ₹ 95,000 + GST",
+      "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+AI+%26+ML+Certification+Program+Learnbay.pdf",
   },
-  // {
-  //   id: 5,
-  //   img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-web-development.webp",
-  //   title: "Full-Stack Web ",
-  //   tag: "Full stack",
-  //   title1: "Development Program",
-  //   para: [
-  //     "300 hours of Interactive Learning",
-  //     "12 Projects + 2 Capstones",
-  //     "Course Fee : ₹1,20,000 + GST",
-  //   ],
-  //   link1: "/full-stack-web-development-program",
-  //   link2:
-  //     "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Web+Development+Program+Learnbay.pdf",
-  // },
+  {
+    id: 5,
+    img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-web-development.webp",
+    title: "Full-Stack Web ",
+    tag: "Full stack",
+    title1: "Development Program",
+    para: [
+      "300 hours of Interactive Learning",
+      "12 Projects + 2 Capstones",
+      "Course Fee : ₹85,000 + 18% GST",
+    ],
+    link1: "/full-stack-web-development-program",
+    link2:
+      "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Web+Development+Program+Learnbay.pdf",
+  },
   {
     id: 6,
     img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/data-science-ai-with-job-guarantee.webp",
     title: "Data Science & AI ",
-    title1: "Master's Program",
+    title1: "Master Program",
     tag: "Data science",
     para: [
       "500 hours of Interactive Learning",
       "20 Projects + 3 Capstones",
-      "Course Fee : ₹ 1,10,000 + GST",
+      "Course Fee : ₹ 1,20,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-ai-masters-program",
     link2:
@@ -251,7 +251,7 @@ export const ForProgrammersD = [
     para: [
       "200 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 70,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/dsa-system-design",
     link2:
@@ -268,7 +268,7 @@ export const ForNonProgrammerD = [
     para: [
       "200 hours of Interactive Learning",
       "8 Projects + 1 Capstone",
-      "Course Fee : ₹ 65,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-certification-courses",
     link2:
@@ -283,7 +283,7 @@ export const ForNonProgrammerD = [
     para: [
       "250 hours of Interactive Learning",
       "12 Projects + 1 Capstones",
-      "Course Fee : ₹ 85,000 + GST",
+      "Course Fee : ₹ 90,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/advance-data-science-certification-courses",
     link2:
@@ -298,7 +298,7 @@ export const ForNonProgrammerD = [
     para: [
       "350 hours of Interactive Learning",
       "15 Projects + 1 Capstones",
-      "Course Fee : ₹ 95,000 + GST",
+      "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
@@ -313,7 +313,7 @@ export const ForNonProgrammerD = [
     para: [
       "400 hours of Interactive Learning",
       "15 Projects + 1 Capstones",
-      "Course Fee : ₹ 95,000 + GST",
+      "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-ai-for-managers",
     link2:
@@ -323,12 +323,12 @@ export const ForNonProgrammerD = [
     id: 5,
     img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/data-science-ai-with-job-guarantee.webp",
     title: "Data Science & AI ",
-    title1: "Master's Program",
+    title1: "Master Program",
     tag: "Data science",
     para: [
       "500 hours of Interactive Learning",
       "20 Projects + 3 Capstones",
-      "Course Fee : ₹ 1,10,000 + GST",
+      "Course Fee : ₹ 1,20,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-ai-masters-program",
     link2:
@@ -344,7 +344,7 @@ export const ForNonProgrammerD = [
     para: [
       "200 hours of Interactive Learning",
       "8 Projects",
-      "Course Fee : ₹ 65,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/business-analytics-certification-course",
     link2:
@@ -359,7 +359,7 @@ export const ForNonProgrammerD = [
     para: [
       "180 hours of Interactive Learning",
       "8 Projects",
-      "Course Fee : ₹ 65,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-analytics-certification-course",
     link2:
@@ -372,49 +372,49 @@ export const JobGuaranteeD = [
     id: 1,
     img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/data-science-ai-with-job-guarantee.webp",
     title: "Data Science & AI ",
-    title1: "Master's Program",
+    title1: "Master Program",
     tag: "Data science",
     para: [
       "500 hours of Interactive Learning",
       "20 Projects + 3 Capstones",
-      "Course Fee : ₹ 1,10,000 + GST",
+      "Course Fee : ₹ 1,20,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/data-science-ai-masters-program",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Data+Science+and+AI+Master's+Program+%5BWith+Unlimited+Interview+Calls%5D.pdf",
   },
-  // {
-  //   id: 2,
-  //   img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-web-development.webp",
-  //   title: "Full-Stack Web ",
-  //   title1: "Development Program",
-  //   tag: "Full stack",
-  //   para: [
-  //     "300 hours of Interactive Learning",
-  //     "12 Projects + 2 Capstones",
-  //     "Course Fee : ₹ 1,20,000 + GST",
-  //   ],
-  //   link1: "/full-stack-web-development-program",
-  //   link2:
-  //     "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Web+Development+Program+Learnbay.pdf",
-  // },
+  {
+    id: 2,
+    img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-web-development.webp",
+    title: "Full-Stack Web ",
+    title1: "Development Program",
+    tag: "Full stack",
+    para: [
+      "300 hours of Interactive Learning",
+      "12 Projects + 2 Capstones",
+      "Course Fee : ₹ 85,000 + 18% GST",
+    ],
+    link1: "/full-stack-web-development-program",
+    link2:
+      "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Web+Development+Program+Learnbay.pdf",
+  },
 ];
 export const StackD = [
-  // {
-  //   id: 1,
-  //   img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-web-development.webp",
-  //   title: "Full-Stack Web ",
-  //   title1: "Development Program",
-  //   tag: "Full stack",
-  //   para: [
-  //     "300 hours of Interactive Learning",
-  //     "12 Projects + 2 Capstones",
-  //     "Course Fee : ₹ 1,20,000 + GST",
-  //   ],
-  //   link1: "/full-stack-web-development-program",
-  //   link2:
-  //     "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Web+Development+Program+Learnbay.pdf",
-  // },
+  {
+    id: 1,
+    img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-web-development.webp",
+    title: "Full-Stack Web ",
+    title1: "Development Program",
+    tag: "Full stack",
+    para: [
+      "300 hours of Interactive Learning",
+      "12 Projects + 2 Capstones",
+      "Course Fee : ₹ 85,000 + 18% GST",
+    ],
+    link1: "/full-stack-web-development-program",
+    link2:
+      "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Full+Stack+Web+Development+Program+Learnbay.pdf",
+  },
   {
     id: 2,
     img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/full-stack-developer-course.webp",
@@ -424,7 +424,7 @@ export const StackD = [
     para: [
       "300 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 1,10,000 + GST",
+      "Course Fee : ₹ 1,10,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/full-stack-software-development-program",
     link2:
@@ -439,7 +439,7 @@ export const StackD = [
     para: [
       "200 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 70,000 + GST",
+      "Course Fee : ₹ 70,000 + 18% GST",
     ],
     link1: "https://www.learnbay.co/dsa-system-design",
     link2:

@@ -40,8 +40,8 @@ export default function blog({ allPostsData }) {
           href="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/Learnbay-Favicon-L.png"
         />
       </Head>
-      <Navbar tag={navCategory[0]} />
-      <HeroSection
+      <Navbar tag={navCategory[0]} dataScience={true}/>
+      <HeroSection dataScience={true} radio={true}
         mTitle="Investing in Knowledge and"
         spanMTitleText="Your Future"
         title="Investing in Knowledge and"
