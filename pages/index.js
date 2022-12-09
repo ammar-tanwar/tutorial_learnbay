@@ -8,9 +8,14 @@ import Course from "../components/homePage/Course/Course";
 import Navbar from "../components/global/navbar/Navbar";
 import HeroSection from "../components/homePage/HeroSection/HeroSection";
 import ThirdSection from "../components/homePage/ThirdSection/ThirdSection";
-import Topics from "../components/homePage/Topics/Topics"
+import Topics from "../components/homePage/Topics/Topics";
 
 export default function blog({ allPostsData }) {
+  const navCategory = [];
+  allPostsData.map((navDetails, i) => {
+    navCategory.push(navDetails.readMainFolder);
+  });
+
   const length = parseInt(allPostsData.length);
   let singleCategoryPost = allPostsData.map((post) => {
     return post.category;
@@ -37,17 +42,17 @@ export default function blog({ allPostsData }) {
       </Head>
       <Navbar tag={categoryPostTag} />
       <HeroSection
-      mTitle="Investing in Knowledge and"
-      spanMTitleText="Your Future"
-      title="Investing in Knowledge and"
-      spanTitleText="Your Future"
-      desc="With new capstone projects, learn how to apply your previous domain expertise to make a successful transition."
-      src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tutorial.png"
-      width="914"
-      height="1002"
-      alt="data science course"
+        mTitle="Investing in Knowledge and"
+        spanMTitleText="Your Future"
+        title="Investing in Knowledge and"
+        spanTitleText="Your Future"
+        desc="With new capstone projects, learn how to apply your previous domain expertise to make a successful transition."
+        src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/tutorial.png"
+        width="914"
+        height="1002"
+        alt="data science course"
       />
-      <Topics categoryPostTopic = {categoryPostTopic}/>
+      <Topics categoryPostTopic={navCategory[0]} />
       <ThirdSection />
       <Course />
       <Footer />

@@ -5,7 +5,7 @@ import matter from "gray-matter";
 export default function handler(req, res) {
   let posts;
   const { q } = req.body;
-
+  console.log(q);
   if (process.env.NODE_ENV === "production") {
     // @todo - fetch rom cache
   } else {
