@@ -20,22 +20,21 @@ const Tabs = ({ tag }) => {
       setMobile(false);
     }
   });
-  // console.log(tag);
 
   return (
     <div className="wrapper">
       <div className={styles.MenuTabs}>
         <div className={styles.leftPanel}>
           {tag.map((posts, i) => {
-            let tag = posts.replace("-"," ");
-            console.log(posts);
-            let murl = tag.replace(" ", "-");
-            let url = `/${murl}/1-getting-started`;
+            let url = `/${posts}/1-getting-started`;
+
             return (
-              <span key={tag} className={styles.span}>
-                <Link href={url}>{tag}</Link>
-                <FaArrowRight />
-              </span>
+              <Link href={url} key={i}>
+                <span className={styles.span}>
+                  {posts}
+                  <FaArrowRight />
+                </span>
+              </Link>
             );
           })}
         </div>

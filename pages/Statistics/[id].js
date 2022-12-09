@@ -13,6 +13,7 @@ import {
   FaHeart,
   FaRegHeart,
 } from "react-icons/fa";
+import { sortByDate } from "../../utils";
 
 export default function CategoryBlog({ postData, posts, navData }) {
   const navCategory =  []
@@ -208,7 +209,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       postData,
-      posts,
+       posts:posts.sort(sortByDate),
       navData,
     },
      revalidate: 18000,

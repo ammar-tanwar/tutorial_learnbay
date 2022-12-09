@@ -75,11 +75,9 @@ export default async function generatePage(req, res) {
       const folder = data.Prefix.split("posts/");
       const parentFolder = folder[1].replace("/", "");
       const path = `./posts/${parentFolder}`;
-      console.log(parentFolder, "parentFolder");
 
       const getInnerFolder = async () => {
         const innerFolder = await getAllFoldersFromBucket(parentFolder);
-        console.log(innerFolder, "InnerFolder");
       };
       getInnerFolder();
       //make file in lib folder to read from post folder
