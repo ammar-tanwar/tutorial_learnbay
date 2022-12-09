@@ -1,0 +1,349 @@
+---
+title: "3. MongoDB DataType and Documents"
+desc: "MongoDB DataType and Documents"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/MongoDB+Header.png"
+date: "December 3, 2022"
+infoP: "Chatper 3 :- MongoDB DataType and Documents"
+spanH2: "Core Concepts"
+bottomP: "The documents are maintained in BSON, which is binary-encoded JSON, and we may use BSON to handle external MongoDB operations. Different data functionality is supported by the BSON data format."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 3, 2022"
+tag: "MongoDB"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "MongoDB",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "MongoDB DataType and Documents : "
+id: "3-mongodb-datatype-and-documents"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. Data Types in MongoDB,  
+  4. MongoDB Documents,  
+  5. Query Document,  
+  6. Update Document,   
+  7. Delete Document,
+  ]
+---
+
+# **Chapter 3**
+
+
+# **MongoDB Datatypes and MongoDB Documents**
+
+
+## 1. Overview
+
+BSON, which is JSON's binary-encoded standard, is the format utilized by MongoDB to store documents. Technically, Binary encoded JSON is how the name BSON originates. When storing JavaScript objects in binary form, the BSON file type provides a wide range of types.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Data Types in MongoDB
+* MongoDB Documents and its classifications
+
+
+## 3. Data Types in MongoDB
+
+The documents are stored in BSON, which would be JSON's binary-encoded format, allowing us to access external MongoDB operations using BSON. The BSON data format supports different data formats. The supported MongoDB data types are described below:
+
+
+
+* **String**
+
+BSON strings are UTF-8 and are the most utilized data type within MongoDB for storing data. As a result, the drivers for every programming language transform the language's string format to UTF-8 when serializing and deserializing BSON. A genuine UTF-8 string must be utilized.
+
+* **Integer**
+
+An integer value is stored in MongoDB utilizing the integer data type. Integer data types can be stored in two different formats: 32-bit signed integers and 64-bit signed integers.
+
+* **Double**
+
+For storing floating-point values, a double data type is utilized.
+
+* **Boolean**
+
+The true or false values are stored to utilize the boolean data type.
+
+* **Null**
+
+The null value is stored as a component of the null data type.
+
+* **Array**
+
+The collection of values is the array. It is capable of storing values of the same or various data types. MongoDB utilizes square brackets to generate the array ([]).
+
+* **Object**
+
+Embedded documents are stored in object data types. Nested documents are another name for embedded documents. Documents that include one document inside another are referred to as embedded documents or nested documents.
+
+* **Object Id**
+
+Every time we add a new document to the collection, MongoDB instantaneously generates a special object id for that item (if it is missing from the document). In MongoDB, each document has an _id field. The information stored in Id is in hexadecimal format and it has a length of 12 bytes. Its values are as follows:
+
+* The Timestamp value is 4 bytes.
+* 5 bytes are utilized for random values. 2 bytes for the process ID and 3 bytes for the machine ID
+* For Counter its 3 bytes
+
+One could also design your custom ID field, but keep in mind that it requires a unique value.
+
+* **Undefined**
+
+The undefined values are stored in this data type.
+
+* **Binary Data**
+
+Binary data is stored using this datatype.
+
+* **Date**
+
+The date data type records the date. The amount of milliseconds is encoded as a 64-bit integer. In general, UTC DateTime is supported through the signed BSON data type. Date data types that have a negative value denote dates prior to 1970. There are several ways to return a date; it could be returned as a date object or as a string. Methods for finding the date.
+
+* Date(): It provides the current date as a string.
+* New Date(): returns back a date object. Utilizes the wrapper for ISODate().
+* New ISODate(): returns back a date object. Utilizes the wrapper for ISODate().
+* **Min & Max key**
+
+The values of the minimum and maximum BSON elements are compared using the Min key and Max key, respectively. Both are types of internal data.
+
+* **Symbol**
+
+A string data type is identical to this data type. Although a mongo shell frequently does not support it, if it receives a symbol from either the database, it will convert the type to a string type.
+
+* **Regular Expression**
+
+In this datatype, regular expressions are stored.
+
+* **JavaScript**
+
+JavaScript code is stored in the document that is using this datatype without any of the scopes.
+
+* **JavaScript with Scope**
+
+This JavaScript data type in MongoDB stores data with a scope. In MongoDB 4.4.4, this data type is no longer supported.
+
+* **Timestamp**
+
+This data type is utilized by MongoDB to store timestamps. When we change our data to retain a record, it is helpful, and the value of such a data type is 64 bits. A timestamp data type value is always unique.
+
+* This MongoDB data type stores floating-point values with a base of 128 bits. Version 3.4 of MongoDB is when this data type was first introduced.
+
+
+## 4. MongoDB Documents
+
+
+### **Insert Document**
+
+**The insert() Method**
+
+Use the insert() or save() methods of MongoDB to add data to a collection.
+
+**_Syntax_**
+
+The following is the insert() command's basic syntax.
+
+db.COLLECTION_NAME.insert(document)
+
+Db.post.save(document) can also be utilized to insert the document. The save() method will function similarly to the insert() method if you don't provide an _id in the document. If users supply _id, the whole document's data that contains _id as stated in the save() function will be replaced.
+
+
+### **The insertOne() method**
+
+This technique could be utilized if users just need to add one document to a collection.
+
+**_Syntax_**
+
+db.COLLECTION_NAME.insertone(document)
+
+
+### **The insertMany() method**
+
+The insertMany() function allows users to insert many documents. An array of documents must be passed to this procedure.
+
+
+## 5. Query Document
+
+
+### **The find() Method**
+
+One must use MongoDB's find() function to query data from a collection.
+
+**_Syntax_**
+
+db.COLLECTION_NAME.find()
+
+The find() function will provide every document in an unstructured manner.
+
+
+### **The findOne() method**
+
+The findOne() function, which only returns one document, is an alternative to the find() method.
+
+**_Syntax_**
+
+db.COLLECTION_NAME.findone()
+
+
+### **AND in MongoDB**
+
+Use the $and keyword to search for documents using the AND condition. Here is the fundamental syntax for AND.
+
+**_Syntax_**
+
+db.mycol.find({ $and: [ {&lt;key1>:&lt;value1>}, { &lt;key2>:&lt;value2>} ] })
+
+
+### **OR in MongoDB**
+
+Use the $or keyword to search for documents using the OR condition. Here is the fundamental syntax for OR
+
+**_Syntax_**
+
+db.mycol.find(
+
+   {
+
+  $or: [
+
+ {key1: value1}, {key2:value2}
+
+  ]
+
+   }
+
+).pretty()
+
+
+### **Utilizing NOT in MongoDB**
+
+Use the $not keyword to search for documents using the NOT condition. Here is the fundamental syntax for NOT
+
+**_Syntax_**
+
+db.COLLECTION_NAME.find(
+
+	{
+
+		$not: [
+
+			{key1: value1}, {key2:value2}
+
+		]
+
+	}
+
+)
+
+
+## 6. Update Document
+
+To update a document into a collection, utilize MongoDB's update() & save() functions. While the save() function substitutes the document supplied to it with the existing document, the update() method modifies the data in the existing document.
+
+
+### **MongoDB Update() Method**
+
+Updates to existing document data are done using the update() function.
+
+**_Syntax_**
+
+The following is the update() method's fundamental syntax.
+
+db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)
+
+
+### **MongoDB Save() Method**
+
+The new document sent into the save() function is substituted for the current document.
+
+Syntax
+
+Below is a basic example of the save() method's syntax for MongoDB.
+
+db.COLLECTION_NAME.save({_id:ObjectId(),NEW_DATA})
+
+
+### **MongoDB findOneAndUpdate() method**
+
+The data in the old document are updated via the findOneAndUpdate() function.
+
+**_Syntax_**
+
+The findOneAndUpdate() method's fundamental syntax is as follows.
+
+db.COLLECTION_NAME.findOneAndUpdate(SELECTIOIN_CRITERIA, UPDATED_DATA)
+
+
+### **MongoDB updateOne() method**
+
+A single document that meets the specified filter is updated by this technique.
+
+**_Syntax_**
+
+The updateOne() function has the following basic syntax.
+
+db.COLLECTION_NAME.updateOne(&lt;filter>, &lt;update>)
+
+
+### **MongoDB updateMany() method**
+
+Updates are made to all documents that meet the requirements specified by the updateMany() function.
+
+**_Syntax_**
+
+The updateMany() function has the following basic syntax.
+
+db.COLLECTION_NAME.update(&lt;filter>, &lt;update>)
+
+
+## 7. Delete Document
+
+
+### **The remove() Method**
+
+To delete a document from the collection, utilize MongoDB's remove() function. The delete() function takes two arguments. One is the justOne flag, and the other is the deletion criteria.
+
+
+
+* Deletion criteria - (Optional) The deletion criteria will be eliminated in accordance with the documents.
+* justOne - (Optional) Only one document will be deleted if the value is true or 1.
+
+**_Syntax_**
+
+The delete() function has the following basic syntax.
+
+db.COLLECTION_NAME.remove(DELLETION_CRITTERIA)
+
+
+### **Remove Only One**
+
+Set the justOne parameter in the remove() function if there are several entries and if you want to eliminate only the initial entry.
+
+Syntax
+
+db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)
+
+
+### **Remove All Documents**
+
+MongoDB will remove all of the collection's documents if you don't provide any criteria for deletion. The truncate command in SQL is similar to this.
+
+**_Syntax_**
+
+db.mycol.remove({})
+
+Summary
+
+The main essential MongoDB Data Types have been covered. More data types are supported by BSON than JSON. JSON does not support the time data type, although BSON does.

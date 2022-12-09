@@ -1,0 +1,348 @@
+---
+title: "2. MongoDB Database"
+desc: "MongoDB Database"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/MongoDB+Header.png"
+date: "December 2, 2022"
+infoP: "Chatper 2 :- MongoDB Database"
+spanH2: "Core Concepts"
+bottomP: "Open-source document database MongoDB offers excellent availability and excellent performance. It utilizes BSON, a subset of JSON, to store data."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 2, 2022"
+tag: "MongoDB"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "MongoDB",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "MongoDB Database : "
+id: "2-Mongodb-database"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. How to Create a Database and a Collection in MongoDB?,  
+  4. Utilizing the "use" command to create a database,  
+  5. Drop Database,  
+  6. Utilizing insert to create a Collection/Table(),   
+  7. The Drop() Method,
+  8. Utilizing the command insert() for adding documents,
+  9. The array of objects in MongoDB using insert(),
+  10. Utilizing JSON for printing,
+  11. What do you mean by Primary key in MongoDB?,
+  12. Summary,
+  ]
+---
+
+# **Chapter 2**
+
+
+# **MongoDB Database**
+
+
+## 1. Overview
+
+A document database called MongoDB database is utilized to generate large and highly accessible web applications. It's well known by development teams utilizing agile approaches because to its flexible schema approach.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Create a Database and a Collection
+* Drop a Database and a Collection
+
+
+## 3. How to Create a Database and a Collection in MongoDB?
+
+The first fundamental step with MongoDB is to set up a database and a collection. All the collections are stored in the database, and all the documents are stored in the collection. The appropriate Field values and Field names are provided in each document separately.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-1.PNG"></img>
+
+
+The document's "Employeeid" and "EmployeeName" fields have the field values "1" and "Smith," respectively. In MongoDB, a collection would then consist of a number of documents.
+
+
+## 4. Utilizing the "use" command to create a database
+
+In MongoDB, a database is created with the "use" command. If the database doesn't already exist, one will be generated.
+
+The below Output will be displayed following successful command execution:
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-2.PNG"></img>
+
+
+When the database is generated, MongoDB will immediately switch to it.
+
+
+## 5. Drop Database
+
+The dropDatabase() Method
+
+An existing database can be deleted using the MongoDB db.dropDatabase() command.
+
+Syntax
+
+**_db.dropDatabase()_**
+
+The identified database will be deleted as a result. It will erase the default "test" database if you do not select anything.
+
+Example
+
+Use the command show dbs to first look through the list of existing databases.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-3.PNG"></img>
+
+
+Here is the dropDatabase() command to erase the new database "mydb".
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-4.PNG"></img>
+
+
+Check the databases list now.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-5.PNG"></img>
+
+
+
+## 6. Utilizing insert to create a Collection/Table()
+
+A record, which is nothing more than a document made up of Column names and Values, can be added to a collection in the simplest method possible. A new collection will be generated if the selected one does not already exist.
+
+Syntax
+
+**_db.createCollection(name, options)_**
+
+Name is the name of the collection that will be formed in the command. Options is a document that describes how a collection must be configured.
+
+
+<table>
+  <tr>
+   <td><strong>Parameter</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Name
+   </td>
+   <td>String
+   </td>
+   <td>Name of the collection to be generated
+   </td>
+  </tr>
+  <tr>
+   <td>Options
+   </td>
+   <td>Document
+   </td>
+   <td>(Optional) Mention your requirements regarding memory size and indexing.
+   </td>
+  </tr>
+</table>
+
+
+Only the collection name has to be specified because the options parameters are optional.
+
+
+<table>
+  <tr>
+   <td><strong>Field</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Capped
+   </td>
+   <td>Boolean
+   </td>
+   <td>(Optional) If it is true, a capped collection is enabled. When a fixed size collection reaches its maximum size, it is known as a "capped collection" and its oldest records are automatically overwritten. If true is specified, the size parameter must also be selected.
+   </td>
+  </tr>
+  <tr>
+   <td>AutoIndexId
+   </td>
+   <td>Boolean
+   </td>
+   <td>(Optional) If it is true, generate an index on the _id column automatically. The default value is false.
+   </td>
+  </tr>
+  <tr>
+   <td>Size
+   </td>
+   <td>Number
+   </td>
+   <td>(Optional) The highest size in bytes for one capped collection is specified. Users also need to provide this field if capped is true.
+   </td>
+  </tr>
+  <tr>
+   <td>Max
+   </td>
+   <td>Number
+   </td>
+   <td>(Optional) Defines the maximum documents that can be included in the capped collection.
+   </td>
+  </tr>
+</table>
+
+
+MongoDB first examines the size field of the capped collection before examining the max field when adding the document.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-6.PNG"></img>
+
+
+As displayed above, the collection would be created if the "insert" command is executed.
+
+
+## 7. The Drop() Method
+
+The db.collection in MongoDB. To remove a collection from the database, use the drop() function.
+
+Syntax
+
+**_db.COLLECTION_NAME.drop()_**
+
+Example
+
+First check the collections that are already in the database mydb.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-7.PNG"></img>
+
+
+Drop collection with the name "mycollection" should now be removed.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-8.PNG"></img>
+
+
+Check the database once again for the list of collections.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-9.PNG"></img>
+
+
+If the specified collection is successfully dropped, the drop() function returns true; otherwise, it returns false.
+
+
+## 8. Utilizing the command insert() for adding documents
+
+The insert () command from MongoDB permits users to add documents into collections. The example that follows explains how to perform this.
+
+Step 1
+
+Enter the “insert” command
+
+Step 2
+
+Add the appropriate Column Name and Column Value for the document that has to be generated within the "insert" command.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-10.PNG"></img>
+
+
+Output
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-11.PNG"></img>
+
+
+
+## 9. The array of objects in MongoDB using insert()
+
+Multiple documents can be inserted into a collection at once with the "insert" command. To insert many documents in one go, use the code sample below.
+
+**_Step 1_**
+
+To store the collection of documents, define a JavaScript variable named "myEmployee."
+
+**_Step 2_**
+
+Add the necessary documents, together with the Field Names and Values, to the variable.
+
+**_Step 3_**
+
+The array of documents can be inserted into the collection using the insert command.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-12.PNG"></img>
+
+
+Output
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-13.PNG"></img>
+
+
+The result shows that the collection now includes those 3 documents.
+
+
+## 10. Utilizing JSON for printing
+
+The JavaScript Object Notation (JSON) format is basically a technique to store data in a structured, readable format. We'll utilize the JSON print feature in our next examples to see the results in a better style.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-14.PNG"></img>
+
+
+Output
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-15.PNG"></img>
+
+
+
+## 11. What do you mean by Primary key in MongoDB?
+
+Each document in the collection could be separately recognized in MongoDB by utilizing the _id field as a primary key. A unique ObjectID value can be found in the _id column.
+
+When adding documents to the collection, MongoDB will create an Object id field by default if you don't provide a column name along with the _id in the column name, as illustrated below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-16.PNG"></img>
+
+
+The ObjectId for every item in a collection is visible whenever we ask for the documents in the collection.
+
+One must clearly indicate this when establishing the collection if you would like to make sure MongoDB does not generate the _id Field when the collection is formed and if you wish to specify their own id as the _id of the collection.
+
+An id field has to have _id in its title when it is created specifically.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-17.PNG"></img>
+
+
+Output
+
+If the function is successfully executed, utilize the find command to show the documents present inside the collections.
+
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/DB-18.PNG"></img>
+
+
+The result makes it very transparent that the collection's primary key is now the _id field that we defined when we first created it.
+
+
+## 12. Summary
+
+The two techniques for creating associations between documents in a MongoDB database were discussed in this tutorial.

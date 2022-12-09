@@ -1,0 +1,307 @@
+---
+title: "4. MongoDB Indexing and Aggregation"
+desc: "MongoDB Indexing and Aggregation"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/MongoDB+Header.png"
+date: "December 4, 2022"
+infoP: "Chatper 4 :- MongoDB Indexing and Aggregation"
+spanH2: "Core Concepts"
+bottomP: "The information saved in arrays is indexed by MongoDB using multikey indexes. Effective equality checks and range-based request procedures are facilitated by the index entries' ordering."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 4, 2022"
+tag: "MongoDB"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "MongoDB",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "MongoDB Indexing and Aggregation : "
+id: "4-mongodb-indexing-and-aggregation"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. Aggregation,  
+  4. Pipeline Concept,  
+  ]
+---
+
+
+# **Chapter 4**
+
+
+# **MongoDB Indexing and Aggregation**
+
+
+## 1. Overview
+
+The effective resolution of queries is assisted by indexes. Without indexes, MongoDB has to go through each document in a collection to find the ones that match the query. This scan consumes a substantial amount of time and requires MongoDB to handle a significant volume of data. Aggregation is a procedure that involves going through many steps with a huge list of documents inside a collection. A pipeline is composed of many stages. A pipeline's phases can filter, sort, group, transform and change the documents that move through them.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Index Methods
+* Aggregation Methods
+
+Indexes are specialized data structures that keep a discrete subset of the data collection in an accessible format. The value of a particular field or collection of fields is stored in the index, arranged by the value of the column as indicated in the index.
+
+
+### **The createIndex() Method**
+
+One must use MongoDB's createIndex() function to create an index.
+
+**_Syntax_**
+
+The createIndex() method's fundamental syntax is as follows.
+
+db.COLLECTION_NAME.createIndex({KEY:1})
+
+Here, "key" is the title of the column on which users want to establish an index, and "1" indicates that the order should be ascending. One must use -1 to construct an index in descending order.
+
+Example
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/MDB+Index1.PNG"></img>
+
+
+To generate an index on multiple fields, utilize the createIndex() function and provide multiple fields.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/MDB+Index2.PNG"></img>
+
+
+This technique also allows a set of alternatives (which are optional)
+
+
+<table>
+  <tr>
+   <td><strong>Parameter</strong>
+   </td>
+   <td><strong>Type</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>background
+   </td>
+   <td>Boolean
+   </td>
+   <td>Generates the index behind the scenes to avoid interfering with other database processes. To generate in the background, specify true. False is the default mode.
+   </td>
+  </tr>
+  <tr>
+   <td>unique
+   </td>
+   <td>Boolean
+   </td>
+   <td>To prevent the collection from accepting the insertion of documents in which the index key or keys match an already-existing value in the index, one needs to create a unique index. To establish a unique index, enter true. False is the default configuration.
+   </td>
+  </tr>
+  <tr>
+   <td>name
+   </td>
+   <td>String
+   </td>
+   <td>It is the index's name. MongoDB creates an index name if not provided by joining the names of such indexed columns and the sort order.
+   </td>
+  </tr>
+  <tr>
+   <td>sparse
+   </td>
+   <td>Boolean
+   </td>
+   <td>Whenever this condition is true, the index only lists documents that have the given field. Although these indexes take up less space, they can behave very differently (particularly sorts). False is the default mode.
+   </td>
+  </tr>
+  <tr>
+   <td>expireAfterSeconds
+   </td>
+   <td>integer
+   </td>
+   <td>Defines a TTL value in seconds to specify how long this collection's documents will be maintained in MongoDB.
+   </td>
+  </tr>
+  <tr>
+   <td>weights
+   </td>
+   <td>document
+   </td>
+   <td>The weight, which is a value between 1 and 99,999, indicates how important a field is about other indexed fields based on score.
+   </td>
+  </tr>
+  <tr>
+   <td>default_language
+   </td>
+   <td>string
+   </td>
+   <td>The language that establishes the collection of stop words and the guidelines for the stemmer and tokenizer for a text index. English is the default option.
+   </td>
+  </tr>
+  <tr>
+   <td>language_override
+   </td>
+   <td>string
+   </td>
+   <td>While creating a text index, be sure to include the name of the document field that includes the language you want to utilize instead of the default. The language value is the default.
+   </td>
+  </tr>
+</table>
+
+
+
+### **The dropIndex() method**
+
+Utilizing MongoDB's dropIndex() function, one can remove a specific index.
+
+**_Syntax_**
+
+db.COLLECTION_NAME.dropIndex({KEY:1})
+
+The file with which users wish to delete an existing index is identified here by the term "key." One may alternatively specify the name of the index directly in place of the index specification document (above syntax) as follows:
+
+dropIndex("name_of_the_index")
+
+
+### **The dropIndexes() method**
+
+A collection's different (specified) indexes are deleted using this technique.
+
+**_Syntax_**
+
+The DropIndexes() method's fundamental syntax is as follows ()
+
+db.COLLECTION_NAME.dropIndexes()
+
+
+### **The getIndex() method**
+
+All index descriptions are returned by this method for the int collection.
+
+**_Syntax_**
+
+db.COLLECTION_NAME.getIndexes()
+
+
+## 3. Aggregation
+
+Processing data records and delivering calculated results are both aggregate operations. Aggregation operations combine values from many documents and can apply a number of actions to the combined data to produce a single output. The counterpart of MongoDB aggregation in SQL is count(*) as well as with group by.
+
+
+### **The aggregate() Method**
+
+Utilize the aggregate() function in MongoDB for aggregation.
+
+**_Syntax_**
+
+db.COLLECTION_NAME.aggregate(AGGREGATE_OPERATION)
+
+We have grouped the documents by the field by the user, and the sum is increased each time the field appears. The possible aggregating expressions are listed below.
+
+
+<table>
+  <tr>
+   <td><strong>Expression</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Example</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>$sum
+   </td>
+   <td>Adds up the specified value over the whole collection of documents.
+   </td>
+   <td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}])
+   </td>
+  </tr>
+  <tr>
+   <td>$avg
+   </td>
+   <td>Calculates the mean of all input values throughout the whole collection of documents.
+   </td>
+   <td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$avg : "$likes"}}}])
+   </td>
+  </tr>
+  <tr>
+   <td>$min
+   </td>
+   <td>Obtains the lowest matching value throughout the whole collection of documents.
+   </td>
+   <td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$min : "$likes"}}}])
+   </td>
+  </tr>
+  <tr>
+   <td>$max
+   </td>
+   <td>Obtains the highest value for each associated field across all documents within the collection.
+   </td>
+   <td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$max : "$likes"}}}])
+   </td>
+  </tr>
+  <tr>
+   <td>$push
+   </td>
+   <td>In the generated document, the value is added to an array.
+   </td>
+   <td>db.mycol.aggregate([{$group : {_id : "$by_user", url : {$push: "$url"}}}])
+   </td>
+  </tr>
+  <tr>
+   <td>$addToSet
+   </td>
+   <td>Includes the item to an array in the outcome document without duplicating it.
+   </td>
+   <td>db.mycol.aggregate([{$group : {_id : "$by_user", url : {$addToSet : "$url"}}}])
+   </td>
+  </tr>
+  <tr>
+   <td>$first
+   </td>
+   <td>The first document is retrieved from the source files in compliance with the grouping. Typically, this only makes sense in conjunction with a previously utilized "$sort"-stage.
+   </td>
+   <td>db.mycol.aggregate([{$group : {_id : "$by_user", first_url : {$first : "$url"}}}])
+   </td>
+  </tr>
+  <tr>
+   <td>$last
+   </td>
+   <td>Retrieves the most recent document among the source files following the grouping. Typically, this only makes sense in conjunction with a previously utilized "$sort"-stage.
+   </td>
+   <td>db.mycol.aggregate([{$group : {_id : "$by_user", last_url : {$last : "$url"}}}])
+   </td>
+  </tr>
+</table>
+
+
+
+## 4. Pipeline Concept
+
+Shell pipeline in UNIX commands refers to the ability to perform an action on certain inputs and utilize the result as the source for the subsequent command, and so forth. A similar idea is supported by MongoDB's aggregation framework as well. There are several unique phases, and each one requires a set of documents as an input and yields a different set of documents as output (or the JSON document that is produced as a consequence after the pipeline). This could then be utilized at the next level, and so on.
+
+The potential stages in an aggregation framework are listed below.
+
+
+
+* $project - utilized to select the subset of a collection's fields.
+* $match - It is a filtering process, hence this could limit the number of documents sent as input to the upcoming step.
+* $group - This does the above-discussed aggregate.
+* $sort - Documents are sorted.
+* $skip - With all this, it is possible to move a certain number of documents forward from the list of documents.
+* $limit - By beginning with the roles that are currently held, this reduces the number of papers that need to be reviewed.
+* $unwind - This is utilized to unwind array-using documents. Data is the type of pre-joined when utilizing an array; however, this process will be undone so that individual documents are once again available. We will therefore add additional documents to the following step with the completion of this stage.
+
+Summary
+
+An easy-to-navigate subset of the collection's data is stored in indexes, which are unique data structures. The value of a certain field or group of fields, arranged according to the field value, is stored in the index. A pipeline for aggregation consisting of one or more phases for document processing.

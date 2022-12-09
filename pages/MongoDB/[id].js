@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/Topic-Page";
+import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/MongoDB-Page";
 import Footer from "../../components/global/footer/Footer";
 import Navbar from "../../components/global/navbar/Navbar";
 import Link from "next/link";

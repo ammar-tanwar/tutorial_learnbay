@@ -1,0 +1,255 @@
+---
+title: "5. MongoDB Tools and Structure"
+desc: "MongoDB Tools and Structure"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/MongoDB+Header.png"
+date: "December 5, 2022"
+infoP: "Chatper 5 :- MongoDB Tools and Structure"
+spanH2: "Core Concepts"
+bottomP: "A series of command-line tools for interacting with a MongoDB deployment are included in the MongoDB Database Tools. Utilizing these tools, users may obtain updates more frequently and take advantage of new functionality as soon as they become available as they operate separately from the MongoDB Server timetable."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 5, 2022"
+tag: "MongoDB"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "MongoDB",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "MongoDB Tools and Structure : "
+id: "5-mongodb-tools-and-structure"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. Different types of of database tools in MongoDB,  
+  4. MongoDB Structure,  
+  5. MongoDB Object ID,
+  6. BSON(Binary JSON),
+  7. Summary,
+  ]
+---
+
+# Chapter 5
+
+
+# MongoDB Tools And Structure
+
+
+## 1. Overview
+
+A group of command-line tools for interacting with a MongoDB deployment are included in the MongoDB Database Tools. With these tools, users can receive updates more often and take advantage of new features as soon as they become available as they release independently from the MongoDB Server timetable. The data records are saved in MongoDB as BSON documents. BSON refers to binary format of JSON documents in this context, even though BSON has a wider range of data types than JSON. Field-value pairs and key-value pairs are used to generate the document, and any BSON type can be used as the field value known as MongoDB Structure.
+
+
+## 2. Scope of the tutorial
+
+This tutorial covers
+
+
+
+* Different types of database tools
+* MongoDB Structure
+
+
+## 3. Different types of of database tools in MongoDB
+
+The following binaries are included with the database tools.
+
+
+
+* mongoimport
+* mongoexport
+* mongodump
+* mongorestore
+
+
+### **Mongo Import**
+
+
+
+* Any file of the types json, csv, tsv, etc. may be converted into a mongo collection using the program called mongoimport, which is included with every installation of the mongo database.
+* JSON files are frequently superior to CSV for source data in many respects (and TSV).
+* Like MongoDB documents, JSON is a structured data format that is also specific about the kinds of data it encodes.
+* On the other side, dealing with source JSON data could be challenging since it frequently lacks the desired structure, contains numeric values stored as strings, or includes date formats that mongoimport does not recognize.
+* Data from CSV (and TSV) files is tabular, and MongoDB will import each row as a single document.
+* It is necessary to run the mongo import command on a different command terminal rather than the mongo shell terminal.
+* In MongoDB, a file can be transformed into a collection utilizing the mongoimport command.
+* A csv, tsv, or json file may be imported it into mongo collection via mongoimport.
+
+**_Syntax_**
+
+mongoimport 
+
+
+--db DB_NAME 
+
+
+--collection &lt;<COLLECTION_NAME>> 
+
+
+--type &lt;<json/csv>> 	
+
+
+-- file &lt;<name of the file>>
+
+
+--headerline
+
+
+### **Mongoexport**
+
+Data from a MongoDB Collection can be exported to a CSV or JSON file using the mongoexport command. The mongoexport function connects by default to a mongod instance that is listening on localhost port 27017.
+
+**_Syntax_**
+
+mongoexport 
+
+
+--db DB_NAME 
+
+
+--collection &lt;<COLLECTION_NAME>> 
+
+
+--type &lt;<json/csv>> 	
+
+
+-- file &lt;<name of the file>>
+
+
+-- fields &lt;<specific fields to export from collection, if many separate by ,>>
+
+
+--out &lt;< path where you want to export>>
+
+Both CSV or json can be created from the collection. If CSV, _id will not be included.
+
+
+### **Mongodump**
+
+One could build a MongoDB database with the mongodump command. The complete data on your server will be dumped using this command and placed in the dump directory, mongodump. The whole contents of the mongoDB will be dumped into the current directory.
+
+Use the parameters listed below if you wish to selectively dump a collection or DB into a particular folder on the system.
+
+**_Syntax_**
+
+mongodump
+
+	--db &lt;<dbname>
+
+	--collection &lt;<collection-name>
+
+	--out &lt;<folder name>>
+
+
+### **Mongorestore**
+
+A section of the database backup or the complete database may be restored using the mongorestore tool. Restoring can be done on the same system, another system, at the same place, or somewhere else.
+
+Mongorestore&lt;>
+
+This will retrieve all of the data from the route that was dumped.
+
+One should be precise if they wish to specifically restore particular collections and databases.
+
+**_Syntax_**
+
+Mongorestore 
+
+--db &lt;<dbname>>
+
+	--collection &lt;<collectionname>>
+
+	--drop
+
+
+## 4. MongoDB Structure
+
+Start considering how all of the data will be kept in json files. The field name should serve as the key, with the value appearing next to it and being split by a semicolon.
+
+{name:”journal”,quantity:25…}
+
+There are instances when a field has to have greater than one value, such as when determining size when we need to know the height, breadth, and unit of measurement It has to be mentioned appropriately.
+
+{
+
+“name”:”journal”,
+
+“quantity”:25,
+
+“size”:{“height”:14,”width”:21,”nom”:”cm”},
+
+ “status”:”A”,
+
+ “tags”:[“brown”,”lined”],
+
+  “rating”:9
+
+}
+
+
+## 5. MongoDB Object ID
+
+
+
+* The predefined index for the collections will be the row key (_id) option.
+* An automated id(objectId) is produced for each document to serve as its unique identifier if a _id is not included with the collection data.
+* The _id column helps customers avoid entering duplicate documents with identical information.
+* Moreover, the _id cannot be removed from a collection.
+* A distinct _id value is required for each document.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/OID+-1.PNG"></img>
+
+
+With the exception of the _id value, all documents inside a collection are identical.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/OID+-2.PNG"></img>
+
+
+Although the patterned data mentioned above will not cause any errors in Mongo DB, it is clearly not the most effective technique to construct the collection.
+
+Each document in a collection could also be unique and different from the others.
+
+There are no fields they share.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/OID+-3.PNG"></img>
+
+
+MongoDB will create a default objectID unless otherwise defined.
+
+One can utilize a field's unique value as a _id if you can make it available for every document.
+
+A 12-byte hexadecimal number is created as the default objectID.
+
+It has the following data: a 4 byte timestamp, a 3 byte machine id, a 2 byte process id, and a 3 byte increment.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/OID+-4.PNG"></img>
+
+
+
+## 6. BSON(Binary JSON)
+
+
+
+* Creates a link between binary expression and JSON format
+* Optimized for flexibility, speed, and space
+* Unlike Bson files, which are encoded using binary format, Json files is encoded in UTF-8 strings.
+* Unlike Bson files, which can only be read by machines, Json files can be read by both humans and machines.
+* Things to keep in mind
+
+In contrast to its native Json storage and retrieval, MongoDB saves data in the Bson format internally across the network. Bson mostly assists in offering extras like speed and flexibility.
+
+
+
+## 7. Summary
+
+In this tutorial we have studied about different MongoDB tools and its structure while working on it.

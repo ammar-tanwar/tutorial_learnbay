@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./Topics.module.css";
 
 function Topics({ categoryPostTopic }) {
-  console.log(categoryPostTopic);
   return (
     <section className={styles.topics}>
       <h2>Our Topics</h2>

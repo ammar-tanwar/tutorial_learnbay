@@ -1,0 +1,301 @@
+---
+title: "1. Getting Started"
+desc: "Introduction And Installation To MongoDB"
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/MongoDB+Header.png"
+date: "December 1, 2022"
+infoP: "Chatper 1 :- MongoDB Introduction"
+spanH2: "Core Concepts"
+bottomP: "MongoDB is a NoSQL document-oriented database designed for large-volume data storage. Combinations of key-value pairs, or documents, are the basic data type in MongoDB."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 1, 2022"
+tag: "MongoDB"
+tagDes: "15 Tutorials & Projects"
+topic: {
+  title: "MongoDB",
+tagDes: "15 Tutorials & Projects",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Introduction And Installation To MongoDB : "
+id: "1-getting-started"
+tableData:
+  [
+  1. Overview, 
+  2. Scope of the tutorial,  
+  3. What do you mean by MongoDB?,  
+  4. Why use MongoDB?,  
+  5. Features of MongoDB,  
+  6. Main Components of MongoDB Architecture,   
+  7. Difference between RDBMS and MongoDB,
+  8. Step-by-step procedure to Install & Download MongoDB on Windows,
+  9.Summary,
+  ]
+---
+
+
+# **Chapter 1**
+
+
+# **Introduction And Installation To MongoDB**
+
+
+## 1. Overview
+
+In MongoDB, a record is a document and is indeed a data structure made up of fields as well as value pairs. JSON objects and MongoDB documents are comparable. For storing large quantities of data, MongoDB is indeed a document-oriented NoSQL database.
+
+
+## 2. Scope of the Tutorial
+
+This tutorial covers
+
+
+
+* Definition of MongoDB
+* Use of MongoDB
+* Features of MongoDB
+* Architecture
+* Difference between RDBMS and MongoDB
+* Step-by-step installation procedure
+
+
+## 3. What do you mean by MongoDB?
+
+MongoDB is indeed a NoSQL document-oriented database utilized for big-volume data storage. MongoDB utilizes collections and documents rather than the tables and rows shown in traditional relational databases. The fundamental unit of data within MongoDB is a combination of key-value pairs, which make up documents. Collections are equal to relational database tables including that they store collections of documents and execute specific functions. A database called MongoDB first became popular in the middle of the 2000s.
+
+
+## 4. Why use MongoDB?
+
+Here are a few reasons to start utilizing MongoDB.
+
+
+
+* Document-oriented
+* Ad hoc Queries
+* Indexing
+* Replication
+* Load balancing
+
+
+### **Document-oriented**
+
+Although MongoDB is just a NoSQL database, it stores data in documents rather than in a relational form. Due to this, MongoDB is particularly flexible to the conditions and needs of the actual corporate environment.
+
+
+### **Ad hoc queries**
+
+Field searching, regular expression, and range query searches are all supported by MongoDB. Within documents, queries can be performed to return a particular field.
+
+
+### **Indexing**
+
+To enhance MongoDB searches perform much better, and indexes can be established. A MongoDB document's fields can all be indexed.
+
+
+### **Replication**
+
+With replica sets, MongoDB can achieve high availability. At least two Mongo DB instances make up a replica set. The member of the replica set can take on the role of either the primary or secondary duplicate at any moment. The main server, which communicates with the user and executes all read/write activities, is the primary replica. Using built-in duplication, the secondary duplicates maintain a replica of the primary data on hand. The duplicate set automatically transfers from the primary server to the secondary server if the primary replica fails.
+
+
+### **Load balancing**
+
+By dividing data among several MongoDB instances, MongoDB utilizes the idea of sharding to expand horizontally. In the event of hardware failure, MongoDB could run across various servers, balancing the demand and/or replicating data to maintain the system operating.
+
+
+## 5. Features of MongoDB
+
+
+
+* Each database has collections, and those collections have documents inside them. The number of columns in a document might vary from one to the other. Each document could vary in size and content from the other.
+* The document format is more consistent with how programmers create the classes as well as objects in their different languages of programming. It's common for developers to claim that their classes don't have rows as well as columns but rather a clear presentation with key-value pairs.
+* There is no need that a schema to be specified before the rows (or documents as MongoDB calls them) be created. The fields might instead be made up as necessary.
+* MongoDB's data schema enables users to more easily define hierarchical relations, store arrays, as well as other highly complicated structures.
+* Scalability - The environments for MongoDB are scalable. Companies all over the globe have created clusters, a few of which operate 100 or more nodes and a database with millions of documents.
+
+
+## 6. Main Components of MongoDB Architecture
+
+The terms that are utilized in MongoDB are displayed below.
+
+
+
+* **_id** - In each and every MongoDB document, this field is a must. A distinct value is represented by the _id column of a MongoDB document. Similar to the document's primary key is the _id column. Without an _id column, MongoDB will instantly construct one whenever you generate a new document.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+intro+-+1.PNG"></img>
+
+
+
+
+* **Collection** - A collection of MongoDB documents is displayed. In any other RDMS, such as Oracle or MS SQL, Comparable to a table is a collection that is generated. Within a single database, there is a collection. As was said in the introduction, collections do not impose any kind of organization.
+* **Cursor** - Query results are displayed via this pointer. Results can be retrieved by clients iterating through a cursor.
+* **Database** - Similar to how RDMS utilizes containers for tables, this one is for collections. The file system receives a unique collection of files for each database. Multiple databases can be stored on a MongoDB server.
+* **Document** - In a MongoDB collection, a record is generally known as a document. Field names and values make up the document itself.
+* **Field** -  It is name-value pairs that make up a document. At least one column must exist in a document. In relational databases, fields are comparable to columns. A figure illustrating a field with key-value pairs is shown in the picture below.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+intro+-+2.PNG"></img>
+
+
+
+
+* **JSON** - The term "JavaScript Object Notation" applies to this. This simple text format for conveying structured data can be read by people. Currently, several programming languages support JSON.
+
+
+## 7. Difference between RDBMS and MongoDB
+
+
+<table>
+  <tr>
+   <td><strong>RDBMS</strong>
+   </td>
+   <td><strong>MongoDB</strong>
+   </td>
+   <td><strong>Difference</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Table
+   </td>
+   <td>Collection
+   </td>
+   <td>In RDBMS, the rows and columns utilized to store the data are included in the table, however, in MongoDB, the same structure is referred to as a collection. Documents are part of the collection, and documents contain Columns, which are key-value pairs.
+   </td>
+  </tr>
+  <tr>
+   <td>Row
+   </td>
+   <td>Document
+   </td>
+   <td>As per RDBMS, each row in a table represents a single implicitly organized data item. Documents are utilized by MongoDB to store data.
+   </td>
+  </tr>
+  <tr>
+   <td>Column
+   </td>
+   <td>Field
+   </td>
+   <td>The column in an RDBMS designates a collection of data values. These are termed Fields in MongoDB.
+   </td>
+  </tr>
+  <tr>
+   <td>Joins
+   </td>
+   <td>Embedded documents
+   </td>
+   <td>Data in RDBMS is usually split across many tables, and in order to present a clear overview of all data, a join is usually performed across tables to obtain the data. Embedded documents in MongoDB are used to split material that is typically stored inside a single collection. Therefore, MongoDB does not have the concept of joins.
+   </td>
+  </tr>
+</table>
+
+
+In addition to the difference in terminology, several other variations are listed below.
+
+
+
+* Data integrity is well-known to be ensured by relational databases. In MongoDB, this is not a specified requirement.
+* RDBMS mandates that information be normalized first in order to avoid orphan records and duplicates. Normalizing data then requires the creation of more tables, which leads to more table joins and, ultimately, the need for more keys and indexes. As databases begin to expand, performance can start to become a concern. Yet again, MongoDB does not clearly specify that it is necessary. The data does not require to be normalized before utilizing MongoDB as it is flexible.
+
+
+## 8. Step-by-step procedure to Install & Download MongoDB on Windows
+
+Both 32-bit and 64-bit versions of the MongoDB installers are available. For testing and development environments, 32-bit installers work effectively. Therefore, one must utilize the 64-bit installers for environments that are used in production. If not, one can be restricted to the volume of information that MongoDB can store. It is suggested that you can use the stable release whenever possible in production environments.
+
+**Step 1**
+
+
+
+* Download the MongoDB Community Server.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+install+-+1.PNG"></img>
+
+
+**Step 2**
+
+
+
+* Launch the MSI file as soon as the download is finished. The startup screen will appear; click Next.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+install+-+2.PNG"></img>
+
+
+**Step 3**
+
+
+
+* Tick on the terms of the License Agreement
+* Click next
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+install+-+3.PNG"></img>
+
+
+**Step 4**
+
+The "complete" button should be clicked.
+
+
+
+* To install each component, select "complete" from the options. One can modify the installation location or install only particular components by utilizing the custom option.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+install+-+4.PNG"></img>
+
+
+**Step 5**
+
+Service Configuration
+
+
+
+* "Run service as Network Service user" must be selected. note down the data directory address; we'll need it later.
+* Click Next
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+install+-+5.PNG"></img>
+
+
+**Step 6**
+
+Proceed with the installation process
+
+
+
+* To begin the installation, click the Install button.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+install+-+6.PNG"></img>
+
+
+**Step 7**
+
+
+
+* Once finished, click Next.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+install+-+7.PNG"></img>
+
+
+**Step 8**
+
+Select "Finish" from the options.
+
+
+
+* In The last step,  Once the setup is finished, select the Finish button.
+
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/mongodb/Mongo+install+-+8.PNG"></img>
+
+
+
+## 9.Summary
+
+MongoDB is an open-source NoSQL database management system. NoSQL is utilized as an alternative to conventional relational databases. MongoDB is a technology that can handle document-oriented data and save or retrieve data.
