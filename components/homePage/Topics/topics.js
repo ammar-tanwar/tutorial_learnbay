@@ -14,8 +14,8 @@ function Topics({ categoryPostTopic }) {
               <Link href={url}>
                 <div className={styles.boxesInner}>
                   <img src={categoryPostTopic.img}></img>
-                  <h2>{categoryPostTopic}</h2>
-                  <p>{categoryPostTopic}</p>
+                  <h2>{categoryPostTopic.title}</h2>
+                  <p>{categoryPostTopic.tagDes}</p>
                 </div>
               </Link>
             </div>

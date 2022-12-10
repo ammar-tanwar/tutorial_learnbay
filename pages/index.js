@@ -11,20 +11,11 @@ import ThirdSection from "../components/homePage/ThirdSection/ThirdSection";
 import Topics from "../components/homePage/Topics/Topics";
 
 export default function blog({ allPostsData }) {
-  const navCategory = [];
+  let navCategory;
   allPostsData.map((navDetails, i) => {
-    navCategory.push(navDetails.readMainFolder);
+    navCategory = navDetails.folderTopicData;
   });
 
-  const length = parseInt(allPostsData.length);
-  let singleCategoryPost = allPostsData.map((post) => {
-    return post.category;
-  });
-  let categoryPostTag = Array.from(new Set(singleCategoryPost));
-  let singleCategoryTopic = allPostsData.map((post) => {
-    return post.topic;
-  });
-  let categoryPostTopic = Array.from(new Set(singleCategoryTopic));
   return (
     <>
       <Head>
@@ -40,8 +31,10 @@ export default function blog({ allPostsData }) {
           href="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/Learnbay-Favicon-L.png"
         />
       </Head>
-      <Navbar tag={navCategory[0]} dataScience={true}/>
-      <HeroSection dataScience={true} radio={true}
+      <Navbar tag={navCategory} dataScience={true} />
+      <HeroSection
+        dataScience={true}
+        radio={true}
         mTitle="Investing in Knowledge and"
         spanMTitleText="Your Future"
         title="Investing in Knowledge and"
@@ -52,7 +45,7 @@ export default function blog({ allPostsData }) {
         height="1002"
         alt="data science course"
       />
-      <Topics categoryPostTopic={navCategory[0]} />
+      <Topics categoryPostTopic={navCategory} />
       <ThirdSection />
       <Course />
       <Footer />

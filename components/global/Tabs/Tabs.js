@@ -26,12 +26,12 @@ const Tabs = ({ tag }) => {
       <div className={styles.MenuTabs}>
         <div className={styles.leftPanel}>
           {tag.map((posts, i) => {
-            let url = `/${posts}/1-getting-started`;
+            let url = `/${posts.title}/1-getting-started`;
 
             return (
               <Link href={url} key={i}>
                 <span className={styles.span}>
-                  {posts}
+                  {posts.title}
                   <FaArrowRight />
                 </span>
               </Link>
