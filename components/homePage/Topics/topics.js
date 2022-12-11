@@ -8,7 +8,7 @@ function Topics({ categoryPostTopic }) {
       <h2>Our Topics</h2>
       <div className={styles.container}>
         {categoryPostTopic.map((categoryPostTopic, index) => {
-          let url = `/${categoryPostTopic}/1-getting-started/`;
+          let url = `/${categoryPostTopic.title}/1-getting-started/`;
           return (
             <div className={styles.boxes} key={index}>
               <Link href={url}>
