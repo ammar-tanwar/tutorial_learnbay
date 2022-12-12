@@ -12,7 +12,7 @@ import SearchResults from "../searchResults/SearchResults";
 import { useRouter } from "next/router";
 import HomeTabs from "../Tabs/HomeTab";
 
-const Navbar = ({ tag }) => {
+const PageNavbar = ({ tag }) => {
   const router = useRouter();
 
   const [icon, setIcon] = useState(false);
@@ -39,22 +39,19 @@ const Navbar = ({ tag }) => {
     };
     getResults();
   }, [searchTerm]);
-
+  useEffect(() => {
+    if (router.pathname === "/") {
+      setStack(true);
+    } else {
+      setStack(false);
+    }
+  }, [router.pathname]);
   const handleIcon = (data) => {
     setIcon(data);
   };
   const showMenu = () => {
     setShow(!show);
   };
-  useEffect(() => {
-    let width = window.innerWidth;
-    if (width < 481) {
-      setMobile(true);
-    }
-    if (width > 481) {
-      setMobile(false);
-    }
-  });
 
   return (
     <div>
@@ -135,7 +132,7 @@ const Navbar = ({ tag }) => {
                 onMouseOver={() => setIcon(true)}
                 onMouseLeave={() => setIcon(false)}
               >
-                <HomeTabs handleIcon={handleIcon} tag={tag} />
+                <Tabs handleIcon={handleIcon} tags={tag} />
               </div>
             ) : (
               ""
@@ -182,4 +179,4 @@ const Navbar = ({ tag }) => {
   );
 };
 
-export default Navbar;
+export default PageNavbar;

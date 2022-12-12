@@ -1,11 +1,10 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
-
 import styles from "./Tabs.module.css";
 
-const Tabs = ({ tags }) => {
-  console.log(tags, "Tabs");
+const HomeTabs = ({ tag }) => {
+  console.log(tag, "HOmeTabs");
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
     let width = window.innerWidth;
@@ -21,14 +20,14 @@ const Tabs = ({ tags }) => {
     <div className="wrapper">
       <div className={styles.MenuTabs}>
         <div className={styles.leftPanel}>
-          {tags.map((posts, i) => {
+          {tag.map((posts, i) => {
             console.log(posts.title);
-            let url = `/${posts}/1-getting-started`;
+            let url = `/${posts.title}/1-getting-started`;
 
             return (
               <Link href={url} key={i}>
                 <span className={styles.span}>
-                  {posts}
+                  {posts.title}
                   <FaArrowRight />
                 </span>
               </Link>
@@ -40,4 +39,4 @@ const Tabs = ({ tags }) => {
   );
 };
 
-export default Tabs;
+export default HomeTabs;
