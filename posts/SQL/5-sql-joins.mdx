@@ -1,6 +1,6 @@
 ---
 title: "5. SQL JOINS"
-desc: "sql joins"
+desc: "SQL joins"
 slug: home
 headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL+Header.png"
 date: "December 5, 2022"
@@ -10,11 +10,11 @@ bottomP: "RDBMS refers to Relational Database Management System. RDBMS serves as
 imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
 PH: "Amritansh"
 pD: "December 5, 2022"
-tag: "sql"
-tagDes: "SQL JOINS"
+tag: "SQL"
+tagDes: "15 Tutorials & Projects"
 topic: {
-  title: "sql joins",
-tagDes: "SQL Joins",
+  title: "SQL",
+tagDes: "15 Tutorials & Projects",
 img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
 
 }
@@ -22,7 +22,7 @@ author: "Admin"
 position: "Editor"
 readTime: "20-25 mins"
 h1: "SQL Joins"
-id: "5-sql-joins"
+id: "5-SQL-joins"
 tableData:
   [
     Overview, 
@@ -41,7 +41,7 @@ tableData:
 
 # **SQL JOINS**
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-1.jpeg"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-1.jpeg"></img>
 
 ## **Overview**
 
@@ -81,7 +81,7 @@ Syntax
 
 The INNER JOIN's primary syntax is
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-2.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-2.png"></img>
 
 Example
 
@@ -91,7 +91,7 @@ Let's create a table first, then do an inner join
 
 Here is a sample table that shows how to make one.
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-3.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-3.png"></img>
 
 |
 Inserting values to the Customer5 table
@@ -115,7 +115,7 @@ Inserting values to the Customer5 table
 
 Customer5 Table 
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-4.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-4.png"></img>
 
  CREATE TABLE ORDER5(
  ORDER\_ID INT NOT NULL,
@@ -145,7 +145,7 @@ Inserting values to the Order5 table
  INSERT INTO ORDER5 (ORDER\_ID, DATE, CUSTOMER\_ID, AMOUNT)
  VALUES (206, '2021-06-02', 2, 5000 );
 Order5 Table
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-5.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-5.png"></img>
 Let's perform inner join
 
  SELECT CUSTOMER5.ID, CUSTOMER5.NAME, ORDER5.AMOUNT, ORDER5.DATE
@@ -156,7 +156,7 @@ Let's perform inner join
 
 Output
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-6.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-6.png"></img>
 
 ### **FULL JOIN**    
 
@@ -176,7 +176,7 @@ All information from the left table (table 1) and the matching information from 
 
 Syntax
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-7.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-7.png"></img>
 
 **Note:** LEFT OUTER JOIN is the name provided to LEFT JOIN in some databases.
 
@@ -201,7 +201,7 @@ The RIGHT JOIN keyword provides all the data from the right table (table2) as we
 
 Syntax
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-8.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-8.png"></img>
 
  **Note:** RIGHT OUTER JOIN is the name provided to RIGHT JOIN in some of the databases.
 
@@ -227,7 +227,7 @@ You can see that when there are no matches in the left table, the RIGHT JOIN key
 
 Syntax
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-jo-9.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-9.png"></img>
 
 You can see that when there are no matches in the left table, the RIGHT JOIN keyword still returns all values from the right table (ORDER5) (CUSTOMER5).
 

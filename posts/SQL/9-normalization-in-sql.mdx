@@ -1,6 +1,6 @@
 ---
 title: "9. Normalization in SQL"
-desc: "normalization in sql"
+desc: "normalization in SQL"
 slug: home
 headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL+Header.png"
 date: "December 9, 2022"
@@ -10,11 +10,11 @@ bottomP: "RDBMS refers to Relational Database Management System. RDBMS serves as
 imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
 PH: "Amritansh"
 pD: "December 9, 2022"
-tag: "sql"
-tagDes: "Normalization in SQL"
+tag: "SQL"
+tagDes: "15 Tutorials & Projects"
 topic: {
-  title: "Normalization in SQL",
-tagDes: "normalization in sql",
+  title: "SQL",
+tagDes: "15 Tutorials & Projects",
 img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
 
 }
@@ -22,7 +22,7 @@ author: "Admin"
 position: "Editor"
 readTime: "20-25 mins"
 h1: "Normalization in SQL"
-id: "9-normalization-in-sql"
+id: "9-normalization-in-SQL"
 tableData:
   [
      Overview, 
@@ -40,7 +40,7 @@ tableData:
 
 # **Normalization in SQL**
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-1.jpeg"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-1.jpeg"></img>
 
 ## **Overview**
 
@@ -92,11 +92,11 @@ Example
 
 Student Relation
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-2.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-2.png"></img>
 
 According to the multi-attribute Course, the STUDENT relationship is not covered in 1NF. We must ensure that the values for the Course property are atomic to convert this table to 1NF. This is shown below.
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-3.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-3.png"></img>
 
 ## **Second Normal Form(2NF)**
 
@@ -106,7 +106,7 @@ Example
 
 Student Relation
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-4.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-4.png"></img>
 
 We can make some assumptions by looking at the table above. The Course Fee alone cannot be utilized to uniquely identify each tuple to begin with. Therefore, neither Course Fee nor Stud Id by themselves, nor Course Id on its own, may be used to identify any given tuple distinctly.
 
@@ -119,9 +119,9 @@ To change the above relation to 2NF, we must split the table into two separate t
 - Table 1: Stud\_Id, Course \_Id
 - Table 2: Course\_Id, Course\_Fee
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-5.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-5.png"></img>
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-6.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-6.png"></img>
 
 Table 1 Table2
 
@@ -138,7 +138,7 @@ For a table to have the third normal form:
 
 Example
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-7.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-7.png"></img>
 
 As you can see from the table, the primary key of the SCORE table is a composite key, which means it is built up of two attributes (columns): Std Id and subject Id.
 
@@ -152,11 +152,11 @@ Example
 
 Score Table
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-8.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-8.png"></img>
 
 Exam table
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-9.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-9.png"></img>
 
 ## **Boyce-Codd Normal Form(BCNF)**
 
@@ -169,7 +169,7 @@ The second point appears to be quite difficult, am I right? In layman's language
 
 Example
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-10.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-10.png"></img>
 
 From the table above
 
@@ -191,11 +191,11 @@ To make the relation (table) abide by BCNF, we will split it into two tables: th
 
 STUDENT Table
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-11.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-11.png"></img>
 
 PROFESSOR Table
 
-<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/sql/sql-norm-12.png"></img>
+<img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-12.png"></img>
 
 In the PROFESSOR table, Professor and Subject are non-prime attributes that are both dependent on the primary key, Professor Id. These tables are all in BCNF because a prime attribute is independent of a non-prime attribute. Professor Id is also added to the STUDENT database as a foreign key to connect the two tables.
 
