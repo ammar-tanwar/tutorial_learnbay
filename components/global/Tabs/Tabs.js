@@ -2,13 +2,12 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import TabData from "./TabData";
+import { useRouter } from "next/router";
 import styles from "./Tabs.module.css";
 
 const Tabs = ({ tag }) => {
-  const [viewAll, setViewAll] = useState(true);
-  const [oneYear, setOneYear] = useState(false);
-  const [nonTech, setNonTech] = useState(false);
-  const [Guarantee, setGuarantee] = useState(false);
+  const router = useRouter();
+
   const [Stack, setStack] = useState(false);
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
@@ -20,18 +19,33 @@ const Tabs = ({ tag }) => {
       setMobile(false);
     }
   });
-
+  console.log(tag);
+  useEffect(() => {
+    if (router.pathname === "/") {
+      setStack(true);
+    } else {
+      setStack(false);
+    }
+  }, []);
   return (
     <div className="wrapper">
       <div className={styles.MenuTabs}>
         <div className={styles.leftPanel}>
           {tag.map((posts, i) => {
             let url = `/${posts.title}/1-getting-started`;
+            let iUrl = `/${posts}/1-getting-started`;
 
-            return (
+            return Stack ? (
               <Link href={url} key={i}>
                 <span className={styles.span}>
                   {posts.title}
+                  <FaArrowRight />
+                </span>
+              </Link>
+            ) : (
+              <Link href={iUrl} key={i}>
+                <span className={styles.span}>
+                  {posts}
                   <FaArrowRight />
                 </span>
               </Link>
