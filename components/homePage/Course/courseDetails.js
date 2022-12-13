@@ -40,7 +40,8 @@ export const viewAllD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
-    link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
+    link1:
+      "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+AI+%26+ML+Certification+Program+Learnbay.pdf",
   },
@@ -114,7 +115,7 @@ export const viewAllD = [
     para: [
       "300 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 85,000 + 18% GST",
+      "Course Fee : ₹ 49,000 + 18% GST",
     ],
     link1: "/full-stack-web-development-program",
     link2:
@@ -208,7 +209,8 @@ export const ForProgrammersD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
-    link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
+    link1:
+      "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+AI+%26+ML+Certification+Program+Learnbay.pdf",
   },
@@ -221,7 +223,7 @@ export const ForProgrammersD = [
     para: [
       "300 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹85,000 + 18% GST",
+      "Course Fee : ₹49,000 + 18% GST",
     ],
     link1: "/full-stack-web-development-program",
     link2:
@@ -300,7 +302,8 @@ export const ForNonProgrammerD = [
       "15 Projects + 1 Capstones",
       "Course Fee : ₹ 1,00,000 + 18% GST",
     ],
-    link1: "https://www.learnbay.co/artificial-intelligence-certification-course",
+    link1:
+      "https://www.learnbay.co/artificial-intelligence-certification-course",
     link2:
       "https://brochureslearnbay.s3.ap-south-1.amazonaws.com/learnbay/Advance+AI+%26+ML+Certification+Program+Learnbay.pdf",
   },
@@ -392,7 +395,7 @@ export const JobGuaranteeD = [
     para: [
       "300 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 85,000 + 18% GST",
+      "Course Fee : ₹ 49,000 + 18% GST",
     ],
     link1: "/full-stack-web-development-program",
     link2:
@@ -409,7 +412,7 @@ export const StackD = [
     para: [
       "300 hours of Interactive Learning",
       "12 Projects + 2 Capstones",
-      "Course Fee : ₹ 85,000 + 18% GST",
+      "Course Fee : ₹ 49,000 + 18% GST",
     ],
     link1: "/full-stack-web-development-program",
     link2:
