@@ -91,7 +91,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
               <span className={styles.spanH2}>{postData.spanH2}</span>
             </h2>
             <p className={styles.bottomP}>{postData.bottomP}</p>
-            <div className={styles.imgText}>
+            {/* <div className={styles.imgText}>
               <div className={styles.imgC}>
                 <Image
                   src={postData.imgC}
@@ -121,7 +121,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
                   )}
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.Content}>
