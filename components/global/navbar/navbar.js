@@ -104,7 +104,7 @@ const Navbar = ({ tag }) => {
                 }}
                 className="hoverBtn"
               >
-                Topic
+                Topics
                 {icon ? (
                   <FaChevronUp className={styles.icon} />
                 ) : (
@@ -121,7 +121,7 @@ const Navbar = ({ tag }) => {
                 }}
                 className="hoverBtn"
               >
-                Topic
+                Topics
                 {icon ? (
                   <FaChevronUp className={styles.icon} />
                 ) : (
