@@ -1,0 +1,173 @@
+---
+title: "8. Power BI Filters"
+desc: "Power BI filters are simply tools that let users isolate and analyze a specific portion of your whole data collection more quickly. Power BI's filters are effective features."
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/PowerBI+Header.png"
+date: "November 1, 2022"
+infoP: "Power BI Filters"
+spanH2: "Core Concepts"
+bottomP: "Python is interpreted high-level, object-oriented, and interactive programming language. It is so flexible that it is utilized in all technical fields, namely Artificial Intelligence, Machine learning, Data Science, Scientific Calculation, Web Development, etc."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "November 1, 2022"
+tag: "PowerBI"
+tagDes: "Power BI Filters"
+topic: {
+  title: "PowerBI",
+tagDes: "Power BI Filters",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Power BI Filters : "
+id: "8-power-bi-filters"
+tableData:
+  [
+  
+Overview, 
+Scope of the tutorial,
+What do you mean by Power BI Filters?,
+Different types of Filters in Power BI,
+Visual-level Filters,
+Page-level Filters,
+Report-level Filters,
+Drillthrough Filters,
+How to implement a Filter in Power BI Desktop?, 
+Implementing Filters to a Visual,
+Applying Filter to a Page,
+Applying Filter to a Report,
+Implement Filters in Power BI Workspace,
+Adding Filter in Edit Report Mode,
+Filters in Reading view mode, 
+Summary
+  ]
+---
+
+# Chapter 8
+
+# Power BI Filters
+
+## Overview
+
+Power BI filters organize data and information according to a set of predefined criteria. Therefore, one could choose certain columns or values inside columns and display only the information relevant to those selections.
+
+## Scope of the tutorial  
+
+This tutorial covers
+
+- Definition of Power BI Filters
+- Different types of Filters in Power BI
+- How to implement a Filter in Power BI Desktop?
+- Implement Filters in Power BI Workspace
+
+## What do you mean by Power BI Filters?
+
+Data and information are organized utilizing filters in Power BI according to defined objectives. In other words, you could choose specific columns or values within columns to examine only the data relevant to that selection. For example, one could have a dataset that refers to a store's sales. One can now exclude unwanted information by utilizing the filters. We could view a report that simply includes the information for the specified parameters. Consider that you are primarily interested in sales data for India in 2019. All you need to do for this is select 2019 and India from relevant fields as the filtering parameters.
+
+## Different types of Filters in Power BI
+
+In Power BI, there are four different filter types. This indicates that a Power BI dashboard or report allows users to apply filters on four separate levels. Here are the various types of filters:
+
+- Visual-level Filters
+- Page-level Filters
+- Report-level Filters
+- Drillthrough Filters
+
+### Visual-level Filters
+
+Individual visualizations undergo direct application of the filters utilized at the visual level. The calculation conditions as well as data utilized in visualization are both subject to these limitations.
+
+### Page-level Filters
+
+Reports often include several pages, however, page-level filters are specific to a single page within the report. On a specified page of a report, certain filter conditions can be applied. The filter conditions that are applied to each page of a report might vary.
+
+### Report-level Filters
+
+The filters that utilize to implement a filter condition throughout the whole report are known as report-level filters. All visualization and page in a report will have the report-level filter applied to them. Report-level filters are therefore generalized filters, in comparison to visual-level and page-level filters.
+
+### Drillthrough Filters
+
+One can design a page that primarily concentrates on particular entities by utilizing drillthrough filters. One can focus on a particular manufacturer, user, or customer from the primary report by providing additional information about each of these entities on a different page.
+
+## How to implement a Filter in Power BI Desktop?
+
+There are multiple visualizations one can create while utilizing Power BI Desktop. A visualization, dashboard, or report that includes all the data in a field is often what you create. However, one can use filters to customize the dashboard to the region of interest by applying filters to the field values. Applying filters to a visual, page, as well as reporting in Power BI Desktop will be covered in this tutorial. Open Power BI Desktop, make a visualization or use a report that already exists to follow along with us as we explore.
+
+### Implementing Filters to a Visual
+
+In Power BI Desktop, generate a visual or select one from the list. For example, we have a Treemap chart that we will filter. The Treemap chart illustrates the total sales for each sold product subcategory.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-1.png"></img>
+
+The Treemap chart contains two fields, Sales and Sub-category, as illustrated in the figure above. Note that there are three sub-sections, namely visual level filters, page level filters, and report level filters, in the Filters section.
+
+Most of the fields that have been picked for the visualization are now presented in the visual level filter section. It's indeed the Sales as well as the Sub-category in the scenario.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-2.png"></img>
+
+If the field contains numeric values and is a measure, the filter will display number-specific filtering criteria. To look at it another way, "is less than," "is greater than," "is," etc. One can insert a numerical value below the selected condition after you've selected it, such as "is less than" followed by the number 100000.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-3.png"></img>
+
+Filtering will be common if a field has a textual value, making it a dimension. A list of each of the possible (unique) values for the specified field is shown to you. By ticking the boxes, one can apply the filter. While you're through selecting the selections, click Apply filter.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-4.png"></img>
+
+### Applying Filter to a Page
+
+
+We will utilize a filter on the whole page of a report after gaining knowledge on how to utilize it on individual visualizations.
+
+Drag and drop a column into the "page level report" column in order to organize the data on a report page depending on that field.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-5.png"></img>
+
+Pick a value from the field options. Select the parameters on which you would like to filter the data. For example, in this scenario, we are only interested in viewing sales summary data for the year 2018. We only pick the dates from 2018 in the Filters section. The graphics on the page will change automatically to only display the information relating to 2018.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-6.png"></img>
+
+### Applying Filter to a Report
+
+We utilize report-level filters to equally apply a filter to each and every page of a report, or the whole report. In the Report level filters area, drag and drop a column from the Fields section.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-7.png"></img>
+
+We will pick the date in 2018 to ensure that the images on every page only represent the data for that year.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-8.png"></img>
+
+When you employ this filter, a report's whole set of pages will display sales data for the year 2018.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-10.png"></img>
+
+### Implement Filters in Power BI Workspace
+
+Open the online version of your Power BI workspace. And then choose one of the reports that have already been uploaded there. The filters that are presently being utilized on the report or a specific visualization are displayed in the Filters pane towards the right after the report has opened.
+
+### Adding Filter in Edit Report Mode
+
+
+
+Go to the option for Edit report to add new filters to the report.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-11.png"></img>
+
+Select the fields that want to utilize and drag them to the column for the Page level filters or Report level filters.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-12.png"></img>
+
+Just select the parameters on which users intend to sort the report's data. In compliance with the metrics selected, the report's visuals will automatically convert.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-13.png"></img>
+
+### Filters in Reading view mode
+
+One cannot add or remove filters that have been set to the report while in reading view mode. Instead, they are only able to see the filters that are now being utilized in the report by a report developer.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbf-14.png"></img>
+
+## Summary
+
+The types of Power BI filters, as well as how to apply Power BI filters to dashboards, are all covered in this tutorial.

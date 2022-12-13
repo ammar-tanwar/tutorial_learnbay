@@ -1,0 +1,164 @@
+---
+title: "2. Power BI - Data Modelling"
+desc: "Data modeling has become one of the functions used in BI tools to establish relationships between various data sources. Better data visualizations are made by utilizing it to build business reports and dashboards."
+slug: home
+headerImg: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/PowerBI+Header.png"
+date: "December 2, 2022"
+infoP: "Chapter 2 :- Power BI Data Modelling"
+spanH2: "Core Concepts"
+bottomP: "Python is interpreted high-level, object-oriented, and interactive programming language. It is so flexible that it is utilized in all technical fields, namely Artificial Intelligence, Machine learning, Data Science, Scientific Calculation, Web Development, etc."
+imgC: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/amritansh.png"
+PH: "Amritansh"
+pD: "December 2, 2022"
+tag: "PowerBI"
+tagDes: "Power BI - Data Modelling"
+topic: {
+  title: "PowerBI",
+tagDes: "Power BI - Data Modelling",
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+
+}
+author: "Admin"
+position: "Editor"
+readTime: "20-25 mins"
+h1: "Power BI - Data Modelling : "
+id: "2-power-bi-data-modelling"
+tableData:
+  [
+  Overview, 
+  Scope of the tutorial,
+  Utilizing navigation as well as data modeling, 
+  Creating Calculated Columns,
+  Creating Calculated Tables,
+  Managing Time-Based Data,
+  Summary    
+  ]
+---
+
+
+# Chapter 2
+
+# Power BI - Data Modelling
+
+## Overview
+
+Data modeling is just the technique of describing and evaluating all the several types of data that a company creates and gathers, in addition to the relations between the data points. Data modeling is a practice of analyzing and defining the data requirements, and it generates graphical representations of the data as it is utilized at the company.
+
+## Scope of the tutorial  
+
+This tutorial covers
+
+- Utilizing navigation as well as data modeling
+- Creating Calculated Columns
+- Creating Calculated Tables
+- Managing Time-Based Data
+
+## Utilizing navigation as well as data modeling 
+
+Data modeling is among the techniques utilized in BI tools to develop relationships between multiple data sources. Various sources of information can be combined to provide fascinating data visualizations by utilizing relationships, which define the connections between the data sources.
+
+Applying the modeling functionality, users could add custom calculations to pre-existing tables, and these fields can subsequently be quickly shown in Power BI presentations. This makes it possible for businesses to produce new metrics and carry out customized calculations for them.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-1.png"></img>
+
+A typical data model that illustrates the connection between two tables could be observed in the image on top. With the help of the column "Id," both tables are connected.
+
+In Power BI, you can also define the connection between two entities. To define the connection, just create a line over the shared fields. In Power BI, users can also see the "Relationship" within a data model.
+
+One must add all sources of data to Power BI's new report option to generate a data model. Navigate to the Get Data menu to add a data source. Click the Link button after selecting the data source users would like to access.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-2.png"></img>
+
+A data source is indicated on the right sidebar once it has been added. To import the data for the associated image, we utilized two xls files: one for the customer and one for the product.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-3.png"></img>
+
+The following three tabs are located on the left side of the screen in Power BI:
+
+- Report
+- Data
+- Relationships
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-4.png"></img>
+
+A dashboard and a chart that has been picked for data visualization can be seen when users go to the Report tab. To match the requirements, you can pick from several chart types. In our instance, we pick a Table style from the available visualizations.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-5.png"></img>
+
+When you click the Data tab, all the information from the specified data sources is shown in accordance with the designated Relationship.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-6.png"></img>
+
+One can view the connections between the sources of data in the Relationship tab. Power BI visualization automatically tries to determine the connection between the fields when you add several data sources. One might examine the Relationship by navigating to the Relationship tab. Utilizing the Create Relationships option, one can also generate a connection between the fields.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-7.png"></img>
+
+Relations in data visualization can also be added or removed. One must right-click and choose "Delete" to get rid of a relationship. You only have to drag and drop the fields you wish to relate between the data sources to build a new "Relationship."
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-8.png"></img>
+
+A specific field in the report can also be hidden by using the Relationship view. To make a column invisible, right-click on its name and choose "Hide in report view."
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-9.png"></img>
+
+## Creating Calculated Columns 
+
+Utilizing two or even more components of the current data, one can combine them to generate calculated fields in Power BI. Moreover, users may combine two fields to generate a new measure or apply calculations to an existing field to define a new field.
+
+Even more, one could build a calculated column that can be utilized to define a relationship between two tables as well as one between the tables themselves.
+
+Select Modeling from the Data View tab, which is positioned just on the left part of the display, and then input a new calculated column.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-10.png"></img>
+
+Whenever users click the Modeling tab, a New Column option will be displayed at the top part of the display. The formula bar is opened, enabling you to insert DAX formulas to carry out calculations. Excel utilizes the powerful DAX- Data Analysis Expression language to conduct calculations. By modifying the Column text inside the formula bar, one can also change the column name.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-11.png"></img>
+
+Let's add a new column in the example below: Product Code (Product C), which is obtained from the Prod Id column's final three characters. After that, type the following formula:
+
+Product\_C = RIGHT( Sheet1[Prod\_Id],3)
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-12.png"></img>
+
+One could also utilize the extensive range of formulae given to build calculated columns. As illustrated in the below image, the user must input the initial character of the formula to be utilized in calculations.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-13.png"></img>
+
+## Creating Calculated Tables   
+
+A fresh calculated table could also be generated in Power BI's data modeling. Go to the Data View tab on the left side of the screen and then select the Modeling option just at top of the screen to generate a fresh table.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-14.png"></img>
+
+To generate the new table, a DAX expression is required. The title of a fresh table must be placed on the left part of the equal sign, and the calculations required to produce the table on the right should be performed using the DAX formula. The new table is present in the model's Fields pane after the calculation is completed.
+
+In the example below, let's create a new table called Table CustC that delivers a one-column table with unique data in a column from a different table.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-15.png"></img>
+
+According to the screenshot below, a new table is added to the Power BI screen's "Fields" area. Users can utilize the fields in Power BI's Report tab once you have generated the calculated column as well as calculated tables according to the requirements.
+
+One should tick a box to add these items, and if any are present, an automated relationship analysis is performed. If not, one can drag the columns to join them.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-16.png"></img>
+
+When users click the Report tab to see the report, both the "Calculated columns" and the fields from the new "Calculated table" are displayed in the report visual.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-17.png"></img>
+
+## Managing Time-Based Data    
+
+Navigating into time-based data is a standard feature of Power BI. The next level of time-based data is obtained when we include a date field in the analysis and allow drill on the data presented.
+
+Consider that Power BI visualization now includes a Time-based table. Revenue and Year columns have been added to our report.
+
+ <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/powerbi/pbdm-18.png"></img>
+
+Utilizing the top option, one can activate the drill functionality in visualizations. Drilling into the subsequent level of the time hierarchy occurs after we enable the drill function and select the bars or lines in the chart. For instance, years→ quarters→ months.
+
+Moreover, we might take advantage of doing a drill and go up to the next level of the hierarchy.
+
+## Summary      
+
+The main objective of data modeling is to build the structure for a database that can quickly store, retrieve, and analyze massive amounts of data. Data relations, use patterns, and business data should all be mapped for a data modeling approach to be effective.
