@@ -8,7 +8,7 @@ import Tabs from "../Tabs/Tabs";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import SearchResults from "../searchResults/SearchResults";
+import SearchResults from "../searchResults/searchResults";
 import { useRouter } from "next/router";
 import HomeTabs from "../Tabs/HomeTab";
 
