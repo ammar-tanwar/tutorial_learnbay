@@ -49,6 +49,16 @@
 
 .boxesInner {
     padding: 20px;
+    width: fit-content;
 }
+
+.boxesInner h2 {
+    margin: 5px 0;
+}
+
+.boxesInner p {
+    margin: 10px 0;
+}
+
 }
 

@@ -13,7 +13,7 @@ import {
   FaRegHeart,
 } from "react-icons/fa";
 import { sortByDate } from "../../utils";
-import Navbar from "../../components/global/navbar/navbar";
+import PageNavbar from "../../components/global/navbar/PageNavbar";
 
 export default function CategoryBlog({ postData, posts, navData }) {
   const navCategory =  []
@@ -73,7 +73,7 @@ export default function CategoryBlog({ postData, posts, navData }) {
 
           <title>{postData.title}</title>
         </Head>
-        <Navbar tag={navCategory[0]} />
+        <PageNavbar tag={navCategory[0]} />
         <div className={styles.banner}>
           <div className={styles.divFirst}>
             <Image
