@@ -8,7 +8,7 @@ import Tabs from "../Tabs/Tabs";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import SearchResults from "../searchResults/SearchResults";
+import SearchResults from "../searchResults/searchResults";
 import { useRouter } from "next/router";
 import HomeTabs from "../Tabs/HomeTab";
 
@@ -83,7 +83,7 @@ const PageNavbar = ({ tag }) => {
                 setIcon(false);
               }}
             />
-            <a href="http://localhost:3000/" className={styles.img}>
+            <a href="/" className={styles.img}>
               <Image
                 src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/Learnbay-Logo.webp"
                 alt="Learnbay"

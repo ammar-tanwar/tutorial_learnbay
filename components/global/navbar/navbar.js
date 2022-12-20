@@ -86,7 +86,7 @@ const Navbar = ({ tag }) => {
                 setIcon(false);
               }}
             />
-            <a href="http://localhost:3000/" className={styles.img}>
+            <a href="/" className={styles.img}>
               <Image
                 src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/Learnbay-Logo.webp"
                 alt="Learnbay"
