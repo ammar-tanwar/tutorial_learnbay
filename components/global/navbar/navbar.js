@@ -156,8 +156,8 @@ const Navbar = ({ tag }) => {
             <Link href="https://www.learnbay.co/contact-us">Contact Us</Link>
           </span>
           <div className={styles.search}>
-            <form>
-              <input
+            <form method = "get" title = "Search Form" action="https://cse.google.com/cse/publicurl">
+              {/* <input
                 type="search"
                 name="search"
                 id="search"
@@ -165,8 +165,11 @@ const Navbar = ({ tag }) => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search Topics Here"
-              />
-              <FaSearch className={styles.iconSearch} />
+              /> */}
+            <input type="text" className={styles.input} id="q" name="q" title="Search this site" alt="Search Text" placeholder='Search for blog...'/>
+            <input type="hidden" id="cx" name="cx" value="446f84458a10944b2" />
+            <input type="image" className={styles.iconSearch} id="searchSubmit" name="submit" src="https://i.ibb.co/CvcDr91/search.png" alt="Go" title="Submit Search Query" />
+            {/* <FaSearch className={styles.iconSearch} /> */}
             </form>
           </div>
           {/* <button>
@@ -175,9 +178,9 @@ const Navbar = ({ tag }) => {
           </button> */}
         </div>
       </nav>
-      <div>
+      {/* <div>
         <SearchResults results={searchResults} />
-      </div>
+      </div> */}
     </div>
   );
 };
