@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -88,9 +88,7 @@ Importing the package in Python should be done before working on the mentioned f
 Example
 
 
-```
 from scipy import special
-```
 
 
 
@@ -101,7 +99,6 @@ The SciPy Special Function package contains several functions that may be used t
 Example
 
 
-```
 from scipy import special
 val = special.exp10(6)
 print(val)
@@ -120,7 +117,6 @@ Output
 64.0
 0.8660254037844387
 0.7071067811865475
-```
 
 
 **_Note: There are only a few SciPy methods in the example above._**
@@ -138,7 +134,6 @@ Univariate interpolation, in general, is the study of finding the curve that bes
 Example
 
 
-```
 import matplotlib.pyplot as plt
 from scipy import interpolate
 x = np.arange(4, 20)
@@ -151,7 +146,6 @@ plt.title("Univariate Interpolation", fontsize = 25)
 plt.show()
 
 Output
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Scipy-1.PNG"></img>
@@ -165,7 +159,6 @@ It is the term for this technique of interpolating functions with several variab
 Example
 
 
-```
 from scipy import interpolate
 import matplotlib.pyplot as plt
 x = np.arange(0,25)
@@ -181,7 +174,6 @@ plt.title("Multivariate Interpolation", fontsize = 25)
 plt.show()
 
 Output
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Scipy-2.PNG"></img>
@@ -195,7 +187,6 @@ There are several functions available in the scipy.signal subpackage that may be
 Example
 
 
-```
 from scipy.signal import chirp, spectrogram
 import matplotlib.pyplot as plt
 t = np.linspace(5, 15, 400)
@@ -206,7 +197,6 @@ plt.xlabel('time in sec)')
 plt.show()
 
 Output
-```
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Scipy-3.PNG"></img>
 
@@ -224,18 +214,15 @@ It is a signal that eliminates unwanted components. Filtering that is ordered is
 Syntax
 
 
-```
 order_filter(o,domain,rank)
 o = N-dimensional input array
 domain = mask array having the same number of dimensions as 'o'
 rank = Non-negative number that selects elements from the list after it has been sorted (0 is the smallest followed by 1...)
-```
 
 
 Example
 
 
-```
 from scipy import signal
 x = np.arange(75).reshape(15, 5)
 domain = np.identity(5)
@@ -243,7 +230,6 @@ print(x,end='nn')
 print(signal.order_filter(x, domain, 1))
 
 
-```
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/SCIPY+output+1.PNG"></img>
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/SCIPY+output+2.PNG"></img>
@@ -255,7 +241,6 @@ Using matrices as well as linear algebra, vector spaces is the study of linear e
 Example
 
 
-```
 from scipy import linalg
 import numpy as np
 val = np.array([[10,25], [40,35]])
@@ -265,7 +250,6 @@ print(val1)
 Output
 [[-0.05384615  0.03846154]
  [ 0.06153846 -0.01538462]]
-```
 
 
 
@@ -276,7 +260,6 @@ A square matrix's components can be used to calculate the determinant, a scalar 
 Example
 
 
-```
 #importing the packages scipy and numpy
 from scipy import linalg
 import numpy as np
@@ -295,7 +278,6 @@ Determinant of
  [8 1 7]
  [3 7 9]] 
  is 244.0
-```
 
 
 
@@ -318,13 +300,11 @@ SciPy offers several features that make image correlation and convolution simple
 Example
 
 
-```
 from scipy.ndimage import correlate1d
 correlate1d([4,6,7,2,9,3,5,6], weights=[1,5])
 
 Output
 array([24, 34, 41, 17, 47, 24, 28, 35])
-```
 
 
 

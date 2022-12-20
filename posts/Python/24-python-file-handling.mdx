@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -116,27 +116,22 @@ Things to consider when dealing with Python files
 ## 4. How to open a file in python?
 
 
-```
-file_object=open('file_name.extension','mode')
+file_object=open('file_name.
+extension','mode')
 file_object is also known as a handle
-```
 
 
 Example
 
 
-```
 e=open('test.txt','w') # e- file_object/handle
-```
 
 
 
 ## 5. How to close a file in python?
 
 
-```
 file_object.close()
-```
 
 
 
@@ -168,46 +163,44 @@ The handle is used to access each of the functions below.
 ls - It returns the list of all the files in the current directory
 
 
-```
 Volume in drive C has no label.
- Volume Serial Number is AE36-3E8D
+Volume Serial Number is AE36-3E8D
 
- Directory of C:\Users\learnbay
+Directory of C:\Users\learnbay
 
-29-Sep-22  09:12 AM    <DIR>          .
-29-Sep-22  09:12 AM    <DIR>          ..
-19-Sep-22  07:31 PM    <DIR>          .conda
-19-Sep-22  07:17 AM                25 .condarc
-19-Sep-22  07:17 AM    <DIR>          .continuum
-21-Sep-22  07:05 AM    <DIR>          .ipynb_checkpoints
-21-Sep-22  07:05 AM    <DIR>          .ipython
-19-Sep-22  07:30 PM    <DIR>          .jupyter
-08-Aug-22  07:09 AM    <DIR>          3D Objects
-19-Sep-22  07:14 AM    <DIR>          anaconda3
-08-Aug-22  07:09 AM    <DIR>          Contacts
-21-Sep-22  07:47 PM    <DIR>          Desktop
-19-Sep-22  01:16 PM    <DIR>          Documents
-28-Sep-22  07:45 PM    <DIR>          Downloads
-08-Aug-22  07:09 AM    <DIR>          Favorites
-08-Aug-22  07:09 AM    <DIR>          Links
-08-Aug-22  07:09 AM    <DIR>          Music
-07-Aug-22  06:39 PM    <DIR>          OneDrive
-08-Aug-22  07:12 AM    <DIR>          Pictures
-08-Aug-22  07:09 AM    <DIR>          Saved Games
-08-Aug-22  07:12 AM    <DIR>          Searches
-29-Sep-22  09:12 AM            76,453 Untitled.ipynb
-19-Sep-22  10:22 AM                 0 untitled.txt
-23-Sep-22  07:47 AM    <DIR>          Videos
-               3 File(s)         76,478 bytes
-              21 Dir(s)  17,602,121,728 bytes free
-```
+29-Sep-22  09:12 AM . <br />
+29-Sep-22  09:12 AM .. <br />
+19-Sep-22  07:31 PM .conda <br />
+19-Sep-22  07:17 AM 25 .condarc <br />
+19-Sep-22  07:17 AM .continuum <br />
+21-Sep-22  07:05 AM .ipynb_checkpoints <br />
+21-Sep-22  07:05 AM .ipython <br />
+19-Sep-22  07:30 PM .jupyter <br />
+08-Aug-22  07:09 AM 3D Objects <br />
+19-Sep-22  07:14 AM anaconda3 <br />
+08-Aug-22  07:09 AM Contacts <br />
+21-Sep-22  07:47 PM Desktop <br />
+19-Sep-22  01:16 PM Documents <br />
+28-Sep-22  07:45 PM Downloads <br />
+08-Aug-22  07:09 AM Favorites <br />
+08-Aug-22  07:09 AM Links <br />
+08-Aug-22  07:09 AM Music <br />
+07-Aug-22  06:39 PM OneDrive <br /> 
+08-Aug-22  07:12 AM Pictures <br />
+08-Aug-22  07:09 AM Saved Games <br /> 
+08-Aug-22  07:12 AM Searches <br />
+29-Sep-22  09:12 AM 76,453 Untitled.ipynb <br />
+19-Sep-22  10:22 AM 0 untitled.txt <br />
+23-Sep-22  07:47 AM Videos <br />
+3 File(s)         76,478 bytes <br />
+21 Dir(s)  17,602,121,728 bytes free <br />
 
 
 
 
 1. When the file does not exist-
 
-    ```
+
 e=open('test.txt', 'r')
 
 Output
@@ -219,11 +212,10 @@ FileNotFoundError                         Traceback (most recent call last)
 ----> 3 e=open('test.txt','r')
 
 FileNotFoundError: [Errno 2] No such file or directory: 'test.txt'
-```
 
 
 
-    ```
+
 e=open('test.txt')
 
 e=open('test.txt','r')
@@ -256,7 +248,6 @@ We have created it in Python.
 Hello world
 This is a text file.
 We have created it in Python.
-```
 
 
 
@@ -269,7 +260,7 @@ We have created it in Python.
 * If the already exists then it opens the file and deletes the contents of the file.
 * We are allowed to write into the file but we can not read from the file.
 
-    ```
+
 Example
 e=open('learnbay.txt','w')
 e.write("This file has been created using 'w' mode.")
@@ -282,14 +273,12 @@ e.close()
 
 Output
 This file has been created using 'w' mode.
-```
 
 
 
 **Create a .py file that takes two numbers as input from the users and returns the addition**
 
 
-```
 e=open('add.py')
 print(e.read())
 e.close()
@@ -317,7 +306,6 @@ print(c)
 Enter a number-50
 Enter the second number- 500
 550
-```
 
 
 
@@ -330,7 +318,7 @@ Enter the second number- 500
 * We are permitted to write to the file, but reading from the file is not permitted.
 * seek() is not used with append mode.
 
-    ```
+
 e=open('test.txt','a')
 e.seek(11)
 e.write("This line is added using append mode.")
@@ -340,7 +328,6 @@ print(e.read())
 
 Hello world
 This is a text file.
-```
 
 
 
@@ -349,7 +336,6 @@ We have created it in Python. This line is added using append mode.
 If it does not exist
 
 
-```
 e=open('test_append.txt','a')
 e.write("This is a new file.\n")
 e.write("This file has been created using append mode")
@@ -361,7 +347,6 @@ print(e.read())
 Output
 This is a new file.
 This file has been created using append mode
-```
 
 
 
@@ -373,7 +358,7 @@ This file has been created using append mode
 * A file not found error message will be displayed if the file is unavailable.
 * We are allowed to read the data from the file and we are also allowed to write the data into the file.
 
-    ```
+
 e=open('test.txt')
 print(e.read())
 e.close()
@@ -414,7 +399,6 @@ print(e.tell())
 e.close()
 
 0
-```
 
 
 
@@ -428,7 +412,7 @@ e.close()
 * We are permitted to read from the file as well as write into it.
 * Whatever we write that is appended at the end of the file so seek() is not applicable
 
-    ```
+
 e=open('test_append.txt','a+')
 e.write("New line")
 e.seek(0)
@@ -452,7 +436,6 @@ e.close()
 
 This is a new file.
 This file has been created using append modeNew lineNew line
-```
 
 
 

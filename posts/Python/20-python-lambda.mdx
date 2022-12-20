@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -82,19 +82,16 @@ Syntax - (arguments: expression, condition)
 Example
 
 
-```
 x=(lambda a,b:a+b)
 x(10,20)
 
 Output
 30
-```
 
 
 Example2
 
 
-```
 # Create a program that takes any number and displays if it is even or odd using the lambda function
 
 (lambda x:'even' if x%2==0 else 'odd')(int(input("Enter a number ")))
@@ -102,7 +99,6 @@ Example2
 Output
 Enter a number 23
 'odd'
-```
 
 
 
@@ -120,7 +116,6 @@ Based on the reasoning supplied in the function, it returns a set of values from
 Example
 
 
-```
 lst=[1,2,3,4,5,6,7,8,9,10]
 
 # Create a function that returns the even numbers from the above list
@@ -129,13 +124,11 @@ list(filter(lambda x:x%2==0,lst))
 
 Output
 [2, 4, 6, 8, 10]
-```
 
 
 Example 2
 
 
-```
 # We can apply a loop on a filter object to get the values
 
 flt=filter(lambda x:x%2==0,lst)
@@ -151,13 +144,11 @@ Output
 6
 8
 10
-```
 
 
 Example 3
 
 
-```
 #Take two lists
 # lst1[1,10]
 # lst2[100,110]
@@ -175,7 +166,6 @@ dict(zip(flt1,flt2))
 
 Output
 {2: 102, 4: 104, 6: 106, 8: 108, 10: 110}
-```
 
 
 
@@ -203,7 +193,6 @@ Lambda functions cannot contain more than one expression at a time, but we may c
 Example
 
 
-```
 my_List = [ [3, 5, 8, 6], [23, 54, 12, 87], [1, 2, 4, 12, 5] ]  
   
 # sorting every sublist of the above list  
@@ -218,7 +207,6 @@ print( result )
 
 Output
 [6, 54, 5]
-```
 
 
 

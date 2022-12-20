@@ -15,7 +15,7 @@ tagDes: "2 Chapters 10 Modules"
 topic: {
   title: "SQL",
 tagDes: "2 Chapters 10 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/sql.png"
 
 }
 author: "Admin"
@@ -25,14 +25,16 @@ h1: "Normalization in SQL : "
 id: "9-normalization-in-SQL"
 tableData:
   [
-     Overview, 
-     Scope of the tutorial, 
-     What is a function in SQL?, 
-     Aggregate SQL Functions, 
-     Scalar SQL Functions, 
-     SQL STRING FUNCTIONS, 
-     SQL Date Functions, 
-     Summary
+     1. Overview, 
+     2. Scope of the tutorial, 
+     3. What is Normalization in SQL?, 
+     4. Normal Forms, 
+     5. Real-world uses of normal forms, 
+     6. First Normal Form(1NF), 
+     7. Second Normal Form(2NF), 
+     8. Third Normal Form(3NF),
+     9. Boyce-Codd Normal Form(BCNF),
+     10. Summary,
   ]
 ---
 
@@ -42,7 +44,7 @@ tableData:
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-1.jpeg"></img>
 
-## **Overview**
+## 1. Overview
 
 Normalization is a part that includes during the database design process. Since it is hard to separate the ER modeling process from the normalization process, the two methods should be used simultaneously.
 
@@ -50,7 +52,7 @@ The entity relation diagram (ERD) is used to provide the overall, or macro, view
 
 The normalization method, which focuses on the attributes of specific entities, represents the micro view of entities in the entity-relationship diagram.
 
-## **Scope of the tutorial**
+## 2. Scope of the tutorial
 
 This tutorial covers
 
@@ -58,7 +60,7 @@ This tutorial covers
 
 -  Different types of Normal Forms
 
-## **What is Normalization in SQL?**
+## 3. What is Normalization in SQL?
 
 Normalization, a component of a relational theory, provides design-related insights. It is a method for evaluating how much duplication is there in a table. The following are some of the normalization's goals:
 
@@ -68,7 +70,7 @@ Normalization, a component of a relational theory, provides design-related insig
 
 In normalization, the functional dependency concept is commonly utilized. The normalization theory describes six normal forms (NF). Each normal form defines a set of dependence requirements that a schema must satisfy and offers assurance about the presence or absence of update anomalies. Moreover, higher normal forms have less redundancy, and hence, there are fewer updating issues.
 
-## **Normal Forms**
+## 4. Normal Forms
 
 Although there are six normal forms, we will just pay attention to the first four, which are as follows:
 
@@ -80,11 +82,11 @@ Although there are six normal forms, we will just pay attention to the first fou
 
 -  Boyce-Codd normal form(BCNF)
 
-## **Real-world uses of normal forms**
+## 5. Real-world uses of normal forms
 
 Several practical design projects, both in the private and government sectors, depend on pre-existing database designs developed using older designs, legacy models, etc. They appear to be interested in the designs since they appear to be of excellent quality and durability. Existing designs are examined using the tests for normal forms, and normalization is used in practice to ensure that the final designs are of a high standard and include no data duplication.
 
-## **First Normal Form(1NF)**
+## 6. First Normal Form(1NF)
 
 The domain of each attribute must only include atomic (single, indivisible) variables and each attribute's value in a tuple must be a single value from that domain, according to the first normal form (1NF). The usage of a set of values, a tuple of values, or a combination of the two as an attribute value for a single tuple is therefore forbidden by 1NF. The only attribute values allowed by 1NF are single atomic (or indivisible) values. In other words, if a relation includes a multi-valued attribute, 1NF is violated.
 
@@ -98,7 +100,7 @@ According to the multi-attribute Course, the STUDENT relationship is not covered
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-3.png"></img>
 
-## **Second Normal Form(2NF)**
+## 7. Second Normal Form(2NF)
 
 To be in the second normal form, a relation needs to be in the first normal form (1NF) and free of any partial dependencies. Therefore, a relation is only in 2NF to the extent that it does not have partial dependencies or, more specifically, just to the extent that no non-prime attributes (attributes that are not present in any candidate key) are dependent on any acceptable subset of a composite primary key of a table.
 
@@ -129,7 +131,7 @@ The two tables are then joined by using Course Id as the foreign key in the firs
 
 It's necessary to keep in mind that 2NF helps to minimize duplicate data stored in memory. For instance, if 100 students are registered in the C1 Course, we do not need to preserve the cost of the Course for each of the 100 records (tuples). In the second table, we can only save it once.
 
-## **Third Normal Form(3NF)**
+## 8. Third Normal Form(3NF)
 
 For a table to have the third normal form:
 
@@ -158,7 +160,7 @@ Exam table
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-norm-9.png"></img>
 
-## **Boyce-Codd Normal Form(BCNF)**
+## 9. Boyce-Codd Normal Form(BCNF)
 
 A table must meet the two conditions to satisfy the Boyce-Codd normal form.
 
@@ -199,6 +201,6 @@ PROFESSOR Table
 
 In the PROFESSOR table, Professor and Subject are non-prime attributes that are both dependent on the primary key, Professor Id. These tables are all in BCNF because a prime attribute is independent of a non-prime attribute. Professor Id is also added to the STUDENT database as a foreign key to connect the two tables.
 
-## **Summary**
+## 10. Summary
 
 To reduce data duplication and improve data consistency in the table, normalization is being used. Moreover, normalization assists in database data organization. The information is organized into tabular form through a multi-step procedure, and duplicate data is then purged from relational tables. To make sure that constraints on database consistency effectively carry out their obligations, normalization structures the columns and tables of a database. It is a systematic method of breaking down tables to get away from redundant data and unwanted features like Insertion, Update, & Deletion anomalies.

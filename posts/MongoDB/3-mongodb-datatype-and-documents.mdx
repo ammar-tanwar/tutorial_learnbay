@@ -15,7 +15,7 @@ tagDes: "5 Chapters 5 Modules"
 topic: {
   title: "MongoDB",
 tagDes: "5 Chapters 5 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/mongodb-logo.png"
 
 }
 author: "Admin"
@@ -166,7 +166,8 @@ This technique could be utilized if users just need to add one document to a col
 
 **_Syntax_**
 
-db.COLLECTION_NAME.insertone(document)
+db.COLLECTION_NAME.
+insertone(document)
 
 
 ### **The insertMany() method**
@@ -261,7 +262,8 @@ Updates to existing document data are done using the update() function.
 
 The following is the update() method's fundamental syntax.
 
-db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)
+db.COLLECTION_NAME.update
+(SELECTION_CRITERIA, UPDATED_DATA)
 
 
 ### **MongoDB Save() Method**
@@ -272,7 +274,8 @@ Syntax
 
 Below is a basic example of the save() method's syntax for MongoDB.
 
-db.COLLECTION_NAME.save({_id:ObjectId(),NEW_DATA})
+db.COLLECTION_NAME.save
+({_id:ObjectId(),NEW_DATA})
 
 
 ### **MongoDB findOneAndUpdate() method**
@@ -283,7 +286,9 @@ The data in the old document are updated via the findOneAndUpdate() function.
 
 The findOneAndUpdate() method's fundamental syntax is as follows.
 
-db.COLLECTION_NAME.findOneAndUpdate(SELECTIOIN_CRITERIA, UPDATED_DATA)
+db.COLLECTION_NAME.
+findOneAndUpdate(SELECTIOIN_C
+RITERIA, UPDATED_DATA)
 
 
 ### **MongoDB updateOne() method**
@@ -294,7 +299,8 @@ A single document that meets the specified filter is updated by this technique.
 
 The updateOne() function has the following basic syntax.
 
-db.COLLECTION_NAME.updateOne(&lt;filter>, &lt;update>)
+db.COLLECTION_NAME.updateOne
+(&lt;filter>, &lt;update>)
 
 
 ### **MongoDB updateMany() method**
@@ -305,7 +311,8 @@ Updates are made to all documents that meet the requirements specified by the up
 
 The updateMany() function has the following basic syntax.
 
-db.COLLECTION_NAME.update(&lt;filter>, &lt;update>)
+db.COLLECTION_NAME.update
+(&lt;filter>, &lt;update>)
 
 
 ## 7. Delete Document
@@ -324,7 +331,8 @@ To delete a document from the collection, utilize MongoDB's remove() function. T
 
 The delete() function has the following basic syntax.
 
-db.COLLECTION_NAME.remove(DELLETION_CRITTERIA)
+db.COLLECTION_NAME.remove
+(DELLETION_CRITTERIA)
 
 
 ### **Remove Only One**
@@ -333,7 +341,8 @@ Set the justOne parameter in the remove() function if there are several entries 
 
 Syntax
 
-db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)
+db.COLLECTION_NAME.remove
+(DELETION_CRITERIA,1)
 
 
 ### **Remove All Documents**

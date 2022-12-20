@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -110,7 +110,6 @@ In pandas, a series is a collection of values, much like a one-dimensional array
 Example
 
 
-```
 lst=['Aswin','Nitia','Yasu','Divya','Tanish']
 
 ser=pd.Series(lst)
@@ -123,13 +122,11 @@ Output
 3     Divya
 4    Tanish
 dtype: object
-```
 
 
 Example2
 
 
-```
 ddata = {'Karthik' : 40500, 'Likith' : 36000, 'John' : 32000, 'Tina' : 87000}
 dis = pd.Series(ddata)
 dis
@@ -141,11 +138,9 @@ John       32000
 Tina       87000
 dtype: int64
 If you simply provide a dict, the keys in the dict will produce a list of sorted indexes. Use the dict keys to appear in the series if you wish to overwrite them.
-```
 
 
 
-```
 names = ['Karthik', 'Lobo', 'John', 'Tina']
 dis = pd.Series(ddata, index=names)
 dis
@@ -156,13 +151,11 @@ Lobo           NaN
 John       32000.0
 Tina       87000.0
 dtype: float64
-```
 
 
 Creating a series using a list of pandas
 
 
-```
 lst=[i for i in range(10,20)]
 print(lst)
 
@@ -182,11 +175,9 @@ Output
 8    18
 9    19
 dtype: int64
-```
 
 
 
-```
 ser=pd.Series(np.random.random(10))
 ser
 
@@ -202,7 +193,6 @@ Output
 8    0.980236
 9    0.875922
 dtype: float64
-```
 
 
 
@@ -214,7 +204,6 @@ dtype: float64
 * Starts from0 by default and stops at len(series)-1 by default.
 * It does not support the negative indexing directly.
 
-```
 ser=pd.Series(np.random.random(10))
 ser
 
@@ -240,7 +229,6 @@ print(ser[len(ser)-1])
 
 Output
 0.875922
-```
 
 
 
@@ -262,7 +250,6 @@ Accessing an element of a series using iloc and loc attributes.
 Example
 
 
-```
 country=['India','Germany','Brazil','UK','China']
 
 ser=pd.Series(country)
@@ -275,7 +262,6 @@ Output
 3         UK
 4      China
 dtype: object
-```
 
 
 
@@ -286,14 +272,12 @@ What does Python's DataFrame term mean?
 The term "DataFrame" refers to a table in Python that stores data in a rectangular style with various value types. The column index and row index are both used to create the data frame. A dict with an equal-length list is one of the usual ways to generate a data frame. However, there are other ways as well.
 
 
-```
 Creating a DataFrame
 data = {'state': ['Tokyo','Paris','Iran','Paris','Tokyo','Paris'],
         'year': [2020, 2021, 2020, 2021, 2020, 2023],
        'pop': [2.5, 4.7, 6.6, 2.4, 7.9, 8.2]}
 frame = pd.DataFrame(data)
 frame
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Pandas+Pic+1.PNG"></img>
@@ -307,13 +291,11 @@ You may modify the default numbering and use custom labels to distinguish the ro
 Example
 
 
-```
 frame2 = pd.DataFrame(data, columns=['year','state','pop','debt'],
 index=['one','two','three','four','five','six'])
 frame2
 
 Output
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Pandas+Pic+2.PNG"></img>
@@ -324,9 +306,7 @@ Output
 It gives some vital information about the dataframe
 
 
-```
 
-```
 
 
 **describe()**
@@ -336,9 +316,7 @@ It gives some vital information about the dataframe
 * It is applicable only to numeric columns.
 * It gives the statistical measures of numeric columns.
 
-```
 data.describe()
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Pandas+Pic+3.PNG"></img>
@@ -348,71 +326,61 @@ data.describe()
 ## 9. Concatenation of the two dataframes
 
 
-```
 new_data=data.iloc[0:20]
 new_data
-```
 
 
 
 ### Concatenate the new data with data
 
 
-```
-pd.concat([data_frame_1,data_frame_2],axis=0)
-data=pd.concat([data,new_data],ignore_index=True)
+pd.concat([data_frame_1,
+data_frame_2],axis=0)
+data=pd.concat([data,
+new_data],ignore_index=True)
 data
-```
 
 
 
 ### How to get duplicate entries?
 
 
-```
 data.duplicated()
-```
 
 
 
 ### How to drop the duplicate values?
 
 
-```
 data.drop_duplicates()
 data.drop_duplicates(inplace=True)
 # data=data.drop_duplicates()
 data.duplicated().sum()
-```
 
 
 
 ### How to drop rows?
 
 
-```
 data.drop([index],axis=0,inplace=True)
 data.drop(data.index[0:10],axis=0)
-```
 
 
 
 ### How to drop a column?
 
 
-```
-data.drop('column_name',axis=1,inplace=True)
+data.drop('column_name',
+axis=1,inplace=True)
 data.drop('Name',axis=1)
-```
 
 
 
 ### How to drop multiple columns?
 
 
-```
-data.drop(['Name','Ticket','PassengerId'],axis=1,inplace=True)
-```
+data.drop(['Name','Ticket',
+'PassengerId'],axis=1,inplace=True)
 
 
 

@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -73,13 +73,11 @@ A ‘list’ is a built-in data structure in Python. In a list, data is stored i
 Example
 
 
-```
 lst1 = [10, 10.20, 10+20j, None, True, 'Python']
 print(lst1, type(lst1))
 
 Output
-[10, 10.20, 10+20j, None, True, 'Python'] <class 'list'>
-```
+[10, 10.20, 10+20j, None, True, 'Python']
 
 
 
@@ -103,28 +101,27 @@ Output
 Example
 
 
-```
 Give me a list of squares of even numbers and cubes of odd numbers in the range 1 to 10(inclusive)
 lst1 = [num**2 if num%2 == 0 else num**3 for num in range(1, 11)]
 print(lst1, type(lst1))
 
 Output
-[1, 4, 27, 16, 125, 36, 343, 64, 729, 100] <class 'list'>
-```
+[1, 4, 27, 16, 125, 36, 343, 64, 729, 100]
 
 
 Example 2
 
 
-```
 print(list("Python class"))
 print(list([1,2,3,4,5]))
 print(list((1,2,3,4,5)))
 print(list({1:100,2:200,3:300,4:400}))
-print(list({1:100,2:200,3:300,4:400}.values()))
+print(list({1:100,2:200,3:300,4:400}
+.values()))
 print()
 print(list(enumerate("Python")))
-print(list(enumerate({1:100,2:200}.values())))
+print(list(enumerate({1:100,2:200}
+.values())))
 
 Output
 ['P', 'y', 't', 'h', 'o', 'n', ' ', 'c', 'l', 'a', 's', 's']
@@ -135,7 +132,6 @@ Output
 
 [(0, 'P'), (1, 'y'), (2, 't'), (3, 'h'), (4, 'o'), (5, 'n')]
 [(0, 100), (1, 200)]
-```
 
 
 **eval()**
@@ -147,13 +143,11 @@ Syntax= eval(iterable)
 Example
 
 
-```
 lst=eval(input("Enter a list "))
 print(lst,type(lst))
 Output
 Enter a list 1, 2, 3, 4
-1, 2, 3, 4<class 'int'>
-```
+1, 2, 3, 4
 
 
 **Slicing**
@@ -163,7 +157,6 @@ List slicing is similar to String slicing. To obtain a portion of a list using i
 Example
 
 
-```
 lst=[5,2.5,"Python",True,None,10+20j,(1,2,3),[4,5,6],{7,8,9}]
 
 # Get the values from Python to 10+20j
@@ -177,7 +170,6 @@ Output
 ['Python', True, None, (10+20j)]
 [5, 'Python', None, (1, 2, 3), {8, 9, 7}]
 {8, 9, 7}
-```
 
 
 
@@ -193,7 +185,6 @@ Syntax - lst.append(value)
 Example
 
 
-```
 lst=[1,2,3,4,5]
 print(lst)
 lst.append(100)
@@ -202,7 +193,6 @@ print(lst)
 Output
 [1, 2, 3, 4, 5]
 [1, 2, 3, 4, 5, 100]
-```
 
 
 
@@ -215,7 +205,6 @@ Syntax - lst.insert(index,value)
 Example
 
 
-```
 lst=[2,5.7,10+20j,"Python",None,True]
 print(lst)
 lst.insert(2,'Learnbay')
@@ -224,7 +213,6 @@ print(lst)
 Output
 [2, 5.7, (10+20j), 'Python', None, True]
 [2, 5.7, 'Learnbay', (10+20j), 'Python', None, True]
-```
 
 
 
@@ -237,7 +225,6 @@ Syntax- Main_lst.extend(iterable)
 Example
 
 
-```
 lst=[2,5.7,True,False,'Python',None]
 print(lst)
 lst.extend('class')
@@ -246,7 +233,6 @@ print(lst)
 Output
 [2, 5.7, True, False, 'Python', None]
 [2, 5.7, True, False, 'Python', None, 'c', 'l', 'a', 's', 's']
-```
 
 
 
@@ -259,13 +245,12 @@ Syntax- lst.count(value)
 Example
 
 
-```
-lst=[2,5.7,True,False,'Python',None,"Python",2,2,2,2,2,2]
+lst=[2,5.7,True,False,'Python',None,
+"Python",2,2,2,2,2,2]
 print(lst.count(2))
 
 Output
 7
-```
 
 
 
@@ -281,7 +266,6 @@ It removes the element from a particular index.
 Example
 
 
-```
 lst=[2,5.7,True,False,'Python',None,"Python"]
 print(lst)
 lst.pop(5)
@@ -290,7 +274,6 @@ print(lst)
 Output
 [2, 5.7, True, False, 'Python', None, 'Python']
 [2, 5.7, True, False, 'Python', 'Python']
-```
 
 
 
@@ -301,7 +284,6 @@ It removes the first occurrence of an element from left to right.
 Example
 
 
-```
 lst=[2,5.7,True,False,'Python',None,"Python"]
 print(lst)
 lst.remove("Python")
@@ -310,7 +292,6 @@ print(lst)
 Output
 [2, 5.7, True, False, 'Python', None, 'Python']
 [2, 5.7, True, False, None, 'Python']
-```
 
 
 
@@ -321,14 +302,12 @@ It deletes all the elements from the list.
 Example
 
 
-```
 lst=[2,5.7,True,False,'Python',None,"Python"]
 lst.clear()
 print(lst)
 
 Output
 []
-```
 
 
 
@@ -339,7 +318,6 @@ It creates a copy of the original list.
 Example
 
 
-```
 lst=[2,5.7,True,False,'Python',None,"Python"]
 print(lst,id(lst))
 lst2=lst.copy()
@@ -348,7 +326,6 @@ print(lst2,id(lst2))
 Output
 [2, 5.7, True, False, 'Python', None, 'Python'] 1517547216256
 [2, 5.7, True, False, 'Python', None, 'Python'] 1517547761024
-```
 
 
 
@@ -359,14 +336,12 @@ It reverses the list.
 Example
 
 
-```
 lst=[2,5.7,True,False,'Python',None,"Python"]
 lst.reverse()
 print(lst)
 
 Output
 ['Python', None, 'Python', False, True, 5.7, 2]
-```
 
 
 **sort()**
@@ -376,14 +351,12 @@ It sorts the values in ascending order. It works only for the same data type.
 Example
 
 
-```
 lst=[5,2,8,4,9,4,11,55,22]
 lst.sort()
 print(lst)
 
 Output
 [2, 4, 4, 5, 8, 9, 11, 22, 55]
-```
 
 
 **sort(reverse=True)**
@@ -393,14 +366,12 @@ It sorts the values in descending order.
 Example
 
 
-```
 lst=[5,2,8,4,9,4,11,55,22]
 lst.sort(reverse=True)
 print(lst)
 
 Output
 [55, 22, 11, 9, 8, 5, 4, 4, 2]
-```
 
 
 

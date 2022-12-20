@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -61,12 +61,10 @@ Python sets are unorganized data that cannot be changed. The values in sets are 
 
 Example
 
-```
 set = {8.5, 'Python', (5, 7, 1)}
 
 Output
 {'Python', (5, 7, 1), 8.5}
-```
 
 ## 4. Frozen Set
 
@@ -74,7 +72,6 @@ Apart from a Python set object, the frozen set is immutable. The components of a
 
 Example
 
-```
 #Difference between a frozen set and a normal set
 
 frozen_set = (["p", "q", "r"])
@@ -92,7 +89,6 @@ print(Normal_set)
 Output
 Normal set
 {'r', 't', 'e'}
-```
 
 So, we can see that results from the normal set can be randomized, while in the Frozen set, it will be the same as creation.
 
@@ -106,7 +102,6 @@ Data is inserted into a set using the set.add() function, and a suitable entry v
 
 Example
 
-```
 #adding elements in a set
 set_1 = {"Rahul", "Shiva", "Data"}
 print("set:", end = " ")
@@ -125,7 +120,6 @@ Output
 set: {'Rahul', 'Shiva', 'Data'}
 Set after adding element: {1, 2, 'Shiva', 3, 4, 'Data', 'Rahul', 'Science'}
 
-```
 
 - **Difference in set**
 
@@ -141,7 +135,6 @@ Two sets can be combined using the '|' operator or the union() function. Values 
 
 Example
 
-```
 #Union of two sets
 Students = {"Aadarsh", "Soma", "Archie"}
 Internship = {"Surya", "Teja"}
@@ -164,7 +157,6 @@ Union utilizing unions() function
 
 Union utilizing '|' operator
 {'Aadarsh', 'Deepak', 'Soma', 'Archie', 'Ranju'}
-```
 
 - **Intersection in set**
 
@@ -172,7 +164,6 @@ The intersection is performed using the intersection or the '&' operator (). For
 
 Example
 
-```
 #intersection of two sets
 set_1 = set()
 set_2 = set()
@@ -201,7 +192,6 @@ Intersection utilizing intersection() function
 
 Intersection utilizing '&' operator
 {4, 5, 6, 7, 8, 9, 10, 11}
-```
 
 ## 6. Eliminating values in Python sets
 
@@ -211,14 +201,12 @@ The remove() option in sets allows you to remove a value from a set.
 
 Example
 
-```
 set = {"Pen", "pencil", "Carrot"}
 set.remove("Carrot")
 print(set)
 
 Output
 {'pencil', 'Pen'}
-```
 
 **_Note: An error message will be displayed if the element is missing from the set._**
 
@@ -228,14 +216,12 @@ The discard() option in sets allows you to remove a value from a set.
 
 Example
 
-```
 set = {"apple", "grapes", "spinach"}
 set.discard("spinach")
 print(set)
 
 Output
 {'apple', 'grapes'}
-```
 
 **_Note: An error message will be displayed if the element is missing from the set._**
 
@@ -245,14 +231,12 @@ By using the pop() option in sets, you can remove a value from a set.
 
 Example
 
-```
 set = {"dog", "cat", "mug"}
 set.pop()
 print(set)
 
 Output
 {'cat', 'mug'}
-```
 
 _Note: The pop() method should not be utilised since sets are always unordered and it will remove any value from the set._
 

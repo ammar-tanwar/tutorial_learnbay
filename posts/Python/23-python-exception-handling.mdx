@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -76,7 +76,6 @@ An exception is a condition that interferes with the program's usual flow of ins
 Syntax
 
 
-```
 Try: 
 # Code block 
 Try:  These are the statements that may include errors.
@@ -90,7 +89,6 @@ else:
 
 finally:
 # The Python interpreter will always run this code.
-```
 
 
 
@@ -101,7 +99,6 @@ Users can raise an exception if there are any doubts about the code, while you c
 Let's look at two situations: one where there is no issue and the other where an exception is being raised.
 
 
-```
 Example
 m=int(input("Provide a number- "))
 n=int(input("Provide a number- "))
@@ -125,24 +122,20 @@ ZeroDivisionError                         Traceback (most recent call last)
       5 print(n)
 
 ZeroDivisionError: division by zero
-```
 
 
 
 ## 5. The try and except
 
 
-```
 Syntax
 try:
      # some code
 except:
      # Alternate code
-```
 
 
 
-```
 Example
 m=int(input("Provide a number- "))
 n=int(input("Provide a number- "))
@@ -161,11 +154,9 @@ Provide a number- 0
 Division by zero is not possible
 20
 0
-```
 
 
 
-```
 Example2
 try:
     m=int(input("Provide a number- "))
@@ -182,7 +173,6 @@ Provide a number- a
 Division by zero is not possible
 15
 50
-```
 
 
 
@@ -193,7 +183,6 @@ Division by zero is not possible
 * If no exception is generated in the try block, then the else block is performed.
 * The except block is performed if the exception is raised.
 
-```
 Example
 m=int(input("Provide a number- "))
 n=int(input("Provide a number- "))
@@ -214,7 +203,6 @@ Provide a number- 0
 Division by zero is not possible
 20
 0
-```
 
 
 
@@ -224,7 +212,6 @@ Division by zero is not possible
 finally- In this block the code is always executed
 
 
-```
 Example
 m=int(input("Provide a number- "))
 n=int(input("Provide a number- "))
@@ -245,7 +232,6 @@ Provide a number- 0
 Some error
 20
 0
-```
 
 
 
@@ -256,7 +242,6 @@ Whether a **try:** block exception is triggered or not, but any code that must r
 **Please Note:** You may either include an except clause or a **finally:** clause; neither is possible. However, you cannot use both the **finally:** clause and the else condition together.
 
 
-```
 try:
     cd = open("testfile","w")
 try:
@@ -265,7 +250,6 @@ finally:
     print("Python Course")
 except IOError:
     print("Error: not able to find the file in the location")
-```
 
 
 When an exception is passed in the **try:** block, the **finally:** block gets immediate execution. The except statement, which is present in the higher layer of the try-except statement, is used to handle the exception that is raised after the **finally:** block statements have been fully executed.
@@ -274,7 +258,6 @@ When an exception is passed in the **try:** block, the **finally:** block gets i
 ## 9. How to get a proper error message
 
 
-```
 try:
     m=int(input("Provide a number- "))
     n=int(input("Provide a number- "))
@@ -289,14 +272,12 @@ Provide a number- 20
 Provide a number- 0
 division by zero
 Finally, here is the block
-```
 
 
 
 ## 10. Nested try and except
 
 
-```
 Syntax
 try:
     # some code
@@ -306,11 +287,9 @@ try:
         # some code
 except:
     # some code
-```
 
 
 
-```
 Example
 m=eval(input("Provide a value- "))
 try:
@@ -327,14 +306,12 @@ Output
 Provide a value- 10
 Provide a value- 2
 External except block
-```
 
 
 
 ## 11. With a try statement we may have several except statements.
 
 
-```
 Example
 try:
     m=int(input("Provide a number- "))
@@ -353,7 +330,6 @@ Provide a number- 20
 Provide a number- 5
 4.0
 name 'abc' is not defined
-```
 
 
 
@@ -364,7 +340,6 @@ An exception may be used as an argument in the value that adds further details a
 Example
 
 
-```
 # Defining a function.
 def temp_convert(variable):
     try:
@@ -377,7 +352,6 @@ temp_convert("abh");
 
 Argument doesn't include any numerical values
 invalid literal for int() with base 10: 'abh'
-```
 
 
 
@@ -386,7 +360,6 @@ invalid literal for int() with base 10: 'abh'
 You may raise exceptions in a number of ways with the use of a raise statement. Any type of string can be an exception. The increase statement is often shown as
 
 
-```
 try:
     m = int(input("Provide a positive value: "))
     if m <= 0:
@@ -397,7 +370,6 @@ try:
 Output
 Provide a positive value: -2
 That value is not a positive!
-```
 
 
 
@@ -408,7 +380,6 @@ In Python, you are free to create your own built-in exceptions by obtaining the 
 The try: block raises the user-defined exception, which is ultimately managed by the except block. The variable "e" is utilized to construct a Networkerror class instance.
 
 
-```
 Example
 try:
     amt=int(input("Specify the amount you wish to send- "))
@@ -428,11 +399,9 @@ Output
 Specify the amount you wish to send- 0
 The amount exceeds the limit or amount is zero or less than zero
 Thanks for using the app
-```
 
 
 
-```
 Example 2
 def  gen():
     yield 10
@@ -451,7 +420,6 @@ Output
 10
 20
 stop iteration
-```
 
 
 

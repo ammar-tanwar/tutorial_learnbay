@@ -15,7 +15,7 @@ tagDes: "2 Chapters 10 Modules"
 topic: {
   title: "SQL",
 tagDes: "2 Chapters 10 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/sql.png"
 
 }
 author: "Admin"
@@ -25,14 +25,16 @@ h1: "SQL Statements : "
 id: "10-SQL-statements"
 tableData:
   [
-     Overview, 
-     Scope of the tutorial, 
-     What is a function in SQL?, 
-     Aggregate SQL Functions, 
-     Scalar SQL Functions, 
-     SQL STRING FUNCTIONS, 
-     SQL Date Functions, 
-     Summary
+     1. Overview, 
+     2. Scope of the tutorial, 
+     3. What is an SQL Statement?, 
+     4. Types of SQL statement, 
+     5. Data Definition Language(DDL), 
+     6. Data Manipulation Language(DML), 
+     7. Data Control Language(DCL), 
+     8. Data Query Language(DQL),
+     9. Data Transaction Language(DTL) or Transaction Control Language(TCL),
+     10. Summary,
   ]
 ---
 
@@ -43,22 +45,22 @@ tableData:
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-stat-1.jpeg"></img>
 
-## **Overview**
+## 1. Overview
 
 The computer language SQL, or Structured Query Language, is used to store, manipulate, and retrieve data from relational databases. To work on the queries, a set of statements needs to be used to input the data into table format.
 
-## **Scope of the tutorial**
+## 2. Scope of the tutorial
 
 This tutorial covers
 
 - Definition of SQL Statement
 - Different types of SQL statements
 
-## **What is an SQL Statement?**
+## 3. What is an SQL Statement?
 
 An SQL statement is a collection of instructions that properly compiles and includes identifiers, variables, data types, parameters, names, and SQL-reserved words.
 
-## **Types of SQL statement**
+## 4. Types of SQL statement
 
 There are five different kinds of SQL statements, which are as follows:
 
@@ -80,7 +82,7 @@ There are five different kinds of SQL statements, which are as follows:
   2. ROLLBACK
   3. SAVEPOINT
 
-## **Data Definition Language(DDL)**
+## 5. Data Definition Language(DDL)
 
 We have three types of SQL statements in Data Definition Language (DDL)
 
@@ -157,7 +159,7 @@ Example
 | Truncate Table Employee; |
 | --- |
 
-## **Data Manipulation Language(DML)**
+## 6. Data Manipulation Language(DML)
 
 The three distinct SQL statements in Data Manipulation Language (DML) are Insert, Update, and Delete.
 
@@ -204,7 +206,7 @@ Example
 | Delete from Employee where EmployeeName='Sathya'; |
 | --- |
 
-## **Data Control Language(DCL)**
+## 7. Data Control Language(DCL)
 
 The control on the data within the database is defined by Data Control Language (DCL). The two commands that we have are
 
@@ -231,7 +233,7 @@ Syntax
  FROM {user\_name |PUBLIC |role\_name}; |
 | --- |
 
-## **Data Query Language(DQL)**
+## 8. Data Query Language(DQL)
 
 ### SELECT
 
@@ -243,7 +245,7 @@ Example
  Select \* from employee where salary\>50000; - Gets records with the condition where employees salary is greater than 50000. |
 | --- |
 
-## **Data Transaction Language(DTL) or Transaction Control Language(TCL)**
+## 9. Data Transaction Language(DTL) or Transaction Control Language(TCL)
 
 The commands of Transaction Control Language (TCL) are utilized to oversee database transactions. These are employed to control the adjustments that DML statements perform. Moreover, it enables the statements to be structured into logical transactions.
 
@@ -274,6 +276,6 @@ Syntax
 | savepointsavepoint-name; |
 | --- |
 
-## **Summary**
+## 10. Summary
 
 Relational databases use the computer language SQL, or Structured Query Language, to store, process, and retrieve data. There are several statements that must be utilized to enter the information into table format to work on the queries.

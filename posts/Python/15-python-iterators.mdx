@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -67,7 +67,6 @@ In Python, an object with a countable number of iterable elements is known as an
 Example
 
 
-```
 # A built-in Python iterator is shown here.
 # Anything that can be iterated serves as a value
 val = 'Learnbay python course'
@@ -81,7 +80,8 @@ while True:
         print(item)
     except StopIteration:
  
-        # When an iteration is complete, an exception will occur.
+        # When an iteration is complete,
+         an exception will occur.
         break
 
 Output
@@ -107,13 +107,11 @@ u
 r
 s
 e
-```
 
 
 Example2
 
 
-```
 # some of the examples of built-in iterators
  
 # Iteration of a list
@@ -191,7 +189,6 @@ e
 Iteration of a dictionary
 hello  23654
 python  25000
-```
 
 
 
@@ -210,7 +207,6 @@ Implementing a for loop to automatically iterate is a more suitable method. We m
 Example
 
 
-```
 my_list = [6, 27, 40, 63, 'Python']
 for element in my_list:
     print(element)
@@ -221,7 +217,6 @@ Output
 40
 63
 Python
-```
 
 
 The for loop is able to iterate automatically through the list, as you can see in the example above. In reality, any iterable may be iterated using the _for loop_. 
@@ -249,7 +244,6 @@ The next item in the container is returned by this function. Raising the StopIte
 Example1
 
 
-```
 # defining a iterable utilising a list
 lst = [0, 1, 2]
 # getting an iterator using iter()
@@ -259,13 +253,11 @@ print(iter1.__next__())
 
 Output
 0
-```
 
 
 Example2
 
 
-```
 # defining a iterable utilising a string
 string = "hello"
 # to obtain an iterator, use iter()
@@ -283,7 +275,6 @@ e
 l
 l
 o
-```
 
 
 
@@ -294,7 +285,6 @@ Why can't we utilise a while loop to ease our workload as we are continuously ut
 Example
 
 
-```
 # defining an iterable utilising a list
 lst=[14,82,93,34,75,6,27,48,59,20]
 
@@ -318,7 +308,6 @@ Output
 48
 59
 20
-```
 
 
 
@@ -329,7 +318,6 @@ The item in an iterator object does not always need to be fixed. Iterators are l
 Example
 
 
-```
 class InfiniteIterator:
  
     def __iter__(self):
@@ -369,7 +357,6 @@ Multiples of three are:
 21
 24
 27
-```
 
 
 
