@@ -15,7 +15,7 @@ tagDes: "5 Chapters 5 Modules"
 topic: {
   title: "MongoDB",
 tagDes: "5 Chapters 5 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/mongodb-logo.png"
 
 }
 author: "Admin"
@@ -64,7 +64,8 @@ One must use MongoDB's createIndex() function to create an index.
 
 The createIndex() method's fundamental syntax is as follows.
 
-db.COLLECTION_NAME.createIndex({KEY:1})
+db.COLLECTION_NAME.createIndex
+({KEY:1})
 
 Here, "key" is the title of the column on which users want to establish an index, and "1" indicates that the order should be ascending. One must use -1 to construct an index in descending order.
 
@@ -166,7 +167,8 @@ Utilizing MongoDB's dropIndex() function, one can remove a specific index.
 
 **_Syntax_**
 
-db.COLLECTION_NAME.dropIndex({KEY:1})
+db.COLLECTION_NAME.dropIndex
+({KEY:1})
 
 The file with which users wish to delete an existing index is identified here by the term "key." One may alternatively specify the name of the index directly in place of the index specification document (above syntax) as follows:
 
@@ -204,7 +206,8 @@ Utilize the aggregate() function in MongoDB for aggregation.
 
 **_Syntax_**
 
-db.COLLECTION_NAME.aggregate(AGGREGATE_OPERATION)
+db.COLLECTION_NAME.aggregate
+(AGGREGATE_OPERATION)
 
 We have grouped the documents by the field by the user, and the sum is increased each time the field appears. The possible aggregating expressions are listed below.
 
@@ -223,7 +226,8 @@ We have grouped the documents by the field by the user, and the sum is increased
    </td>
    <td>Adds up the specified value over the whole collection of documents.
    </td>
-   <td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}])
+   <td>db.mycol.aggregate
+    ([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}])
    </td>
   </tr>
   <tr>
@@ -231,7 +235,8 @@ We have grouped the documents by the field by the user, and the sum is increased
    </td>
    <td>Calculates the mean of all input values throughout the whole collection of documents.
    </td>
-   <td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$avg : "$likes"}}}])
+   <td>db.mycol.aggregate
+    ([{$group : {_id : "$by_user", num_tutorial : {$avg : "$likes"}}}])
    </td>
   </tr>
   <tr>
@@ -239,7 +244,8 @@ We have grouped the documents by the field by the user, and the sum is increased
    </td>
    <td>Obtains the lowest matching value throughout the whole collection of documents.
    </td>
-   <td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$min : "$likes"}}}])
+   <td>db.mycol.aggregate
+    ([{$group : {_id : "$by_user", num_tutorial : {$min : "$likes"}}}])
    </td>
   </tr>
   <tr>
@@ -247,7 +253,8 @@ We have grouped the documents by the field by the user, and the sum is increased
    </td>
    <td>Obtains the highest value for each associated field across all documents within the collection.
    </td>
-   <td>db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$max : "$likes"}}}])
+   <td>db.mycol.aggregate
+    ([{$group : {_id : "$by_user", num_tutorial : {$max : "$likes"}}}])
    </td>
   </tr>
   <tr>
@@ -255,7 +262,8 @@ We have grouped the documents by the field by the user, and the sum is increased
    </td>
    <td>In the generated document, the value is added to an array.
    </td>
-   <td>db.mycol.aggregate([{$group : {_id : "$by_user", url : {$push: "$url"}}}])
+   <td>db.mycol.aggregate
+    ([{$group : {_id : "$by_user", url : {$push: "$url"}}}])
    </td>
   </tr>
   <tr>
@@ -263,7 +271,8 @@ We have grouped the documents by the field by the user, and the sum is increased
    </td>
    <td>Includes the item to an array in the outcome document without duplicating it.
    </td>
-   <td>db.mycol.aggregate([{$group : {_id : "$by_user", url : {$addToSet : "$url"}}}])
+   <td>db.mycol.aggregate
+    ([{$group : {_id : "$by_user", url : {$addToSet : "$url"}}}])
    </td>
   </tr>
   <tr>
@@ -271,7 +280,8 @@ We have grouped the documents by the field by the user, and the sum is increased
    </td>
    <td>The first document is retrieved from the source files in compliance with the grouping. Typically, this only makes sense in conjunction with a previously utilized "$sort"-stage.
    </td>
-   <td>db.mycol.aggregate([{$group : {_id : "$by_user", first_url : {$first : "$url"}}}])
+   <td>db.mycol.aggregate
+    ([{$group : {_id : "$by_user", first_url : {$first : "$url"}}}])
    </td>
   </tr>
   <tr>
@@ -279,7 +289,8 @@ We have grouped the documents by the field by the user, and the sum is increased
    </td>
    <td>Retrieves the most recent document among the source files following the grouping. Typically, this only makes sense in conjunction with a previously utilized "$sort"-stage.
    </td>
-   <td>db.mycol.aggregate([{$group : {_id : "$by_user", last_url : {$last : "$url"}}}])
+   <td>db.mycol.aggregate
+    ([{$group : {_id : "$by_user", last_url : {$last : "$url"}}}])
    </td>
   </tr>
 </table>

@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -100,12 +100,11 @@ Examples of string formatting in Python
  
 
 
-```
-print ('{2} {0} {1}'.format('you?', 'how', 'are'))
+print ('{2} {0} {1}'.format
+('you?', 'how', 'are'))
  
 Output
 How are you?
-```
 
 
  
@@ -116,15 +115,15 @@ How are you?
  
 
 
-```
-print('a: {a}, b: {b}, c: {c}'.format(a = 108, b = 'Sixty-Eight', c = 462.65))
+print('a: {a}, b: {b}, c: {c}'
+.format(a = 108,
+ b = 'Sixty-Eight', c = 462.65))
 
 
 Output
 a: 108, b: Sixty-Eight, c: 462.65
 
 
-```
 
 
 
@@ -133,18 +132,17 @@ a: 108, b: Sixty-Eight, c: 462.65
  
 
 
-```
-print('The first {w} was alright, but the {w} {w} was not correct.'.format(w = 'word'))
-```
+print('The first {w} was alright,
+but the {w} {w} was not correct.'
+.format(w = 'word'))
 
 
  
 
 
-```
 Output
-The first word was alright, but the word word was not correct.
-```
+The first word was alright, but the word word
+ was not correct.
 
 
  
@@ -155,18 +153,15 @@ The first word was alright, but the word word was not correct.
  
 
 
-```
-print("Floating point {0:.3f}".format(425.16408732))
-```
+print("Floating point {0:.3f}"
+.format(425.16408732))
 
 
  
 
 
-```
 Output
 Floating point 425.164
-```
 
 
  

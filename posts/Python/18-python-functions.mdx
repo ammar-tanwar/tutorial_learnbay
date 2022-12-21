@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -79,11 +79,9 @@ The essential functionality is available via a function. The following are basic
 **Example: Define a function**
 
 
-```
 # A simple python function
 def fun():
     print("Hello! Welcome to python class")
-```
 
 
 **Example2: Calling a function**
@@ -91,7 +89,6 @@ def fun():
 Once a function has been built, it may be called by using its name, which is headed by a parenthesis that holds the function's specific parameters.
 
 
-```
 # A python function
 
 def fun():
@@ -102,13 +99,11 @@ fun()
 
 Output
 Hello! Welcome to python class
-```
 
 
 Example3:
 
 
-```
 It displays both the initial and successive calls for the same function.
 def my_function(Fun):
       print(Fun + "Learnbay")
@@ -123,7 +118,6 @@ Hello! Learnbay
 Welcome Learnbay
 python Learnbay
 class Learnbay
-```
 
 
 
@@ -170,7 +164,6 @@ There are three elements to a user-defined method.
 Example
 
 
-```
 # program for  user-defined functions 
 
 def multiply_num(x,y):
@@ -182,7 +175,6 @@ print("The Product of: ", multiply_num(num1,num2))
 
 Output
 The Product of: 24
-```
 
 
 **Function Definition**
@@ -205,13 +197,11 @@ def add()
 Example
 
 
-```
 def add(): # Function definition
 x=10
 y=20 Function body
 z=x+y
 print(z) 
-```
 
 
 **Function Call**
@@ -227,7 +217,6 @@ Syntax - function_name()
 Example
 
 
-```
 def add():                            # Function definition and function body
 a=int(input("Enter a number- "))
 b=int(input("Enter a number- "))
@@ -238,7 +227,6 @@ Output
 Enter a number- 10
 Enter a number- 50
 60
-```
 
 
 
@@ -254,7 +242,6 @@ _Non-parameterized functions_- The functions that have no parameters or argument
 Example
 
 
-```
 #Create a function with the name num_list that creates a list of integer values from 1 to 50
 
 # def num_list():
@@ -273,7 +260,6 @@ num_list()
 
 Output
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
-```
 
 
 
@@ -303,7 +289,6 @@ Arguments appear in four different types.
 Example
 
 
-```
 def add(num_1,num_2):
     sum=num_1+num_2
     return sum
@@ -318,7 +303,6 @@ Output
 Enter the first value 30
 Enter the second value 23
 53
-```
 
 
 Default arguments
@@ -332,7 +316,6 @@ Default arguments
 Example
 
 
-```
 def course(a,b,c='MCA'):
     print(a,b,c)
     
@@ -340,7 +323,6 @@ course('MBA','M.Tech')
 
 Output
 MBA M.Tech MCA
-```
 
 
 Keyworded arguments
@@ -355,7 +337,6 @@ Keyworded arguments
 Example
 
 
-```
 def course(a,b,c):
     print(a,b,c)
     
@@ -363,7 +344,6 @@ course(a="DS",b='B.Tech',c='MBA')
 
 Output
 DS B.Tech MBA
-```
 
 
 Variable Length Argument (Arbitrary Number of Arguments)
@@ -379,12 +359,13 @@ Syntax - def function_name(*parameter):
 Example
 
 
-```
 def course(*name):
     for i in name:
         print(i,type(i))
         
-course('MBA','MCA','BCA','BBA','B.Tech','M.Tech',123,10+20j,[1,2,3,4,5])
+course('MBA','MCA','BCA','BBA
+','B.Tech','M.Tech',123,10+20j,
+[1,2,3,4,5])
 
 Output
 MBA <class 'str'>
@@ -396,7 +377,6 @@ M.Tech <class 'str'>
 123 <class 'int'>
 (10+20j) <class 'complex'>
 [1, 2, 3, 4, 5] <class 'list'>
-```
 
 
 
@@ -409,7 +389,6 @@ Recursion is the process of defining something only by itself. A function can ca
 Example
 
 
-```
 # To find the factorial number
 def calc_fact(x):
     if x == 1:
@@ -421,7 +400,6 @@ print ("Factorial of", num, "is", calc_fact(num))
 
 Output
 Factorial of 7 is 5040
-```
 
 
 In the example above, since it executed the function by itself the Python function calc fact() is recursive. The function call increases the factorial value by one so that it is equal to one.

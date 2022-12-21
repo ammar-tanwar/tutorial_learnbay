@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -73,7 +73,6 @@ The data that is wrapped in curly brackets with a key and value separated by a s
 Example1
 
 
-```
 st_name = (101, 'Suresh', 'Ramesh', 'Veeresh')
 st_id = ('LB101', 'LB102', 'LB103', 'LB104')
 st_email = ['rakesh@gmail.com','suresh@yahoo.com', 'ramesh@hotmail.com', 'veeresh@gmail.com']
@@ -89,19 +88,16 @@ print(list(st_details['st_2'].items())[1])
 Output
 LB104
 ('id', 'LB102')
-```
 
 
 Example2
 
 
-```
 car = { "brand": "Hyundai","model":"Getz","year": 2010,"year": 2022}
 print(car)
 
 Output
 {'brand': 'Hyundai', 'model': 'Getz', 'year': 2022}
-```
 
 
 Here brand, model, and year are keys while Hyundai, Getz, 2010 and 2022 are values
@@ -126,14 +122,12 @@ Get Keys: The get() method returns the values associated with the object whose k
 Example
 
 
-```
 car = { "brand": "Hyundai","model":"Getz","year": 2010,"year": 2022}
 a=car.get("model")
 print(a)
 
 Output
 Getz
-```
 
 
 Get values: Returns a list of all values found inside the dictionary that was specified. Values that are in reverse have been retained.
@@ -141,14 +135,12 @@ Get values: Returns a list of all values found inside the dictionary that was sp
 Example
 
 
-```
 salary = {"Dan":17000,"mike":45000,"juke": 82000}
 out1 = salary.values()
 print(sum(out1))
 
 Output
 144000
-```
 
 
 Get items: All dictionary keys and values are returned in a list by the items() method of the Python dictionary.
@@ -156,14 +148,13 @@ Get items: All dictionary keys and values are returned in a list by the items() 
 Example
 
 
-```
-out = {"name":'mike',"status":'married',"place":'Bangalore'}
+out = {"name":'mike',"status":
+'married',"place":'Bangalore'}
 items = out.items()
 print(items)
 
 Output
 dict_items([('name', 'mike'), ('status', 'married'), ('place', 'Bangalore')])
-```
 
 
 
@@ -176,7 +167,6 @@ To remove data, use the built-in Python method pop().
 Example
 
 
-```
 #Adding of elements
 empl_det = {"zenk" : 19000,"marker":42000,"rodio":38000}
 empl_det.update({"bendon":59500})
@@ -184,11 +174,9 @@ print(empl_det)
 
 Output
 {'zenk': 19000, 'marker': 42000, 'rodio': 38000, 'bendon': 59500}
-```
 
 
 
-```
 #Deletion of elements
 empl_det = {'zenk': 19000, 'marker': 42000, 'rodio': 38000, 'bendon': 59500}
 empl_det.pop('zenk')
@@ -196,7 +184,6 @@ print(empl_det)
 
 Output
 {'marker': 42000, 'rodio': 38000, 'bendon': 59500}
-```
 
 
 
@@ -207,8 +194,8 @@ Let's take a closer look at how to utilise Python's loop function to find keys, 
 Example
 
 
-```
-empl={"Dept1":"Maths","Dept2":"Physics","Dept3":"Biology","Dept4": "Chemistry"}
+empl={"Dept1":"Maths","Dept2":"Physics"
+,"Dept3":"Biology","Dept4": "Chemistry"}
 for x in empl:
     print(x)
 
@@ -217,7 +204,6 @@ Dept1
 Dept2
 Dept3
 Dept4
-```
 
 
 
@@ -228,8 +214,8 @@ The values() function can be used to return dictionary values.
 Example:
 
 
-```
-empl={"Dept1":"Maths","Dept2":"Physics","Dept3":"Biology","Dept4": "Chemistry"}
+empl={"Dept1":"Maths","Dept2":"Physics",
+"Dept3":"Biology","Dept4": "Chemistry"}
 for x in empl.values():
     print(x)
 
@@ -238,7 +224,6 @@ Maths
 Physics
 Biology
 Chemistry
-```
 
 
 
@@ -249,8 +234,8 @@ The results of the Items identified in dictionaries are produced by Items loops.
 Example:
 
 
-```
-empl={"Dept1":"Maths","Dept2":"Physics","Dept3":"Biology","Dept4": "Chemistry"}
+empl={"Dept1":"Maths","Dept2":"Physics",
+"Dept3":"Biology","Dept4": "Chemistry"}
 for x in empl.items():
     print(x)
 
@@ -259,7 +244,6 @@ Output
 ('Dept2', 'Physics')
 ('Dept3', 'Biology')
 ('Dept4', 'Chemistry')
-```
 
 
 

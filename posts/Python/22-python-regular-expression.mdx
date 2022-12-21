@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -75,7 +75,6 @@ To use a regex import the library ‘re’.
 Example
 
 
-```
 import re
 text='I have a blue car'		# wherever you have blue just convert it into green
 pat=r'blue'
@@ -83,7 +82,6 @@ res=re.sub(pat,'green',text)
 print(res)
 Output
 I have a green car.
-```
 
 
 
@@ -142,7 +140,6 @@ $-  Matches a pattern from the end of a string
 Example
 
 
-```
 import re
 mat = "Many houses are located in Bangalore"
 matchObj = re.match(r'(.*) are (.*?) .*', mat, re.M|re.I)
@@ -157,7 +154,6 @@ Output
 matchObj.group() :  Many houses are located in Bangalore
 matchObj.group(1) :  Many houses
 matchObj.group(2) :  located
-```
 
 
 
@@ -171,7 +167,6 @@ matchObj.group(2) :  located
 Example
 
 
-```
 text="The largest continent in the world is Asia and Asia has many countries"
 pattern=r'Asia'
 
@@ -188,7 +183,6 @@ Asia
 (38, 42)
 38
 42
-```
 
 
 
@@ -202,7 +196,6 @@ Asia
 Example
 
 
-```
 text="The largest continent in the world is Asia and Asia has many countries"
 pattern=r'Asia'
 
@@ -210,13 +203,11 @@ res=re.findall(pattern,text)
 print(res)
 Output
 ['Asia', 'Asia']
-```
 
 
 Example2
 
 
-```
 # Match all the values that start with a number and after that have an alphabet
 text="a1 2b 4c d5" 
 pattern=r'[0-9]\w'
@@ -226,7 +217,6 @@ print(res)
 
 Output
 ['2b', '4c']
-```
 
 
 
@@ -241,7 +231,6 @@ Output
 Example
 
 
-```
 text="India is a colorful country. India is one of the largest countries in Asia"
 pattern=r'India'
 res=re.finditer(pattern,text)
@@ -273,13 +262,11 @@ India
 (29, 34)
 29
 34
-```
 
 
 Example 2
 
 
-```
 text="India is a colorful country. India is one of the largest countries in Asia"
 pattern=r'India'
 res=re.findall(pattern,text)
@@ -287,7 +274,6 @@ print(res)
 
 Output
 ['India', 'India']
-```
 
 
 
@@ -298,7 +284,6 @@ Regular expressions are built into template objects, which provide methods for d
 Example
 
 
-```
 # compile() creates the regular expression
 # characters class [a-e],
 # which is equivalent to [abcde].
@@ -314,7 +299,6 @@ Output
 ['e', 'e', 'c', 'e', 'e', 'a', 'b', 'a', 'a', 'a', 'c', 'e', 'c', 'e', 'e']
 
 Note: A in All is not displayed as it is case sensitive
-```
 
 
 

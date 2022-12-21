@@ -15,7 +15,7 @@ tagDes: "2 Chapters 10 Modules"
 topic: {
   title: "SQL",
 tagDes: "2 Chapters 10 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/sql.png"
 
 }
 author: "Admin"
@@ -25,15 +25,11 @@ h1: "SQL Joins : "
 id: "5-SQL-joins"
 tableData:
   [
-    Overview, 
-    Scope of the Tutorial, 
-    Various categories of SQL JOINS,
-     INNER JOIN, 
-     FULL JOIN, 
-     LEFT JOIN, 
-     RIGHT JOIN, 
-     CARTESIAN JOIN, 
-     Summary
+    1. Overview, 
+    2. Scope of the Tutorial, 
+    3. What is meant by SQL JOINS?,
+    4. Various categories of SQL JOINS, 
+    5. Summary,
   ]
 ---
 
@@ -43,11 +39,11 @@ tableData:
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-jo-1.jpeg"></img>
 
-## **Overview**
+## 1. Overview
 
 Users will frequently need to check over many tables and combine them throughout the data analysis in SQL in order to obtain the necessary results. In order to join tables for data analysis, a data scientist must be able to perform SQL JOINS. You will study the various joins that SQL could do in this tutorial.
 
-## **Scope of the Tutorial**     
+## 2. Scope of the Tutorial     
 
 This tutorial covers
 
@@ -55,11 +51,11 @@ This tutorial covers
 
 -  Various categories of JOINS
 
-## **What is meant by SQL JOINS?**
+## 3. What is meant by SQL JOINS?
 
 Using a JOIN clause, data from two or more tables can be combined together based on a comparable column.
 
-## **Various categories of SQL JOINS**   
+## 4. Various categories of SQL JOINS   
 
 -  INNER JOIN
 
@@ -164,7 +160,8 @@ By using the Full Join or Full Outer Join, all items that match in either the le
 
 Syntax
 
-| SELECT Table1.Column1,Table1.Column2,Table2.Column1,....
+| SELECT Table1.Column1,Table1.Column2,
+Table2.Column1,....
  FROM Table1
  FULL JOIN Table2
  ON Table1.MatchingColumnName = Table2.MatchingColumnName; |
@@ -246,7 +243,7 @@ Syntax
  WHERE a.common\_filed = b.common\_field; |
 | --- |
 
-## **Summary**  
+## 5. Summary  
 
  
 We have already covered several commands that could be used to create queries and explore your databases. Additionally, you should be familiar with the various types of joins and how to utilize them to accumulate data from several tables.

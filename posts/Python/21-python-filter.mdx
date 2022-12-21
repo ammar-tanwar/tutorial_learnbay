@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -87,7 +87,6 @@ There are various uses for the Python filter() function. It is the perfect repla
 Example
 
 
-```
 lst=[1,2,3,4,5,6,7,8,9,10]
 
 # Create a function that returns the even numbers from the above list
@@ -96,13 +95,11 @@ list(filter(lambda x:x%2==0,lst))
 
 Output
 [2, 4, 6, 8, 10]
-```
 
 
 Example2
 
 
-```
 # We can apply loop on a filter object to get the values
 
 flt=filter(lambda x:x%2==0,lst)
@@ -118,7 +115,6 @@ Output
 6
 8
 10
-```
 
 
 The conditional statement eliminates 0 and any negative values. Filtering is the term for this sort of functionality. When performing filtering operations, each value in an iterable is tested against a predicate function, and only the ones that provide a true result are kept. Programming involves filtering operations often, hence most programming languages include tools for this purpose.
@@ -126,7 +122,6 @@ The conditional statement eliminates 0 and any negative values. Filtering is the
 Example
 
 
-```
 def identity(x):
     return x
 
@@ -138,7 +133,6 @@ list(filter(identity, objects))
 
 Output
 [1, 4, 5, 8]
-```
 
 
 In this case, the filtering operation identity() returns the same argument instead of returning either True or False. Filter() eliminates None, 0, [], "", and other false values by using their truth values. Only the values that are true in Python are part of the final list.
@@ -146,7 +140,6 @@ In this case, the filtering operation identity() returns the same argument inste
 Example : Finding Prime Numbers
 
 
-```
 import math
 
 def is_prime(n):
@@ -163,17 +156,14 @@ is_prime(29)
 Output
 False
 True
-```
 
 
 
-```
 Prime numbers ranging between 1-50 
 list(filter(is_prime, range(1, 51)))
 
 Output
 [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
-```
 
 
 
@@ -188,7 +178,6 @@ Outliers, on the other hand, are frequently described in normal distribution sam
 Example
 
 
-```
 import statistics as st
 sample = [10, 28, 40, 68, 22, 71, 95, 36, 4, 49, 15, 89, 53]
 
@@ -208,7 +197,6 @@ clean_sample
 # The mean after removing outliers
 st.mean(clean_sample)
 44.61538461538461
-```
 
 
 
@@ -219,7 +207,6 @@ You could end up running across NaN (not a number) numbers while using floating-
 Example
 
 
-```
 import statistics as st
 
 sample = [10.1, 8.3, 10.4, 8.8, float("nan"), 7.2, float("nan")]
@@ -227,7 +214,6 @@ st.mean(sample)
 
 Output
 nan
-```
 
 
 The result of this example's call to mean() is nan, which isn't the most useful result you can receive. Different sources can give way to NaN values. They could result from incorrect inputs, inaccurate data, etc. In any application, one should come up with the best method for handling them. Getting rid of them from your files is one option.
@@ -235,7 +221,6 @@ The result of this example's call to mean() is nan, which isn't the most useful 
 One could solve this issue using the useful function isnan() that the math module offers. The method provides True if the input parameter x has a NaN; otherwise, it provides False. When calling filterfalse(), one can utilize this method to specify the filtering criteria:
 
 
-```
 import math
 import statistics as st
 from itertools import filterfalse
@@ -246,7 +231,6 @@ st.mean(filterfalse(math.isnan, sample))
 
 Output
 8.96
-```
 
 
 One may exclude any NaN values from the mean calculation by using the functions math.isnan() and filterfalse(). After filtering, you should take note that the call to mean() provides a number that better describes the sample data you provided.

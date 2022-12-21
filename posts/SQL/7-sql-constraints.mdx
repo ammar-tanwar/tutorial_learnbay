@@ -15,7 +15,7 @@ tagDes: "2 Chapters 10 Modules"
 topic: {
   title: "SQL",
 tagDes: "2 Chapters 10 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/sql.png"
 
 }
 author: "Admin"
@@ -25,18 +25,11 @@ h1: "SQL Constraints : "
 id: "7-SQL-constraints"
 tableData:
   [
-     Overview, 
-     Scope of the tutorial,
-     What are constraints in SQL?, 
-     Different categories of SQL Constraints, 
-     The Primary Key, 
-     The Foreign Key,
-     The Unique Constraints, 
-     The NOT NULL Constraint, 
-     The DEFAULT Constraint, 
-     The INDEX Constraint, 
-     The CHECK Constraint, 
-     Summary
+     1. Overview, 
+     2. Scope of the tutorial,
+     3. What are constraints in SQL?, 
+     4. Different categories of SQL Constraints, 
+     5. Summary, 
   ]
 ---
 
@@ -46,21 +39,21 @@ tableData:
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/SQL/SQL-cons-1.jpeg"></img>
 
-## **Overview**
+## 1. Overview
 
 SQL constraints are a group of standards utilized on tables in relational databases to restrict the types of data that could be inserted, altered, or deleted from those tables. In order to ensure the data's integrity and consistency recorded in the table, this process is done.
 
-## **Scope of the tutorial**  
+## 2. Scope of the tutorial  
 This tutorial covers
 
 - Defining SQL Constraints
 - Different categories of SQL Constraints
 
-## **What are constraints in SQL?**
+## 3. What are constraints in SQL?
 
 Constraints are the guidelines that a table's data columns must follow. These are employed to restrict the sort of data that could be entered into the table. This assures the database's information accuracy and durability. When inserting, deleting, and updating information into tables, constraints are employed to maintain data integrity. After the constraint is set up, any database activity that does not adhere to the restrictions set forth by the constraint is terminated.
 
-## **Different categories of SQL Constraints**
+## 4. Different categories of SQL Constraints
 
 SQL constraints could be applied to either columns or tables. With the exception of the check constraints, column-level constraints only apply to individual columns in a table. The column that they read is referred to. The names are determined by the table-level limitations of the relevant columns.
 
@@ -171,6 +164,6 @@ Dropping an INDEX constraint
 
 All the entries in a specific column must follow specified criteria, and this is when the CHECK constraint steps in. This constraint is typically utilized to establish business logic on data in a column, preventing the entry of incorrect data.
 
-## **Summary**
+## 5. Summary
 
 Constraints refer to the limitations placed on a table's content columns. It is possible at both the column level and the table level. Utilizing the CREATE TABLE statement, constraints could be provided when a table is created. Users can also add constraints using the ALTER TABLE command after the table has already been set up.

@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -29,7 +29,7 @@ tableData:
   2. Scope of the tutorial,  
   3. Defining NumPy in Python,  
   4. Why use NumPy?,  
-  5. The NumPy’s ‘ndarray’,
+  5. The NumPy's 'ndarray',
   6. Shape,
   7. ndim,
   8. Standard deviation and square root,
@@ -70,10 +70,8 @@ Numerical Python is referred to as NumPy in Python. The computation and processi
 The syntax for importing
 
 
-```
 import numpy
 import numpy as np
-```
 
 
 
@@ -90,11 +88,9 @@ import numpy as np
 I'll use a million integers as an example, and a Python list of equivalent values:
 
 
-```
 import numpy as np
 in_array = np.arrange(1200000)
 out_lst = list(range(1200000))
-```
 
 
 **When we already have a list, why use NumPy?**
@@ -117,14 +113,13 @@ out_lst = list(range(1200000))
 * Each element is not a separate object because they are of the same type.
 
 
-## 5. The NumPy’s ‘ndarray’
+## 5. The NumPy's 'ndarray'
 
 The N-dimensional array, often known as the nd array, is one of the key components of a multidimensional array in NumPy. This is a versatile container that is quick for huge datasets. Large blocks of data are used to carry out the mathematical operations in an array.
 
 Example
 
 
-```
 import numpy as np
 #generate some random data
 data5 = np.random.randn(3, 3)
@@ -144,7 +139,6 @@ data5 + data5
 array([[ 0.00480473, -1.39197227, -0.49862863],
        [-1.66789152,  1.45343161, -1.32999033],
        [ 0.01154968,  0.25956522, -1.47604931]])
-```
 
 
 
@@ -157,12 +151,10 @@ An example
 I'm using one of the results from the example above to examine the matrix's shape.
 
 
-```
 data5.shape
 
 Output
 (3, 3)
-```
 
 
 Using the reshape function, where you may change rows into columns and vice versa, you can also reshape the array.
@@ -170,7 +162,6 @@ Using the reshape function, where you may change rows into columns and vice vers
 Example
 
 
-```
 arry = np.array([(23,52,64),(36,73,96)])
 print(arry)
 
@@ -183,7 +174,6 @@ Output
 [[23 52]
  [64 36]
  [73 96]]
-```
 
 
 
@@ -192,13 +182,11 @@ Output
 'ndim' can be used to determine an array's dimension. You guys would grasp realistically if I gave you an example.
 
 
-```
 g = np.array([(45,26,92),(54,37,31)])
 print(g.ndim)
 
 Output
 2
-```
 
 
 Heads up: Importing the NumPy library only has to be done once per workspace, it is not required every time.
@@ -208,7 +196,6 @@ Using a list of tuples to create a two-dimensional array
 Example
 
 
-```
 lst=[('Akash',101,185000),
     ('Nivin',102,378000),
     ('Wasim',103000)]
@@ -224,13 +211,11 @@ Output
  ['Wasim' '103' '95000']] <class 'numpy.ndarray'>
 (3, 3)
 <U11
-```
 
 
 Example 2
 
 
-```
 lst=[('Akash',101,185000),
     ('Nivin',102,378000),
     ('Wasim',103000)]
@@ -248,7 +233,6 @@ Output
 1
 <ipython-input-36-6389e1a2db0f>:5: 
 
-```
 
 
 
@@ -259,7 +243,6 @@ Output
 Example
 
 
-```
 arry=np.array([(48,82,34),(73,13,69)])
 print(np.std(arry))
 print(np.sqrt(arry))
@@ -268,7 +251,6 @@ Output
 24.09299114311509
 [[6.92820323 9.05538514 5.83095189]
  [8.54400375 3.60555128 8.30662386]]
-```
 
 
 The square root of all the numbers is given in the output above along with the mean value, which is shown as the standard deviation.
@@ -286,14 +268,12 @@ arange(start,stop,step)
 Example
 
 
-```
 arr=np.arange(0,10,1)
 arr
 
 Output
 array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 The default start is 0 and the default step is 1
-```
 
 
 
@@ -304,7 +284,6 @@ The default start is 0 and the default step is 1
 * Diagonal values are 1 and the rest of the values are 0.
 * eye(rows, columns)
 
-```
 # Create an identity matrix of 3rows and 3 columns
 np.eye(3,3)
 
@@ -312,7 +291,6 @@ Output
 array([[1., 0., 0.],
        [0., 1., 0.],
        [0., 0., 1.]])
-```
 
 
 
@@ -327,14 +305,12 @@ array([[1., 0., 0.],
 Example
 
 
-```
 np.floor(np.random.rand(3,3)*100)
 
 Output
 array([[69., 73., 38.],
        [48., 67., 47.],
        [69., 30., 38.]])
-```
 
 
 Create an array of random values that returns the same set of values at every execution
@@ -342,7 +318,6 @@ Create an array of random values that returns the same set of values at every ex
 seed() is used when you want to get the same set of random values
 
 
-```
 np.random.seed(2)
 arr=np.random.rand(3,3)
 arr
@@ -350,21 +325,18 @@ arr
 array([[0.4359949 , 0.02592623, 0.54966248],
        [0.43532239, 0.4203678 , 0.33033482],
        [0.20464863, 0.61927097, 0.29965467]])
-```
 
 
 Find the index of maximum and minimum of the array
 
 
-```
 # argmax()- Index of the maximum number
 # argmin()- Index of the minimum number
-```
 
 
 
-```
-arr=np.random.randint(50,100,9).reshape(3,3)
+arr=np.random.randint(50,100,9)
+.reshape(3,3)
 print(arr)
 print(np.max(arr))
 print(np.argmax(arr))
@@ -379,7 +351,6 @@ print(np.min(arr))
 print(np.argmin(arr))
 58
 0
-```
 
 
 
@@ -390,13 +361,11 @@ The ravel function is used to convert an array into one column.
 Example
 
 
-```
 arry=np.array([(24,52,78),(81,33,92)])
 print(arry.ravel())
 
 Output
 [24 52 78 81 33 92]
-```
 
 
 

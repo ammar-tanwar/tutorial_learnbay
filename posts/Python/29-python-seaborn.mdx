@@ -15,7 +15,7 @@ tagDes: "12 Chapters 29 Modules"
 topic: {
   title: "Python",
 tagDes: "12 Chapters 29 Modules",
-img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/arrow.png"
+img: "https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/domainpage/Python-logo.png"
 
 }
 author: "Admin"
@@ -123,29 +123,23 @@ We will look over all the above plots by utilizing a dataset “titanic.”
 ### **displot()**
 
 
-```
 sns.displot(data_frame.column)
 sns.displot(df.age)
 plt.show()
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+2.PNG"></img>
 
 
 
-```
 sns.displot(x='age',data=df,kind='kde')
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+3.PNG"></img>
 
 
 
-```
 sns.displot(x='age',data=df,kde=True)
-```
 
 
 
@@ -153,20 +147,17 @@ sns.displot(x='age',data=df,kde=True)
 
 
 
-```
 kdeplot()
-sns.kdeplot(x='age',data=df,shade=True,color='red')
-```
+sns.kdeplot(x='age',data=df,
+shade=True,color='red')
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+5.PNG"></img>
 
 
 
-```
 histplot()
 sns.histplot(df.age,bins=35,kde=True)
-```
 
 
 
@@ -179,9 +170,7 @@ sns.histplot(df.age,bins=35,kde=True)
 Box-and-whisker plots are the alternative names for box plots. To make it simple to compare one variable with another or various phases of categorical data, it visualizes the distribution of statistical data. The box shows the quartiles of the dataset, and the whiskers stretch to represent the remainder of the distribution, except for points that are designated as "outliers" using a method that is an expression of an interquartile range.
 
 
-```
 sns.boxplot(y='age',data=df)
-```
 
 
 
@@ -192,9 +181,8 @@ sns.boxplot(y='age',data=df)
 ### **Countplot()**
 
 
-```
-sns.countplot(x='sex',hue='class',data=df,palette='bright')
-```
+sns.countplot(x='sex',hue='class',
+data=df,palette='bright')
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+8.PNG"></img>
@@ -205,7 +193,8 @@ sns.countplot(x='sex',hue='class',data=df,palette='bright')
 
 One of the most popular methods for displaying the relationship between two items is a scatter plot. Each observation point from the dataset is shown on the plot as a collection of interconnected dots.
 
-sns.scatterplot(x='age',y='fare',hue='class',data=df)
+sns.scatterplot(x='age',y='fare',
+hue='class',data=df)
 
 
 
@@ -213,9 +202,8 @@ sns.scatterplot(x='age',y='fare',hue='class',data=df)
 
 
 
-```
-sns.scatterplot(x='tip',y='total_bill',data=data)
-```
+sns.scatterplot(x='tip',
+y='total_bill',data=data)
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+10.PNG"></img>
@@ -232,9 +220,7 @@ Using new dataset
 ### **jointplot()**
 
 
-```
 sns.jointplot(x='total_bill', y='tip', data=data, kind='hex')
-```
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+12.PNG"></img>
 
@@ -245,10 +231,8 @@ sns.jointplot(x='total_bill', y='tip', data=data, kind='hex')
 The same goal is achieved by both a violin plot as well as a whisker and box plot. It shows the distributions of quantitative data for one (or even more) categorical parameters over several phases to enable comparison. In contrast to a box plot, where every single piece of the plot correlates to actual data points, the violin plot incorporates an estimated kernel frequency of the underlying distribution. This method of presenting multiple data distributions simultaneously can be informative and appealing, but it should be noted that the estimated algorithm is influenced by the sample size, making small samples of violins look deceptively smooth.
 
 
-```
 sns.set(style="tricks", color_codes=True)
 a = sns.load_dataset("tips")
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+12(b).PNG"></img>
@@ -258,10 +242,9 @@ a = sns.load_dataset("tips")
 ### **heatmap()** 
 
 
-```
 plt.subplots(figsize=(8,6),dpi=100)
-sns.heatmap(df.corr(),annot=True,fmt='.2g',cmap='viridis')
-```
+sns.heatmap(df.corr(),annot=True,
+fmt='.2g',cmap='viridis')
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+13.PNG"></img>
@@ -270,10 +253,8 @@ sns.heatmap(df.corr(),annot=True,fmt='.2g',cmap='viridis')
 Heatmap for checking null values
 
 
-```
 plt.subplots(figsize=(6,4),dpi=100)
 sns.heatmap(df.isna(),cmap='viridis')
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+14.PNG"></img>
@@ -283,10 +264,8 @@ sns.heatmap(df.isna(),cmap='viridis')
 ### **stripplot()**
 
 
-```
 plt.subplots(figsize=(6,5),dpi=100)
 sns.stripplot(x='day',y='tip',data=data)
-```
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+15.PNG"></img>
 
@@ -295,10 +274,8 @@ sns.stripplot(x='day',y='tip',data=data)
 ### **swarmplot()**
 
 
-```
 plt.subplots(figsize=(6,5),dpi=100)
 sns.swarmplot(x='day',y='tip',data=data)
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+16.PNG"></img>
@@ -308,9 +285,8 @@ sns.swarmplot(x='day',y='tip',data=data)
 ### **scatter plot()**
 
 
-```
-sns.scatterplot(x='tip',y='total_bill',hue='smoker',data=data)
-```
+sns.scatterplot(x='tip',y='total_bill',
+hue='smoker',data=data)
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+17.PNG"></img>
@@ -322,10 +298,8 @@ sns.scatterplot(x='tip',y='total_bill',hue='smoker',data=data)
 It is used to plot the regression line.
 
 
-```
 plt.subplots(figsize=(10,8))
 sns.regplot(x='tip',y='total_bill',data=data)
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+18.PNG"></img>
@@ -337,20 +311,16 @@ sns.regplot(x='tip',y='total_bill',data=data)
 Relplot is used to visually represent the connection between two statistically comparable techniques. One could pass data, x-axis and y-axis labels, size, style, color, and many other parameters in this.
 
 
-```
 Syntax
 seaborn.relplot(data="your data",
 x="name for x axis", y="name for y axis",
 hue="your_hue", style="your_style", size="and size",)
-```
 
 
 Example
 
 
-```
 sns.relplot(x="total_bill",y="tip", hue= "smoker", data=tips);
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+19.PNG"></img>
@@ -360,9 +330,8 @@ sns.relplot(x="total_bill",y="tip", hue= "smoker", data=tips);
 ### **lmplot()**
 
 
-```
-sns.lmplot(x='tip',y='total_bill',hue='day',data=data)
-```
+sns.lmplot(x='tip',y='total_bill',
+hue='day',data=data)
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+20.PNG"></img>
@@ -372,9 +341,7 @@ sns.lmplot(x='tip',y='total_bill',hue='day',data=data)
 ### **pairplot()**
 
 
-```
 sns.pairplot(x_vars=['Attack Point','Defense Point','Speed Point','Sp. Atk Point'], y_vars=['Total Point'], kind='reg', data=data)
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+21.PNG"></img>
@@ -384,11 +351,9 @@ sns.pairplot(x_vars=['Attack Point','Defense Point','Speed Point','Sp. Atk Point
 ### **barplot()**
 
 
-```
 from numpy import median
 plt.subplots(figsize=(6,4),dpi=100)
 sns.barplot(x='Type1',y='Total Point',data=data,ci=False,estimator=max)
-```
 
 
 
@@ -401,29 +366,23 @@ sns.barplot(x='Type1',y='Total Point',data=data,ci=False,estimator=max)
 It is known as a universal plot
 
 
-```
 # plt.figure(figsize=(12,8),dpi=100)
-sns.catplot(x='Type1',y='Total Point',data=data,kind='strip',height=8,estimator=median)
+sns.catplot(x='Type1',y='Total Point',data=data,kind='strip',
+height=8,estimator=median)
 plt.show()
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+23.PNG"></img>
 
 
 
-```
-sns.catplot(x='day',y='tip',data=data,kind='bar',height=6,estimator=median)
-```
-
-
-![alt_text](images/image26.png "image_tooltip")
+sns.catplot(x='day',y='tip',data=data,
+kind='bar',height=6,estimator=median)
 
 
 How to plot multiple axes in seaborn?
 
 
-```
 fig, ax= plt.subplots(2,2,figsize=(12,8),dpi=100)
 
 sns.boxplot(y='tip',data=data,ax=ax[0][0])
@@ -431,14 +390,15 @@ ax[0][0].set_title("Tip")
 ax[0][0].set_xlabel("x_axis")
 ax[0][0].set_ylabel("y_axis")
 
-sns.boxplot(y='total_bill',data=data,ax=ax[0][1])
+sns.boxplot(y='total_bill',data=data,
+ax=ax[0][1])
 
-sns.regplot(x='tip',y='total_bill',data=data,ax=ax[1][0],color='y')
+sns.regplot(x='tip',y='total_bill',
+data=data,ax=ax[1][0],color='y')
 ax[1][0].set_title("tip vs total_bill")
 
 plt.tight_layout()
 plt.show()
-```
 
 
 <img src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/python/Seaborn+-+24.PNG"></img>
