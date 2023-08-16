@@ -47,7 +47,7 @@ export default function blog({ allPostsData }) {
       />
       <Topics categoryPostTopic={navCategory} />
       <ThirdSection />
-      <Course />
+      <Course popup={true} dataScience={true} radio={true} />
       <Footer />
     </>
   );
