@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/SQL-Page";
+import {
+  getSortedPostsData,
+  getAllPostIds,
+  getPostData,
+} from "../../lib/SQL-Page";
 import Footer from "../../components/global/footer/footer";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,12 +20,11 @@ import { sortByDate } from "../../utils";
 import PageNavbar from "../../components/global/navbar/PageNavbar";
 
 export default function CategoryBlog({ postData, posts, navData }) {
-  const navCategory =  []
-  navData.map((navDetails, i)=>{
-    
-    navCategory.push(navDetails.readMainFolder)
-  })
-  
+  const navCategory = [];
+  navData.map((navDetails, i) => {
+    navCategory.push(navDetails.readMainFolder);
+  });
+
   let singleCategoryPost = posts.map((post) => {
     return post.category;
   });
@@ -209,9 +212,9 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       postData,
-       posts:posts.sort(sortByDate),
+      posts: posts.sort(sortByDate),
       navData,
     },
-     revalidate: 18000,
+    revalidate: 18000,
   };
 }
