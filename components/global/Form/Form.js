@@ -3,35 +3,27 @@ import styles from "./Form.module.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useRouter } from "next/router";
-import DatePicker from "react-datepicker";
-import setHours from "date-fns/setHours";
-import setMinutes from "date-fns/setMinutes";
-import addDays from "date-fns/addDays";
-import subDays from "date-fns/subDays";
-import getDay from "date-fns/getDay";
 
-const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience,
-  fullStack, }) => {
+const Form = ({ popup, setTrigger, downloadBrochure, radio, jobDesc }) => {
   const router = useRouter();
-  let today = new Date();
-  let time =
-    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-  //offset to maintain time zone difference
-  const [startDate, setStartDate] = useState();
+ 
+ //offset to maintain time zone difference
   const [value, setValue] = useState();
   const [query, setQuery] = useState({
     name: "",
     email: "",
     phone: "",
     workExperience: "",
+    jobDescription: "",
+    platform: "",
     Brief: "",
-    dateTime: "",
     url: router.asPath,
   });
+
+
   useEffect(() => {
-    setQuery({ ...query, phone: value,dateTime: startDate  });
-  }, [value]);
+    setQuery({ ...query, phone: value});
+  }, [value,query]);
 
   // Update inputs value
   const handleParam = () => (e) => {
@@ -43,15 +35,7 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
     }));
   };
 
-  let endPoint = "https://getform.io/f/0b5b1a8f-bce0-445a-967f-f56103e73f3d";
-  if (event) {
-    endPoint = "https://getform.io/f/69076866-e1f7-4cf3-a7d2-12603819a5a4";
-  }
-
-  let btnText = "Apply for Counselling";
-  if (event) {
-    btnText = "Register Now";
-  }
+  let endPoint = "https://getform.io/f/85e92281-63f9-4d2f-b946-31d1098532f4";
 
   // Form Submit function
   const formSubmit = (e) => {
@@ -68,10 +52,11 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
         name: "",
         email: "",
         phone: "",
-        jobDescription: "",
         workExperience: "",
-        dateTime: "",
-        url: "",
+        jobDescription: "",
+        platform: "",
+        Brief: "",
+        url: router.asPath,
       })
     );
     if (popup) {
@@ -80,31 +65,33 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
       };
       off();
     }
-    if (dataScience) {
+
+    if (router.pathname === "/") {
       router.push("/Thank-you");
+      return;
     }
   };
-  const isWeekday = (date) => {
-    const day = getDay(date);
-    return day !== 0;
-  };
-  const filterPassedTime = (time) => {
-    const currentDate = new Date();
-    const selectedDate = new Date(time);
+  // const isWeekday = (date) => {
+  //   const day = getDay(date);
+  //   return day !== 0;
+  // };
+  // const filterPassedTime = (time) => {
+  //   const currentDate = new Date();
+  //   const selectedDate = new Date(time);
 
-    return currentDate.getTime() < selectedDate.getTime();
-  };
+  //   return currentDate.getTime() < selectedDate.getTime();
+  // };
 
   return (
     <div className={styles.App}>
       <form onSubmit={formSubmit}>
-      <div className={styles.formWrapper}>
+        <div className={styles.formWrapper}>
           <input
             type="text"
             name="name"
             className={popup ? styles.NameInputs : styles.NameInput}
             required
-            placeholder="Enter your Full Name"
+            placeholder="Enter your Full Name*"
             value={query.name}
             style={{ borderBottom: "1px solid grey" }}
             onChange={handleParam()}
@@ -115,7 +102,7 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
             type="email"
             name="email"
             required
-            placeholder="Enter your Email"
+            placeholder="Enter your Email*"
             className={popup ? styles.EmailInputs : styles.EmailInput}
             value={query.email}
             onChange={handleParam()}
@@ -126,17 +113,17 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
             style={
               popup
                 ? {
-                    height: "50px",
-                    borderRadius: "8px",
-                    border: "1px solid grey",
-                    padding: "10px",
-                  }
+                  height: "50px",
+                  borderRadius: "8px",
+                  border: "1px solid grey",
+                  padding: "10px",
+                }
                 : {
-                    border: "0",
-                    height: "50px",
-                    borderRadius: "3px",
-                    borderBottom: "1px solid grey",
-                  }
+                  border: "0",
+                  height: "50px",
+                  borderRadius: "3px",
+                  borderBottom: "1px solid grey",
+                }
             }
             name="phone"
             rules={{ required: true }}
@@ -148,16 +135,43 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
             required
           />
         </div>
-        <div className={styles.formWrapper}>
-          <input
-            type="text"
-            name="jobDescription"
-            placeholder="Job Description"
-            className={popup ? styles.EmailInputs : styles.EmailInput}
-            value={query.jobDescription}
-            onChange={handleParam()}
-          />
-        </div>
+
+        <>
+                {" "}
+                {jobDesc ? (
+                  <>
+                    <div className={styles.formWrapper}>
+                      <input
+                        type="text"
+                        name="jobDescription"
+                        placeholder="Job Description"
+                        className={
+                          popup ? styles.EmailInputs : styles.EmailInput
+                        }
+                        value={query.jobDescription}
+                        onChange={handleParam()}
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    <div className={styles.formWrapper}>
+                      <input
+                        type="text"
+                        name="jobDescription"
+                        placeholder="Job Description"
+                        className={
+                          popup ? styles.EmailInputs : styles.EmailInput
+                        }
+                        value={query.jobDescription}
+                        onChange={handleParam()}
+                        required
+                      />
+                    </div>
+                  </>
+                )}
+              </>
         <div className={popup ? styles.formWrappers : styles.formWrapper}>
           <select
             name="workExperience"
@@ -166,85 +180,47 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
             onChange={handleParam()}
           >
             <option value="Work Experience">Work Experience</option>
-            <option value="1 to 3 year">Fresher or 0 year</option>
             <option value="1 to 3 year">1 to 3 years</option>
             <option value="3 to 7 year">3 to 7 years</option>
             <option value="7 to 12 year">7 to 12 years</option>
             <option value="12+ year">12+ years</option>
           </select>
         </div>
-        {popup ? (
-          <div className={popup ? styles.formWrappers : styles.formWrapper}>
-            <input
-              type="hidden"
-              id="url"
-              name="url"
-              value={router.asPath}
-            ></input>
-          </div>
-        ) : (
-          ""
-        )}
 
-        {/* <div className={popup ? styles.formWrappers : styles.formWrapper}>
-            <div className={styles.inner}>
-              <DatePicker
-                selected={startDate}
-                name="dateTime"
-                id="dateTime"
-                onChange={(date) => setStartDate(date)}
-                showTimeSelect
-                timeIntervals={15}
-                includeDateIntervals={[
-                  {
-                    start: subDays(new Date(), 1),
-                    end: addDays(new Date(), 5),
-                  },
-                ]}
-                filterDate={isWeekday}
-                filterTime={filterPassedTime}
-                wrapperClassName={styles.date}
-                className={styles.datePicker}
-                placeholderText="Select Date and Time"
-                dateFormat="MMMM d, yyyy h:mm aa"
+         
+          {radio ? (
+            <div className={popup ? styles.formWrappers : styles.formWrapper}>
+              <input
+                id="Data Science Program"
+                value="Data Science Courses"
+                name="platform"
                 required
-                minTime={setHours(setMinutes(new Date(), 0), 10)}
-                maxTime={setHours(setMinutes(new Date(), 0), 22)}
+                type="radio"
+                onChange={handleParam()}
               />
+              Data Science Courses&nbsp;
+              <br />
+              <input
+                id="Software (DSA & System Design)"
+                value="Software (DSA & System Design)"
+                name="platform"
+                required
+                type="radio"
+                onChange={handleParam()}
+              />
+            Software (DSA & System Design)
             </div>
-          </div> */}
-        {radio ? (
-          <div className={popup ? styles.formWrappers : styles.formWrapper}>
-            <input
-              id="Data Science Program"
-              value="Data Science Courses"
-              name="platform"
-              required
-              type="radio"
-              onChange={handleParam()}
-            />
-            Data Science Courses&nbsp;
-            <br />
-            <input
-              id="Full Stack Program"
-              value="Full Stack Software Dev Courses"
-              name="platform"
-              required
-              type="radio"
-              onChange={handleParam()}
-            />
-            Full Stack Software Dev <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;(DSA & System Design) Courses
-          </div>
-        ) : (
-          ""
-        )}
+          ) : (
+            ""
+          )}
+          
+
         <p className={styles.FormText} style={{ fontSize: "10px" }}>
           By submitting the form, you agree to our Terms and Conditions and our
           Privacy Policy.
         </p>
         <button type="submit" className={styles.button}>
-          {downloadBrochure ? "Download Now" : btnText}{" "}
+          {downloadBrochure ? "Download Now" : "Apply For Counselling"}
         </button>
       </form>
     </div>
@@ -252,4 +228,3 @@ const Form = ({ popup, setTrigger, downloadBrochure, radio, event,   dataScience
 };
 
 export default Form;
- 
