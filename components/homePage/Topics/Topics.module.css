@@ -14,6 +14,11 @@
     margin: 0;
 }
 
+.boxesInner img {
+    width: auto;
+    height: 80px;
+}
+
 .boxesInner {
     padding: 30px 20px;
     border-radius: 10px;

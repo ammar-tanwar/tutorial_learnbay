@@ -166,9 +166,9 @@ const Navbar = ({ tag }) => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search Topics Here"
               /> */}
-            <input type="text" className={styles.input} id="q" name="q" title="Search this site" alt="Search Text" placeholder='Search for blog...'/>
+            <input type="text" className={styles.input} id="q" name="q" title="Search this site" alt="Search Text" placeholder='Search Topics Here'/>
             <input type="hidden" id="cx" name="cx" value="446f84458a10944b2" />
-            <input type="image" className={styles.iconSearch} id="searchSubmit" name="submit" src="https://i.ibb.co/CvcDr91/search.png" alt="Go" title="Submit Search Query" />
+            <input type="image" className={styles.iconSearch} id="searchSubmit" width="20px" name="submit" src="https://learnbay-wb.s3.ap-south-1.amazonaws.com/main/tutorial/search.png" alt="Go" title="Submit Search Query" />
             {/* <FaSearch className={styles.iconSearch} /> */}
             </form>
           </div>
