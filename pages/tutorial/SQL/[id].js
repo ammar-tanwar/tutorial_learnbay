@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { getSortedPostsData,getAllPostIds, getPostData, } from "../../lib/Python-Page";
-import Footer from "../../components/global/footer/footer";
+import {
+  getSortedPostsData,
+  getAllPostIds,
+  getPostData,
+} from "../../../lib/SQL-Page";
+import Footer from "../../../components/global/footer/footer";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import styles from "../../styles/blog.module.css";
+import styles from "../../../styles/blog.module.css";
 import {
   FaRegCopy,
   FaChevronDown,
@@ -12,16 +16,15 @@ import {
   FaHeart,
   FaRegHeart,
 } from "react-icons/fa";
-import { sortByDate } from "../../utils";
-import PageNavbar from "../../components/global/navbar/PageNavbar";
+import { sortByDate } from "../../../utils";
+import PageNavbar from "../../../components/global/navbar/PageNavbar";
 
 export default function CategoryBlog({ postData, posts, navData }) {
-  const navCategory =  []
-  navData.map((navDetails, i)=>{
-    
-    navCategory.push(navDetails.readMainFolder)
-  })
-  
+  const navCategory = [];
+  navData.map((navDetails, i) => {
+    navCategory.push(navDetails.readMainFolder);
+  });
+
   let singleCategoryPost = posts.map((post) => {
     return post.category;
   });
@@ -209,9 +212,9 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       postData,
-       posts:posts.sort(sortByDate),
+      posts: posts.sort(sortByDate),
       navData,
     },
-     revalidate: 18000,
+    revalidate: 18000,
   };
 }

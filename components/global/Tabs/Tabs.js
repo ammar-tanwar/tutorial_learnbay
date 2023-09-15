@@ -23,7 +23,7 @@ const Tabs = ({ tags }) => {
         <div className={styles.leftPanel}>
           {tags.map((posts, i) => {
             console.log(posts.title);
-            let url = `/${posts}/1-getting-started`;
+            let url = `/tutorial/${posts}/1-getting-started`;
 
             return (
               <Link href={url} key={i}>

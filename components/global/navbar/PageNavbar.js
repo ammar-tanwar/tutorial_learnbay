@@ -64,7 +64,7 @@ const PageNavbar = ({ tag }) => {
                   <Link href="/">Home</Link>
                 </span>
                 <span>
-                  <Link href="https://www.learnbay.co/about-us">About Us</Link>
+                  <Link href="https://www.learnbay.co/demo">Demo</Link>
                 </span>
                 <span>
                   <Link href="https://blog.learnbay.co/">Blog</Link>
@@ -144,7 +144,7 @@ const PageNavbar = ({ tag }) => {
             <Link href="/">Home</Link>
           </span>
           <span>
-            <Link href="https://www.learnbay.co/about-us">About Us</Link>
+            <Link href="https://www.learnbay.co/demo">Demo</Link>
           </span>
           <span>
             <Link href="https://blog.learnbay.co/">Blog</Link>
