@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../styles/ThankYou.module.css";
+import styles from "../../styles/ThankYou.module.css";
 import Head from "next/head";
 import Image from "next/image";
-import Navbar from "../components/global/navbar/navbar";
-import Footer from "../components/global/footer/footer";
+import Navbar from "../../components/global/navbar/navbar";
+import Footer from "../../components/global/footer/footer";
 const ThankYou = () => {
   return (
     <div className={styles.main}>

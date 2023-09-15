@@ -1,14 +1,14 @@
 import React from "react";
-import { getSortedPostsData } from "../lib/posts";
-import styles from "../styles/blogM.module.css";
+import { getSortedPostsData } from "../../lib/posts";
+import styles from "../../styles/blogM.module.css";
 import Head from "next/head";
-import { sortByDate } from "../utils";
-import Footer from "../components/global/footer/footer";
-import Course from "../components/homePage/Course/Course";
-import Navbar from "../components/global/navbar/navbar";
-import HeroSection from "../components/homePage/HeroSection/HeroSection";
-import ThirdSection from "../components/homePage/ThirdSection/thirdSection";
-import Topics from "../components/homePage/Topics/topics";
+import { sortByDate } from "../../utils";
+import Footer from "../../components/global/footer/footer";
+import Course from "../../components/homePage/Course/Course";
+import Navbar from "../../components/global/navbar/navbar";
+import HeroSection from "../../components/homePage/HeroSection/HeroSection";
+import ThirdSection from "../../components/homePage/ThirdSection/thirdSection";
+import Topics from "../../components/homePage/Topics/topics";
 
 export default function blog({ allPostsData }) {
   let navCategory;
